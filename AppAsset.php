@@ -19,12 +19,12 @@ class AppAsset extends AssetBundle
         '//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
         'js/webslidemenu/webslidemenu.css',
         'js/webslidemenu/dropdown-effects/fade-up.css',
-        'css/medical-theme-default.css',
-        'css/kingcomposer.min.css',
-        'css/medical-style.css',
+        // 'css/medical-theme-default.css',
+        // 'css/kingcomposer.min.css',
+        // 'css/medical-style.css',
         'css/main.css',
-        'css/responsive.css',
-        'css/colors.less',
+        // 'css/responsive.css',
+        //'css/colors.less',
     ];
     public $js = [
         'js/webslidemenu/webslidemenu.js',

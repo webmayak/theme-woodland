@@ -53,6 +53,39 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<div class="why-us">
+    <div class="container">
+        <div class="why-us__title-big">Домостроительная компания</div>
+        <div class="why-us__title section-title">Почему выбирают нас</div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-2">
+                <div class="why-us-item">
+                    <div class="why-us-item__circle">19</div>
+                    <div class="why-us-item__descr">Лет <br>работы</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="why-us-item">
+                    <div class="why-us-item__circle">2</div>
+                    <div class="why-us-item__descr">Собственных <br>производства</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="why-us-item">
+                    <div class="why-us-item__circle">550</div>
+                    <div class="why-us-item__descr">Проектов <br>выполненно</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="why-us-item">
+                    <div class="why-us-item__circle">200</div>
+                    <div class="why-us-item__descr">Рабочих <br>в штате</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="content-block">
     <div class="container">
         <div class="content-block__body">
