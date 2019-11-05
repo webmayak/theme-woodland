@@ -86,6 +86,44 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<div class="steps">
+    <div class="container">
+        <div class="steps__title section-title">Как мы работаем</div>
+        <ul class="steps-list ul-reset">
+            <li class="steps-list__item step">
+                <div class="step__number">01</div>
+                <div class="step__title">Общение</div>
+                <div class="step__descr">Общение с заказчиком, получение информации для отрисовки и просчёта проекта</div>
+            </li>
+            <li class="steps-list__item step">
+                <div class="step__number">02</div>
+                <div class="step__title">Создание</div>
+                <div class="step__descr">Создание<br> проекта и технической документации</div>
+            </li>
+            <li class="steps-list__item step">
+                <div class="step__number">03</div>
+                <div class="step__title">Согласовываем</div>
+                <div class="step__descr">Согласовываем<br> и подписываем документы +&nbsp;предоплата 35%</div>
+            </li>
+            <li class="steps-list__item step">
+                <div class="step__number">04</div>
+                <div class="step__title">Встреча</div>
+                <div class="step__descr">Встреча заказчика<br> с прорабом на участке и обсуждение вопросов</div>
+            </li>
+            <li class="steps-list__item step">
+                <div class="step__number">05</div>
+                <div class="step__title">Вывоз</div>
+                <div class="step__descr">Вывоз домокомплекта,<br> начало работ бригады +&nbsp;вторая оплата 35%</div>
+            </li>
+            <li class="steps-list__item step">
+                <div class="step__number">06</div>
+                <div class="step__title">Приемка</div>
+                <div class="step__descr">Приемка проекта согласно документации, заказчиком и  прорабом +&nbsp;остаток оплаты 30%</div>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <div class="advantages">
     <div class="container">
         <div class="advantages__title section-title">Наши преимущества</div>
@@ -174,7 +212,7 @@ $this->context->layout = '//front';
             ]) ?>
         </div>
 
-		<?= $this->render('@theme/views/_fast-consult') ?>
+        <?= $this->render('@theme/views/_fast-consult') ?>
     </div>
 </div>
 
@@ -197,8 +235,8 @@ $this->context->layout = '//front';
             'key' => 'question-row',
             'mode' => LeadForm::MODE_INLINE,
         ]) ?>
-		<?= $this->render('@theme/views/_faq-block') ?>
-	</div>
+        <?= $this->render('@theme/views/_faq-block') ?>
+    </div>
 </div>
 
 <div class="content-block content-block--fillwidth-bg">
@@ -217,9 +255,9 @@ $this->context->layout = '//front';
 <?= $this->render('@theme/views/_quality-protection') ?>
 
 <?php if (0): ?>
-<div class="content-block">
-	<div class="h2 content-block__title text-center">Химические исследования</div>
-	<?= Block::widget([
+    <div class="content-block">
+       <div class="h2 content-block__title text-center">Химические исследования</div>
+       <?= Block::widget([
         'position' => 'chemical_research',
     ]) ?>
 </div>
