@@ -14,6 +14,74 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
 
 /* @var $this View */
 ?>
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="/" class="header__logo">
+                    <img class="header__logo-img" src="/images/logo.jpg" alt="">
+                    <span>
+                        <div class="header__logo-name">Фортуна</div>
+                        <div class="header__logo-descr">Домостроительная компания</div>
+                    </span>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="header__contact header__contact--city">
+                            <div class="header__contact-key">Ваш город:</div>
+                            <div class="header__contact-value">г. Москва <i class="fa fa-chevron-down"></i></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="header__contact header__contact--tel">
+                            <div class="header__contact-key">Телефон:</div>
+                            <div class="header__contact-value">
+                                <div class="dropdown">
+                                    <button class="header__tel-toggle dropdown-toggle" type="button" id="dropdownTel" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">8-800-775-18-13 <i class="fa fa-chevron-down"></i></button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownTel">
+                                        <li>
+                                            Отдел Продаж:
+                                            <a href="tel:+74957751813">+7-495-775-18-13</a>
+                                        </li>
+                                        <li>
+                                            Горячяя Линия:
+                                            <a href="tel:89267751813">8-926-775-18-13</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="header__contact header__contact--email">
+                            <div class="header__contact-key">Email:</div>
+                            <div class="header__contact-value">fortuna-les@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">                        
+                        <div class="header__contact header__contact--mode">
+                            <div class="header__contact-key">Режим работы:</div>
+                            <div class="header__contact-value">Пн-Пт: 09:00-19:00</div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="header__contact header__contact--address">
+                            <div class="header__contact-key">Адрес:</div>
+                            <div class="header__contact-value">г. Москва, ул. Летчика Бабушкина, д. 123, оф. 244</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="btn btn-primary header__btn header__btn--call">Заказать звонок</a>
+                <a href="#" class="btn btn-success header__btn header__btn--question">Задать вопрос</a>
+            </div>
+        </div>
+    </div>
+</header>
+
 <div class="top-controls">
     <div class="container">
         <div class="row">
@@ -51,10 +119,10 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
     <div class="container">
         <div class="top-panel">
             <?php if (0): ?>
-            <span class="top-panel__low-vision" title="Версия сайта для слабовидящих">
-                <a rel="nofollow" class="top-panel__low-vision-toggle">Версия сайта для слабовидящих</a>
-                <a rel="nofollow" class="top-panel__low-vision-toggle top-panel__low-vision-toggle_back">Обычная версия сайта</a>
-            </span>
+                <span class="top-panel__low-vision" title="Версия сайта для слабовидящих">
+                    <a rel="nofollow" class="top-panel__low-vision-toggle">Версия сайта для слабовидящих</a>
+                    <a rel="nofollow" class="top-panel__low-vision-toggle top-panel__low-vision-toggle_back">Обычная версия сайта</a>
+                </span>
             <?php endif; ?>
             <div class="row">
                 <div class="col-md-2 col-lg-3 top-panel__col-logo">
