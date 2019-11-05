@@ -24,6 +24,13 @@
 
 body {
     font-family: "SegoeUI", Arial, sans-serif;
+    color: #000e39;
+}
+
+.ul-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .why-us {
@@ -38,7 +45,6 @@ body {
     font-size: 48px;
     line-height: 1;
     font-weight: bold;
-    color: #000e39;
     margin-bottom: 35px;
 }
 
@@ -47,10 +53,10 @@ body {
 }
 
 .section-title {
+    text-align: center;
     font-size: 42px;
     line-height: 1.15;
     font-weight: bold;
-    color: #000e39;
     position: relative;
     padding-bottom: 25px;
 }
@@ -128,5 +134,84 @@ body {
     font-size: 18px;
     line-height: 1.3;
     font-weight: 600;
-    color: #000e39;
+}
+
+.advantages {
+    padding: 70px 0 40px;
+    background-repeat: no-repeat;
+    background-image: url("../images/why-us-bg.png");
+    text-align: center;
+}
+
+.advantages__title {
+    margin-bottom: 60px;
+}
+
+.advantages-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.advantages-list__item {
+    width: calc(100% / 7);
+}
+
+.advantage__circle {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 94px;
+    height: 94px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    color: #00bbdf;
+    border-radius: 50%;
+    border: 1px solid #49d074;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.02);
+    transition: 0.25s;
+}
+
+.advantage__circle::before,
+.advantage__circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid #49d074;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.02);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.advantage__circle::before {
+    width: 110px;
+    height: 110px;
+}
+
+.advantage__circle::after {
+    width: 128px;
+    height: 128px;
+}
+
+.advantage__circle:hover {
+    color: #54d27c;
+}
+
+.advantage__circle:hover::before {
+    opacity: 0.5;
+}
+
+.advantage__circle:hover::after {
+    opacity: 0.3;
+}
+
+.advantage__descr {
+    font-size: 16px;
+    font-weight: 600;
 }
