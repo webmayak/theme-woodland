@@ -13,6 +13,103 @@ use yii\web\View;
 /* @var $this View */
 ?>
 
+<footer class="footer">
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    logo
+                </div>
+                <div class="col-md-2">
+                    <div class="footer__menu-title">Информация</div>
+                    <ul class="footer__menu ul-reset">
+                        <li>
+                            <a href="">Способы оплаты</a>
+                        </li>
+                        <li>
+                            <a href="">Гарантия</a>
+                        </li>
+                        <li>
+                            <a href="">Доставка по России</a>
+                        </li>
+                        <li>
+                            <a href="">Наши партнеры</a>
+                        </li>
+                        <li>
+                            <a href="">Отзывы о компании</a>
+                        </li>
+                        <li>
+                            <a href="">Реквизиты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer__menu-title">ПРОЕКТЫ</div>
+                    <ul class="footer__menu ul-reset">
+                        <li>
+                            <a href="">Дома из бруса</a>
+                        </li>
+                        <li>
+                            <a href="">Коттеджи из бруса</a>
+                        </li>
+                        <li>
+                            <a href="">Бани из бруса</a>
+                        </li>
+                        <li>
+                            <a href="">Каркасные дома</a>
+                        </li>
+                        <li>
+                            <a href="">Перевозные бани</a>
+                        </li>
+                        <li>
+                            <a href="">Навесы для машины</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <div class="footer__menu-title">СТРОИТЕЛЬСТВО</div>
+                    <ul class="footer__menu ul-reset">
+                        <li>
+                            <a href="">Фундамент</a>
+                        </li>
+                        <li>
+                            <a href="">Строительство срубов</a>
+                        </li>
+                        <li>
+                            <a href="">Внутренняя отделка</a>
+                        </li>
+                        <li>
+                            <a href="">Печи для бань</a>
+                        </li>
+                        <li>
+                            <a href="">Строительство бань</a>
+                        </li>
+                        <li>
+                            <a href="">Калькулятор</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    contacts
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    Copyright © fortuna-les.ru 2008-2019
+                </div>
+                <div class="col-md-6 text-right">
+                    Создание и продвижение сайта от Iceseo
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<?php if (0) : ?>
 <footer id="footer">
     <div class="footer-middle">
         <div class="container">
@@ -118,3 +215,4 @@ use yii\web\View;
         </div>
     </div>
 </footer>
+<?php endif; ?>

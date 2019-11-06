@@ -550,3 +550,28 @@ body {
 .step__descr {
     font-size: 16px;
 }
+
+.footer-middle {
+    padding: 120px 0;
+    background-color: #2a2c2b;
+    color: #ffffff;
+}
+
+.footer__menu-title {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.footer__menu li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.footer__menu a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom {
+    padding: 35px 0;
+    background-color: #1c1d1c;
+    color: rgba(255, 255, 255, 0.8);
+}
