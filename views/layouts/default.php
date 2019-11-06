@@ -41,12 +41,18 @@ $this->beginPage();
 <body class="page-<?= $_SERVER['REQUEST_URI'] == '/' ? 'front' : str_replace('/', '-', trim($_SERVER['REQUEST_URI'], '/')) ?>">
 <?php $this->beginBody() ?>
 <?= $this->render('_header') ?>
+
+<?php if (0) : ?>
 <?= MegaMenu::widget() ?>
+<?php endif; ?>
+
 <div class="wrap">
     <?= TwigRender::widget([
         'text' => $content,
     ]) ?>
 </div>
+
+<?php if (0) : ?>
 <div class="section-subcribe">
     <div class="container">
         <div class="row">
@@ -63,6 +69,8 @@ $this->beginPage();
         </div>
     </div>
 </div>
+<?php endif; ?>
+
 <?= $this->render('_footer') ?>
 <?php $this->endBody() ?>
 <?= Yii::$app->settings->get('script', 'default') ?>
