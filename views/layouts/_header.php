@@ -48,6 +48,24 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
     <symbol id="icon-tw" viewbox="0 -47 512.002 512" fill="currentColor">
         <path d="M191.012 419.043c-22.14 0-44.93-1.793-67.856-5.387-40.379-6.336-81.254-27.457-92.82-33.781L0 363.289l32.844-10.8c35.902-11.805 57.742-19.13 84.777-30.598-27.07-13.11-47.933-36.692-57.976-67.176l-7.641-23.195 6.266.957A113.939 113.939 0 0144 214.883c-12.934-19.645-19.781-43.649-18.324-64.219l1.437-20.246 12.121 4.695a113.316 113.316 0 01-10.98-30.777c-5.293-26.36-.863-54.363 12.476-78.852L51.29 6.102l14.12 16.96c44.66 53.649 101.227 85.473 168.363 94.79-2.742-18.903-.687-37.145 6.114-53.497 7.918-19.039 22.004-35.183 40.722-46.69 20.79-12.778 46-18.97 70.989-17.435 26.511 1.63 50.582 11.563 69.699 28.747 9.336-2.426 16.215-5.016 25.512-8.516 5.593-2.106 11.937-4.496 19.875-7.23l29.25-10.079-19.075 54.477a96.355 96.355 0 013.91-.254l31.235-1.414-18.461 25.23c-1.059 1.446-1.328 1.856-1.703 2.422-1.488 2.242-3.34 5.032-28.68 38.867-6.344 8.473-9.512 19.508-8.922 31.079 2.246 43.968-3.148 83.75-16.043 118.234-12.195 32.625-31.093 60.617-56.164 83.2-31.023 27.937-70.582 47.066-117.582 56.847-23.054 4.797-47.812 7.203-73.437 7.203zm0 0"/>
     </symbol>
+    <symbol id="icon-cart" viewbox="0 0 511.997 511.997" fill="currentColor">
+        <path d="M405.387 362.612c-35.202 0-63.84 28.639-63.84 63.84s28.639 63.84 63.84 63.84 63.84-28.639 63.84-63.84-28.639-63.84-63.84-63.84zm0 89.376c-14.083 0-25.536-11.453-25.536-25.536s11.453-25.536 25.536-25.536c14.083 0 25.536 11.453 25.536 25.536s-11.453 25.536-25.536 25.536zM507.927 115.875a19.128 19.128 0 00-15.079-7.348H118.22l-17.237-72.12a19.16 19.16 0 00-18.629-14.702H19.152C8.574 21.704 0 30.278 0 40.856s8.574 19.152 19.152 19.152h48.085l62.244 260.443a19.153 19.153 0 0018.629 14.702h298.135c8.804 0 16.477-6.001 18.59-14.543l46.604-188.329a19.185 19.185 0 00-3.512-16.406zM431.261 296.85H163.227l-35.853-150.019h341.003L431.261 296.85zM173.646 362.612c-35.202 0-63.84 28.639-63.84 63.84s28.639 63.84 63.84 63.84 63.84-28.639 63.84-63.84-28.639-63.84-63.84-63.84zm0 89.376c-14.083 0-25.536-11.453-25.536-25.536s11.453-25.536 25.536-25.536 25.536 11.453 25.536 25.536-11.453 25.536-25.536 25.536z"/>
+    </symbol>
+    <symbol id="icon-heart" viewbox="0 0 471.701 471.701" fill="currentColor">
+        <path d="M433.601 67.001c-24.7-24.7-57.4-38.2-92.3-38.2s-67.7 13.6-92.4 38.3l-12.9 12.9-13.1-13.1c-24.7-24.7-57.6-38.4-92.5-38.4-34.8 0-67.6 13.6-92.2 38.2-24.7 24.7-38.3 57.5-38.2 92.4 0 34.9 13.7 67.6 38.4 92.3l187.8 187.8c2.6 2.6 6.1 4 9.5 4 3.4 0 6.9-1.3 9.5-3.9l188.2-187.5c24.7-24.7 38.3-57.5 38.3-92.4.1-34.9-13.4-67.7-38.1-92.4zm-19.2 165.7l-178.7 178-178.3-178.3c-19.6-19.6-30.4-45.6-30.4-73.3s10.7-53.7 30.3-73.2c19.5-19.5 45.5-30.3 73.1-30.3 27.7 0 53.8 10.8 73.4 30.4l22.6 22.6c5.3 5.3 13.8 5.3 19.1 0l22.4-22.4c19.6-19.6 45.7-30.4 73.3-30.4 27.6 0 53.6 10.8 73.2 30.3 19.6 19.6 30.3 45.6 30.3 73.3.1 27.7-10.7 53.7-30.3 73.3z"/>
+    </symbol>
+    <symbol id="icon-graph" viewbox="0 -54 512 511" fill="currentColor">
+        <path d="M496 370.617h-10.266V16.5c0-8.836-7.164-16-16-16h-97.593c-8.836 0-16 7.164-16 16v354.117H320.8V91.164c0-8.836-7.164-16-16-16h-97.594c-8.836 0-16 7.164-16 16v279.453h-35.34V165.832c0-8.836-7.164-16-16-16H42.273c-8.835 0-16 7.164-16 16v204.785H16c-8.836 0-16 7.164-16 16s7.164 16 16 16h480c8.836 0 16-7.164 16-16s-7.164-16-16-16zM388.137 32.5h65.593v338.117h-65.593zm-164.93 338.117V107.164h65.594v263.453zM58.273 181.832h65.594v188.785H58.273zm0 0"/>
+    </symbol>
+    <symbol id="icon-bed" viewbox="0 0 350.557 350.557" fill="currentColor">
+        <path d="M349.772 228.298l-42.991-68.063V35.028l-17.5-17.5H61.275l-17.5 17.5v125.206L.784 228.298h348.988zm-77.991-175.77v85.076c-18.886-5.5-49.271-10.742-96.503-10.742s-77.617 5.242-96.503 10.742V52.528h193.006zM0 249.833v35h40.778v48.195h35v-48.195h199v48.195h35v-48.195h40.779v-35z"/><path d="M214.508 114.87V87.267c0-12.104-17.564-21.916-39.23-21.916s-39.229 9.813-39.229 21.916v27.604s24.603-2.174 39.23-2.174 39.229 2.173 39.229 2.173z"/>
+    </symbol>
+    <symbol id="icon-size" viewbox="0 0 438.529 438.529" fill="currentColor">
+        <path d="M180.156 225.828c-1.903-1.902-4.093-2.854-6.567-2.854-2.475 0-4.665.951-6.567 2.854l-94.787 94.787-41.112-41.117c-3.617-3.61-7.895-5.421-12.847-5.421s-9.235 1.811-12.851 5.421c-3.617 3.621-5.424 7.905-5.424 12.854v127.907c0 4.948 1.807 9.229 5.424 12.847 3.619 3.613 7.902 5.424 12.851 5.424h127.906c4.949 0 9.23-1.811 12.847-5.424 3.615-3.617 5.424-7.898 5.424-12.847s-1.809-9.233-5.424-12.854l-41.112-41.104 94.787-94.793c1.902-1.903 2.853-4.086 2.853-6.564 0-2.478-.953-4.66-2.853-6.57l-32.548-32.546zM433.11 5.424C429.496 1.807 425.212 0 420.263 0H292.356c-4.948 0-9.227 1.807-12.847 5.424-3.614 3.615-5.421 7.898-5.421 12.847s1.807 9.233 5.421 12.847l41.106 41.112-94.786 94.787c-1.901 1.906-2.854 4.093-2.854 6.567s.953 4.665 2.854 6.567l32.552 32.548c1.902 1.903 4.086 2.853 6.563 2.853s4.661-.95 6.563-2.853l94.794-94.787 41.104 41.109c3.62 3.616 7.905 5.428 12.854 5.428s9.229-1.812 12.847-5.428c3.614-3.614 5.421-7.898 5.421-12.847V18.268c.003-4.953-1.793-9.228-5.417-12.844z"/>
+    </symbol>
+    <symbol id="icon-calendar" viewbox="0 0 36.447 36.447" fill="currentColor">
+        <path d="M30.224 3.948h-1.098V2.75c0-1.517-1.197-2.75-2.67-2.75-1.474 0-2.67 1.233-2.67 2.75v1.197h-2.74V2.75c0-1.517-1.197-2.75-2.67-2.75-1.473 0-2.67 1.233-2.67 2.75v1.197h-2.74V2.75c0-1.517-1.197-2.75-2.67-2.75-1.473 0-2.67 1.233-2.67 2.75v1.197H6.224a4.255 4.255 0 00-4.25 4.25v24a4.255 4.255 0 004.25 4.25h24a4.255 4.255 0 004.25-4.25v-24a4.255 4.255 0 00-4.25-4.249zM25.286 2.75c0-.689.525-1.25 1.17-1.25.646 0 1.17.561 1.17 1.25v4.896c0 .689-.524 1.25-1.17 1.25-.645 0-1.17-.561-1.17-1.25V2.75zm-8.08 0c0-.689.525-1.25 1.17-1.25s1.17.561 1.17 1.25v4.896c0 .689-.525 1.25-1.17 1.25s-1.17-.561-1.17-1.25V2.75zm-8.081 0c0-.689.525-1.25 1.17-1.25s1.17.561 1.17 1.25v4.896c0 .689-.525 1.25-1.17 1.25s-1.17-.561-1.17-1.25V2.75zm22.849 29.448c0 .965-.785 1.75-1.75 1.75h-24c-.965 0-1.75-.785-1.75-1.75v-22h27.5v22z"/><path d="M6.724 14.626h4.595v4.089H6.724zM12.857 14.626h4.596v4.089h-4.596zM18.995 14.626h4.595v4.089h-4.595zM25.128 14.626h4.596v4.089h-4.596zM6.724 20.084h4.595v4.086H6.724zM12.857 20.084h4.596v4.086h-4.596zM18.995 20.084h4.595v4.086h-4.595zM25.128 20.084h4.596v4.086h-4.596zM6.724 25.54h4.595v4.086H6.724zM12.857 25.54h4.596v4.086h-4.596zM18.995 25.54h4.595v4.086h-4.595zM25.128 25.54h4.596v4.086h-4.596z"/>
+    </symbol>
 </svg>
 
 <header class="header">
@@ -68,247 +86,247 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                         <div class="header__contact header__contact--city">
                             <div class="header__contact-icon-wrap">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="10">
-                                    <use xlink:href="#icon-city">
-                                    </svg>
-                                </div>
-                                <div>
-                                    <div class="header__contact-key">Ваш город:</div>
-                                    <div class="header__contact-value">
-                                        <div class="dropdown">
-                                            <button class="header__contact-toggle dropdown-toggle" type="button" data-toggle="dropdown">г. Москва <i class="fa fa-chevron-down"></i></button>
-                                            <ul class="header__city-dropdown dropdown-menu">
-                                                <li>
-                                                    <button class="header__city-item header__city-item--active" type="button">г. Москва</button>
-                                                </li>
-                                                <li>
-                                                    <button class="header__city-item" type="button">г.Санкт-Петербург</button>
-                                                </li>
-                                                <li>
-                                                    <button class="header__city-item" type="button">г.Сочи</button>
-                                                </li>
-                                                <li>
-                                                    <button class="header__city-item" type="button">г.Нижний Новгород</button>
-                                                </li>
-                                                <li>
-                                                    <button class="header__city-item" type="button">г.Новосибирск</button>
-                                                </li>
-                                                <li>
-                                                    <button class="header__city-item" type="button">г.Екатеренбург</button>
-                                                </li>
-                                                <li>
-                                                    <button class="header__city-item" type="button">г.Самара</button>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                    <use xlink:href="#icon-city"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="header__contact-key">Ваш город:</div>
+                                <div class="header__contact-value">
+                                    <div class="dropdown">
+                                        <button class="header__contact-toggle dropdown-toggle" type="button" data-toggle="dropdown">г. Москва <i class="fa fa-chevron-down"></i></button>
+                                        <ul class="header__city-dropdown dropdown-menu">
+                                            <li>
+                                                <button class="header__city-item header__city-item--active" type="button">г. Москва</button>
+                                            </li>
+                                            <li>
+                                                <button class="header__city-item" type="button">г.Санкт-Петербург</button>
+                                            </li>
+                                            <li>
+                                                <button class="header__city-item" type="button">г.Сочи</button>
+                                            </li>
+                                            <li>
+                                                <button class="header__city-item" type="button">г.Нижний Новгород</button>
+                                            </li>
+                                            <li>
+                                                <button class="header__city-item" type="button">г.Новосибирск</button>
+                                            </li>
+                                            <li>
+                                                <button class="header__city-item" type="button">г.Екатеренбург</button>
+                                            </li>
+                                            <li>
+                                                <button class="header__city-item" type="button">г.Самара</button>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="header__contact header__contact--tel">
-                                <div class="header__contact-icon-wrap">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="10">
-                                        <use xlink:href="#icon-tel">
-                                        </svg>
-                                    </div>
-                                    <div>
-                                        <div class="header__contact-key">Телефон:</div>
-                                        <div class="header__contact-value">
-                                            <div class="dropdown">
-                                                <button class="header__contact-toggle dropdown-toggle" type="button" data-toggle="dropdown">8-800-775-18-13 <i class="fa fa-chevron-down"></i></button>
-                                                <ul class="header__tel-dropdown dropdown-menu">
-                                                    <li>
-                                                        Отдел Продаж:
-                                                        <a href="tel:+74957751813">+7-495-775-18-13</a>
-                                                    </li>
-                                                    <li>
-                                                        Горячая Линия:
-                                                        <a href="tel:89267751813">8-926-775-18-13</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="header__contact header__contact--tel">
+                            <div class="header__contact-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="10">
+                                    <use xlink:href="#icon-tel"/>
+                                </svg>
                             </div>
-                            <div class="col-md-4">
-                                <div class="header__contact header__contact--email">
-                                    <div class="header__contact-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" height="10">
-                                            <use xlink:href="#icon-email">
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="header__contact-key">Email:</div>
-                                            <div class="header__contact-value">fortuna-les@gmail.com</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="header__contact header__contact--mode">
-                                        <div class="header__contact-icon-wrap">
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="10">
-                                                <use xlink:href="#icon-mode">
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="header__contact-key">Режим работы:</div>
-                                            <div class="header__contact-value">Пн-Пт: 09:00-19:00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="header__contact header__contact--address">
-                                        <div class="header__contact-icon-wrap">
-                                            <svg xmlns="http://www.w3.org/2000/svg" height="12">
-                                                <use xlink:href="#icon-address">
-                                            </svg>
-                                        </div>
-                                        <div>
-                                            <div class="header__contact-key">Адрес:</div>
-                                            <div class="header__contact-value">г. Москва, ул. Летчика Бабушкина, д. 123, оф. 244</div>
-                                        </div>
+                            <div>
+                                <div class="header__contact-key">Телефон:</div>
+                                <div class="header__contact-value">
+                                    <div class="dropdown">
+                                        <button class="header__contact-toggle dropdown-toggle" type="button" data-toggle="dropdown">8-800-775-18-13 <i class="fa fa-chevron-down"></i></button>
+                                        <ul class="header__tel-dropdown dropdown-menu">
+                                            <li>
+                                                Отдел Продаж:
+                                                <a href="tel:+74957751813">+7-495-775-18-13</a>
+                                            </li>
+                                            <li>
+                                                Горячая Линия:
+                                                <a href="tel:89267751813">8-926-775-18-13</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <a href="#" class="btn btn-primary header__btn btn--call">Заказать звонок</a>
-                            <a href="#" class="btn btn-success header__btn btn--question">Задать вопрос</a>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="header__contact header__contact--email">
+                            <div class="header__contact-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="10">
+                                    <use xlink:href="#icon-email"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="header__contact-key">Email:</div>
+                                <div class="header__contact-value">fortuna-les@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="header__contact header__contact--mode">
+                            <div class="header__contact-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="10">
+                                    <use xlink:href="#icon-mode"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="header__contact-key">Режим работы:</div>
+                                <div class="header__contact-value">Пн-Пт: 09:00-19:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="header__contact header__contact--address">
+                            <div class="header__contact-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="12">
+                                    <use xlink:href="#icon-address"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="header__contact-key">Адрес:</div>
+                                <div class="header__contact-value">г. Москва, ул. Летчика Бабушкина, д. 123, оф. 244</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </header>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="btn btn-primary header__btn btn--call">Заказать звонок</a>
+                <a href="#" class="btn btn-success header__btn btn--question">Задать вопрос</a>
+            </div>
+        </div>
+    </div>
+</header>
 
-            <?php if (0) : ?>
-            <div class="top-controls">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-5">
-                            <div class="top-controls__left">
-                                <?= Geolocation::widget([
-                                    'labelYourLocation' => 'Ваш город:',
-                                    'labelLocationNotDetected' => 'не указан',
-                                    'labelChangeLocation' => 'Выбрать город',
-                                ]) ?>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-7">
-                            <div class="top-controls__right">
-                                <?= LeadForm::widget([
-                                    'key' => 'iDoctor',
-                                    'text' => 'Я врач<span class="hidden-sm hidden-xs"> - желаю сотрудничать</span>',
-                                    'options' => [
-                                        'class' => '',
-                                    ],
-                                ]) ?>
-                                <?= LeadForm::widget([
-                                    'key' => 'getRecommendations',
-                                    'text' => 'Получить рекомендации по лечению гепатита С',
-                                    'options' => [
-                                        'class' => '',
-                                    ],
-                                ]) ?>
-                            </div>
-                        </div>
+<?php if (0) : ?>
+    <div class="top-controls">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-5">
+                    <div class="top-controls__left">
+                        <?= Geolocation::widget([
+                            'labelYourLocation' => 'Ваш город:',
+                            'labelLocationNotDetected' => 'не указан',
+                            'labelChangeLocation' => 'Выбрать город',
+                        ]) ?>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-7">
+                    <div class="top-controls__right">
+                        <?= LeadForm::widget([
+                            'key' => 'iDoctor',
+                            'text' => 'Я врач<span class="hidden-sm hidden-xs"> - желаю сотрудничать</span>',
+                            'options' => [
+                                'class' => '',
+                            ],
+                        ]) ?>
+                        <?= LeadForm::widget([
+                            'key' => 'getRecommendations',
+                            'text' => 'Получить рекомендации по лечению гепатита С',
+                            'options' => [
+                                'class' => '',
+                            ],
+                        ]) ?>
                     </div>
                 </div>
             </div>
-            <header>
-                <div class="container">
-                    <div class="top-panel">
-                        <?php if (0): ?>
-                            <span class="top-panel__low-vision" title="Версия сайта для слабовидящих">
-                                <a rel="nofollow" class="top-panel__low-vision-toggle">Версия сайта для слабовидящих</a>
-                                <a rel="nofollow" class="top-panel__low-vision-toggle top-panel__low-vision-toggle_back">Обычная версия сайта</a>
-                            </span>
-                        <?php endif; ?>
-                        <div class="row">
-                            <div class="col-md-2 col-lg-3 top-panel__col-logo">
-                                <a href="/">
-                                    <img src="/images/logo.svg" alt="Индиавир" id="logo" />
-                                </a>
-                                <small class="top-panel__logo-text">Препараты от Гепатита и ВИЧ из Индии</small>
-                            </div>
-                            <div class="col-md-8 col-lg-6 top-panel__col-contacts">
-                                <div class="creative_header_address">
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <div class="single_header_address first">
-                                            <div class="creative_header_icon">
-                                                <?= LeadForm::widget([
-                                                    'key' => 'callMe',
-                                                    'text' => '<i class="fa fa-phone"></i>',
-                                                    'options' => [
-                                                        'class' => '',
-                                                    ],
-                                                ]) ?>
-                                            </div>
-                                            <div class="creative_header_address_text">
-                                                <h3>Телефон</h3>
-                                                <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><?= Yii::$app->contactsManager->get('phone_city') ?></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
-                                        <div class="single_header_address" style="position: relative; left: -30px;">
-                                            <div class="creative_header_icon">
-                                                <?= LeadForm::widget([
-                                                    'key' => 'callMe',
-                                                    'text' => '<i class="fa fa-phone"></i>',
-                                                    'options' => [
-                                                        'class' => '',
-                                                    ],
-                                                ]) ?>
-                                            </div>
-                                            <div class="creative_header_address_text">
-                                                <h3 style="margin-right: -30px;">Бесплатная&nbsp;консультация</h3>
-                                                <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile') ?></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
-                                        <div class="single_header_address ctrp" style="position: relative; left: -20px; margin-right: -35px;">
-                                            <a href="/contacts" class="creative_header_icon">
-                                                <i class="fa fa-map-marker"></i>
-                                            </a>
-                                            <div class="creative_header_address_text">
-                                                <h3>Главный офис</h3>
-                                                <a href="/contacts" style="font-size: 13px; line-height: 1.6em; display: inline-block;"><?= nl2br(Yii::$app->contactsManager->get('address')) ?></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-2 col-lg-3 top-panel__col-buttons text-right">
-                                <div class="top-panel__icons">
-                                    <a href="<?= Yii::$app->contactsManager->get('social_facebook') ?>" target="_blank"><img src="/images/icon-fb.svg"></a>
-                                    <a href="<?= Yii::$app->contactsManager->get('social_whatsapp') ?>" target="_blank"><img src="/images/icon-wa.svg"></a>
-                                    <a href="<?= Yii::$app->contactsManager->get('social_youtube') ?>" target="_blank"><img src="/images/icon-youtube.svg"></a>
-                                    <a href="<?= Yii::$app->contactsManager->get('social_instagram') ?>" target="_blank"><img src="/images/icon-instagram.svg"></a>
-                                    <a href="<?= Yii::$app->contactsManager->get('social_vkontakte') ?>" target="_blank"><img src="/images/icon-vk.svg"></a>
-                                </div>
-                                <div class="top-panel__email">
-                                    <i class="fa fa-envelope"></i> <a href="mailto:<?= Yii::$app->contactsManager->get('email') ?>" style="font-size: 13px;"><?= Yii::$app->contactsManager->get('email') ?></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <div class="wsmobileheader clearfix">
-                <div class="container">
-                    <div class="wsmobileheader__holder">
-                        <a id="wsnavtoggle">
-                            <div class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </div>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="top-panel">
+                <?php if (0): ?>
+                    <span class="top-panel__low-vision" title="Версия сайта для слабовидящих">
+                        <a rel="nofollow" class="top-panel__low-vision-toggle">Версия сайта для слабовидящих</a>
+                        <a rel="nofollow" class="top-panel__low-vision-toggle top-panel__low-vision-toggle_back">Обычная версия сайта</a>
+                    </span>
+                <?php endif; ?>
+                <div class="row">
+                    <div class="col-md-2 col-lg-3 top-panel__col-logo">
+                        <a href="/">
+                            <img src="/images/logo.svg" alt="Индиавир" id="logo" />
                         </a>
-                        <div class="logo">
-                            <a href="/">
-                                <img src="/images/logo.svg" height="30" style="margin-top: 8px; margin-left: -40px;" alt=""/>
-                            </a>
+                        <small class="top-panel__logo-text">Препараты от Гепатита и ВИЧ из Индии</small>
+                    </div>
+                    <div class="col-md-8 col-lg-6 top-panel__col-contacts">
+                        <div class="creative_header_address">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="single_header_address first">
+                                    <div class="creative_header_icon">
+                                        <?= LeadForm::widget([
+                                            'key' => 'callMe',
+                                            'text' => '<i class="fa fa-phone"></i>',
+                                            'options' => [
+                                                'class' => '',
+                                            ],
+                                        ]) ?>
+                                    </div>
+                                    <div class="creative_header_address_text">
+                                        <h3>Телефон</h3>
+                                        <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><?= Yii::$app->contactsManager->get('phone_city') ?></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                                <div class="single_header_address" style="position: relative; left: -30px;">
+                                    <div class="creative_header_icon">
+                                        <?= LeadForm::widget([
+                                            'key' => 'callMe',
+                                            'text' => '<i class="fa fa-phone"></i>',
+                                            'options' => [
+                                                'class' => '',
+                                            ],
+                                        ]) ?>
+                                    </div>
+                                    <div class="creative_header_address_text">
+                                        <h3 style="margin-right: -30px;">Бесплатная&nbsp;консультация</h3>
+                                        <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile') ?></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                                <div class="single_header_address ctrp" style="position: relative; left: -20px; margin-right: -35px;">
+                                    <a href="/contacts" class="creative_header_icon">
+                                        <i class="fa fa-map-marker"></i>
+                                    </a>
+                                    <div class="creative_header_address_text">
+                                        <h3>Главный офис</h3>
+                                        <a href="/contacts" style="font-size: 13px; line-height: 1.6em; display: inline-block;"><?= nl2br(Yii::$app->contactsManager->get('address')) ?></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-lg-3 top-panel__col-buttons text-right">
+                        <div class="top-panel__icons">
+                            <a href="<?= Yii::$app->contactsManager->get('social_facebook') ?>" target="_blank"><img src="/images/icon-fb.svg"></a>
+                            <a href="<?= Yii::$app->contactsManager->get('social_whatsapp') ?>" target="_blank"><img src="/images/icon-wa.svg"></a>
+                            <a href="<?= Yii::$app->contactsManager->get('social_youtube') ?>" target="_blank"><img src="/images/icon-youtube.svg"></a>
+                            <a href="<?= Yii::$app->contactsManager->get('social_instagram') ?>" target="_blank"><img src="/images/icon-instagram.svg"></a>
+                            <a href="<?= Yii::$app->contactsManager->get('social_vkontakte') ?>" target="_blank"><img src="/images/icon-vk.svg"></a>
+                        </div>
+                        <div class="top-panel__email">
+                            <i class="fa fa-envelope"></i> <a href="mailto:<?= Yii::$app->contactsManager->get('email') ?>" style="font-size: 13px;"><?= Yii::$app->contactsManager->get('email') ?></a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </header>
+    <div class="wsmobileheader clearfix">
+        <div class="container">
+            <div class="wsmobileheader__holder">
+                <a id="wsnavtoggle">
+                    <div class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </div>
+                </a>
+                <div class="logo">
+                    <a href="/">
+                        <img src="/images/logo.svg" height="30" style="margin-top: 8px; margin-left: -40px;" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 <?php endif; ?>
