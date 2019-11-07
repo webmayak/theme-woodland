@@ -89,6 +89,110 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<div class="categories">
+    <div class="container">
+        <h2 class="categories__title section-title">Категории</h2>
+        <ul class="categories__list ul-reset">
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-1.jpg" alt="">
+                    <div class="categories__item-title">Дома из бруса</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-2.jpg" alt="">
+                    <div class="categories__item-title">Каркасные</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-3.jpg" alt="">
+                    <div class="categories__item-title">Бани</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-4.jpg" alt="">
+                    <div class="categories__item-title">Одноэтажные</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-5.jpg" alt="">
+                    <div class="categories__item-title">Беседки</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-6.jpg" alt="">
+                    <div class="categories__item-title">Туалеты</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-7.jpg" alt="">
+                    <div class="categories__item-title">Гаражи</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-8.jpg" alt="">
+                    <div class="categories__item-title">Декор</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-1.jpg" alt="">
+                    <div class="categories__item-title">Дома из бруса</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-2.jpg" alt="">
+                    <div class="categories__item-title">Каркасные</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-3.jpg" alt="">
+                    <div class="categories__item-title">Бани</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-4.jpg" alt="">
+                    <div class="categories__item-title">Одноэтажные</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-5.jpg" alt="">
+                    <div class="categories__item-title">Беседки</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-6.jpg" alt="">
+                    <div class="categories__item-title">Туалеты</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-7.jpg" alt="">
+                    <div class="categories__item-title">Гаражи</div>
+                </a>
+            </li>
+            <li class="categories__item">
+                <a class="categories__item-link" href="#">
+                    <img class="categories__item-img" src="/images/category-8.jpg" alt="">
+                    <div class="categories__item-title">Декор</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <div class="steps">
     <div class="container">
         <h2 class="steps__title section-title">Как мы работаем</h2>
