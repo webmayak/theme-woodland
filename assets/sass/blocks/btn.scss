@@ -1,0 +1,72 @@
+.btn {
+  font-size: inherit;
+  line-height: inherit;
+  transition: 0.25s;
+
+  &--call,
+  &--question {
+    max-width: 195px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding: 14px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+
+    &::before {
+      content: "";
+      flex-shrink: 0;
+      margin-right: 8px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.btn--call::before {
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/btn-call-icon.svg");
+}
+
+.btn--question::before {
+  width: 14px;
+  height: 14px;
+  background-image: url("../images/btn-question-icon.svg");
+}
+
+.btn-primary {
+  background-color: $primary;
+  border-color: $primary;
+
+  &:hover,
+  &:focus,
+  &:not(:disabled):not(.disabled):active {
+    background-color: darken($primary, 8%);
+    border-color: darken($primary, 8%);
+  }
+}
+
+.btn-success {
+  background-color: $success;
+  border-color: $success;
+
+  &:hover,
+  &:focus,
+  &:not(:disabled):not(.disabled):active {
+    background-color: darken($success, 8%);
+    border-color: darken($success, 8%);
+  }
+}
+
+.btn-outline-success {
+  color: $success;
+  border-color: $success;
+
+  &:hover,
+  &:focus,
+  &:not(:disabled):not(.disabled):active {
+    background-color: darken($success, 8%);
+    border-color: darken($success, 8%);
+  }
+}

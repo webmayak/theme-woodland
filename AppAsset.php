@@ -15,6 +15,7 @@ class AppAsset extends AssetBundle
     public $sourcePath = __DIR__.'/assets';
     public $baseUrl = '@web';
     public $css = [
+        'css/bootstrap.min.css',
         '//fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp;subset=cyrillic',
         '//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
         'js/webslidemenu/webslidemenu.css',
@@ -22,11 +23,12 @@ class AppAsset extends AssetBundle
         // 'css/medical-theme-default.css',
         // 'css/kingcomposer.min.css',
         // 'css/medical-style.css',
-        'css/main.css',
+        'css/main.min.css',
         // 'css/responsive.css',
         //'css/colors.less',
     ];
     public $js = [
+        'js/bootstrap.bundle.min.js',
         'js/webslidemenu/webslidemenu.js',
         'js/jquery.goup.min.js',
         'js/js.cookie.js',
@@ -34,9 +36,7 @@ class AppAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
         OwlCarouserAsset::class,
-        BootstrapPluginAsset::class,
         SyncedOwlsAsset::class,
     ];
     public function init()

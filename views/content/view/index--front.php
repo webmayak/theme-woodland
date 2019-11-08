@@ -60,8 +60,8 @@ $this->context->layout = '//front';
     <div class="container">
         <h1 class="why-us__title-big">Домостроительная компания</h1>
         <h2 class="why-us__title section-title">Почему выбирают нас</h2>
-        <div class="row">
-            <div class="col-md-2 col-md-offset-2">
+        <div class="row justify-content-center">
+            <div class="col-md-2">
                 <div class="why-us-item">
                     <div class="why-us-item__circle">19</div>
                     <div class="why-us-item__descr">Лет <br>работы</div>
@@ -207,32 +207,32 @@ $this->context->layout = '//front';
                     <ul class="product-card__params ul-reset">
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-address"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-address"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-bed"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-bed"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Комнат: <b>5</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
-                                    <use xlink:href="#icon-size"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-size"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-calendar"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-calendar"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
@@ -243,20 +243,20 @@ $this->context->layout = '//front';
                     <div class="product-card__actions">
                         <button class="product-card__to-cart btn btn-primary">
                             Заказать
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-                                <use xlink:href="#icon-cart"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-cart"/>
                             </svg>
                         </button>
-                        <button class="product-card__to-favorites btn btn-success btn-outline">
+                        <button class="product-card__to-favorites btn btn-outline-success">
                             <span class="sr-only">В избранное</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                <use xlink:href="#icon-heart"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-heart"/>
                             </svg>
                         </button>
-                        <button class="product-card__to-compare btn btn-success btn-outline">
+                        <button class="product-card__to-compare btn btn-outline-success">
                             <span class="sr-only">Сравнить</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                <use xlink:href="#icon-graph"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-graph"/>
                             </svg>
                         </button>
                     </div>
@@ -272,32 +272,32 @@ $this->context->layout = '//front';
                     <ul class="product-card__params ul-reset">
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-address"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-address"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-bed"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-bed"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Комнат: <b>5</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
-                                    <use xlink:href="#icon-size"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-size"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-calendar"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-calendar"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
@@ -308,20 +308,20 @@ $this->context->layout = '//front';
                     <div class="product-card__actions">
                         <button class="product-card__to-cart btn btn-primary">
                             Заказать
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-                                <use xlink:href="#icon-cart"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-cart"/>
                             </svg>
                         </button>
-                        <button class="product-card__to-favorites btn btn-success btn-outline">
+                        <button class="product-card__to-favorites btn btn-outline-success">
                             <span class="sr-only">В избранное</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                <use xlink:href="#icon-heart"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-heart"/>
                             </svg>
                         </button>
-                        <button class="product-card__to-compare btn btn-success btn-outline">
+                        <button class="product-card__to-compare btn btn-outline-success">
                             <span class="sr-only">Сравнить</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                <use xlink:href="#icon-graph"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-graph"/>
                             </svg>
                         </button>
                     </div>
@@ -337,32 +337,32 @@ $this->context->layout = '//front';
                     <ul class="product-card__params ul-reset">
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-address"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-address"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-bed"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-bed"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Комнат: <b>5</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
-                                    <use xlink:href="#icon-size"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-size"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-calendar"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-calendar"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
@@ -373,20 +373,20 @@ $this->context->layout = '//front';
                     <div class="product-card__actions">
                         <button class="product-card__to-cart btn btn-primary">
                             Заказать
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-                                <use xlink:href="#icon-cart"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-cart"/>
                             </svg>
                         </button>
-                        <button class="product-card__to-favorites btn btn-success btn-outline">
+                        <button class="product-card__to-favorites btn btn-outline-success">
                             <span class="sr-only">В избранное</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                <use xlink:href="#icon-heart"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-heart"/>
                             </svg>
                         </button>
-                        <button class="product-card__to-compare btn btn-success btn-outline">
+                        <button class="product-card__to-compare btn btn-outline-success">
                             <span class="sr-only">Сравнить</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                <use xlink:href="#icon-graph"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-graph"/>
                             </svg>
                         </button>
                     </div>
@@ -402,32 +402,32 @@ $this->context->layout = '//front';
                     <ul class="product-card__params ul-reset">
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-address"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-address"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-bed"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-bed"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Комнат: <b>5</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
-                                    <use xlink:href="#icon-size"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-size"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                    <use xlink:href="#icon-calendar"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                    <use xlink:href="/images/sprite.svg#icon-calendar"/>
                                 </svg>
                             </div>
                             <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
@@ -438,20 +438,20 @@ $this->context->layout = '//front';
                     <div class="product-card__actions">
                         <button class="product-card__to-cart btn btn-primary">
                             Заказать
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-                                <use xlink:href="#icon-cart"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-cart"/>
                             </svg>
                         </button>
-                        <button class="product-card__to-favorites btn btn-success btn-outline">
+                        <button class="product-card__to-favorites btn btn-outline-success">
                             <span class="sr-only">В избранное</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                <use xlink:href="#icon-heart"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-heart"/>
                             </svg>
                         </button>
-                        <button class="product-card__to-compare btn btn-success btn-outline">
+                        <button class="product-card__to-compare btn btn-outline-success">
                             <span class="sr-only">Сравнить</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                                <use xlink:href="#icon-graph"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                                <use xlink:href="/images/sprite.svg#icon-graph"/>
                             </svg>
                         </button>
                     </div>
@@ -506,7 +506,7 @@ $this->context->layout = '//front';
             <li class="advantages-list__item advantage">
                 <div class="advantage__circle">
                     <svg xmlns="http://www.w3.org/2000/svg" width="29" fill="currentColor">
-                        <use xlink:href="#icon-address">
+                        <use xlink:href="/images/sprite.svg#icon-address">
                     </svg>
                 </div>
                 <div class="advantage__descr">Офисы в Москве и&nbsp;Волгограде</div>
@@ -573,7 +573,7 @@ $this->context->layout = '//front';
                 'limit' => 3,
             ]) ?>
         </div>
-        
+
         <h3 class="main-catalog__subtitle"><a href="/catalog/preparaty-dlya-lechenia-gepatita-b">Препараты для лечения гепатита В</a></h3>
         <div class="main-catalog__subset">
             <?= MainCatalog::widget([

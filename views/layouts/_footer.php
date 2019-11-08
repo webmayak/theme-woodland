@@ -14,7 +14,7 @@ use yii\web\View;
 ?>
 
 <footer class="footer">
-    <div class="footer-middle">
+    <div class="footer__middle">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -31,48 +31,48 @@ use yii\web\View;
                             <li>
                                 <a class="footer__social-link footer__social-link--vk" href="<?= Yii::$app->contactsManager->get('social_vkontakte') ?>" target="_blank">
                                     <span class="sr-only">ВКонтакте</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                        <use xlink:href="#icon-vk">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                        <use xlink:href="/images/sprite.svg#icon-vk">
                                     </svg>
                                 </a>
                             </li>
                             <li>
                                 <a class="footer__social-link footer__social-link--fb" href="<?= Yii::$app->contactsManager->get('social_facebook') ?>" target="_blank">
                                     <span class="sr-only">Facebook</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                        <use xlink:href="#icon-fb">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                        <use xlink:href="/images/sprite.svg#icon-fb">
                                     </svg>
                                 </a>
                             </li>
                             <li>
                                 <a class="footer__social-link footer__social-link--youtube" href="<?= Yii::$app->contactsManager->get('social_youtube') ?>" target="_blank">
                                     <span class="sr-only">YouTube</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                        <use xlink:href="#icon-youtube">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                        <use xlink:href="/images/sprite.svg#icon-youtube">
                                     </svg>
                                 </a>
                             </li>
                             <li>
                                 <a class="footer__social-link footer__social-link--instargam" href="<?= Yii::$app->contactsManager->get('social_instagram') ?>" target="_blank">
                                     <span class="sr-only">Instargam</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                        <use xlink:href="#icon-instargam">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                        <use xlink:href="/images/sprite.svg#icon-instargam">
                                     </svg>
                                 </a>
                             </li>
                             <li>
                                 <a class="footer__social-link footer__social-link--ok" href="#" target="_blank">
                                     <span class="sr-only">OK</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                        <use xlink:href="#icon-ok">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                        <use xlink:href="/images/sprite.svg#icon-ok">
                                     </svg>
                                 </a>
                             </li>
                             <li>
                                 <a class="footer__social-link footer__social-link--tw" href="#" target="_blank">
                                     <span class="sr-only">Twitter</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15">
-                                        <use xlink:href="#icon-tw">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                        <use xlink:href="/images/sprite.svg#icon-tw">
                                     </svg>
                                 </a>
                             </li>
@@ -160,32 +160,32 @@ use yii\web\View;
                         <ul class="footer__contact-list ul-reset">
                             <li class="footer__contact-item">
                                 <div class="footer__contact-item-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
-                                        <use xlink:href="#icon-tel">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor">
+                                        <use xlink:href="/images/sprite.svg#icon-tel">
                                     </svg>
                                 </div>
                                 <div class="footer__contact-item-text">8-800-775-18-13</div>
                             </li>
                             <li class="footer__contact-item">
                                 <div class="footer__contact-item-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12">
-                                        <use xlink:href="#icon-email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" fill="currentColor">
+                                        <use xlink:href="/images/sprite.svg#icon-email">
                                     </svg>
                                 </div>
                                 <div class="footer__contact-item-text">fortuna-les@gmail.com</div>
                             </li>
                             <li class="footer__contact-item">
                                 <div class="footer__contact-item-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12">
-                                        <use xlink:href="#icon-mode">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor">
+                                        <use xlink:href="/images/sprite.svg#icon-mode">
                                     </svg>
                                 </div>
                                 <div class="footer__contact-item-text">Пн-Пт: 09:00-19:00</div>
                             </li>
                             <li class="footer__contact-item">
                                 <div class="footer__contact-item-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12">
-                                        <use xlink:href="#icon-address">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" fill="currentColor">
+                                        <use xlink:href="/images/sprite.svg#icon-address">
                                     </svg>
                                 </div>
                                 <div class="footer__contact-item-text">Шатурский р-н, д. ЦУС Мир д. 1б</div>
@@ -196,16 +196,16 @@ use yii\web\View;
             </div>
         </div>
     </div>
-    <div class="footer-bottom">
+    <div class="footer__bottom">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="footer-bottom__copyright">
+                    <div class="footer__bottom-copyright">
                         <p>Copyright © fortuna-les.ru 2008-2019</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="footer-bottom__development">
+                    <div class="footer__bottom-development">
                         <p>Создание и продвижение сайта от Iceseo</p>
                     </div>
                 </div>
