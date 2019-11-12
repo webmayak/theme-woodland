@@ -7,10 +7,7 @@
  */
 
 use frontend\widgets\leads\request\LeadRequest;
-use kartik\depdrop\DepDrop;
-use nex\datepicker\DatePicker;
 use yii\helpers\Html;
-use yii\helpers\Url;
 use yii\web\View;
 use yii\widgets\ActiveForm;
 use yii\widgets\MaskedInput;
@@ -28,55 +25,10 @@ use yii\widgets\MaskedInput;
         ],
     ]) ?>
     <div class="title-forma">
-        Online-запись на процедуру или консультацию
+        Оставьте Вашу заявку и получите -10%
     </div>
-    <div class="form-home__announce">Оставьте заявку и мы перезвоним Вам в самое ближайшее время!</div>
+    <div class="form-home__announce">Оставьте заявку и получите конечную стоимость уже через 10 минут</div>
     <div class="form-home__form">
-        <div class="row">
-            <div class="col-md-6">
-                <?= $form->field($model, 'categoryLevel1')->dropDownList($model->getCategoryLevel1(), [
-                    'prompt' => 'Процедура..',
-                ])->label(false) ?>
-            </div>
-            <div class="col-md-6">
-                <?= $form->field($model, 'categoryLevel2')->widget(DepDrop::class, [
-                    'options' => ['placeholder' => '..'],
-                    'pluginOptions' => [
-                        'depends' => ['leadrequest-categorylevel1'],
-                        'placeholder' => '--',
-                        'url' => Url::to(['/catalog/default/load-child-category'])
-                    ]
-                ])->label(false) ?>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <?= $form->field($model, 'date')->widget(DatePicker::class, [
-                    'options' => [
-                        'placeholder' => 'Дата',
-                    ],
-                    'language' => Yii::$app->language,
-                    'addon' => false,
-                    'clientOptions' => [
-                        'showTodayButton' => false,
-                        'showClear' => false,
-                        'format' => 'DD-MM-YYYY',
-                    ],
-                ])->label(false) ?>
-            </div>
-            <div class="col-md-6">
-                <?= $form->field($model, 'time')->dropDownList($model->getTime(), [
-                    'prompt' => 'Время',
-                ])->label(false) ?>
-            </div>
-        </div>
-        
-        <?php if (0): ?>
-        <?= $form->field($model, 'affiliate')->dropDownList($model->getAffiliates(), [
-                'prompt' => 'Филиал',
-        ])->label(false) ?>
-        <?php endif; ?>
-
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
@@ -97,17 +49,16 @@ use yii\widgets\MaskedInput;
                 </div>
             </div>
         </div>
-
         <div class="form-group">
             <?= $form->field($model, 'comment')->textarea([
                 'placeholder' => 'Ваш комментарий',
             ])->label(false) ?>
         </div>
         <div class="form-group">
-            <?= Html::submitButton(Html::tag('span', 'ЗАПИСАТЬСЯ', [
+            <?= Html::submitButton(Html::tag('span', 'ОСТАВИТЬ ЗАЯВКУ', [
                 'class' => 'ladda-label',
             ]), [
-                'class' => 'btn btn-primary btn-lg ladda-button',
+                'class' => 'btn btn-success btn-lg ladda-button',
                 'data' => [
                     'style' => 'zoom-in'
                 ],
