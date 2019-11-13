@@ -28,6 +28,7 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/bootstrap.bundle.min.js',
+        'js/svg4everybody.min.js',
         'js/webslidemenu/webslidemenu.js',
         'js/jquery.goup.min.js',
         'js/js.cookie.js',

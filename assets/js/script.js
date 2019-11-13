@@ -107,3 +107,5 @@ $(document).on('pjax:complete', function () {
 $.goup({
     bottomOffset: 50
 });
+
+svg4everybody();
