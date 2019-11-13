@@ -50,6 +50,7 @@
 .btn-success {
   background-color: $success;
   border-color: $success;
+  color: #ffffff;
 
   &:hover,
   &:focus,
@@ -68,5 +69,6 @@
   &:not(:disabled):not(.disabled):active {
     background-color: darken($success, 8%);
     border-color: darken($success, 8%);
+    color: #ffffff;
   }
 }

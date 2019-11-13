@@ -15,7 +15,6 @@ class AppAsset extends AssetBundle
     public $sourcePath = __DIR__.'/assets';
     public $baseUrl = '@web';
     public $css = [
-        'css/bootstrap.min.css',
         '//fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp;subset=cyrillic',
         '//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
         'js/webslidemenu/webslidemenu.css',
