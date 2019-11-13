@@ -648,9 +648,16 @@ $this->context->layout = '//front';
 <?php endif; ?>
 <?php endif; ?>
 
-<div class="container">
-    <?= LeadForm::widget([
-        'key' => 'request',
-        'mode' => LeadForm::MODE_INLINE,
-    ]) ?>
+<div class="contact-form-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <?= LeadForm::widget([
+                    'key' => 'request',
+                    'mode' => LeadForm::MODE_INLINE,
+                ]) ?>
+            </div>
+        </div>
+
+    </div>
 </div>

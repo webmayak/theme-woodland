@@ -1,0 +1,36 @@
+.contact-form-block {
+  color: #ffffff;
+  background-color: #0695b0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/contact-form-bg.jpg");
+  padding: 140px 0 100px;
+
+  .title-forma {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: bold;
+  }
+
+  .form-home__announce {
+    opacity: 0.8;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .form-home__form {
+    margin-top: 35px;
+  }
+
+  .form-control {
+    font-size: 16px;
+    height: 50px;
+    border: none;
+    padding: 10px 20px;
+  }
+
+  button[type="submit"] {
+    min-width: 210px;
+    padding: 15px;
+  }
+}
