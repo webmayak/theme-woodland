@@ -24,17 +24,16 @@ use yii\widgets\MaskedInput;
             'class' => 'form-home lead-form',
         ],
     ]) ?>
-    <div class="title-forma">
-        Оставьте Вашу заявку и получите -10%
-    </div>
-    <div class="form-home__announce">Оставьте заявку и получите конечную стоимость уже через 10 минут</div>
+    <div class="title-forma">Заполните короткую форму</div>
+    <div class="form-home__announce">Менеджер свяжется с Вами в ближайщее время</div>
     <div class="form-home__form">
         <div class="row">
             <div class="col-sm-6">
                 <div class="form-group">
                     <?= $form->field($model, 'name')->textInput([
-                        'placeholder' => 'Ваше имя',
-                    ])->label(false) ?>
+                        'placeholder' => 'Имя',
+                        'class' => 'form-control',
+                    ])->label('Ваше имя') ?>
                 </div>
             </div>
             <div class="col-sm-6">
@@ -45,24 +44,23 @@ use yii\widgets\MaskedInput;
                             'placeholder' => 'Ваш номер телефона',
                             'class' => 'form-control',
                         ],
-                    ])->label(false) ?>
+                    ])->label('Ваш телефон') ?>
                 </div>
             </div>
         </div>
         <div class="form-group">
-            <?= $form->field($model, 'comment')->textarea([
-                'placeholder' => 'Ваш комментарий',
-            ])->label(false) ?>
-        </div>
-        <div class="form-group">
-            <?= Html::submitButton(Html::tag('span', 'ОСТАВИТЬ ЗАЯВКУ', [
+            <?= Html::submitButton(Html::tag('span', 'Оставить заявку →', [
                 'class' => 'ladda-label',
             ]), [
-                'class' => 'btn btn-success btn-lg ladda-button',
+                'class' => 'btn btn-success ladda-button',
                 'data' => [
                     'style' => 'zoom-in'
                 ],
             ]) ?>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="sr-only" id="acception" checked>
+          <label class="form-check-label" for="acception">Даю свое согласие на обработку персональных данных</label>
         </div>
     </div>
     <?php ActiveForm::end(); ?>

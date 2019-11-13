@@ -14,14 +14,12 @@ class LeadRequest extends Lead
 {
     public $name;
     public $phone;
-    public $comment;
 
     public function rules()
     {
         $rules = parent::rules();
         $rules[] = ['name', 'required'];
         $rules[] = ['phone', 'required'];
-        $rules[] = ['comment', 'required'];
         return $rules;
     }
 
@@ -30,7 +28,6 @@ class LeadRequest extends Lead
         $labels = parent::attributeLabels();
         $labels['name'] = 'Имя';
         $labels['phone'] = 'Телефон';
-        $labels['comment'] = 'Комментарий';
         return $labels;
     }
 }
