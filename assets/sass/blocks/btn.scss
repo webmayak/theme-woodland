@@ -35,40 +35,6 @@
   background-image: url("../images/btn-question-icon.svg");
 }
 
-.btn-primary {
-  background-color: $primary;
-  border-color: $primary;
-
-  &:hover,
-  &:focus,
-  &:not(:disabled):not(.disabled):active {
-    background-color: darken($primary, 8%);
-    border-color: darken($primary, 8%);
-  }
-}
-
 .btn-success {
-  background-color: $success;
-  border-color: $success;
   color: #ffffff;
-
-  &:hover,
-  &:focus,
-  &:not(:disabled):not(.disabled):active {
-    background-color: darken($success, 8%);
-    border-color: darken($success, 8%);
-  }
-}
-
-.btn-outline-success {
-  color: $success;
-  border-color: $success;
-
-  &:hover,
-  &:focus,
-  &:not(:disabled):not(.disabled):active {
-    background-color: darken($success, 8%);
-    border-color: darken($success, 8%);
-    color: #ffffff;
-  }
 }

@@ -1,0 +1,54 @@
+.megamenu {
+  background-color: #efefef;
+  border-top: 1px solid rgba(149, 149, 149, 0.1);
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.1);
+}
+
+.wsmenu {
+  float: none;
+  width: 100%;
+  border-left: none;
+
+  & > .wsmenu-list {
+    display: flex;
+
+    & > li {
+      float: none;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 12px;
+        bottom: 12px;
+        width: 1px;
+        background-color: #959595;
+        opacity: 0.2;
+      }
+
+      & > a {
+        color: #323b49;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.25s;
+
+        &:hover {
+          color: $success;
+        }
+      }
+
+      & > .navtext {
+        display: flex;
+        align-items: flex-start;
+        padding: 24px 15px;
+      }
+    }
+  }
+}
+
+.megamenu__icon {
+  flex-shrink: 0;
+  color: $success;
+  margin-right: 5px;
+}

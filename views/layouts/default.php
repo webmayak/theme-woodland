@@ -42,9 +42,7 @@ $this->beginPage();
 <?php $this->beginBody() ?>
 <?= $this->render('_header') ?>
 
-<?php if (0) : ?>
 <?= MegaMenu::widget() ?>
-<?php endif; ?>
 
 <div class="wrap">
     <?= TwigRender::widget([
