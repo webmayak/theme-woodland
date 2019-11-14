@@ -156,7 +156,13 @@ use yii\web\View;
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="footer__contacts">
-                        <a href="#" class="btn btn-primary footer__contacts-btn btn--call">Заказать звонок</a>
+                        <?= LeadForm::widget([
+                            'key' => 'callMe',
+                            'text' => 'Заказать звонок',
+                            'options' => [
+                                'class' => 'btn btn-primary footer__contacts-btn btn--call',
+                            ],
+                        ]) ?>
                         <ul class="footer__contact-list ul-reset">
                             <li class="footer__contact-item">
                                 <div class="footer__contact-item-icon">
