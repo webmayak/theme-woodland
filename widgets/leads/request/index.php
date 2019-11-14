@@ -25,7 +25,7 @@ use yii\widgets\MaskedInput;
         ],
     ]) ?>
     <div class="title-forma">Заполните короткую форму</div>
-    <div class="form-home__announce">Менеджер свяжется с Вами в ближайщее время</div>
+    <div class="form-home__announce">Менеджер свяжется с Вами в ближайшее время</div>
     <div class="form-home__form">
         <div class="row">
             <div class="col-sm-6">
