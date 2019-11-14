@@ -207,12 +207,16 @@ use yii\web\View;
             <div class="row">
                 <div class="col-md-6">
                     <div class="footer__bottom-copyright">
-                        <p>Copyright © fortuna-les.ru 2008-2019</p>
+                        <?= Block::widget([
+                            'position' => 'copyrightLeft',
+                        ]) ?>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="footer__bottom-development">
-                        <p>Создание и продвижение сайта от Iceseo</p>
+                        <?= Block::widget([
+                            'position' => 'copyrightRight',
+                        ]) ?>
                     </div>
                 </div>
             </div>
