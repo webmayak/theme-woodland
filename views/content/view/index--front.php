@@ -766,6 +766,34 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<div class="works">
+    <div class="container">
+        <h2 class="works__title section-title">Наши выполненные работы</h2>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="works__item">
+                    <img src="/images/work-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="works__item">
+                    <img src="/images/work-2.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="works__item">
+                    <img src="/images/work-3.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="works__item">
+                    <img src="/images/work-4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="contact-form-block">
     <div class="container">
         <div class="row">
@@ -776,6 +804,5 @@ $this->context->layout = '//front';
                 ]) ?>
             </div>
         </div>
-
     </div>
 </div>
