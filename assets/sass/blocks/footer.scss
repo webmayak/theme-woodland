@@ -122,3 +122,46 @@
 .footer__bottom-development {
   text-align: right;
 }
+
+@media (max-width: 991px) {
+  .footer__middle {
+    padding: 70px 0;
+  }
+
+  .footer__menu {
+    margin-top: 40px;
+  }
+
+  .footer__contacts {
+    margin-left: 0;
+    width: auto;
+  }
+
+  .footer__contacts-btn {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__bottom-development {
+    text-align: left;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer__middle {
+    padding: 50px 0;
+  }
+
+  .footer__menu-title {
+    margin-bottom: 20px;
+  }
+
+  .footer__contacts {
+    margin-top: 40px;
+  }
+
+  .footer__contacts-btn {
+    margin-bottom: 25px;
+  }
+}

@@ -17,7 +17,7 @@ use yii\web\View;
     <div class="footer__middle">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-8 col-sm-6">
                     <a href="/" class="site-logo footer__logo">
                         <img class="site-logo__img" src="/images/logo.jpg" alt="">
                         <span>
@@ -79,7 +79,7 @@ use yii\web\View;
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-lg-2 order-lg-0 col-md-4 order-sm-3 col-sm-4">
                     <div class="footer__menu">
                         <div class="footer__menu-title">Информация</div>
                         <ul>
@@ -104,7 +104,7 @@ use yii\web\View;
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-lg-2 order-lg-0 col-md-4 order-sm-3 col-sm-4">
                     <div class="footer__menu">
                         <div class="footer__menu-title">ПРОЕКТЫ</div>
                         <ul>
@@ -129,7 +129,7 @@ use yii\web\View;
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-lg-2 order-lg-0 col-md-4 order-sm-3 col-sm-4">
                     <div class="footer__menu">
                         <div class="footer__menu-title">СТРОИТЕЛЬСТВО</div>
                         <ul>
@@ -154,7 +154,7 @@ use yii\web\View;
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
                     <div class="footer__contacts">
                         <a href="#" class="btn btn-primary footer__contacts-btn btn--call">Заказать звонок</a>
                         <ul class="footer__contact-list ul-reset">
