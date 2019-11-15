@@ -8,15 +8,17 @@
   float: none;
   width: 100%;
   border-left: none;
+  font-family: inherit;
 
-  & > .wsmenu-list {
+  > .wsmenu-list {
     display: flex;
+    flex-wrap: wrap;
 
-    & > li {
-      float: none;
+    > li {
       position: relative;
+      flex-grow: 1;
 
-      &::after {
+      &:not(:last-child)::after {
         content: '';
         position: absolute;
         right: 0;
@@ -27,7 +29,31 @@
         opacity: 0.2;
       }
 
-      & > a {
+      &.active {
+        > a {
+          color: $success;
+        }
+
+        > .navtext {
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 4px;
+            background-color: $success;
+          }
+        }
+      }
+
+      &:last-child {
+        > a {
+          padding-right: 0;
+        }
+      }
+
+      > a {
         color: #323b49;
         font-size: 16px;
         font-weight: 600;
@@ -38,10 +64,46 @@
         }
       }
 
-      & > .navtext {
+      > .navtext {
         display: flex;
-        align-items: flex-start;
-        padding: 24px 15px;
+        align-items: center;
+        padding: 24px 12px;
+
+        .fa {
+          font-size: 8px;
+          position: relative;
+          top: 1px;
+          margin-left: 3px;
+        }
+      }
+
+      > .navicon {
+        padding: 14px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #cacaca;
+      }
+
+      > ul.sub-menu {
+        top: 100%;
+        border: none;
+
+        > li {
+          > a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #323b49;
+            padding: 13px 20px;
+            transition: background-color 0.25s;
+
+            &:hover {
+              background-color: $success;
+              color: #ffffff;
+            }
+          }
+        }
       }
     }
   }
@@ -51,4 +113,16 @@
   flex-shrink: 0;
   color: $success;
   margin-right: 5px;
+}
+
+.menu-cart-count {
+  width: 26px;
+  height: 26px;
+  line-height: 24px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 3px;
 }

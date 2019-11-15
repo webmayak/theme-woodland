@@ -25,12 +25,13 @@ use yii\web\View;
                 $catalogIsActive = preg_match('/^(catalog|brands|documenty-certificaty-rezultaty-himicheskih-issledovanii)/', Yii::$app->request->pathInfo);
                 $brandsIsActive = preg_match('/^brands/', Yii::$app->request->pathInfo);
                 ?>
-                <li class="<?= $catalogIsActive ? 'active' : '' ?>" id="main-menu-catalog">
-                    <a href="<?= Url::to(['#']) ?>" class="navtext">
+                <li class="<?= $catalogIsActive ? 'active' : '' ?>active" id="main-menu-catalog">
+                    <a href="<?= Url::to(['#']) ?>" class="navtext vsmenu-cat-toggle">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor">
                             <use xlink:href="/images/sprite.svg#icon-address"/>
                         </svg>
                         Проекты
+                        <i class="fa fa-chevron-down"></i>
                     </a>
                     <ul class="sub-menu">
                         <li>
@@ -61,6 +62,7 @@ use yii\web\View;
                             <use xlink:href="/images/sprite.svg#icon-wall"/>
                         </svg>
                         Строительство
+                        <i class="fa fa-chevron-down"></i>
                     </a>
                 </li>
                 <li class="<?= preg_match('/^lechenie/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
@@ -77,7 +79,16 @@ use yii\web\View;
                             <use xlink:href="/images/sprite.svg#icon-company"/>
                         </svg>
                         О компании
+                        <i class="fa fa-chevron-down"></i>
                     </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Пункт 1</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Пункт 2</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="<?= preg_match('/^reviews/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
@@ -85,7 +96,16 @@ use yii\web\View;
                             <use xlink:href="/images/sprite.svg#icon-percentage"/>
                         </svg>
                         Покупателю
+                        <i class="fa fa-chevron-down"></i>
                     </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Пункт 1</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Пункт 2</a>
+                        </li>
+                    </ul>
                 </li>
                 <?php
                 $faqIsActive = preg_match('/^faq/', Yii::$app->request->pathInfo);
@@ -96,7 +116,16 @@ use yii\web\View;
                             <use xlink:href="/images/sprite.svg#icon-fence"/>
                         </svg>
                         Услуги
+                        <i class="fa fa-chevron-down"></i>
                     </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Пункт 1</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Пункт 2</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="<?= Yii::$app->request->pathInfo === 'contacts' ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
@@ -104,6 +133,35 @@ use yii\web\View;
                             <use xlink:href="/images/sprite.svg#icon-city"/>
                         </svg>
                         Контакты
+                    </a>
+                </li>
+                <li>
+                    <a class="navicon" href="<?= Url::to(['#']) ?>">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                            <use xlink:href="/images/sprite.svg#icon-search"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="navicon" href="<?= Url::to(['#']) ?>">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <use xlink:href="/images/sprite.svg#icon-heart"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="navicon" href="<?= Url::to(['#']) ?>">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <use xlink:href="/images/sprite.svg#icon-graph"/>
+                        </svg>
+                    </a>
+                </li>
+                <li class="active">
+                    <a class="navicon" href="<?= Url::to(['#']) ?>">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <use xlink:href="/images/sprite.svg#icon-cart"/>
+                        </svg>
+                        <span class="menu-cart-count">23</span>
                     </a>
                 </li>
             </ul>
