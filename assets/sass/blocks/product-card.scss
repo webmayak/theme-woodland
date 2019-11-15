@@ -1,5 +1,6 @@
 .product-card {
   position: relative;
+  background-color: #ffffff;
   padding: 20px;
   box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.12);
   border-radius: 10px;
@@ -7,95 +8,84 @@
 
 .product-card__label {
   position: absolute;
-  right: -40px;
-  top: 20px;
+  right: -42px;
+  top: 23px;
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   color: #ffffff;
   transform: rotate(45deg);
-  width: 150px;
-}
+  width: 160px;
 
-.product-card__label::before,
-.product-card__label::after {
-  content: "";
-  position: absolute;
-  top: -1px;
-  border-style: solid;
-}
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+    border-style: solid;
+  }
 
-.product-card__label::before {
-  left: -1px;
-  border-width: 32px 32px 0 0;
-  border-color: #ffffff transparent transparent transparent;
-}
+  &::before {
+    left: 0;
+    border-width: 8px 0 0 8px;
+  }
 
-.product-card__label::after {
-  right: -1px;
-  border-width: 0 32px 32px 0;
-  border-color: transparent #ffffff transparent transparent;
-}
+  &::after {
+    right: 4px;
+    border-width: 8px 0 0 8px;
+  }
 
-.product-card__label div {
-  position: relative;
-  padding: 8px;
-  text-align: center;
-}
+  div {
+    padding: 8px;
+    text-align: center;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  }
 
-.product-card__label div::before,
-.product-card__label div::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  transform: rotate(-45deg);
-  border-style: solid;
-}
+  &--discount {
+    &::before,
+    &::after {
+      border-color: transparent transparent transparent #851425;
+    }
 
-.product-card__label div::before {
-  left: 1px;
-  border-width: 7px 0 0 7px;
-}
+    div {
+      background-color: #df1434;
+    }
+  }
 
-.product-card__label div::after {
-  right: 1px;
-  border-width: 7px 0 0 7px;
-}
+  &--best-price {
+    &::before,
+    &::after {
+      border-color: transparent transparent transparent #106c2d;
+    }
 
-.product-card__label--discount {
-  background-color: #df1434;
-}
+    div {
+      background-color: #23af4f;
+    }
+  }
 
-.product-card__label--discount div::before,
-.product-card__label--discount div::after {
-  border-color: transparent transparent transparent #851425;
-}
+  &--present {
+    &::before,
+    &::after {
+      border-color: transparent transparent transparent #076f81;
+    }
 
-.product-card__label--best-price {
-  background-color: #23af4f;
-}
+    div {
+      background-color: #01b8da;
+    }
+  }
 
-.product-card__label--best-price div::before,
-.product-card__label--best-price div::after {
-  border-color: transparent transparent transparent #106c2d;
-}
+  &--bestseller {
+    &::before,
+    &::after {
+      border-color: transparent transparent transparent #c06104;
+    }
 
-.product-card__label--present {
-  background-color: #01b8da;
-}
-
-.product-card__label--present div::before,
-.product-card__label--present div::after {
-  border-color: transparent transparent transparent #076f81;
-}
-
-.product-card__label--bestseller {
-  background-color: #e8780b;
-}
-
-.product-card__label--bestseller div::before,
-.product-card__label--bestseller div::after {
-  border-color: transparent transparent transparent #c06104;
+    div {
+      background-color: #e8780b;
+    }
+  }
 }
 
 .product-card__img {

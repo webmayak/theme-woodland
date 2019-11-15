@@ -175,7 +175,7 @@ $this->context->layout = '//front';
     <div class="container">
         <h2 class="projects__title section-title">Проекты</h2>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="product-card">
                     <div class="product-card__label product-card__label--discount"><div>скидка</div></div>
                     <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
@@ -240,7 +240,7 @@ $this->context->layout = '//front';
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="product-card">
                     <div class="product-card__label product-card__label--best-price"><div>лучшая цена</div></div>
                     <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
@@ -305,7 +305,7 @@ $this->context->layout = '//front';
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="product-card">
                     <div class="product-card__label product-card__label--present"><div>подарок</div></div>
                     <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
@@ -370,7 +370,7 @@ $this->context->layout = '//front';
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="product-card">
                     <div class="product-card__label product-card__label--bestseller"><div>хит продаж</div></div>
                     <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">

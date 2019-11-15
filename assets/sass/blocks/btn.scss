@@ -35,6 +35,8 @@
   background-image: url("../images/btn-question-icon.svg");
 }
 
-.btn-success {
+.btn-success,
+.btn-outline-success:hover,
+.btn-outline-success:not(:disabled):not(.disabled):active{
   color: #ffffff;
 }
