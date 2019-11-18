@@ -1,5 +1,5 @@
 .why-us {
-  padding: 70px 0 40px;
+  padding: 70px 0 10px;
   background-repeat: no-repeat;
   background-image: url("../images/why-us-bg.png");
   text-align: center;
@@ -10,8 +10,25 @@
   line-height: 1;
   font-weight: bold;
   margin: 0 0 35px;
+  word-break: break-word;
 }
 
 .why-us__title {
   margin-bottom: 60px;
+}
+
+.why-us__item {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .why-us__title-big {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 575px) {
+  .why-us__title-big {
+    font-size: 34px;
+  }
 }

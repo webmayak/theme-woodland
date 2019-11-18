@@ -39,26 +39,26 @@ $this->context->layout = '//front';
         <h1 class="why-us__title-big">Домостроительная компания</h1>
         <h2 class="why-us__title section-title">Почему выбирают нас</h2>
         <div class="row justify-content-center">
-            <div class="col-md-2">
-                <div class="why-us-item">
+            <div class="col-xl-2 col-md-3 col-6">
+                <div class="why-us__item why-us-item">
                     <div class="why-us-item__circle">19</div>
                     <div class="why-us-item__descr">Лет <br>работы</div>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="why-us-item">
+            <div class="col-xl-2 col-md-3 col-6">
+                <div class="why-us__item why-us-item">
                     <div class="why-us-item__circle">2</div>
                     <div class="why-us-item__descr">Собственных <br>производства</div>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="why-us-item">
+            <div class="col-xl-2 col-md-3 col-6">
+                <div class="why-us__item why-us-item">
                     <div class="why-us-item__circle">550</div>
                     <div class="why-us-item__descr">Проектов <br>выполненно</div>
                 </div>
             </div>
-            <div class="col-md-2">
-                <div class="why-us-item">
+            <div class="col-xl-2 col-md-3 col-6">
+                <div class="why-us__item why-us-item">
                     <div class="why-us-item__circle">200</div>
                     <div class="why-us-item__descr">Рабочих <br>в штате</div>
                 </div>
@@ -208,7 +208,7 @@ $this->context->layout = '//front';
         <h2 class="projects__title section-title">Проекты</h2>
         <div class="row">
             <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="product-card">
+                <div class="projects__item product-card">
                     <div class="product-card__label product-card__label--discount"><div>скидка</div></div>
                     <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
                     <a href="#" class="product-card__title-link">
@@ -273,7 +273,7 @@ $this->context->layout = '//front';
                 </div>
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="product-card">
+                <div class="projects__item product-card">
                     <div class="product-card__label product-card__label--best-price"><div>лучшая цена</div></div>
                     <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
                     <a href="#" class="product-card__title-link">
@@ -338,7 +338,7 @@ $this->context->layout = '//front';
                 </div>
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="product-card">
+                <div class="projects__item product-card">
                     <div class="product-card__label product-card__label--present"><div>подарок</div></div>
                     <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
                     <a href="#" class="product-card__title-link">
@@ -403,7 +403,7 @@ $this->context->layout = '//front';
                 </div>
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="product-card">
+                <div class="projects__item product-card">
                     <div class="product-card__label product-card__label--bestseller"><div>хит продаж</div></div>
                     <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
                     <a href="#" class="product-card__title-link">
