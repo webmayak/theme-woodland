@@ -18,3 +18,15 @@
   bottom: 0;
   background-color: $success;
 }
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-title {
+    font-size: 30px;
+  }
+}
