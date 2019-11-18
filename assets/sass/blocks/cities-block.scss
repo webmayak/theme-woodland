@@ -31,3 +31,19 @@
     }
   }
 }
+
+@media (max-width: 991px) {
+  .cities-block__list {
+    ul {
+      column-count: 3;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cities-block__list {
+    ul {
+      column-count: 2;
+    }
+  }
+}
