@@ -70,104 +70,136 @@ $this->context->layout = '//front';
 <div class="categories">
     <div class="container">
         <h2 class="categories__title section-title">Категории</h2>
-        <ul class="categories__list ul-reset">
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-1.jpg" alt="">
-                    <div class="categories__item-title">Дома из бруса</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-2.jpg" alt="">
-                    <div class="categories__item-title">Каркасные</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-3.jpg" alt="">
-                    <div class="categories__item-title">Бани</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-4.jpg" alt="">
-                    <div class="categories__item-title">Одноэтажные</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-5.jpg" alt="">
-                    <div class="categories__item-title">Беседки</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-6.jpg" alt="">
-                    <div class="categories__item-title">Туалеты</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-7.jpg" alt="">
-                    <div class="categories__item-title">Гаражи</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-8.jpg" alt="">
-                    <div class="categories__item-title">Декор</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-1.jpg" alt="">
-                    <div class="categories__item-title">Дома из бруса</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-2.jpg" alt="">
-                    <div class="categories__item-title">Каркасные</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-3.jpg" alt="">
-                    <div class="categories__item-title">Бани</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-4.jpg" alt="">
-                    <div class="categories__item-title">Одноэтажные</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-5.jpg" alt="">
-                    <div class="categories__item-title">Беседки</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-6.jpg" alt="">
-                    <div class="categories__item-title">Туалеты</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-7.jpg" alt="">
-                    <div class="categories__item-title">Гаражи</div>
-                </a>
-            </li>
-            <li class="categories__item">
-                <a class="categories__item-link" href="#">
-                    <img class="categories__item-img" src="/images/category-8.jpg" alt="">
-                    <div class="categories__item-title">Декор</div>
-                </a>
-            </li>
-        </ul>
+        <div class="row row-10">
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-1.jpg" alt="">
+                        <div class="categories__item-title">Дома из бруса</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-2.jpg" alt="">
+                        <div class="categories__item-title">Каркасные</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-3.jpg" alt="">
+                        <div class="categories__item-title">Бани</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-4.jpg" alt="">
+                        <div class="categories__item-title">Одноэтажные</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-5.jpg" alt="">
+                        <div class="categories__item-title">Беседки</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-6.jpg" alt="">
+                        <div class="categories__item-title">Туалеты</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-7.jpg" alt="">
+                        <div class="categories__item-title">Гаражи</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-8.jpg" alt="">
+                        <div class="categories__item-title">Декор</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-1.jpg" alt="">
+                        <div class="categories__item-title">Дома из бруса</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-2.jpg" alt="">
+                        <div class="categories__item-title">Каркасные</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-3.jpg" alt="">
+                        <div class="categories__item-title">Бани</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-4.jpg" alt="">
+                        <div class="categories__item-title">Одноэтажные</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-5.jpg" alt="">
+                        <div class="categories__item-title">Беседки</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-6.jpg" alt="">
+                        <div class="categories__item-title">Туалеты</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-7.jpg" alt="">
+                        <div class="categories__item-title">Гаражи</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <img class="categories__item-img" src="/images/category-8.jpg" alt="">
+                        <div class="categories__item-title">Декор</div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -185,7 +217,7 @@ $this->context->layout = '//front';
                     <ul class="product-card__params ul-reset">
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-address"/>
                                 </svg>
                             </div>
@@ -193,7 +225,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-bed"/>
                                 </svg>
                             </div>
@@ -201,7 +233,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-size"/>
                                 </svg>
                             </div>
@@ -209,7 +241,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-calendar"/>
                                 </svg>
                             </div>
@@ -221,19 +253,19 @@ $this->context->layout = '//front';
                     <div class="product-card__actions">
                         <button class="product-card__to-cart btn btn-primary">
                             Заказать
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-cart"/>
                             </svg>
                         </button>
                         <button class="product-card__to-favorites btn btn-outline-success">
                             <span class="sr-only">В избранное</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-heart"/>
                             </svg>
                         </button>
                         <button class="product-card__to-compare btn btn-outline-success">
                             <span class="sr-only">Сравнить</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-graph"/>
                             </svg>
                         </button>
@@ -250,7 +282,7 @@ $this->context->layout = '//front';
                     <ul class="product-card__params ul-reset">
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-address"/>
                                 </svg>
                             </div>
@@ -258,7 +290,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-bed"/>
                                 </svg>
                             </div>
@@ -266,7 +298,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-size"/>
                                 </svg>
                             </div>
@@ -274,7 +306,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-calendar"/>
                                 </svg>
                             </div>
@@ -286,19 +318,19 @@ $this->context->layout = '//front';
                     <div class="product-card__actions">
                         <button class="product-card__to-cart btn btn-primary">
                             Заказать
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-cart"/>
                             </svg>
                         </button>
                         <button class="product-card__to-favorites btn btn-outline-success">
                             <span class="sr-only">В избранное</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-heart"/>
                             </svg>
                         </button>
                         <button class="product-card__to-compare btn btn-outline-success">
                             <span class="sr-only">Сравнить</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-graph"/>
                             </svg>
                         </button>
@@ -315,7 +347,7 @@ $this->context->layout = '//front';
                     <ul class="product-card__params ul-reset">
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-address"/>
                                 </svg>
                             </div>
@@ -323,7 +355,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-bed"/>
                                 </svg>
                             </div>
@@ -331,7 +363,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-size"/>
                                 </svg>
                             </div>
@@ -339,7 +371,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-calendar"/>
                                 </svg>
                             </div>
@@ -351,19 +383,19 @@ $this->context->layout = '//front';
                     <div class="product-card__actions">
                         <button class="product-card__to-cart btn btn-primary">
                             Заказать
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-cart"/>
                             </svg>
                         </button>
                         <button class="product-card__to-favorites btn btn-outline-success">
                             <span class="sr-only">В избранное</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-heart"/>
                             </svg>
                         </button>
                         <button class="product-card__to-compare btn btn-outline-success">
                             <span class="sr-only">Сравнить</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-graph"/>
                             </svg>
                         </button>
@@ -380,7 +412,7 @@ $this->context->layout = '//front';
                     <ul class="product-card__params ul-reset">
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-address"/>
                                 </svg>
                             </div>
@@ -388,7 +420,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-bed"/>
                                 </svg>
                             </div>
@@ -396,7 +428,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-size"/>
                                 </svg>
                             </div>
@@ -404,7 +436,7 @@ $this->context->layout = '//front';
                         </li>
                         <li class="product-card__param">
                             <div class="product-card__param-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-calendar"/>
                                 </svg>
                             </div>
@@ -416,19 +448,19 @@ $this->context->layout = '//front';
                     <div class="product-card__actions">
                         <button class="product-card__to-cart btn btn-primary">
                             Заказать
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-cart"/>
                             </svg>
                         </button>
                         <button class="product-card__to-favorites btn btn-outline-success">
                             <span class="sr-only">В избранное</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-heart"/>
                             </svg>
                         </button>
                         <button class="product-card__to-compare btn btn-outline-success">
                             <span class="sr-only">Сравнить</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-graph"/>
                             </svg>
                         </button>
@@ -443,14 +475,14 @@ $this->context->layout = '//front';
     <div class="container">
         <h2 class="steps__title section-title">Как мы работаем</h2>
         <div class="row">
-            <div class="col-lg-4 col-sm-6 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <div class="steps__item step">
                     <div class="step__number">01</div>
                     <div class="step__title" style="background-image: url('/images/1.svg')">Общение</div>
                     <div class="step__descr">Общение с заказчиком, получение информации для отрисовки и просчёта проекта</div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6 col-sm-6">
+            <div class="col-lg-4 col-sm-6">
                 <div class="steps__item step">
                     <div class="step__number">02</div>
                     <div class="step__title" style="background-image: url('/images/2.svg')">Создание</div>
@@ -496,7 +528,7 @@ $this->context->layout = '//front';
             <div class="col-xl col-md-3 col-sm-4 col-6">
                 <div class="advantages__item advantage">
                     <div class="advantage__circle">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="29" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="29" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-address">
                         </svg>
                     </div>

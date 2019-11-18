@@ -27,7 +27,7 @@ use yii\web\View;
                 ?>
                 <li class="<?= $catalogIsActive ? 'active' : '' ?>active" id="main-menu-catalog">
                     <a href="<?= Url::to(['#']) ?>" class="navtext vsmenu-cat-toggle">
-                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor">
+                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-address"/>
                         </svg>
                         Проекты
@@ -58,7 +58,7 @@ use yii\web\View;
                 </li>
                 <li class="<?= preg_match('/^article$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
-                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor">
+                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-wall"/>
                         </svg>
                         Строительство
@@ -67,7 +67,7 @@ use yii\web\View;
                 </li>
                 <li class="<?= preg_match('/^lechenie/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
-                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor">
+                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-gallery"/>
                         </svg>
                         Галерея
@@ -75,7 +75,7 @@ use yii\web\View;
                 </li>
                 <li class="<?= preg_match('/^news$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
-                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor">
+                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-company"/>
                         </svg>
                         О компании
@@ -92,7 +92,7 @@ use yii\web\View;
                 </li>
                 <li class="<?= preg_match('/^reviews/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
-                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor">
+                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-percentage"/>
                         </svg>
                         Покупателю
@@ -112,7 +112,7 @@ use yii\web\View;
                 ?>
                 <li class="<?= $faqIsActive ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
-                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor">
+                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-fence"/>
                         </svg>
                         Услуги
@@ -129,7 +129,7 @@ use yii\web\View;
                 </li>
                 <li class="<?= Yii::$app->request->pathInfo === 'contacts' ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
-                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor">
+                        <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-city"/>
                         </svg>
                         Контакты
@@ -137,30 +137,34 @@ use yii\web\View;
                 </li>
                 <li>
                     <a class="navicon" href="<?= Url::to(['#']) ?>">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-search"/>
                         </svg>
+                        <span class="sr-only">Поиск</span>
                     </a>
                 </li>
                 <li>
                     <a class="navicon" href="<?= Url::to(['#']) ?>">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-heart"/>
                         </svg>
+                        <span class="sr-only">Избранное</span>
                     </a>
                 </li>
                 <li>
                     <a class="navicon" href="<?= Url::to(['#']) ?>">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-graph"/>
                         </svg>
+                        <span class="sr-only">Сравнение</span>
                     </a>
                 </li>
                 <li class="active">
                     <a class="navicon" href="<?= Url::to(['#']) ?>">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-cart"/>
                         </svg>
+                        <span class="sr-only">Корзина</span>
                         <span class="menu-cart-count">23</span>
                     </a>
                 </li>

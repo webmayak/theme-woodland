@@ -31,7 +31,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     <div class="col-md-4">
                         <div class="header__contact header__contact--city">
                             <div class="header__contact-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-city"/>
                                 </svg>
                             </div>
@@ -71,7 +71,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     <div class="col-md-4">
                         <div class="header__contact header__contact--tel">
                             <div class="header__contact-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-tel"/>
                                 </svg>
                             </div>
@@ -98,7 +98,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     <div class="col-md-4">
                         <div class="header__contact header__contact--email">
                             <div class="header__contact-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-email"/>
                                 </svg>
                             </div>
@@ -111,7 +111,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     <div class="col-md-4">
                         <div class="header__contact header__contact--mode">
                             <div class="header__contact-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-mode"/>
                                 </svg>
                             </div>
@@ -124,7 +124,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     <div class="col-md-8">
                         <div class="header__contact header__contact--address">
                             <div class="header__contact-icon-wrap">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-address"/>
                                 </svg>
                             </div>
