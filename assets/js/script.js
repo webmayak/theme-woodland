@@ -129,3 +129,14 @@ $(document).ready(function () {
         }
     });
 });
+
+$(document).on('click', '.open-lead-modal', function () {
+    const self = $(this);
+    const modal = $(self.data('target'));
+    const url  = self.attr('href') || self.data('url');
+    $.get(url, function (result) {
+        modal.find('.modal-content').html(result);
+        modal.modal('show');
+    });
+    return false;
+});
