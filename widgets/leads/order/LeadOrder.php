@@ -6,7 +6,7 @@
  * Time: 2:37 PM
  */
 
-namespace frontend\widgets\leads\order;
+namespace frontend\themes\woodland\widgets\leads\order;
 
 use pantera\leads\models\Lead;
 
@@ -15,7 +15,7 @@ class LeadOrder extends Lead
     public $name;
     public $phone;
     public $email;
-    public $detail;
+    public $comment;
 
     public function rules()
     {
@@ -24,17 +24,17 @@ class LeadOrder extends Lead
         $rules[] = ['phone', 'required'];
         $rules[] = ['email', 'required'];
         $rules[] = ['email', 'email'];
-        $rules[] = ['detail', 'string'];
+        $rules[] = ['comment', 'string'];
         return $rules;
     }
 
     public function attributeLabels()
     {
         $labels = parent::attributeLabels();
-        $labels['name'] = 'Ваше имя';
-        $labels['phone'] = 'Ваш номер телефона';
-        $labels['email'] = 'Ваш E-mail';
-        $labels['detail'] = 'Детали заказа';
+        $labels['name'] = 'ФИО';
+        $labels['phone'] = 'Телефон';
+        $labels['email'] = 'E-mail';
+        $labels['comment'] = 'Комментарий';
         return $labels;
     }
 }

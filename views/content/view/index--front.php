@@ -35,6 +35,13 @@ $this->context->layout = '//front';
     <a href="#video" class="btn btn-primary btn--video">Смотреть видео <i class="fa fa-play" aria-hidden="true"></i></a>
 </div>
 
+<div class="container">
+    <?= LeadForm::widget([
+        'key' => 'order',
+        'mode' => LeadForm::MODE_INLINE,
+    ]) ?>
+</div>
+
 <div class="why-us light-bg">
     <div class="container">
         <h1 class="why-us__title-big">Домостроительная компания</h1>
