@@ -34,6 +34,13 @@ $this->context->layout = '//front';
     ]) ?>
 </div>
 
+<div class="container">
+    <?= LeadForm::widget([
+        'key' => 'order',
+        'mode' => LeadForm::MODE_INLINE,
+    ]) ?>
+</div>
+
 <div class="why-us light-bg">
     <div class="container">
         <h1 class="why-us__title-big">Домостроительная компания</h1>
