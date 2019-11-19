@@ -64,6 +64,14 @@ use yii\web\View;
                         Строительство
                         <i class="fa fa-chevron-down"></i>
                     </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Пункт 1</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Пункт 2</a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="<?= preg_match('/^lechenie/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">

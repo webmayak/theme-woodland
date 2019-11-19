@@ -41,7 +41,7 @@ $this->context->layout = '//front';
         ]) ?>
     </div>
 
-    <a href="#video" class="btn btn-primary btn--video">Смотреть видео <i class="fa fa-play" aria-hidden="true"></i></a>
+    <a href="#video-block" class="btn btn-primary btn--video">Смотреть видео <i class="fa fa-play" aria-hidden="true"></i></a>
 </div>
 
 <div class="why-us light-bg">
@@ -508,6 +508,15 @@ $this->context->layout = '//front';
         </ol>
         <p>Мы не стоим на месте и в настоящий момент, для наших клиентов функционируют два офиса продаж: В Шатурском районе Московской области, а так-же в г. Волгоград.</p>
         <p>В активе компании склад круглого леса, пилорама, несколько деревообрабатывающих цехов, комплекс сушильных камер, склад готовой продукции, собственный парк автотранспорта. В цехах установлено оборудование для производства домостроительного бруса и подготовки домокомплектов , в том числе и линия для изготовления клеёного бруса. Иными словами, на производственные площади  предприятия мы поместили всё необходимое оборудование для полного технологического цикла по обработке древесины от раскроя бревна до выпуска готовых домокомплектов и другой столярной продукции.</p>
+    </div>
+</div>
+
+<div class="video-block" id="video-block">
+    <div class="container">
+        <h2 class="video-block__title section-title">Видео</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fVcxQFPvl88?rel=0" allowfullscreen></iframe>
+        </div>
     </div>
 </div>
 
