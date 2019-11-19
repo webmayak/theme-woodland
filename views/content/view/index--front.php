@@ -211,7 +211,9 @@ $this->context->layout = '//front';
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="projects__item product-card">
                     <div class="product-card__label product-card__label--discount"><div>скидка</div></div>
-                    <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                    </div>
                     <a href="#" class="product-card__title-link">
                         <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
                     </a>
@@ -276,7 +278,9 @@ $this->context->layout = '//front';
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="projects__item product-card">
                     <div class="product-card__label product-card__label--best-price"><div>лучшая цена</div></div>
-                    <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                    </div>
                     <a href="#" class="product-card__title-link">
                         <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
                     </a>
@@ -341,7 +345,9 @@ $this->context->layout = '//front';
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="projects__item product-card">
                     <div class="product-card__label product-card__label--present"><div>подарок</div></div>
-                    <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                    </div>
                     <a href="#" class="product-card__title-link">
                         <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
                     </a>
@@ -406,7 +412,9 @@ $this->context->layout = '//front';
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="projects__item product-card">
                     <div class="product-card__label product-card__label--bestseller"><div>хит продаж</div></div>
-                    <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                    </div>
                     <a href="#" class="product-card__title-link">
                         <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
                     </a>
@@ -469,6 +477,28 @@ $this->context->layout = '//front';
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="text-block light-bg">
+    <div class="container">
+        <h2 class="text-block__title section-title">Текстовый блок</h2>
+        <p>В активе компании склад круглого леса, пилорама, несколько деревообрабатывающих цехов, комплекс сушильных камер, склад готовой продукции, собственный парк автотранспорта. В цехах установлено оборудование для производства домостроительного бруса и подготовки домокомплектов , в том числе и линия для изготовления клеёного бруса. Иными словами, на производственные площади  предприятия мы поместили всё необходимое оборудование для полного технологического цикла по обработке древесины от раскроя бревна до выпуска готовых домокомплектов и другой столярной продукции.</p>
+        <ul>
+            <li>Доставка по Москве в день заказа!</li>
+            <li>Выдача-доставка заказов в Москве - "на завтра"!</li>
+            <li>Организуем быструю доставку в любую точку России транспортными компаниями для юр. лиц.</li>
+            <li>Получить и оплатить товары можно в многочисленных пунктах выдачи в любом городе России. Оплата в 99% - при получении, никаких предоплат!</li>
+        </ul>
+        <p>У каждого из нас есть свои слабости. Наша — это деревянное и экологичное домостроение, история которого насчитывает уже не одну тысячу лет.</p>
+        <p>Чтобы прикоснуться к истории, мы создали домостроительную компанию «ФОРТУНА» и разместили ее в подмосковной Мещёре, в краю красивых и экологически чистых лесов, жемчужных озёр и рек, на расстоянии 140км. от Москвы, в посёлке ЦУС «Мир» Шатурского района.</p>
+        <ol>
+            <li>Доставка по Москве в день заказа!</li>
+            <li>Выдача-доставка заказов в Москве - "на завтра"!</li>
+            <li>Организуем быструю доставку в любую точку России транспортными компаниями для юр. лиц.</li>
+        </ol>
+        <p>Мы не стоим на месте и в настоящий момент, для наших клиентов функционируют два офиса продаж: В Шатурском районе Московской области, а так-же в г. Волгоград.</p>
+        <p>В активе компании склад круглого леса, пилорама, несколько деревообрабатывающих цехов, комплекс сушильных камер, склад готовой продукции, собственный парк автотранспорта. В цехах установлено оборудование для производства домостроительного бруса и подготовки домокомплектов , в том числе и линия для изготовления клеёного бруса. Иными словами, на производственные площади  предприятия мы поместили всё необходимое оборудование для полного технологического цикла по обработке древесины от раскроя бревна до выпуска готовых домокомплектов и другой столярной продукции.</p>
     </div>
 </div>
 
