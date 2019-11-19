@@ -32,6 +32,7 @@ $this->context->layout = '//front';
             'autoplayHoverPause' => true,
         ],
     ]) ?>
+    <a href="#video" class="btn btn-primary btn--video">Смотреть видео <i class="fa fa-play" aria-hidden="true"></i></a>
 </div>
 
 <div class="why-us light-bg">
