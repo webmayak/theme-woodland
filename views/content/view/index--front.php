@@ -32,14 +32,16 @@ $this->context->layout = '//front';
             'autoplayHoverPause' => true,
         ],
     ]) ?>
-    <a href="#video" class="btn btn-primary btn--video">Смотреть видео <i class="fa fa-play" aria-hidden="true"></i></a>
-</div>
 
-<div class="container">
-    <?= LeadForm::widget([
-        'key' => 'order',
-        'mode' => LeadForm::MODE_INLINE,
-    ]) ?>
+    <div class="slider__form">
+        <div class="slider__form-title">Отправить расчёт на проект</div>
+        <?= LeadForm::widget([
+            'key' => 'order',
+            'mode' => LeadForm::MODE_INLINE,
+        ]) ?>
+    </div>
+
+    <a href="#video" class="btn btn-primary btn--video">Смотреть видео <i class="fa fa-play" aria-hidden="true"></i></a>
 </div>
 
 <div class="why-us light-bg">

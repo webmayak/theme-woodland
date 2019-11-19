@@ -51,7 +51,7 @@ echo $form->field($model, 'comment')->textarea([
 echo Html::submitButton(Html::tag('span', 'Отправить заявку', [
     'class' => 'ladda-label',
 ]), [
-    'class' => 'btn btn-primary ladda-button btn-lg',
+    'class' => 'btn btn-success btn-block ladda-button',
     'data' => [
         'style' => 'zoom-in'
     ],
