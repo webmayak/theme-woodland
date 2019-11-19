@@ -51,25 +51,33 @@ $this->context->layout = '//front';
         <div class="row justify-content-center">
             <div class="col-xl-2 col-md-3 col-6">
                 <div class="why-us__item why-us-item">
-                    <div class="why-us-item__circle">19</div>
+                    <div class="why-us-item__circle">
+                        <div class="why-us-item__number" data-from="0" data-to="19">19</div>
+                    </div>
                     <div class="why-us-item__descr">Лет <br>работы</div>
                 </div>
             </div>
             <div class="col-xl-2 col-md-3 col-6">
                 <div class="why-us__item why-us-item">
-                    <div class="why-us-item__circle">2</div>
+                    <div class="why-us-item__circle">
+                        <div class="why-us-item__number" data-from="0" data-to="2">2</div>
+                    </div>
                     <div class="why-us-item__descr">Собственных <br>производства</div>
                 </div>
             </div>
             <div class="col-xl-2 col-md-3 col-6">
                 <div class="why-us__item why-us-item">
-                    <div class="why-us-item__circle">550</div>
+                    <div class="why-us-item__circle">
+                        <div class="why-us-item__number" data-from="0" data-to="550">550</div>
+                    </div>
                     <div class="why-us-item__descr">Проектов <br>выполненно</div>
                 </div>
             </div>
             <div class="col-xl-2 col-md-3 col-6">
                 <div class="why-us__item why-us-item">
-                    <div class="why-us-item__circle">200</div>
+                    <div class="why-us-item__circle">
+                        <div class="why-us-item__number" data-from="0" data-to="200">200</div>
+                    </div>
                     <div class="why-us-item__descr">Рабочих <br>в штате</div>
                 </div>
             </div>

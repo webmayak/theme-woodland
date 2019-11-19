@@ -32,6 +32,7 @@ class AppAsset extends AssetBundle
         'js/webslidemenu/webslidemenu.js',
         'js/jquery.goup.min.js',
         'js/js.cookie.js',
+        'js/jquery.countTo.js',
         'js/script.js',
     ];
     public $depends = [

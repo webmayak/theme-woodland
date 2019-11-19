@@ -115,3 +115,17 @@ $('.btn--video').click(function(){
     $('html, body').animate({scrollTop: $(target).offset().top}, 700);
     return false;
 });
+
+$(document).ready(function () {
+    var counterFlag = 0;
+    $(window).scroll(function() {
+        var oTop = $('.why-us-item').offset().top - window.innerHeight + 100;
+        if (counterFlag === 0 && $(window).scrollTop() > oTop) {
+            $('.why-us-item__number').countTo({
+                speed: 500,
+                refreshInterval: 1
+            });
+            counterFlag = 1;
+        }
+    });
+});
