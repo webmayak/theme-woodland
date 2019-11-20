@@ -15,7 +15,7 @@ use yii\widgets\MaskedInput;
 /* @var $this View */
 /* @var $key string */
 /* @var $model LeadQuestion */
-$this->title = 'ЗАПИСАТЬСЯ ONLINE';
+$this->title = 'Задать вопрос';
 
 $form = ActiveForm::begin([
     'id' => 'lead-question-form',
@@ -49,7 +49,7 @@ echo $form->field($model, 'question')->textarea([
 echo Html::submitButton(Html::tag('span', 'Отправить', [
     'class' => 'ladda-label',
 ]), [
-    'class' => 'btn btn-primary ladda-button',
+    'class' => 'btn btn-success d-block ladda-button',
     'data' => [
         'style' => 'zoom-in'
     ],

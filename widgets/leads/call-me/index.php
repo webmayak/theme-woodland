@@ -37,10 +37,10 @@ echo $form->field($model, 'phone')->widget(MaskedInput::class, [
     ],
 ]);
 
-echo Html::submitButton(Html::tag('span', 'Отправить', [
+echo Html::submitButton(Html::tag('span', 'Заказать звонок', [
     'class' => 'ladda-label',
 ]), [
-    'class' => 'btn btn-primary ladda-button',
+    'class' => 'btn btn-success d-block ladda-button',
     'data' => [
         'style' => 'zoom-in'
     ],
