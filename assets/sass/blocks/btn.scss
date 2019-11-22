@@ -75,7 +75,7 @@
   }
 }
 
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 991px) {
   .btn {
     &--call,
     &--question {
@@ -84,11 +84,3 @@
   }
 }
 
-@media (max-width: 575px) {
-  .btn {
-    &--call,
-    &--question {
-      margin-left: 0;
-    }
-  }
-}

@@ -17,8 +17,13 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
 <header class="header">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-3 col-md-5 col-sm-6">
-                <a href="/" class="site-logo">
+            <div class="col-lg-3 col-md-5">
+                <button type="button" class="wsnavtoggle d-lg-none" id="wsnavtoggle">
+                    <div class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </div>
+                </button>
+                <a href="/" class="header__site-logo site-logo">
                     <img class="site-logo__img" src="/images/logo.jpg" alt="">
                     <span>
                         <div class="site-logo__name">Фортуна</div>
@@ -26,7 +31,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     </span>
                 </a>
             </div>
-            <div class="col-xl-6 col-lg-7 order-lg-0 order-3">
+            <div class="col-xl-6 col-lg-7 order-lg-0 order-3 d-none d-lg-block">
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
                         <div class="header__contact header__contact--city">
@@ -136,7 +141,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-2 col-md-7 col-sm-6">
+            <div class="col-xl-3 col-lg-2 col-md-7 d-none d-md-block">
                 <?= LeadForm::widget([
                     'key' => 'callMe',
                     'text' => 'Заказать звонок',

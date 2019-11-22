@@ -9,8 +9,8 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  background-color: #ffffff;
   border: 1px solid $success;
+  background-color: #ffffff;
   color: $primary;
   font-size: 48px;
   line-height: 116px;
@@ -19,8 +19,7 @@
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.02);
   transition: 0.25s;
 
-  &::before,
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -29,17 +28,9 @@
     border-radius: 50%;
     border: 1px solid $success;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.02);
+    width: 100%;
+    height: 100%;
     opacity: 0;
-  }
-
-  &::before {
-    width: 136px;
-    height: 136px;
-  }
-
-  &::after {
-    width: 150px;
-    height: 150px;
   }
 
   &:hover {
@@ -47,11 +38,7 @@
     font-size: 52px;
 
     &::before {
-      animation: pulse-1 1.25s ease-in infinite;
-    }
-
-    &::after{
-      animation: pulse-2 1.25s ease-in infinite;
+      animation: pulse 1.25s ease-in infinite;
     }
   }
 }
