@@ -88,132 +88,125 @@ $this->context->layout = '//front';
 <div class="categories">
     <div class="container">
         <h2 class="categories__title section-title">Категории</h2>
-        <div class="row row-10">
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                 <div class="categories__item">
                     <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-1.jpg" alt="">
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-1.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
+                        <div class="categories__item-title">Каркасные дома</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-2.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
+                        <div class="categories__item-title">Дома из бревна</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-3.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
+                        <div class="categories__item-title">Кирпичные дома</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-4.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
+                        <div class="categories__item-title">Дачные дома</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-5.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
                         <div class="categories__item-title">Дома из бруса</div>
                     </a>
                 </div>
             </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                 <div class="categories__item">
                     <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-2.jpg" alt="">
-                        <div class="categories__item-title">Каркасные</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-3.jpg" alt="">
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-6.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
                         <div class="categories__item-title">Бани</div>
                     </a>
                 </div>
             </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                 <div class="categories__item">
                     <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-4.jpg" alt="">
-                        <div class="categories__item-title">Одноэтажные</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-5.jpg" alt="">
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-7.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
                         <div class="categories__item-title">Беседки</div>
                     </a>
                 </div>
             </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                 <div class="categories__item">
                     <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-6.jpg" alt="">
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-8.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
+                        <div class="categories__item-title">Хозблоки</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="categories__item">
+                    <a class="categories__item-link" href="#">
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-9.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
                         <div class="categories__item-title">Туалеты</div>
                     </a>
                 </div>
             </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                 <div class="categories__item">
                     <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-7.jpg" alt="">
-                        <div class="categories__item-title">Гаражи</div>
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-10.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
+                        <div class="categories__item-title">Мобильные дома</div>
                     </a>
                 </div>
             </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
+            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                 <div class="categories__item">
                     <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-8.jpg" alt="">
-                        <div class="categories__item-title">Декор</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-1.jpg" alt="">
-                        <div class="categories__item-title">Дома из бруса</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-2.jpg" alt="">
-                        <div class="categories__item-title">Каркасные</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-3.jpg" alt="">
-                        <div class="categories__item-title">Бани</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-4.jpg" alt="">
-                        <div class="categories__item-title">Одноэтажные</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-5.jpg" alt="">
-                        <div class="categories__item-title">Беседки</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-6.jpg" alt="">
-                        <div class="categories__item-title">Туалеты</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-7.jpg" alt="">
-                        <div class="categories__item-title">Гаражи</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl col-lg-2 col-md-3 col-sm-4 col-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <img class="categories__item-img" src="/images/category-8.jpg" alt="">
-                        <div class="categories__item-title">Декор</div>
+                        <div class="categories__item-img-wrap">
+                            <img class="categories__item-img" src="/images/category-11.jpg" alt="">
+                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                        </div>
+                        <div class="categories__item-title">Бытовки</div>
                     </a>
                 </div>
             </div>
