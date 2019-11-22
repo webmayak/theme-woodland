@@ -46,8 +46,8 @@ $this->context->layout = '//front';
 
 <div class="why-us light-bg">
     <div class="container">
-        <h1 class="why-us__title-big">Домостроительная компания</h1>
-        <h2 class="why-us__title section-title">Почему выбирают нас</h2>
+        <h1>Домостроительная компания</h1>
+        <h2>Почему выбирают нас</h2>
         <div class="row justify-content-center">
             <div class="col-xl-2 col-md-3 col-6">
                 <div class="why-us__item why-us-item">
@@ -87,7 +87,7 @@ $this->context->layout = '//front';
 
 <div class="categories">
     <div class="container">
-        <h2 class="categories__title section-title">Категории</h2>
+        <h2>Категории</h2>
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
                 <div class="categories__item">
@@ -216,7 +216,7 @@ $this->context->layout = '//front';
 
 <div class="projects">
     <div class="container">
-        <h2 class="projects__title section-title">Проекты</h2>
+        <h2>Проекты</h2>
         <div class="row">
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="projects__item product-card">
@@ -492,7 +492,7 @@ $this->context->layout = '//front';
 
 <div class="text-block light-bg">
     <div class="container">
-        <h2 class="text-block__title section-title">Текстовый блок</h2>
+        <h2>Текстовый блок</h2>
         <p>В активе компании склад круглого леса, пилорама, несколько деревообрабатывающих цехов, комплекс сушильных камер, склад готовой продукции, собственный парк автотранспорта. В цехах установлено оборудование для производства домостроительного бруса и подготовки домокомплектов , в том числе и линия для изготовления клеёного бруса. Иными словами, на производственные площади  предприятия мы поместили всё необходимое оборудование для полного технологического цикла по обработке древесины от раскроя бревна до выпуска готовых домокомплектов и другой столярной продукции.</p>
         <ul>
             <li>Доставка по Москве в день заказа!</li>
@@ -514,7 +514,7 @@ $this->context->layout = '//front';
 
 <div class="video-block" id="video-block">
     <div class="container">
-        <h2 class="video-block__title section-title">Видео</h2>
+        <h2>Видео</h2>
         <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/fVcxQFPvl88?rel=0" allowfullscreen></iframe>
         </div>
@@ -523,7 +523,7 @@ $this->context->layout = '//front';
 
 <div class="steps">
     <div class="container">
-        <h2 class="steps__title section-title">Как мы работаем</h2>
+        <h2>Как мы работаем</h2>
         <div class="row">
             <div class="col-lg-4 col-sm-6">
                 <div class="steps__item step">
@@ -571,9 +571,16 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<div class="works-map">
+    <div class="container">
+        <h2>Карта выполненых объектов</h2>
+    </div>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CGXCfH1r"></iframe>
+</div>
+
 <div class="advantages">
     <div class="container">
-        <h2 class="advantages__title section-title">Наши преимущества</h2>
+        <h2>Наши преимущества</h2>
         <div class="row justify-content-center no-gutters">
             <div class="col-xl col-md-3 col-sm-4 col-6">
                 <div class="advantages__item advantage">
@@ -758,7 +765,7 @@ $this->context->layout = '//front';
 
 <div class="cities-block light-bg">
     <div class="container">
-        <h2 class="cities-block__title section-title">Города</h2>
+        <h2>Города</h2>
         <div class="cities-block__list">
             <ul>
                 <li>
@@ -876,7 +883,7 @@ $this->context->layout = '//front';
 
 <div class="works">
     <div class="container">
-        <h2 class="works__title section-title">Наши выполненные работы</h2>
+        <h2>Наши выполненные работы</h2>
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <a class="works__item" href="/images/work-1.jpg" data-fancybox="works">

@@ -1,20 +1,10 @@
 .advantages {
-  padding: 70px 0 10px;
+  padding: 40px 0 10px;
   background-repeat: no-repeat;
   background-image: url("../images/why-us-bg.png");
-}
-
-.advantages__title {
-  margin-bottom: 60px;
 }
 
 .advantages__item {
   max-width: 160px;
   margin: 0 auto 30px;
-}
-
-@media (max-width: 991px) {
-  .advantages__title {
-    margin-bottom: 40px;
-  }
 }

@@ -1,0 +1,17 @@
+.works-map {
+  padding-top: 40px;
+
+  iframe {
+    height: 700px;
+    width: 100%;
+    border: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .works-map {
+    iframe {
+      height: 400px;
+    }
+  }
+}

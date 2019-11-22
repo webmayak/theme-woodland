@@ -5,6 +5,38 @@ body {
   color: $text;
 }
 
+h1,
+h2 {
+  text-align: center;
+  word-break: break-word;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1;
+  margin: 0 0 35px;
+}
+
+h2 {
+   font-size: 42px;
+   line-height: 1.15;
+   margin: 0 0 1em;
+   position: relative;
+   padding-bottom: 25px;
+
+   &::after {
+     content: "";
+     position: absolute;
+     width: 60px;
+     height: 2px;
+     left: 50%;
+     transform: translateX(-50%);
+     bottom: 0;
+     background-color: $success;
+   }
+ }
+
 .ul-reset {
   list-style: none;
   margin: 0;
@@ -46,5 +78,25 @@ body {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 42px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 30px;
   }
 }
