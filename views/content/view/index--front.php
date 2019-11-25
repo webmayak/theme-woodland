@@ -763,6 +763,7 @@ $this->context->layout = '//front';
 <?php endif; ?>
 <?php endif; ?>
 
+<?php if (0): ?>
 <div class="cities-block light-bg">
     <div class="container">
         <h2>Города</h2>
@@ -880,6 +881,7 @@ $this->context->layout = '//front';
         </div>
     </div>
 </div>
+<?php endif; ?>
 
 <div class="works">
     <div class="container">
