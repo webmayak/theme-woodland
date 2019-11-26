@@ -32,6 +32,148 @@
   }
 }
 
+.product-page__carousel {
+  margin-bottom: 10px;
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+
+    > button {
+      position: absolute;
+      transform: translateY(-50%);
+      transition: 0.25s;
+
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .owl-prev {
+      left: 0;
+    }
+
+    .owl-next {
+      right: 0;
+    }
+
+    svg {
+      color: #ffffff;
+    }
+  }
+
+  .owl-dots {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .owl-dot {
+    margin: 0 5px;
+    transition: 0.25s;
+
+    span {
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #f7f7f7;
+    }
+
+    &.active {
+      span {
+        background-color: $success;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.product-page__carousel-item {
+  position: relative;
+  display: block;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.35);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 20px;
+    background-image: url("/images/zoom-in.svg");
+  }
+
+  img {
+    border-radius: 5px;
+  }
+}
+
+.product-page__carousel-thumbs {
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+
+  li {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: calc(20% - 10px);
+  }
+
+  a {
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.25s;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px $primary;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.product-page__sizes-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.product-page__size-item {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.product-page__size-img {
+  display: block;
+  margin-bottom: 20px;
+}
+
 .product-page__sidebar {
   background-color: #f2f2f2;
   padding: 30px;

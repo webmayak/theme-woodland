@@ -16,7 +16,131 @@
     </div>
     <div class="row align-items-start">
         <div class="col-lg-8">
-            carousel
+            <div class="product-page__carousel owl-carousel">
+                <a class="product-page__carousel-item" href="/images/product-gallery-1.jpg" data-fancybox="product-gallery" data-hash="product-img-0">
+                    <img src="/images/product-gallery-1.jpg" alt="">
+                </a>
+                <a class="product-page__carousel-item" href="/images/product-gallery-1.jpg" data-fancybox="product-gallery" data-hash="product-img-1">
+                    <img src="/images/product-gallery-1.jpg" alt="">
+                </a>
+                <a class="product-page__carousel-item" href="/images/product-gallery-1.jpg" data-fancybox="product-gallery" data-hash="product-img-2">
+                    <img src="/images/product-gallery-1.jpg" alt="">
+                </a>
+                <a class="product-page__carousel-item" href="/images/product-gallery-1.jpg" data-fancybox="product-gallery" data-hash="product-img-3">
+                    <img src="/images/product-gallery-1.jpg" alt="">
+                </a>
+                <a class="product-page__carousel-item" href="/images/product-gallery-1.jpg" data-fancybox="product-gallery" data-hash="product-img-4">
+                    <img src="/images/product-gallery-1.jpg" alt="">
+                </a>
+                <a class="product-page__carousel-item" href="/images/product-gallery-1.jpg" data-fancybox="product-gallery" data-hash="product-img-5">
+                    <img src="/images/product-gallery-1.jpg" alt="">
+                </a>
+                <a class="product-page__carousel-item" href="/images/product-gallery-1.jpg" data-fancybox="product-gallery" data-hash="product-img-6">
+                    <img src="/images/product-gallery-1.jpg" alt="">
+                </a>
+                <a class="product-page__carousel-item" href="/images/product-gallery-1.jpg" data-fancybox="product-gallery" data-hash="product-img-7">
+                    <img src="/images/product-gallery-1.jpg" alt="">
+                </a>
+                <a class="product-page__carousel-item" href="/images/product-gallery-1.jpg" data-fancybox="product-gallery" data-hash="product-img-8">
+                    <img src="/images/product-gallery-1.jpg" alt="">
+                </a>
+                <a class="product-page__carousel-item" href="/images/product-gallery-1.jpg" data-fancybox="product-gallery" data-hash="product-img-9">
+                    <img src="/images/product-gallery-1.jpg" alt="">
+                </a>
+            </div>
+            <ul class="product-page__carousel-thumbs list-unstyled">
+                <li>
+                    <a href="#product-img-0">
+                        <img src="/images/product-gallery-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-img-1">
+                        <img src="/images/product-gallery-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-img-2">
+                        <img src="/images/product-gallery-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-img-3">
+                        <img src="/images/product-gallery-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-img-4">
+                        <img src="/images/product-gallery-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-img-5">
+                        <img src="/images/product-gallery-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-img-6">
+                        <img src="/images/product-gallery-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-img-7">
+                        <img src="/images/product-gallery-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-img-8">
+                        <img src="/images/product-gallery-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#product-img-9">
+                        <img src="/images/product-gallery-1.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="product-page__sizes">
+                <div class="product-page__sizes-title">Возможные размеры и сечения профилированного бруса</div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <span class="product-page__size-item">
+                            <img class="product-page__size-img" src="/images/size-1.png" alt="">
+                            <span class="product-page__size-text">90×140 мм. <br>(Прямой)</span>
+                        </span>
+                    </div>
+                    <div class="col-lg-4">
+                        <span class="product-page__size-item">
+                            <img class="product-page__size-img" src="/images/size-2.png" alt="">
+                            <span class="product-page__size-text">90×140 мм. <br>(Овал)</span>
+                        </span>
+                    </div>
+                    <div class="col-lg-4">
+                        <span class="product-page__size-item">
+                            <img class="product-page__size-img" src="/images/size-3.png" alt="">
+                            <span class="product-page__size-text">140×140 мм. <br>(Прямой)</span>
+                        </span>
+                    </div>
+                    <div class="col-lg-4">
+                        <span class="product-page__size-item">
+                            <img class="product-page__size-img" src="/images/size-4.png" alt="">
+                            <span class="product-page__size-text">140×140 мм. <br>(Овал)</span>
+                        </span>
+                    </div>
+                    <div class="col-lg-4">
+                        <span class="product-page__size-item">
+                            <img class="product-page__size-img" src="/images/size-5.png" alt="">
+                            <span class="product-page__size-text">190×140 мм. <br>(Прямой)</span>
+                        </span>
+                    </div>
+                    <div class="col-lg-4">
+                        <span class="product-page__size-item">
+                            <img class="product-page__size-img" src="/images/size-6.png" alt="">
+                            <span class="product-page__size-text">190×140 мм. <br>(Овал)</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-lg-4">
             <div class="product-page__sidebar">
