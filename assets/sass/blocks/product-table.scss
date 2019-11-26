@@ -1,0 +1,77 @@
+.product-table {
+  line-height: 1.2;
+
+  tr:last-child {
+    td {
+      padding-bottom: 0;
+    }
+  }
+
+  td {
+    vertical-align: middle;
+    padding-bottom: 10px;
+    padding-right: 5px;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.product-table__thickness {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.product-table__price-wrap {
+  margin: 0;
+  cursor: pointer;
+
+  input:checked ~ .product-table__price {
+    color: $success;
+
+    &::before {
+      border-color: $success;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.product-table__price {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+  padding-right: 30px;
+  transition: 0.25s;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    transition: 0.25s;
+  }
+
+  &::before {
+    right: 0;
+    top: 0;
+    width: 21px;
+    height: 21px;
+    border-radius: 5px;
+    border: 1px solid rgba($text, 0.8);
+  }
+
+  &::after {
+    top: 5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45.701 45.7' fill='%2349d074'%3E%3Cpath d='M20.687 38.332a5.308 5.308 0 01-7.505 0L1.554 26.704A5.306 5.306 0 119.059 19.2l6.928 6.927a1.344 1.344 0 001.896 0L36.642 7.368a5.308 5.308 0 017.505 7.504l-23.46 23.46z'/%3E%3C/svg%3E");
+    opacity: 0;
+  }
+}

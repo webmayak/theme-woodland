@@ -3,6 +3,10 @@
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "global.scss";
 @import "blocks/btn.scss";
+@import "blocks/breadcrumb.scss";
+@import "blocks/nav-tabs.scss";
+@import "blocks/point-with-icon.scss";
+@import "blocks/social-link.scss";
 @import "blocks/header.scss";
 @import "blocks/site-logo.scss";
 @import "blocks/megamenu.scss";
@@ -24,3 +28,5 @@
 @import "blocks/contact-form-block.scss";
 @import "blocks/footer.scss";
 @import "blocks/modal.scss";
+@import "blocks/product-page.scss";
+@import "blocks/product-table.scss";

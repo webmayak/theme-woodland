@@ -117,17 +117,23 @@ $('.btn--video').click(function(){
 });
 
 $(document).ready(function () {
-    var counterFlag = 0;
-    $(window).scroll(function() {
-        var oTop = $('.why-us-item').offset().top - window.innerHeight + 100;
-        if (counterFlag === 0 && $(window).scrollTop() > oTop) {
-            $('.why-us-item__number').countTo({
-                speed: 500,
-                refreshInterval: 1
-            });
-            counterFlag = 1;
-        }
-    });
+    if ($('.why-us-item').length) {
+        var counterFlag = 0;
+
+        $(window).scroll(function () {
+            var oTop = $('.why-us-item').offset().top - window.innerHeight + 100;
+
+            if (counterFlag === 0 && $(window).scrollTop() > oTop) {
+
+                $('.why-us-item__number').countTo({
+                    speed: 500,
+                    refreshInterval: 1
+                });
+
+                counterFlag = 1;
+            }
+        });
+    }
 });
 
 $(document).on('click', '.open-lead-modal', function () {

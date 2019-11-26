@@ -1,0 +1,141 @@
+.product-page {
+  padding-bottom: 100px;
+
+  h1 {
+    font-size: 42px;
+    flex-grow: 1;
+    margin: 0 15px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -20px;
+      background-color: #49d074;
+    }
+  }
+}
+
+.product-page__nav {
+  display: flex;
+  align-items: center;
+  margin-bottom: 80px;
+
+  .btn {
+    padding: 13px 10px;
+    min-width: 210px;
+    flex-shrink: 0;
+  }
+}
+
+.product-page__sidebar {
+  background-color: #f2f2f2;
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+.product-page__order-btn {
+  font-size: 16px;
+  padding: 12px 10px;
+}
+
+.product-page__sidebar-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 20px;
+
+  svg,
+  img {
+    margin-right: 10px;
+  }
+}
+
+.product-page__same-link {
+  margin-top: 20px;
+  padding: 13px 10px;
+}
+
+.product-page__sidebar-table {
+  margin: 0 -15px;
+  width: calc(100% + 30px);
+}
+
+.product-page__param {
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.product-page__links {
+  text-align: center;
+}
+
+.product-page__view-all-link,
+.product-page__view-set-link,
+.product-page__materials-link{
+  border-bottom: 1px dashed $text;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    border-color: transparent;
+    color: inherit;
+  }
+}
+
+.product-page__view-all-link,
+.product-page__view-set-link {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.product-page__delivery-link,
+.product-page__print-link {
+  display: inline-flex;
+  margin-bottom: 15px;
+  color: inherit;
+}
+
+.product-page__delivery-link {
+  margin-right: 20px;
+}
+
+.product-page__materials {
+  margin-bottom: 20px;
+}
+
+.product-page__calc-link {
+  padding: 9px 10px;
+
+  img,
+  svg {
+    margin-right: 5px;
+  }
+}
+
+.product-page__share-title {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.product-page__share {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+
+  li {
+    margin: 0 10px;
+  }
+}

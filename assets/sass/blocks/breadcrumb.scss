@@ -1,0 +1,36 @@
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 30px 0 50px;
+
+  li {
+    font-weight: 600;
+    color: #323b49;
+
+    &::after {
+      content:"\f054";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-size: 8px;
+      margin: 0 10px;
+    }
+
+    &.active {
+      opacity: 0.7;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    a {
+      color: inherit;
+      transition: 0.25s;
+
+      &:hover {
+        text-decoration: none;
+        opacity: 0.7;
+      }
+    }
+  }
+}
