@@ -378,15 +378,510 @@
                     </li>
                 </ul>
                 <div class="product-page__tab-content tab-content">
-                    <div class="tab-pane fade show active" id="product-tab-1">1</div>
-                    <div class="tab-pane fade" id="product-tab-2">2</div>
-                    <div class="tab-pane fade" id="product-tab-3">3</div>
-                    <div class="tab-pane fade" id="product-tab-4">4</div>
+                    <div class="tab-pane fade show active" id="product-tab-1">
+                        <table>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Описание</th>
+                                <th colspan="3">Значение</th>
+                            </tr>
+                            <tr>
+                                <td>Обвязка:</td>
+                                <td>
+                                    2 нижних венца  из нестроганного бруса <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>100×150</td>
+                                <td>150×150</td>
+                                <td>200×150</td>
+                            </tr>
+                            <tr>
+                                <td>Каркас внешних цен:</td>
+                                <td>
+                                    обрезная доска на гвозди, с шагом 60 см <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>40×100</td>
+                                <td>40×150</td>
+                                <td>40×200</td>
+                            </tr>
+                            <tr>
+                                <td>Цена:</td>
+                                <td>
+                                    стоимость в базовой комплектации <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    <span class="text-success mb-2 d-inline-block">763 000</span><br>
+                                    <button class="btn btn-primary">Купить</button>
+                                </td>
+                                <td>
+                                    <span class="text-success mb-2 d-inline-block">891 000</span><br>
+                                    <button class="btn btn-primary">Купить</button>
+                                </td>
+                                <td>
+                                    <span class="text-success mb-2 d-inline-block">990 000</span><br>
+                                    <button class="btn btn-primary">Купить</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Каркас внутренних стен:</td>
+                                <td>
+                                    обрезная доска на гвозди, с шагом 60 см <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Высота потолка:</td>
+                                <td>
+                                    1-й этаж - 2.4 м., 2-й этаж - 2.3 м. <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Пол черновой:</td>
+                                <td>
+                                    обрезная доска 100х22 мм <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Лаги:</td>
+                                <td>
+                                    потолочные лаги, брус 150х50 мм <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Стропильная система:</td>
+                                <td>
+                                    стропила из доски 40х100 мм. и 40х150 мм <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Обрешетка:</td>
+                                <td>
+                                    доска обрезная 22 мм на 100 мм <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Кровля:</td>
+                                <td>
+                                    ондулин (красный, зеленый) <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Утепление внешних стен:</td>
+                                <td>
+                                    плитный утеплитель <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Утепление пола, перекрытий:</td>
+                                <td>
+                                    минеральная вата Isover или URSA <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Парогидроизоляция:</td>
+                                <td>
+                                    утепление Изоспан <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Чистовой пол:</td>
+                                <td>
+                                    сухая половая доска 100 мм. на 36 мм <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Внутренняя отделка:</td>
+                                <td>
+                                    вагонка камерной сушки 88х12.5 мм <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Внешняя отделка:</td>
+                                <td>
+                                    вагонка естественной влажности 90 мм <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Входная дверь:</td>
+                                <td>
+                                    металлическая 8 м. на 2 м <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Внутренние двери:</td>
+                                <td>
+                                    деревянные без фурнитуры 8 м. на 2 м <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Углы внутренние:</td>
+                                <td>
+                                    сухой плинтус <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Лестница:</td>
+                                <td>
+                                    ступени половая доска 36 мм <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Окна:</td>
+                                <td>
+                                    двойное остекление 1 м. на 1,2 м <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Наличники:</td>
+                                <td>
+                                    камерная сушка 88 мм. на 12.5 мм <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                                <td><i class="fa fa-check text-success"></i></td>
+                            </tr>
+                            <tr>
+                                <td>Цена:</td>
+                                <td>
+                                    стоимость дома под ключ <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    <span class="text-success mb-2 d-inline-block">790 000</span><br>
+                                    <button class="btn btn-primary">Купить</button>
+                                </td>
+                                <td>
+                                    <span class="text-success mb-2 d-inline-block">850 000</span><br>
+                                    <button class="btn btn-primary">Купить</button>
+                                </td>
+                                <td>
+                                    <span class="text-success mb-2 d-inline-block">940 000</span><br>
+                                    <button class="btn btn-primary">Купить</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="product-tab-2">
+                        <table>
+                            <tr>
+                                <th>Услуга</th>
+                                <th>Описание</th>
+                                <th>Цена</th>
+                            </tr>
+                            <tr>
+                                <td>Замена утеплителя Isover на Rockwool</td>
+                                <td>
+                                    более качественный вариант утеплителя <br>
+                                    плитный Rockwool, доплата за вычетом Isover
+                                </td>
+                                <td>
+                                    50 мм.:   + 110 руб за м2 <br>
+                                    100 мм.: + 220 руб за м2 <br>
+                                    150 мм.: + 330 руб. за м2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Утепление внутренних стен <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    Isaover или аналог во внутренние перегородки. <br>
+                                    Возможно использование Rockwool
+                                </td>
+                                <td>
+                                    50 мм.: 90 руб за м2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Кровля из металлочерепицы <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    кровельный материал из тонколистовой стали <br>
+                                    с полимерным защитным слоем
+                                </td>
+                                <td>
+                                    460 за м2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Обрабработка антисептиком <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    огнебиозащита обвязки, лаг пола и потолка
+                                </td>
+                                <td>
+                                    380 руб./м2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Внутренняя отделка имитацией бруса <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    деревянный отделочный материал под брус, <br>
+                                    цена за вычетом вагонки
+                                </td>
+                                <td>
+                                    + 100 руб./м2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Внутренняя отделка блок-хаусом <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    деревянный отделочный материал под бревно, <br>
+                                    цена за вычетом вагонки
+                                </td>
+                                <td>
+                                    + 130 руб./м2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Внешняя отделка блок-хаусом <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    деревянный отделочный материал под бревно, <br>
+                                    цена за вычетом вагонки
+                                </td>
+                                <td>
+                                    + 130 руб./м2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Внешняя отделка сайдингом <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    виниловый отделочный материал, цена <br>
+                                    за вычетом вагонки
+                                </td>
+                                <td>
+                                    + 150 руб./м2
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Замена деревянных окон на ПВХ <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    сверхпрочные пластиковые окна двойного <br>
+                                    остекления, цена за вычетом деревянного окна
+                                </td>
+                                <td>
+                                    5200 руб./шт.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Водосточные трубы <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    желоба из ПВХ, алюминия или меди
+                                </td>
+                                <td>
+                                    требуется детальный расчет
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Строительная бытовка <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    необходима для проживания рабочей бригады <br>
+                                    и хозяйственных нужд, не требуется, если на участке
+                                </td>
+                                <td>
+                                    14000 руб.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Аренда генератора <br>
+                                    <a href="#">Посмотреть фото</a>
+                                </td>
+                                <td>
+                                    необходим если на участке нет электроэнергии, <br>
+                                    топливо не входит в стоимость
+                                </td>
+                                <td>
+                                    7000 руб.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="product-tab-3">
+                        <p><b>Работаем без предоплаты!</b></p>
+                        <p>70% от стоимости по договору оплачивается по факту доставки материала и бригады на участок.<br>
+                        30% оплачивается после сдачи объекта и подписания акта приемки.</p>
+                        <p><b>РАБОТАЕМ С МАТЕРИНСКИМ КАПИТАЛОМ!</b> <a href="#">Читать подробнее.</a></p>
+                        <p><b>О доставке:</b></p>
+                        <p>Первые 500 км доставки от производства - бесплатно!<br>
+                        Остальное расстояние оплачивается из расчета 95 руб/км.</p>
+                    </div>
+                    <div class="tab-pane fade" id="product-tab-4">
+                        <p>Компания "Фортуна" совмсестно с <a href="#">банками-партнёрами</a> предлагает выгодные условия кредитования на малоэтажное строительство.</p>
+                        <br>
+                        <div class="row justify-content-between">
+                            <div class="col-auto">
+                                <img src="/images/credit-1.png" alt="">
+                            </div>
+                            <div class="col-auto">
+                                <img src="/images/credit-2.png" alt="">
+                            </div>
+                            <div class="col-auto">
+                                <img src="/images/credit-3.png" alt="">
+                            </div>
+                        </div>
+                        <h5><b>Преимущества кредитования</b></h5>
+                        <ul>
+                            <li>Срок кредита: от 6 до 84 месяцев;</li>
+                            <li>Сумма кредита: от 300 т.р. до 3 млн. р;</li>
+                            <li>Процентая ставка: от 12.99% годовых;</li>
+                            <li>Досрочное погашение без комиссии;</li>
+                        </ul>
+                        <h5><b>Условия кредитования</b></h5>
+                        <ul>
+                            <li>Гражданство РФ;</li>
+                            <li>Постоянная регистрация в регионе присутствия банка;</li>
+                            <li>Возраст от 20 до 70 лет;</li>
+                            <li>Стаж на текущем месте работы: от 3-х месяцев;</li>
+                        </ul>
+                        <div class="text-center">
+                            <a class="product-page__credit-btn btn btn-primary" href="#">Каркасный дом 7×8 в кредит</a>
+                        </div>
+                        <div class="text-center">
+                            <a href="#" class="product-page__credit-link text-uppercase">подробнее об условиях кредитования</a>
+                        </div>
+                    </div>
                     <div class="tab-pane fade" id="product-tab-5">5</div>
                     <div class="tab-pane fade" id="product-tab-6">6</div>
-                    <div class="tab-pane fade" id="product-tab-7">7</div>
+                    <div class="tab-pane fade" id="product-tab-7">
+                        <table>
+                            <tr>
+                                <th>Наименование</th>
+                                <th>Материал</th>
+                            </tr>
+                            <tr>
+                                <td>Стены</td>
+                                <td>Брус ЕВ 150×150</td>
+                            </tr>
+                            <tr>
+                                <td>Лаги перекрытий</td>
+                                <td>150×40</td>
+                            </tr>
+                            <tr>
+                                <td>Фронтоны</td>
+                                <td>Рубленный</td>
+                            </tr>
+                            <tr>
+                                <td>Окна</td>
+                                <td>Оконный проем</td>
+                            </tr>
+                            <tr>
+                                <td>Двери</td>
+                                <td>Дверные проемы</td>
+                            </tr>
+                            <tr>
+                                <td>Кровля</td>
+                                <td>Рубероид</td>
+                            </tr>
+                            <tr>
+                                <td>Полы</td>
+                                <td>Утепление 150 мм</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>

@@ -272,3 +272,99 @@
 .product-page__tab-content {
   margin-top: 40px;
 }
+
+.product-page__tab-content {
+  h5 {
+    margin-bottom: 25px;
+    margin-top: 35px;
+  }
+
+  a:not([class]) {
+    color: $success;
+    font-weight: 600;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    line-height: 1.8;
+
+    li {
+      padding-left: 40px;
+      position: relative;
+      margin-bottom: 25px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 1px;
+        width: 24px;
+        height: 24px;
+        border: 1px solid $success;
+        border-radius: 5px;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 9px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45.701 45.7' fill='%2349d074'%3E%3Cpath d='M20.687 38.332a5.308 5.308 0 01-7.505 0L1.554 26.704A5.306 5.306 0 119.059 19.2l6.928 6.927a1.344 1.344 0 001.896 0L36.642 7.368a5.308 5.308 0 017.505 7.504l-23.46 23.46z'/%3E%3C/svg%3E");
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  table {
+    width: 100%;
+    text-align: center;
+
+    tr:nth-child(even) {
+      td {
+        background-color: #f2f2f2;
+      }
+    }
+
+    th {
+      font-size: 16px;
+      color: $success;
+      font-weight: 600;
+      border: 1px solid $success;
+      padding: 25px 10px;
+    }
+
+    td {
+      font-weight: 600;
+      color: #2c2c2c;
+      background-color: #fdfdfd;
+      padding: 17px 10px;
+      border-left: 1px solid rgba(162, 162, 162, 0.15);
+
+      &:first-child {
+        font-weight: bold;
+        border-left: none;
+        color: #323b49;
+      }
+
+      .fa-check {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.product-page__credit-btn {
+  padding: 13px 10px;
+}
+
+.product-page__credit-link {
+  border-bottom: 1px dashed #000e39;
+  color: inherit;
+  margin-top: 15px;
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+    border-color: transparent;
+  }
+}
