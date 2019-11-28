@@ -104,37 +104,37 @@
                 <div class="product-page__sizes">
                     <div class="product-page__sizes-title">Возможные размеры и сечения профилированного бруса</div>
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-sm-4 col-6">
                             <span class="product-page__size-item">
                                 <img class="product-page__size-img" src="/images/size-1.png" alt="">
                                 <span class="product-page__size-text">90×140 мм. <br>(Прямой)</span>
                             </span>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm-4 col-6">
                             <span class="product-page__size-item">
                                 <img class="product-page__size-img" src="/images/size-2.png" alt="">
                                 <span class="product-page__size-text">90×140 мм. <br>(Овал)</span>
                             </span>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm-4 col-6">
                             <span class="product-page__size-item">
                                 <img class="product-page__size-img" src="/images/size-3.png" alt="">
                                 <span class="product-page__size-text">140×140 мм. <br>(Прямой)</span>
                             </span>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm-4 col-6">
                             <span class="product-page__size-item">
                                 <img class="product-page__size-img" src="/images/size-4.png" alt="">
                                 <span class="product-page__size-text">140×140 мм. <br>(Овал)</span>
                             </span>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm-4 col-6">
                             <span class="product-page__size-item">
                                 <img class="product-page__size-img" src="/images/size-5.png" alt="">
                                 <span class="product-page__size-text">190×140 мм. <br>(Прямой)</span>
                             </span>
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-sm-4 col-6">
                             <span class="product-page__size-item">
                                 <img class="product-page__size-img" src="/images/size-6.png" alt="">
                                 <span class="product-page__size-text">190×140 мм. <br>(Овал)</span>
@@ -379,7 +379,8 @@
                 </ul>
                 <div class="product-page__tab-content tab-content">
                     <div class="tab-pane fade show active" id="product-tab-1">
-                        <table>
+                        <div class="table-responsive">
+                            <table>
                             <tr>
                                 <th>Наименование</th>
                                 <th>Описание</th>
@@ -634,9 +635,11 @@
                                 </td>
                             </tr>
                         </table>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="product-tab-2">
-                        <table>
+                        <div class="table-responsive">
+                            <table>
                             <tr>
                                 <th>Услуга</th>
                                 <th>Описание</th>
@@ -796,6 +799,7 @@
                                 </td>
                             </tr>
                         </table>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="product-tab-3">
                         <p><b>Работаем без предоплаты!</b></p>
@@ -810,13 +814,13 @@
                         <p>Компания "Фортуна" совмсестно с <a href="#">банками-партнёрами</a> предлагает выгодные условия кредитования на малоэтажное строительство.</p>
                         <br>
                         <div class="row justify-content-between">
-                            <div class="col-auto">
+                            <div class="col-xl-auto col-md-4">
                                 <img src="/images/credit-1.png" alt="">
                             </div>
-                            <div class="col-auto">
+                            <div class="col-xl-auto col-md-4">
                                 <img src="/images/credit-2.png" alt="">
                             </div>
-                            <div class="col-auto">
+                            <div class="col-xl-auto col-md-4">
                                 <img src="/images/credit-3.png" alt="">
                             </div>
                         </div>
@@ -841,10 +845,28 @@
                             <a href="#" class="product-page__credit-link text-uppercase">подробнее об условиях кредитования</a>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="product-tab-5">5</div>
-                    <div class="tab-pane fade" id="product-tab-6">6</div>
+                    <div class="tab-pane fade" id="product-tab-5">
+                        Комментарии
+                    </div>
+                    <div class="tab-pane fade" id="product-tab-6">
+                        <p>В активе компании склад круглого леса, пилорама, несколько деревообрабатывающих цехов, комплекс сушильных камер, склад готовой продукции, собственный парк автотранспорта. В цехах установлено оборудование для производства домостроительного бруса и подготовки домокомплектов , в том числе и линия для изготовления клеёного бруса. Иными словами, на производственные площади  предприятия мы поместили всё необходимое оборудование для полного технологического цикла по обработке древесины от раскроя бревна до выпуска готовых домокомплектов и другой столярной продукции.</p>
+                        <img src="/images/tab-descr-1.jpg" alt="">
+                        <p>У каждого из нас есть свои слабости. Наша — это деревянное и экологичное домостроение, история которого насчитывает уже не одну тысячу лет.</p>
+                        <p>Чтобы прикоснуться к истории, мы создали домостроительную компанию «ФОРТУНА» и разместили ее в подмосковной Мещёре, в краю красивых и экологически чистых лесов, жемчужных озёр и рек, на расстоянии 140км. от Москвы, в посёлке ЦУС «Мир» Шатурского района.</p>
+                        <p>В активе компании склад круглого леса, пилорама, несколько деревообрабатывающих цехов, комплекс сушильных камер, склад готовой продукции, собственный парк автотранспорта. В цехах установлено оборудование для производства домостроительного бруса и подготовки домокомплектов , в том числе и линия для изготовления клеёного бруса. Иными словами, на производственные площади  предприятия мы поместили всё необходимое оборудование для полного технологического цикла по обработке древесины от раскроя бревна до выпуска готовых домокомплектов и другой столярной продукции.
+                        </p>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="/images/tab-descr-2.jpg" alt="">
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="/images/tab-descr-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
                     <div class="tab-pane fade" id="product-tab-7">
-                        <table>
+                        <div class="table-responsive">
+                            <table>
                             <tr>
                                 <th>Наименование</th>
                                 <th>Материал</th>
@@ -878,6 +900,7 @@
                                 <td>Утепление 150 мм</td>
                             </tr>
                         </table>
+                        </div>
                     </div>
                 </div>
             </div>
