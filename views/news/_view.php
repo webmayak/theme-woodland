@@ -31,6 +31,5 @@ $body = trim(str_replace('&nbsp;', '', $body));
     <h4 class="news-list__item-title media-heading"><a href="<?= $model->getUrl() ?>"><?= Html::encode($model->title) ?></a></h4>
     <div class="news-list__item-date small"><?= Yii::$app->formatter->asDate($model->created_at) ?></div>
     <div class="news-list__item-body"><?= mb_substr($body, 0, 300, 'utf-8') . (mb_strlen($body, 'utf-8') > 300 ? '...' : '') ?> <a href="<?= $model->getUrl() ?>">подробнее »</a></div>
-    <div class="news-list__item-tags"><a href="/news/<?= str_replace('news-', '', $model->type->key) ?>"><i class="fa fa-tag"></i><?= $model->type->name ?></a></div>
   </div>
 </div>
