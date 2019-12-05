@@ -18,16 +18,4 @@ use yii\widgets\Breadcrumbs;
 	<?= Alert::widget() ?>
 	<?= $content ?>
 </div>
-
-<div class="content-block">
-	<div class="container">
-		<?= $this->render('@theme/views/_fast-consult') ?>
-	</div>
-</div>
-
-<div class="content-block content-block__contacts-map">
-    <?= Block::widget([
-        'position' => 'contacts_map',
-    ]) ?>
-</div>
 <?php $this->endContent() ?>
