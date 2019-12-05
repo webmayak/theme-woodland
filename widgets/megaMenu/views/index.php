@@ -22,7 +22,7 @@ use yii\web\View;
         <nav class="wsmenu">
             <ul class="wsmenu-list">
                 <?php
-                $catalogIsActive = preg_match('/^(catalog|brands|documenty-certificaty-rezultaty-himicheskih-issledovanii)/', Yii::$app->request->pathInfo);
+                $catalogIsActive = preg_match('/^catalog/', Yii::$app->request->pathInfo);
                 $brandsIsActive = preg_match('/^brands/', Yii::$app->request->pathInfo);
                 ?>
                 <li class="<?= $catalogIsActive ? 'active' : '' ?>active" id="main-menu-catalog">
@@ -56,7 +56,7 @@ use yii\web\View;
                     ]) ?>
                     <?php $this->endCache(); endif; ?>
                 </li>
-                <li class="<?= preg_match('/^article$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
+                <li class="<?= false ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-wall"/>
@@ -73,15 +73,15 @@ use yii\web\View;
                         </li>
                     </ul>
                 </li>
-                <li class="<?= preg_match('/^lechenie/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= Url::to(['#']) ?>">
+                <li class="<?= Yii::$app->request->pathInfo === 'gallery' ? 'active' : '' ?>">
+                    <a class="navtext" href="<?= Url::to(['/gallery']) ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-gallery"/>
                         </svg>
                         Галерея
                     </a>
                 </li>
-                <li class="<?= preg_match('/^news$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
+                <li class="<?= false ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-company"/>
@@ -90,15 +90,17 @@ use yii\web\View;
                         <i class="fa fa-chevron-down"></i>
                     </a>
                     <ul class="sub-menu">
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Пункт 1</a>
-                        </li>
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Пункт 2</a>
-                        </li>
+                        <li><a href="<?= Url::to(['/news']) ?>">Новости</a></li>
+                        <li><a href="<?= Url::to(['/articles']) ?>">Статьи</a></li>
+                        <li><a href="<?= Url::to(['/specials']) ?>">Акции</a></li>
+                        <li><a href="<?= Url::to(['/site/reviews']) ?>">Отзывы</a></li>
+                        <li><a href="<?= Url::to(['/site/search']) ?>">Поиск по сайту</a></li>
+                        <li><a href="<?= Url::to(['/site/faq']) ?>">FAQ</a></li>
+                        <li><a href="<?= Url::to(['/sitemap']) ?>">Карта сайта</a></li>
+                        <li><a href="<?= Url::to(['/404']) ?>">404</a></li>
                     </ul>
                 </li>
-                <li class="<?= preg_match('/^reviews/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
+                <li class="<?= false ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-percentage"/>
@@ -115,10 +117,7 @@ use yii\web\View;
                         </li>
                     </ul>
                 </li>
-                <?php
-                $faqIsActive = preg_match('/^faq/', Yii::$app->request->pathInfo);
-                ?>
-                <li class="<?= $faqIsActive ? 'active' : '' ?>">
+                <li class="<?= false ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['#']) ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-fence"/>
@@ -135,8 +134,8 @@ use yii\web\View;
                         </li>
                     </ul>
                 </li>
-                <li class="<?= Yii::$app->request->pathInfo === 'contacts' ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= Url::to(['#']) ?>">
+                <li class="<?= Yii::$app->request->pathInfo === 'kontakty' ? 'active' : '' ?>">
+                    <a class="navtext" href="<?= Url::to(['/kontakty']) ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-city"/>
                         </svg>
@@ -144,7 +143,7 @@ use yii\web\View;
                     </a>
                 </li>
                 <li>
-                    <a class="navicon" href="<?= Url::to(['#']) ?>">
+                    <a class="navicon" href="<?= Url::to(['/site/search']) ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-search"/>
                         </svg>
@@ -152,7 +151,7 @@ use yii\web\View;
                     </a>
                 </li>
                 <li>
-                    <a class="navicon" href="<?= Url::to(['#']) ?>">
+                    <a class="navicon" href="<?= Url::to(['/site/favorite']) ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-heart"/>
                         </svg>
@@ -160,7 +159,7 @@ use yii\web\View;
                     </a>
                 </li>
                 <li>
-                    <a class="navicon" href="<?= Url::to(['#']) ?>">
+                    <a class="navicon" href="<?= Url::to(['/site/compare']) ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-graph"/>
                         </svg>
