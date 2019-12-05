@@ -15,21 +15,16 @@ $body = trim(str_replace('&nbsp;', '', $body));
 
 /* @var $this View */
 /* @var $model ContentPage */
-?><div class="media">
-  <div class="media-left">
-    <a href="<?= $model->getUrl() ?>">
+?><div class="news-list__item">
+    <h4 class="news-list__item-title"><a href="<?= $model->getUrl() ?>"><?= Html::encode($model->title) ?></a></h4>
+    <a class="news-list__item-img-link" href="<?= $model->getUrl() ?>">
       <?php
         if ($model->media && $model->media->issetMedia()) {
-            $img = $model->media->image(150, 150, false);
+            $img = $model->media->image(310, 200, false);
             echo Html::img($img, [
-                'class' => 'media-object img-thumbnail',
+                'class' => 'news-list__item-img',
             ]);
         } ?>
     </a>
-  </div>
-  <div class="media-body">
-    <h4 class="news-list__item-title media-heading"><a href="<?= $model->getUrl() ?>"><?= Html::encode($model->title) ?></a></h4>
-    <div class="news-list__item-date small"><?= Yii::$app->formatter->asDate($model->created_at) ?></div>
-    <div class="news-list__item-body"><?= mb_substr($body, 0, 300, 'utf-8') . (mb_strlen($body, 'utf-8') > 300 ? '...' : '') ?> <a href="<?= $model->getUrl() ?>">подробнее »</a></div>
-  </div>
+    <div class="news-list__item-date"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDate($model->created_at, 'd.MM.yy') ?></div>
 </div>
