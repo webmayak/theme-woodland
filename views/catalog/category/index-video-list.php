@@ -17,6 +17,7 @@ use yii\web\View;
 <h1 class="title-home">
     <?= Yii::$app->seo->getH1() ?>
 </h1>
+
 <?= VideoList::widget([
     'category' => $model,
 ]) ?>

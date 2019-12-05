@@ -176,20 +176,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                 </div>
                 <div class="col-md-6 col-sm-7">
                     <div class="top-controls__right">
-                        <?= LeadForm::widget([
-                            'key' => 'iDoctor',
-                            'text' => 'Я врач<span class="hidden-sm hidden-xs"> - желаю сотрудничать</span>',
-                            'options' => [
-                                'class' => '',
-                            ],
-                        ]) ?>
-                        <?= LeadForm::widget([
-                            'key' => 'getRecommendations',
-                            'text' => 'Получить рекомендации по лечению гепатита С',
-                            'options' => [
-                                'class' => '',
-                            ],
-                        ]) ?>
+                        
                     </div>
                 </div>
             </div>
@@ -207,9 +194,9 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                 <div class="row">
                     <div class="col-md-2 col-lg-3 top-panel__col-logo">
                         <a href="/">
-                            <img src="/images/logo.svg" alt="Индиавир" id="logo" />
+                            <img src="/images/logo.svg" alt="" id="logo" />
                         </a>
-                        <small class="top-panel__logo-text">Препараты от Гепатита и ВИЧ из Индии</small>
+                        <small class="top-panel__logo-text"></small>
                     </div>
                     <div class="col-md-8 col-lg-6 top-panel__col-contacts">
                         <div class="creative_header_address">

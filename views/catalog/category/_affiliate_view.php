@@ -25,13 +25,3 @@ use yii\web\View;
         </a>
     </h3>
 </div>
-<?php if ($key == ($widget->dataProvider->totalCount-1)): ?>
-    </div>
-<div class="col-md-2 col-sm-4 col-xs-6">
-    <div class="affiliate-item">
-        <div class="affiliate-item__image">
-            <a target="_blank" href="mailto:indiavirexpress@gmail.com?subject=Открыть филиал ИНДИАВИР"><img src="/images/open-affiliate.png" alt="Открыть филиал в вашем городе" class="img-responsive"/></a>
-        </div>
-    </div>
-    <!-- не закрываем тег-->
-<?php endif; ?>

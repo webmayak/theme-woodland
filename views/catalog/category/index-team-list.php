@@ -7,8 +7,7 @@
  */
 
 use common\modules\catalog\models\CatalogCategory;
-use frontend\widgets\teamList\TeamList;
-use pantera\leads\widgets\form\LeadForm;
+use frontend\themes\woodland\widgets\teamList\TeamList;
 use yii\web\View;
 
 /* @var $this View */

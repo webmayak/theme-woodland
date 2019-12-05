@@ -12,9 +12,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="page-specials">
     <h1><?= $this->title ?></h1>
-    <?= \pantera\content\widgets\block\Block::widget([
-        'position' => 'specials_top',
-    ]) ?>
     <?= ListView::widget([
         'dataProvider' => $dataProvider,
         'summary' => false,
@@ -30,5 +27,3 @@ $this->params['breadcrumbs'][] = $this->title;
         ]
     ]) ?>
 </div>
-
-<?= $this->render('@theme/views/_fast-consult') ?>
