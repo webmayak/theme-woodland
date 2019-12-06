@@ -1,4 +1,4 @@
-.card {
+.item-card {
   position: relative;
   background-color: #ffffff;
   border-radius: 10px;
@@ -73,25 +73,25 @@
   }
 }
 
-.card--news-item {
-  .card__img-link,
-  .card__title {
+.item-card--news-item {
+  .item-card__img-link,
+  .item-card__title {
     margin-bottom: 15px;
   }
 }
 
-.card--articles-item {
-  .card__img-link,
-  .card__date,
-  .card__title {
+.item-card--articles-item {
+  .item-card__img-link,
+  .item-card__date,
+  .item-card__title {
     margin-bottom: 15px;
   }
 }
 
-.card--specials-item {
-  .card__img-link,
-  .card__date,
-  .card__title {
+.item-card--specials-item {
+  .item-card__img-link,
+  .item-card__date,
+  .item-card__title {
     margin-bottom: 15px;
   }
 }
