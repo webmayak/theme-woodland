@@ -13,25 +13,21 @@ use yii\web\View;
 /* @var $this View */
 /* @var $model ContentPage */
 
-?><div class="specials-item__top">
-    <div class="specials-item__title">
-        <a href="<?= $model->getUrl() ?>">
-            <?php
-            if ($model->media && $model->media->issetMedia()) {
-                $img = $model->media->image(370, 280, false);
-                echo Html::img($img, [
-                    'class' => 'content-item__image',
-                ]);
-            } ?>
-            <?= $model->title ?>
-        </a>
+?><div class="card card--specials-item">
+    <div class="card__label">Действующая акция</div>
+    <a class="card__img-link" href="<?= $model->getUrl() ?>">
+        <?php
+        if ($model->media && $model->media->issetMedia()) {
+            $img = $model->media->image(310, 200, false);
+            echo Html::img($img, [
+                'class' => 'card__img',
+            ]);
+        } ?>
+    </a>
+    <div class="card__date"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDate($model->created_at, 'd.MM.yy') ?></div>
+    <h4 class="card__title"><a href="<?= $model->getUrl() ?>"><?= Html::encode($model->title) ?></a></h4>
+    <div>
+        <p>Не пропустите две недели скидок для Вас, с 10 октября по 24 октября. Не упустите свой шанс, приобрести дом по скидке. Для того что бы оформить заказ, заполните форму ...</p>
     </div>
-    <div class="specials-item__buttons">
-        <a class="btn btn-primary" href="<?= $model->getUrl() ?>">
-            Подробнее <i class="fa fa-arrow-right"></i>
-        </a>
-    </div>
-</div>
-<div class="specials-item__bottom">
-    <i class="fa fa-calendar"></i> <span class="specials-item__date-label">Дата публикации<br/><?= Yii::$app->formatter->asDate($model->created_at) ?></span>
+    <a class="card__more-link" href="<?= $model->getUrl() ?>">Читать все <i class="fa fa-angle-right"></i></a>
 </div>

@@ -1,4 +1,5 @@
-.articles-item {
+.card {
+  position: relative;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 25px 30px;
@@ -10,8 +11,31 @@
     border-color: $success;
   }
 
+  &__label {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: $primary;
+    padding: 8px 15px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+
+    &--closed {
+      background-color: #e83b3b;
+    }
+  }
+
+  &__img-link {
+    display: block;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
   &__date {
-    margin-bottom: 15px;
     font-weight: 600;
     color: $primary;
 
@@ -20,21 +44,10 @@
     }
   }
 
-  &__img-link {
-    display: block;
-    margin-bottom: 15px;
-  }
-
-  &__img {
-    width: 100%;
-    border-radius: 10px;
-  }
-
   &__title {
     font-size: 16px;
     font-weight: bold;
     color: #191919;
-    margin-bottom: 15px;
 
     a {
       color: inherit;
@@ -57,5 +70,28 @@
       text-decoration: none;
       color: darken($success, 8%);
     }
+  }
+}
+
+.card--news-item {
+  .card__img-link,
+  .card__title {
+    margin-bottom: 15px;
+  }
+}
+
+.card--articles-item {
+  .card__img-link,
+  .card__date,
+  .card__title {
+    margin-bottom: 15px;
+  }
+}
+
+.card--specials-item {
+  .card__img-link,
+  .card__date,
+  .card__title {
+    margin-bottom: 15px;
   }
 }

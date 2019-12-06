@@ -10,20 +10,23 @@ $this->title = 'Акции';
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
-<div class="page-specials">
+<main class="page-specials__content">
     <h1><?= $this->title ?></h1>
     <?= ListView::widget([
         'dataProvider' => $dataProvider,
         'summary' => false,
         'itemView' => '_view',
         'itemOptions' => [
-            'class' => 'specials-item',
+            'class' => 'col-lg-4 col-sm-6 page-specials__list-item-wrap',
         ],
         'options' => [
-            'class' => 'specials',
+            'class' => 'row',
         ],
         'pager' => [
             'class' => 'justinvoelker\separatedpager\LinkPager',
         ]
     ]) ?>
-</div>
+    <div class="page-specials__btn-wrap text-center">
+        <button class="btn btn-lg btn-primary">Показать еще</button>
+    </div>
+</main>
