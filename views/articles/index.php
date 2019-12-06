@@ -10,17 +10,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
 /* @var $this View */
 /* @var $dataProvider ActiveDataProvider */
-?><div class="page-articles">
+?><main class="page-articles__content">
     <h1><?= $this->title ?></h1>
     <?= ListView::widget([
         'dataProvider' => $dataProvider,
         'summary' => false,
         'itemView' => '_view',
         'itemOptions' => [
-            'class' => 'articles-list__item media',
+            'class' => 'col-lg-4 col-sm-6 page-articles__list-item-wrap',
         ],
         'options' => [
-            'class' => 'articles-list',
+            'class' => 'row',
         ],
     ]) ?>
-</div>
+    <div class="page-articles__btn-wrap text-center">
+        <button class="btn btn-lg btn-primary">Показать еще</button>
+    </div>
+</main>

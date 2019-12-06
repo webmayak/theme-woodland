@@ -15,21 +15,17 @@ $body = trim(str_replace('&nbsp;', '', $body));
 
 /* @var $this View */
 /* @var $model ContentPage */
-?><div class="media">
-  <div class="media-left">
-    <a href="<?= $model->getUrl() ?>">
+?><div class="articles-item">
+    <div class="articles-item__date"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDate($model->created_at, 'd.MM.yy') ?></div>
+    <a class="articles-item__img-link" href="<?= $model->getUrl() ?>">
       <?php
         if ($model->media && $model->media->issetMedia()) {
-            $img = $model->media->image(150, 150, false);
+            $img = $model->media->image(310, 200, false);
             echo Html::img($img, [
-                'class' => 'media-object img-thumbnail',
+                'class' => 'articles-item__img',
             ]);
         } ?>
     </a>
-  </div>
-  <div class="media-body">
-    <h4 class="articles-list__item-title media-heading"><a href="<?= $model->getUrl() ?>"><?= Html::encode($model->title) ?></a></h4>
-    <div class="articles-list__item-date small"><?= Yii::$app->formatter->asDate($model->created_at) ?></div>
-    <div class="articles-list__item-body"><?= mb_substr($body, 0, 300, 'utf-8') . (mb_strlen($body, 'utf-8') > 300 ? '...' : '') ?> <a href="<?= $model->getUrl() ?>">подробнее »</a></div>
-  </div>
+    <h4 class="articles-item__title"><a href="<?= $model->getUrl() ?>"><?= Html::encode($model->title) ?></a></h4>
+    <a class="articles-item__more-link" href="<?= $model->getUrl() ?>">Читать все <i class="fa fa-angle-right"></i></a>
 </div>
