@@ -15,16 +15,16 @@ $body = trim(str_replace('&nbsp;', '', $body));
 
 /* @var $this View */
 /* @var $model ContentPage */
-?><div class="news-list__item">
-    <h4 class="news-list__item-title"><a href="<?= $model->getUrl() ?>"><?= Html::encode($model->title) ?></a></h4>
-    <a class="news-list__item-img-link" href="<?= $model->getUrl() ?>">
+?><div class="news-item">
+    <h4 class="news-item__title"><a href="<?= $model->getUrl() ?>"><?= Html::encode($model->title) ?></a></h4>
+    <a class="news-item__img-link" href="<?= $model->getUrl() ?>">
       <?php
         if ($model->media && $model->media->issetMedia()) {
             $img = $model->media->image(310, 200, false);
             echo Html::img($img, [
-                'class' => 'news-list__item-img',
+                'class' => 'news-item__img',
             ]);
         } ?>
     </a>
-    <div class="news-list__item-date"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDate($model->created_at, 'd.MM.yy') ?></div>
+    <div class="news-item__date"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDate($model->created_at, 'd.MM.yy') ?></div>
 </div>

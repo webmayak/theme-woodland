@@ -17,10 +17,10 @@ $this->params['breadcrumbs'][] = $this->title;
         'summary' => false,
         'itemView' => '_view',
         'itemOptions' => [
-            'class' => 'col-lg-4 col-sm-6 news-list__item-wrap',
+            'class' => 'col-lg-4 col-sm-6 page-news__list-item-wrap',
         ],
         'options' => [
-            'class' => 'row news-list',
+            'class' => 'row',
         ],
     ]) ?>
     <div class="page-news__btn-wrap text-center">

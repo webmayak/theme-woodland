@@ -1,8 +1,4 @@
-.news-list__item-wrap {
-  margin-bottom: 30px;
-}
-
-.news-list__item {
+.news-item {
   background-color: #ffffff;
   border-radius: 10px;
   padding: 25px 30px;
@@ -15,7 +11,7 @@
   }
 }
 
-.news-list__item-title {
+.news-item__title {
   font-size: 16px;
   font-weight: bold;
   color: #191919;
@@ -31,16 +27,16 @@
   }
 }
 
-.news-list__item-img-link {
+.news-item__img-link {
   display: block;
 }
 
-.news-list__item-img {
+.news-item__img {
   width: 100%;
   border-radius: 10px;
 }
 
-.news-list__item-date {
+.news-item__date {
   margin-top: 15px;
   font-weight: 600;
   color: $primary;
