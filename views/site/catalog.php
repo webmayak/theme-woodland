@@ -4,804 +4,69 @@ use pantera\leads\widgets\form\LeadForm;
 
 ?>
 
-<div class="container">
-    <ul class="breadcrumb">
-        <li>
-            <a href="/">Главная</a>
-        </li>
-        <li class="active">Каталог</li>
-    </ul>
+<ul class="breadcrumb">
+    <li>
+        <a href="/">Главная</a>
+    </li>
+    <li class="active">Каталог</li>
+</ul>
 
-    <div class="catalog-page">
-        <h1>Каталог</h1>
-        <ul class="catalog-page__nav-tabs nav nav-tabs" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#catalog-tab-1">Дома из бруса</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-2">Каркасные</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-3">Бани</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-4">Одноэтажные</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-5">Беседки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-6">Туалеты</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-7">Гаражи</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-8">Декор</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-9">Дома из бруса</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-10">Каркасные</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-11">Бани</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-12">Одноэтажные</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-13">Беседки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-14">Туалеты</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-15">Гаражи</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#catalog-tab-16">Декор</a>
-            </li>
-        </ul>
-        <div class="catalog-page__tab-content tab-content">
-            <div class="tab-pane fade show active" id="catalog-tab-1">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catalog-page__btn-wrap">
-                    <button class="catalog-page__btn btn btn-primary">Показать еще</button>
-                    <button class="catalog-page__btn btn btn-success">Перейти в категорию</button>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="catalog-tab-2">
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="catalog-page__item product-card">
-                            <div class="product-card__img-wrap">
-                                <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
-                            </div>
-                            <a href="#" class="product-card__title-link">
-                                <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
-                            </a>
-                            <ul class="product-card__params ul-reset">
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-address"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-bed"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Комнат: <b>5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-size"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
-                                </li>
-                                <li class="product-card__param">
-                                    <div class="product-card__param-icon-wrap">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                            <use xlink:href="/images/sprite.svg#icon-calendar"/>
-                                        </svg>
-                                    </div>
-                                    <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
-                                </li>
-                            </ul>
-                            <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
-                            <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
-                            <div class="product-card__actions">
-                                <button class="product-card__to-cart btn btn-primary">
-                                    Заказать
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-cart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-favorites btn btn-outline-success">
-                                    <span class="sr-only">В избранное</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-heart"/>
-                                    </svg>
-                                </button>
-                                <button class="product-card__to-compare btn btn-outline-success">
-                                    <span class="sr-only">Сравнить</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                        <use xlink:href="/images/sprite.svg#icon-graph"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+<div class="catalog-page">
+    <h1>Каталог</h1>
+    <ul class="catalog-page__nav-tabs nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#catalog-tab-1">Дома из бруса</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-2">Каркасные</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-3">Бани</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-4">Одноэтажные</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-5">Беседки</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-6">Туалеты</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-7">Гаражи</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-8">Декор</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-9">Дома из бруса</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-10">Каркасные</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-11">Бани</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-12">Одноэтажные</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-13">Беседки</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-14">Туалеты</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-15">Гаражи</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#catalog-tab-16">Декор</a>
+        </li>
+    </ul>
+    <div class="catalog-page__tab-content tab-content">
+        <div class="tab-pane fade show active" id="catalog-tab-1">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="catalog-page__item product-card">
                         <div class="product-card__img-wrap">
                             <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
@@ -867,25 +132,760 @@ use pantera\leads\widgets\form\LeadForm;
                         </div>
                     </div>
                 </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="catalog-page__item product-card">
+                        <div class="product-card__img-wrap">
+                            <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                        </div>
+                        <a href="#" class="product-card__title-link">
+                            <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                        </a>
+                        <ul class="product-card__params ul-reset">
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Комнат: <b>5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-size"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                            </li>
+                        </ul>
+                        <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                        <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                        <div class="product-card__actions">
+                            <button class="product-card__to-cart btn btn-primary">
+                                Заказать
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-cart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-favorites btn btn-outline-success">
+                                <span class="sr-only">В избранное</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-heart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-compare btn btn-outline-success">
+                                <span class="sr-only">Сравнить</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-graph"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="catalog-page__item product-card">
+                        <div class="product-card__img-wrap">
+                            <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                        </div>
+                        <a href="#" class="product-card__title-link">
+                            <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                        </a>
+                        <ul class="product-card__params ul-reset">
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Комнат: <b>5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-size"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                            </li>
+                        </ul>
+                        <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                        <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                        <div class="product-card__actions">
+                            <button class="product-card__to-cart btn btn-primary">
+                                Заказать
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-cart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-favorites btn btn-outline-success">
+                                <span class="sr-only">В избранное</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-heart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-compare btn btn-outline-success">
+                                <span class="sr-only">Сравнить</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-graph"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="catalog-page__item product-card">
+                        <div class="product-card__img-wrap">
+                            <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                        </div>
+                        <a href="#" class="product-card__title-link">
+                            <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                        </a>
+                        <ul class="product-card__params ul-reset">
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Комнат: <b>5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-size"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                            </li>
+                        </ul>
+                        <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                        <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                        <div class="product-card__actions">
+                            <button class="product-card__to-cart btn btn-primary">
+                                Заказать
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-cart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-favorites btn btn-outline-success">
+                                <span class="sr-only">В избранное</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-heart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-compare btn btn-outline-success">
+                                <span class="sr-only">Сравнить</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-graph"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="catalog-page__item product-card">
+                        <div class="product-card__img-wrap">
+                            <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                        </div>
+                        <a href="#" class="product-card__title-link">
+                            <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                        </a>
+                        <ul class="product-card__params ul-reset">
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Комнат: <b>5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-size"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                            </li>
+                        </ul>
+                        <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                        <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                        <div class="product-card__actions">
+                            <button class="product-card__to-cart btn btn-primary">
+                                Заказать
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-cart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-favorites btn btn-outline-success">
+                                <span class="sr-only">В избранное</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-heart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-compare btn btn-outline-success">
+                                <span class="sr-only">Сравнить</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-graph"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="catalog-page__item product-card">
+                        <div class="product-card__img-wrap">
+                            <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                        </div>
+                        <a href="#" class="product-card__title-link">
+                            <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                        </a>
+                        <ul class="product-card__params ul-reset">
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Комнат: <b>5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-size"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                            </li>
+                        </ul>
+                        <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                        <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                        <div class="product-card__actions">
+                            <button class="product-card__to-cart btn btn-primary">
+                                Заказать
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-cart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-favorites btn btn-outline-success">
+                                <span class="sr-only">В избранное</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-heart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-compare btn btn-outline-success">
+                                <span class="sr-only">Сравнить</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-graph"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="catalog-page__item product-card">
+                        <div class="product-card__img-wrap">
+                            <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                        </div>
+                        <a href="#" class="product-card__title-link">
+                            <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                        </a>
+                        <ul class="product-card__params ul-reset">
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Комнат: <b>5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-size"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                            </li>
+                        </ul>
+                        <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                        <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                        <div class="product-card__actions">
+                            <button class="product-card__to-cart btn btn-primary">
+                                Заказать
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-cart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-favorites btn btn-outline-success">
+                                <span class="sr-only">В избранное</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-heart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-compare btn btn-outline-success">
+                                <span class="sr-only">Сравнить</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-graph"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="catalog-page__item product-card">
+                        <div class="product-card__img-wrap">
+                            <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                        </div>
+                        <a href="#" class="product-card__title-link">
+                            <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                        </a>
+                        <ul class="product-card__params ul-reset">
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Комнат: <b>5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-size"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                            </li>
+                        </ul>
+                        <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                        <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                        <div class="product-card__actions">
+                            <button class="product-card__to-cart btn btn-primary">
+                                Заказать
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-cart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-favorites btn btn-outline-success">
+                                <span class="sr-only">В избранное</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-heart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-compare btn btn-outline-success">
+                                <span class="sr-only">Сравнить</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-graph"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="catalog-tab-3">3</div>
-            <div class="tab-pane fade" id="catalog-tab-4">4</div>
-            <div class="tab-pane fade" id="catalog-tab-5">5</div>
-            <div class="tab-pane fade" id="catalog-tab-6">6</div>
-            <div class="tab-pane fade" id="catalog-tab-7">7</div>
-            <div class="tab-pane fade" id="catalog-tab-8">8</div>
-            <div class="tab-pane fade" id="catalog-tab-9">9</div>
-            <div class="tab-pane fade" id="catalog-tab-10">10</div>
-            <div class="tab-pane fade" id="catalog-tab-11">11</div>
-            <div class="tab-pane fade" id="catalog-tab-12">12</div>
-            <div class="tab-pane fade" id="catalog-tab-13">13</div>
-            <div class="tab-pane fade" id="catalog-tab-14">14</div>
-            <div class="tab-pane fade" id="catalog-tab-15">15</div>
-            <div class="tab-pane fade" id="catalog-tab-16">16</div>
+            <div class="catalog-page__btn-wrap">
+                <button class="catalog-page__btn btn btn-primary">Показать еще</button>
+                <button class="catalog-page__btn btn btn-success">Перейти в категорию</button>
+            </div>
         </div>
+        <div class="tab-pane fade" id="catalog-tab-2">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="catalog-page__item product-card">
+                        <div class="product-card__img-wrap">
+                            <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                        </div>
+                        <a href="#" class="product-card__title-link">
+                            <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                        </a>
+                        <ul class="product-card__params ul-reset">
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Комнат: <b>5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-size"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                            </li>
+                        </ul>
+                        <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                        <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                        <div class="product-card__actions">
+                            <button class="product-card__to-cart btn btn-primary">
+                                Заказать
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-cart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-favorites btn btn-outline-success">
+                                <span class="sr-only">В избранное</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-heart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-compare btn btn-outline-success">
+                                <span class="sr-only">Сравнить</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-graph"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="catalog-page__item product-card">
+                        <div class="product-card__img-wrap">
+                            <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                        </div>
+                        <a href="#" class="product-card__title-link">
+                            <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                        </a>
+                        <ul class="product-card__params ul-reset">
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Комнат: <b>5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-size"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                            </li>
+                        </ul>
+                        <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                        <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                        <div class="product-card__actions">
+                            <button class="product-card__to-cart btn btn-primary">
+                                Заказать
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-cart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-favorites btn btn-outline-success">
+                                <span class="sr-only">В избранное</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-heart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-compare btn btn-outline-success">
+                                <span class="sr-only">Сравнить</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-graph"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="catalog-page__item product-card">
+                        <div class="product-card__img-wrap">
+                            <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                        </div>
+                        <a href="#" class="product-card__title-link">
+                            <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                        </a>
+                        <ul class="product-card__params ul-reset">
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Комнат: <b>5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-size"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                            </li>
+                            <li class="product-card__param">
+                                <div class="product-card__param-icon-wrap">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                    </svg>
+                                </div>
+                                <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                            </li>
+                        </ul>
+                        <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                        <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                        <div class="product-card__actions">
+                            <button class="product-card__to-cart btn btn-primary">
+                                Заказать
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-cart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-favorites btn btn-outline-success">
+                                <span class="sr-only">В избранное</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-heart"/>
+                                </svg>
+                            </button>
+                            <button class="product-card__to-compare btn btn-outline-success">
+                                <span class="sr-only">Сравнить</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-graph"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="catalog-page__item product-card">
+                    <div class="product-card__img-wrap">
+                        <img class="product-card__img" src="/images/product-1.jpg" alt="Дом из бруса 8x8.5 в два этажа брусом с эркером">
+                    </div>
+                    <a href="#" class="product-card__title-link">
+                        <h3 class="product-card__title">Дом из бруса 8x8.5 в два этажа брусом с эркером</h3>
+                    </a>
+                    <ul class="product-card__params ul-reset">
+                        <li class="product-card__param">
+                            <div class="product-card__param-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-address"/>
+                                </svg>
+                            </div>
+                            <div class="product-card__param-text">Этажность: <b>2 этажа</b></div>
+                        </li>
+                        <li class="product-card__param">
+                            <div class="product-card__param-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-bed"/>
+                                </svg>
+                            </div>
+                            <div class="product-card__param-text">Комнат: <b>5</b></div>
+                        </li>
+                        <li class="product-card__param">
+                            <div class="product-card__param-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-size"/>
+                                </svg>
+                            </div>
+                            <div class="product-card__param-text">Размер: <b>8×8.5</b></div>
+                        </li>
+                        <li class="product-card__param">
+                            <div class="product-card__param-icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-calendar"/>
+                                </svg>
+                            </div>
+                            <div class="product-card__param-text">Сроки: <b>14 дней</b></div>
+                        </li>
+                    </ul>
+                    <div class="product-card__old-price">Старая цена: <del>850 000 Руб</del></div>
+                    <div class="product-card__price">Цена: <b>742 500 Руб</b></div>
+                    <div class="product-card__actions">
+                        <button class="product-card__to-cart btn btn-primary">
+                            Заказать
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                <use xlink:href="/images/sprite.svg#icon-cart"/>
+                            </svg>
+                        </button>
+                        <button class="product-card__to-favorites btn btn-outline-success">
+                            <span class="sr-only">В избранное</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                <use xlink:href="/images/sprite.svg#icon-heart"/>
+                            </svg>
+                        </button>
+                        <button class="product-card__to-compare btn btn-outline-success">
+                            <span class="sr-only">Сравнить</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                <use xlink:href="/images/sprite.svg#icon-graph"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="catalog-tab-3">3</div>
+        <div class="tab-pane fade" id="catalog-tab-4">4</div>
+        <div class="tab-pane fade" id="catalog-tab-5">5</div>
+        <div class="tab-pane fade" id="catalog-tab-6">6</div>
+        <div class="tab-pane fade" id="catalog-tab-7">7</div>
+        <div class="tab-pane fade" id="catalog-tab-8">8</div>
+        <div class="tab-pane fade" id="catalog-tab-9">9</div>
+        <div class="tab-pane fade" id="catalog-tab-10">10</div>
+        <div class="tab-pane fade" id="catalog-tab-11">11</div>
+        <div class="tab-pane fade" id="catalog-tab-12">12</div>
+        <div class="tab-pane fade" id="catalog-tab-13">13</div>
+        <div class="tab-pane fade" id="catalog-tab-14">14</div>
+        <div class="tab-pane fade" id="catalog-tab-15">15</div>
+        <div class="tab-pane fade" id="catalog-tab-16">16</div>
     </div>
 </div>
+
+</div><!-- закрываем .container -->
 
 <div class="advantages light-bg">
     <div class="container">
@@ -1015,3 +1015,6 @@ use pantera\leads\widgets\form\LeadForm;
         </div>
     </div>
 </div>
+
+<!-- снова открываем локально закрытый .container -->
+<div class="container">
