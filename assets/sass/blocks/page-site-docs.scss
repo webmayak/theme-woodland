@@ -1,0 +1,9 @@
+.page-site-docs__content {
+  padding-bottom: 50px;
+}
+
+.page-site-docs__item {
+  & + & {
+    margin-top: 10px;
+  }
+}
