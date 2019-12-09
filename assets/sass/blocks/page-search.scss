@@ -1,0 +1,30 @@
+.page-search__content {
+  padding-bottom: 100px;
+}
+
+.page-search__search-field {
+  font-size: 16px;
+}
+
+.page-search__search-btn {
+  min-width: 170px;
+}
+
+.page-search__text {
+  font-size: 16px;
+  margin: 30px 0 40px;
+}
+
+.page-search__btn-wrap {
+  margin-top: 20px;
+}
+
+.page-search__pagination {
+  margin-top: 50px;
+}
+
+@media (max-width: 575px) {
+  .page-search__search-btn {
+    min-width: 80px;
+  }
+}
