@@ -578,6 +578,133 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<div class="main-tabs">
+    <div class="container">
+        <ul class="main-tabs__nav-tabs nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#reviews-tab">Отзывы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#news-tab">Новости</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#articles-tab">Статьи</a>
+            </li>
+        </ul>
+        <div class="main-tabs__tab-content tab-content">
+            <div class="tab-pane fade show active" id="reviews-tab">
+                <h2>Что клиенты говорят о нас</h2>
+                <div class="main-tabs__reviews-carousel owl-carousel">
+                    <div class="review-item">
+                        <div class="review-item__name">Татьяна Косенко</div>
+                        <div class="review-item__date"><i class="fa fa-clock-o"></i> 07.10.19</div>
+                        <div class="review-item__text">
+                            <p>Долго и качественно я выбирала фирму, которая построит дом по моим требованиям и за приемлемую цену. Когда нашла эту компанию после звонка менеджеру, прежде чем заключить договор, сначала съездила на несколько объектов, которые они раньше строили, что и вам советую. Смогла лично удостовериться, что имею дело с профессионалами, а после того, как залили мне фундамент, я приезжала во время возведения самого сруба и видела, что работа кипит. Каждый был занят своим делом, но работали дружно, как в команде. Дом возвели добротный, с точностью выполнив условия договора, весной этого года думаю продолжить сотрудничество по отделке дома. Выполненной работой осталась очень довольна, здесь вам помогут построить дом вашей мечты.</p>
+                        </div>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-item__name">Татьяна Косенко</div>
+                        <div class="review-item__date"><i class="fa fa-clock-o"></i> 07.10.19</div>
+                        <div class="review-item__text">
+                            <p>Долго и качественно я выбирала фирму, которая построит дом по моим требованиям и за приемлемую цену. Когда нашла эту компанию после звонка менеджеру, прежде чем заключить договор, сначала съездила на несколько объектов, которые они раньше строили, что и вам советую. Смогла лично удостовериться, что имею дело с профессионалами, а после того, как залили мне фундамент, я приезжала во время возведения самого сруба и видела, что работа кипит. Каждый был занят своим делом, но работали дружно, как в команде. Дом возвели добротный, с точностью выполнив условия договора, весной этого года думаю продолжить сотрудничество по отделке дома. Выполненной работой осталась очень довольна, здесь вам помогут построить дом вашей мечты.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="news-tab">
+                <h2>Последние новости</h2>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="main-tabs__item-card item-card item-card--main-news-item">
+                            <a class="item-card__img-link" href="#">
+                                <img class="item-card__img" src="/images/main-new-1.jpg" alt="Приглашение на выставку домов из дерева 2019 года">
+                            </a>
+                            <div class="item-card__date"><i class="fa fa-calendar"></i> 07.10.19</div>
+                            <h4 class="item-card__title"><a href="#">Приглашение на выставку домов из дерева 2019 года</a></h4>
+                            <a class="item-card__more-link" href="#">Подробнее <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="main-tabs__item-card item-card item-card--main-news-item">
+                            <a class="item-card__img-link" href="#">
+                                <img class="item-card__img" src="/images/main-new-1.jpg" alt="Приглашение на выставку домов из дерева 2019 года">
+                            </a>
+                            <div class="item-card__date"><i class="fa fa-calendar"></i> 07.10.19</div>
+                            <h4 class="item-card__title"><a href="#">Приглашение на выставку домов из дерева 2019 года</a></h4>
+                            <a class="item-card__more-link" href="#">Подробнее <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="main-tabs__item-card item-card item-card--main-news-item">
+                            <a class="item-card__img-link" href="#">
+                                <img class="item-card__img" src="/images/main-new-1.jpg" alt="Приглашение на выставку домов из дерева 2019 года">
+                            </a>
+                            <div class="item-card__date"><i class="fa fa-calendar"></i> 07.10.19</div>
+                            <h4 class="item-card__title"><a href="#">Приглашение на выставку домов из дерева 2019 года</a></h4>
+                            <a class="item-card__more-link" href="#">Подробнее <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="main-tabs__item-card item-card item-card--main-news-item">
+                            <a class="item-card__img-link" href="#">
+                                <img class="item-card__img" src="/images/main-new-1.jpg" alt="Приглашение на выставку домов из дерева 2019 года">
+                            </a>
+                            <div class="item-card__date"><i class="fa fa-calendar"></i> 07.10.19</div>
+                            <h4 class="item-card__title"><a href="#">Приглашение на выставку домов из дерева 2019 года</a></h4>
+                            <a class="item-card__more-link" href="#">Подробнее <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="articles-tab">
+                <h2>Актуальные статьи</h2>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="main-tabs__item-card item-card item-card--main-articles-item">
+                            <div class="item-card__date"><i class="fa fa-calendar"></i> 07.10.19</div>
+                            <a class="item-card__img-link" href="#">
+                                <img class="item-card__img" src="/images/main-article-1.jpg" alt="Комформ и уют проживания в деревянном доме">
+                            </a>
+                            <h4 class="item-card__title"><a href="#">Комформ и уют проживания в деревянном доме</a></h4>
+                            <a class="item-card__more-link" href="#">Читать все <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="main-tabs__item-card item-card item-card--main-articles-item">
+                            <div class="item-card__date"><i class="fa fa-calendar"></i> 07.10.19</div>
+                            <a class="item-card__img-link" href="#">
+                                <img class="item-card__img" src="/images/main-article-1.jpg" alt="Комформ и уют проживания в деревянном доме">
+                            </a>
+                            <h4 class="item-card__title"><a href="#">Комформ и уют проживания в деревянном доме</a></h4>
+                            <a class="item-card__more-link" href="#">Читать все <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="main-tabs__item-card item-card item-card--main-articles-item">
+                            <div class="item-card__date"><i class="fa fa-calendar"></i> 07.10.19</div>
+                            <a class="item-card__img-link" href="#">
+                                <img class="item-card__img" src="/images/main-article-1.jpg" alt="Комформ и уют проживания в деревянном доме">
+                            </a>
+                            <h4 class="item-card__title"><a href="#">Комформ и уют проживания в деревянном доме</a></h4>
+                            <a class="item-card__more-link" href="#">Читать все <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="main-tabs__item-card item-card item-card--main-articles-item">
+                            <div class="item-card__date"><i class="fa fa-calendar"></i> 07.10.19</div>
+                            <a class="item-card__img-link" href="#">
+                                <img class="item-card__img" src="/images/main-article-1.jpg" alt="Комформ и уют проживания в деревянном доме">
+                            </a>
+                            <h4 class="item-card__title"><a href="#">Комформ и уют проживания в деревянном доме</a></h4>
+                            <a class="item-card__more-link" href="#">Читать все <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="steps">
     <div class="container">
         <h2>Как мы работаем</h2>

@@ -95,3 +95,28 @@
     margin-bottom: 15px;
   }
 }
+
+.item-card--main-news-item {
+  .item-card__img-link,
+  .item-card__date,
+  .item-card__title {
+    margin-bottom: 15px;
+  }
+
+  .item-card__title {
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+
+.item-card--main-articles-item {
+  .item-card__img-link,
+  .item-card__date,
+  .item-card__title {
+    margin-bottom: 15px;
+  }
+
+  .item-card__title {
+    font-size: 14px;
+  }
+}
