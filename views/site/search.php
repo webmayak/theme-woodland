@@ -13,12 +13,8 @@ use yii\web\View;
 /* @var $links array */
 $this->title = '"Дом" - результаты поиска';
 $this->params['breadcrumbs'][] = $this->title;
-?>
-<h1 class="title-home">
-    <?= $this->title ?>
-</h1>
-
-<main class="page-search__content">
+?><main class="page-search__content">
+    <h1><?= $this->title ?></h1>
 	<div class="input-group">
 		<input class="page-search__search-field form-control form-control-lg" type="text" placeholder="Поиск по сайту" value="Дом">
 		<div class="input-group-append">

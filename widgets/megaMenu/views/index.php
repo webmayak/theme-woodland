@@ -74,7 +74,7 @@ use yii\web\View;
                     </ul>
                 </li>
                 <li class="<?= Yii::$app->request->pathInfo === 'gallery' ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= Url::to(['/gallery']) ?>">
+                    <a class="navtext" href="<?= Url::to(['/site/gallery']) ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-gallery"/>
                         </svg>
@@ -98,6 +98,7 @@ use yii\web\View;
                         <li><a href="<?= Url::to(['/site/faq']) ?>">FAQ</a></li>
                         <li><a href="<?= Url::to(['/sitemap']) ?>">Карта сайта</a></li>
                         <li><a href="<?= Url::to(['/404']) ?>">404</a></li>
+                        <li><a href="<?= Url::to(['/site/docs']) ?>">Документы</a></li>
                     </ul>
                 </li>
                 <li class="<?= false ? 'active' : '' ?>">

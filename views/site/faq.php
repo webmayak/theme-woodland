@@ -14,7 +14,7 @@ use yii\web\View;
 $this->title = 'Вопросы и ответы';
 $this->params['breadcrumbs'][] = $this->title;
 ?><main class="page-site-faq__content">
-    <h1 class="title-home"><?= $this->title ?></h1>
+    <h1><?= $this->title ?></h1>
     <div class="row">
         <div class="col-xl-3 col-lg-4">
             <ul class="page-site-faq__menu">
