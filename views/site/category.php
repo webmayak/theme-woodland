@@ -21,7 +21,9 @@ use pantera\leads\widgets\form\LeadForm;
         <p>Чтобы прикоснуться к истории, мы создали домостроительную компанию «ФОРТУНА» и разместили ее в подмосковной Мещёре, в краю красивых и экологически чистых лесов, жемчужных озёр и рек, на расстоянии 140км. от Москвы, в посёлке ЦУС «Мир» Шатурского района.</p>
     </div>
 
-    <div class="row">
+    <?= $this->render('@theme/views/_categories') ?>
+
+    <div class="row mt-5">
         <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="catalog-page__item product-card">
                 <?= $this->render('@theme/views/_product-card') ?>
@@ -70,7 +72,7 @@ use pantera\leads\widgets\form\LeadForm;
         </div>
     </div>
 
-    <div class="page-site-category__btn-wrap text-center">
+    <div class="page-site-category__btn-wrap text-center mb-4">
         <button class="btn btn-lg btn-primary">Показать еще</button>
     </div>
 

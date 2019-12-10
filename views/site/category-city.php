@@ -109,9 +109,9 @@ use pantera\leads\widgets\form\LeadForm;
 
 <?= $this->render('@theme/views/_advantages') ?>
 
-<?= $this->render('@theme/views/_steps') ?>
-
 <?= $this->render('@theme/views/_text-block') ?>
+
+<?= $this->render('@theme/views/_steps') ?>
 
 <?= $this->render('@theme/views/_works-map') ?>
 
