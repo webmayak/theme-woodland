@@ -70,9 +70,8 @@
 
   a {
     @extend .btn;
+    @extend .btn-lg;
     @extend .btn-primary;
-    padding: 14px 30px;
-    width: 195px;
   }
 }
 

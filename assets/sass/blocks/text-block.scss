@@ -6,6 +6,10 @@
   background-position: 50%;
   background-image: url("../images/text-bg.png");
 
+  &.light-bg {
+    background-image: url("../images/text-bg--light-bg.png");
+  }
+
   p,
   ol,
   ul {

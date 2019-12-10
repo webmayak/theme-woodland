@@ -22,7 +22,48 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 	</div>
     <div class="page-search__text">Если результаты вас не удовлетворяют, пожалуйста, попробуйте еще раз</div>
-    <?= $this->render('@theme/views/_catalog_grid') ?>
+    <div class="row">
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="catalog-page__item product-card">
+                <?= $this->render('@theme/views/_product-card') ?>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="catalog-page__item product-card">
+                <?= $this->render('@theme/views/_product-card') ?>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="catalog-page__item product-card">
+                <?= $this->render('@theme/views/_product-card') ?>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="catalog-page__item product-card">
+                <?= $this->render('@theme/views/_product-card') ?>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="catalog-page__item product-card">
+                <?= $this->render('@theme/views/_product-card') ?>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="catalog-page__item product-card">
+                <?= $this->render('@theme/views/_product-card') ?>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="catalog-page__item product-card">
+                <?= $this->render('@theme/views/_product-card') ?>
+            </div>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="catalog-page__item product-card">
+                <?= $this->render('@theme/views/_product-card') ?>
+            </div>
+        </div>
+    </div>
     <div class="page-search__btn-wrap text-center">
         <button class="btn btn-lg btn-primary">Показать еще</button>
     </div>
