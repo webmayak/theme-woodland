@@ -34,20 +34,17 @@
     padding: 13px 12px;
     flex-shrink: 0;
     margin-left: auto;
-  }
+    order: 3;
 
-  &--doc {
-    .doc-item__icon-wrap {
+    &[href*=".doc"] ~ .doc-item__icon-wrap {
       color: #3e5b95;
 
       &::after {
         content: 'doc';
       }
     }
-  }
 
-  &--pdf {
-    .doc-item__icon-wrap {
+    &[href*=".pdf"] ~ .doc-item__icon-wrap {
       color: #e8575b;
 
       &::after {
