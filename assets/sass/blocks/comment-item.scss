@@ -1,0 +1,69 @@
+.comment-item {
+  border: 1px solid $success;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.12);
+  padding: 30px;
+  font-size: 16px;
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__author {
+    font-weight: 600;
+    margin-right: 25px;
+  }
+
+  &__rating {
+    color: $success;
+    margin-right: 25px;
+  }
+
+  &__date {
+    .fa {
+      color: $primary;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  &__content,
+  &__reply-content {
+    p {
+      margin: 0;
+      line-height: 1.2;
+    }
+  }
+
+  &__replies-list {
+    border-top: 1px solid #f7f7f7;
+    margin-top: 25px;
+    padding-top: 25px;
+    padding-left: 50px;
+  }
+
+  &__reply {
+    padding-left: 35px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-image: url("../images/reply-arrow.png");
+  }
+}
+
+@media (max-width: 767px) {
+  .comment-item {
+    &__replies-list {
+      padding-left: 15px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .comment-item {
+    padding: 20px 15px;
+  }
+}

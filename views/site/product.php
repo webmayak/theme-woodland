@@ -845,7 +845,85 @@
                     </div>
                 </div>
                 <div class="tab-pane fade" id="product-tab-5">
-                    Комментарии
+                    <div class="comments">
+                        <ul class="comments__list ul-reset">
+                            <li class="comments__item comment-item">
+                                <div class="comment-item__header">
+                                    <span class="comment-item__author">Татьяна Косенко</span>
+                                    <span class="comment-item__rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span class="comment-item__date"><i class="fa fa-clock-o"></i> 07.10.19</span>
+                                </div>
+                                <div class="comment-item__title">Комментарий</div>
+                                <div class="comment-item__content">
+                                    <p>Понравился этот дом. Сколько займет по времени строительство такого дома?</p>
+                                </div>
+                                <ul class="comment-item__replies-list ul-reset">
+                                    <li class="comment-item__reply">
+                                        <div class="comment-item__title">Фортуна</div>
+                                        <div class="comment-item__reply-content">
+                                            <p>Рады приветствовать вас. Строительство такого дома занимает 20–25 дней.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="comments__item comment-item">
+                                <div class="comment-item__header">
+                                    <span class="comment-item__author">Татьяна Косенко</span>
+                                    <span class="comment-item__rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span class="comment-item__date"><i class="fa fa-clock-o"></i> 07.10.19</span>
+                                </div>
+                                <div class="comment-item__title">Комментарий</div>
+                                <div class="comment-item__content">
+                                    <p>Понравился этот дом. Сколько займет по времени строительство такого дома?</p>
+                                </div>
+                                <ul class="comment-item__replies-list ul-reset">
+                                    <li class="comment-item__reply">
+                                        <div class="comment-item__title">Фортуна</div>
+                                        <div class="comment-item__reply-content">
+                                            <p>Рады приветствовать вас. Строительство такого дома занимает 20–25 дней.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="comments__item comment-item">
+                                <div class="comment-item__header">
+                                    <span class="comment-item__author">Татьяна Косенко</span>
+                                    <span class="comment-item__rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </span>
+                                    <span class="comment-item__date"><i class="fa fa-clock-o"></i> 07.10.19</span>
+                                </div>
+                                <div class="comment-item__title">Комментарий</div>
+                                <div class="comment-item__content">
+                                    <p>Понравился этот дом. Сколько займет по времени строительство такого дома?</p>
+                                </div>
+                                <ul class="comment-item__replies-list ul-reset">
+                                    <li class="comment-item__reply">
+                                        <div class="comment-item__title">Фортуна</div>
+                                        <div class="comment-item__reply-content">
+                                            <p>Рады приветствовать вас. Строительство такого дома занимает 20–25 дней.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="tab-pane fade" id="product-tab-6">
                     <p>В активе компании склад круглого леса, пилорама, несколько деревообрабатывающих цехов, комплекс сушильных камер, склад готовой продукции, собственный парк автотранспорта. В цехах установлено оборудование для производства домостроительного бруса и подготовки домокомплектов , в том числе и линия для изготовления клеёного бруса. Иными словами, на производственные площади  предприятия мы поместили всё необходимое оборудование для полного технологического цикла по обработке древесины от раскроя бревна до выпуска готовых домокомплектов и другой столярной продукции.</p>
