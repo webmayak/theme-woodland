@@ -34,3 +34,9 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .requisites ul {
+    column-count: 1;
+  }
+}

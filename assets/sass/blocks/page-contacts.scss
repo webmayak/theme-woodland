@@ -1,9 +1,75 @@
 .page-contacts {
+  &__tabs {
+    padding-bottom: 40px;
+  }
+
   &__contact-item {
     margin-bottom: 40px;
 
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  &__route {
+    padding-top: 60px;
+  }
+
+  &__route-item {
+    border: 1px solid $success;
+    border-radius: 5px;
+    padding: 30px 70px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 35px 30px;
+
+    &--foot {
+      background-image: url("../images/footsteps-silhouette-variant.png");
+    }
+
+    &--car {
+      background-image: url("../images/car.png");
+    }
+  }
+
+  &__route-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__map-tabs {
+    .nav-item {
+      flex-grow: 0;
+    }
+
+    .nav-link {
+      background-color: transparent;
+      color: rgba(#323b49, 0.7);
+      padding: 0;
+
+      &.active {
+        background-color: transparent;
+        color: #323b49;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .page-contacts__contact-list {
+    margin-bottom: 45px;
+  }
+
+  .page-contacts__route-item {
+    margin-bottom: 30px;
+    height: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .page-contacts__route-item {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: none;
   }
 }
