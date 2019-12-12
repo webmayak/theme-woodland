@@ -1,6 +1,6 @@
 <?php
 
-use pantera\leads\widgets\form\LeadForm;
+    use pantera\leads\widgets\form\LeadForm;
 
 ?>
 
@@ -113,7 +113,7 @@ use pantera\leads\widgets\form\LeadForm;
 
 <?= $this->render('@theme/views/_steps') ?>
 
-<?= $this->render('@theme/views/_works-map') ?>
+<?= $this->render('@theme/views/_works-map--with-form') ?>
 
 <?= $this->render('@theme/views/_text-block') ?>
 
