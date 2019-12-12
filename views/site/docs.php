@@ -6,6 +6,7 @@
  * Time: 4:40 PM
  */
 
+use pantera\leads\widgets\form\LeadForm;
 use yii\helpers\Html;
 use yii\web\View;
 
@@ -52,3 +53,12 @@ $this->params['breadcrumbs'][] = $this->title;
         <span class="doc-item__title">ГОСТ 7319 - 80 "Пиломатериалы и заготовки лиственных пород.Атмосферная сушка и хранение"</span>
     </div>
 </main>
+
+</div><!--закрываем .container -->
+
+<?= LeadForm::widget([
+    'mode' => LeadForm::MODE_INLINE,
+    'key' => 'question',
+]) ?>
+
+<div class="container"><!--снова открываем -->
