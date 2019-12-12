@@ -6,6 +6,7 @@
  * Time: 4:40 PM
  */
 
+use pantera\leads\widgets\form\LeadForm;
 use yii\helpers\Html;
 use yii\web\View;
 
@@ -40,3 +41,12 @@ $this->params['breadcrumbs'][] = $this->title;
         <button class="btn btn-lg btn-primary">Показать еще</button>
     </div>
 </main>
+
+</div><!--закрываем .container -->
+
+<?= LeadForm::widget([
+    'mode' => LeadForm::MODE_INLINE,
+    'key' => 'review',
+]) ?>
+
+<div class="container"><!--снова открываем -->

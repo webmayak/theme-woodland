@@ -6,66 +6,72 @@
  * Time: 1:43 PM
  */
 
-use frontend\themes\woodland\widgets\leads\review\LeadReview;
+use frontend\widgets\leads\request\LeadRequest;
 use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\ActiveForm;
+use yii\widgets\MaskedInput;
 
 /* @var $this View */
-/* @var $model LeadReview */
+/* @var $model LeadRequest */
 /* @var $key string */
 ?>
-<?php $form = ActiveForm::begin([
-    'id' => 'lead-review-form',
-    'action' => ['/leads/default/save', 'key' => $key],
-    'options' => [
-        'class' => 'lead-form',
-    ],
-]) ?>
-<div class="question">
-    <div class="row">
-        <div class="col-md-5">
-            <div class="question__title hidden-sm hidden-xs">
-                На Ваш вопрос ответит квалифицированный специалист с большим опытом работы.
+<div class="content-block content-block--review-form">
+    <div class="container">
+        <?php $form = ActiveForm::begin([
+            'id' => 'lead-review-form',
+            'action' => ['/leads/default/save', 'key' => $key],
+            'options' => [
+                'class' => 'lead-form review-form',
+            ],
+        ]) ?>
+        <div class="title-home review-form__title-home">
+            Напишите свой отзыв
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <?= $form->field($model, 'name')->textInput([
+                        'placeholder' => $model->getAttributeLabel('name'),
+                    ])->label(false) ?>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <?= $form->field($model, 'phone')->widget(MaskedInput::class, [
+                        'mask' => '+7 (999) 999-99-99',
+                        'options' => [
+                            'placeholder' => $model->getAttributeLabel('phone'),
+                            'class' => 'form-control',
+                        ],
+                    ])->label(false) ?>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <?= $form->field($model, 'email')->textInput([
+                        'type' => 'email',
+                        'placeholder' => $model->getAttributeLabel('email'),
+                    ])->label(false) ?>
+                </div>
             </div>
         </div>
-        <div class="col-md-5 col-md-offset-2">
-            <div class="question__form">
-                <form>
-                    <div class="form-group">
-                        <?= $form->field($model, 'name')->textInput([
-                            'placeholder' => 'Ваше Имя',
-                        ])->label(false) ?>
-                    </div>
-                    <div class="form-group">
-                        <?= $form->field($model, 'location')->textInput([
-                            'placeholder' => 'Ваша страна, город',
-                        ])->label(false); ?>
-                    </div>
-                    <div class="form-group">
-                        <?= $form->field($model, 'scheme')->textInput([
-                            'placeholder' => 'Ваша схема лечения',
-                        ])->label(false) ?>
-                    </div>
-                    <div class="form-group">
-                        <?= $form->field($model, 'comment')->textarea([
-                            'rows' => 3,
-                            'placeholder' => 'Ваш комментарий',
-                        ])->label(false) ?>
-                    </div>
-                    <div class="form-group text-right">
-                        <?= Html::submitButton(Html::tag('span', 'Оставить отзыв', [
-                            'class' => 'ladda-label',
-                        ]), [
-                            'class' => 'btn btn-primary ladda-button',
-                            'data' => [
-                                'style' => 'zoom-in'
-                            ],
-                        ]) ?>
-                    </div>
-                </form>
-            </div>
+        <div class="form-group">
+            <?= $form->field($model, 'comment')->textarea([
+                'placeholder' => $model->getAttributeLabel('comment'),
+                'rows' => 4,
+            ])->label(false) ?>
         </div>
+        <div class="form-group text-center">
+            <?= Html::submitButton(Html::tag('span', 'ОСТАВИТЬ ОТЗЫВ', [
+                'class' => 'ladda-label',
+            ]), [
+                'class' => 'btn btn-success btn-lg ladda-button',
+                'data' => [
+                    'style' => 'zoom-in'
+                ],
+            ]) ?>
+        </div>
+        <?php ActiveForm::end(); ?>
     </div>
 </div>
-<?php ActiveForm::end(); ?>

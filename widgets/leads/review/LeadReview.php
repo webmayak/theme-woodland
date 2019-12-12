@@ -13,16 +13,17 @@ use pantera\leads\models\Lead;
 class LeadReview extends Lead
 {
     public $name;
-    public $location;
-    public $scheme;
+    public $phone;
+    public $email;
     public $comment;
 
     public function rules()
     {
         $rules = parent::rules();
         $rules[] = ['name', 'required'];
-        $rules[] = ['location', 'required'];
-        $rules[] = ['scheme', 'required'];
+        $rules[] = ['phone', 'required'];
+        $rules[] = ['email', 'required'];
+        $rules[] = ['email', 'email'];
         $rules[] = ['comment', 'required'];
         return $rules;
     }
@@ -31,8 +32,8 @@ class LeadReview extends Lead
     {
         $labels = parent::attributeLabels();
         $labels['name'] = 'Ваше имя';
-        $labels['location'] = 'Ваша страна, город';
-        $labels['scheme'] = 'Ваша схема лечения';
+        $labels['phone'] = 'Ваш номер телефона';
+        $labels['email'] = 'Ваш Email';
         $labels['comment'] = 'Ваш комментарий';
         return $labels;
     }
