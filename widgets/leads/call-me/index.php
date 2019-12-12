@@ -15,7 +15,6 @@ use yii\widgets\MaskedInput;
 /* @var $this View */
 /* @var $model CallMe */
 /* @var $key string */
-$this->title = 'Заказать обратный звонок';
 
 $form = ActiveForm::begin([
     'id' => 'lead-call-me-form',

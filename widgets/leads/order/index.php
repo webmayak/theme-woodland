@@ -16,8 +16,6 @@ use yii\widgets\MaskedInput;
 /* @var $model LeadOrder */
 /* @var $key string */
 
-$this->title = 'Быстрый заказ';
-
 $form = ActiveForm::begin([
     'id' => 'lead-call-me-form',
     'action' => ['/leads/default/save', 'key' => $key],
