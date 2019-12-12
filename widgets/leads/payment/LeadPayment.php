@@ -6,7 +6,7 @@
  * Time: 2:37 PM
  */
 
-namespace frontend\widgets\leads\payment;
+namespace frontend\themes\woodland\widgets\leads\payment;
 
 use pantera\leads\models\Lead;
 

@@ -6,7 +6,7 @@
  * Time: 1:33 PM
  */
 
-use frontend\widgets\leads\question\LeadQuestion;
+use frontend\themes\woodland\widgets\leads\question\LeadQuestion;
 use yii\bootstrap\ActiveForm;
 use yii\web\View;
 use yii\widgets\MaskedInput;

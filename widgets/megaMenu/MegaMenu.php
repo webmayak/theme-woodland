@@ -6,7 +6,7 @@
  * Time: 12:02 PM
  */
 
-namespace frontend\widgets\megaMenu;
+namespace frontend\themes\woodland\widgets\megaMenu;
 
 use common\modules\catalog\models\CatalogCategory;
 

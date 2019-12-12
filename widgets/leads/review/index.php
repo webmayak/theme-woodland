@@ -6,7 +6,7 @@
  * Time: 1:43 PM
  */
 
-use frontend\widgets\leads\request\LeadRequest;
+use frontend\themes\woodland\widgets\leads\request\LeadRequest;
 use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\ActiveForm;

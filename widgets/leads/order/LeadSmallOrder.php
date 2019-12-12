@@ -6,7 +6,7 @@
  * Time: 2:37 PM
  */
 
-namespace frontend\widgets\leads\order;
+namespace frontend\themes\woodland\widgets\leads\order;
 
 use pantera\leads\models\Lead;
 

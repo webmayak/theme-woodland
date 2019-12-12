@@ -6,7 +6,7 @@
  * Time: 12:46 PM
  */
 
-namespace frontend\widgets\leads\question;
+namespace frontend\themes\woodland\widgets\leads\question;
 
 use pantera\leads\models\Lead;
 

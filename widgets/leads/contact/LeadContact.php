@@ -6,7 +6,7 @@
  * Time: 2:37 PM
  */
 
-namespace frontend\widgets\leads\contact;
+namespace frontend\themes\woodland\widgets\leads\contact;
 
 use pantera\leads\models\Lead;
 

@@ -6,7 +6,7 @@
  * Time: 10:13 AM
  */
 
-use frontend\widgets\leads\contact\LeadContact;
+use frontend\themes\woodland\widgets\leads\contact\LeadContact;
 use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\ActiveForm;
@@ -24,7 +24,7 @@ use yii\widgets\MaskedInput;
     ],
 ]) ?>
 <div class="title-forma">
-    НАПИШИТЕ НАМ
+    Напишите нам
 </div>
 <div class="form-contact__form">
     <div class="row">
