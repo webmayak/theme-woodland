@@ -134,6 +134,10 @@ $(document).ready(function () {
             }
         });
     }
+
+    setTimeout(function () {
+        $('.quantity-field').styler();
+    }, 100);
 });
 
 $(document).on('click', '.open-lead-modal', function () {

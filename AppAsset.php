@@ -33,6 +33,7 @@ class AppAsset extends AssetBundle
         'js/jquery.goup.min.js',
         'js/js.cookie.js',
         'js/jquery.countTo.js',
+        'js/jquery.formstyler.min.js',
         'js/script.js',
     ];
     public $depends = [
