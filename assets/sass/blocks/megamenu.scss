@@ -112,7 +112,6 @@
 
     > .wsmenu-list {
       display: flex;
-      flex-wrap: wrap;
 
       > li {
         position: relative;
@@ -157,6 +156,7 @@
           color: #323b49;
           font-size: 16px;
           font-weight: 600;
+          white-space: nowrap;
           transition: 0.25s;
 
           &:hover {
