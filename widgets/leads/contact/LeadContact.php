@@ -12,8 +12,7 @@ use pantera\leads\models\Lead;
 
 class LeadContact extends Lead
 {
-    public $firstName;
-    public $lastName;
+    public $name;
     public $phone;
     public $email;
     public $comment;
@@ -21,8 +20,7 @@ class LeadContact extends Lead
     public function rules()
     {
         $rules = parent::rules();
-        $rules[] = ['firstName', 'required'];
-        $rules[] = ['lastName', 'required'];
+        $rules[] = ['name', 'required'];
         $rules[] = ['phone', 'required'];
         $rules[] = ['email', 'required'];
         $rules[] = ['email', 'email'];
@@ -33,8 +31,7 @@ class LeadContact extends Lead
     public function attributeLabels()
     {
         $labels = parent::attributeLabels();
-        $labels['firstName'] = 'Ваше имя';
-        $labels['lastName'] = 'Ваша Фамилия';
+        $labels['name'] = 'Ваше имя';
         $labels['phone'] = 'Ваш номер телефона';
         $labels['email'] = 'Ваш E-mail';
         $labels['comment'] = 'Ваш комментарий';

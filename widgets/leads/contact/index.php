@@ -28,21 +28,14 @@ use yii\widgets\MaskedInput;
 </div>
 <div class="form-contact__form">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <div class="form-group">
-                <?= $form->field($model, 'firstName')->textInput([
-                    'placeholder' => $model->getAttributeLabel('firstName'),
+                <?= $form->field($model, 'name')->textInput([
+                    'placeholder' => $model->getAttributeLabel('name'),
                 ])->label(false); ?>
             </div>
         </div>
-        <div class="col-sm-6">
-            <div class="form-group">
-                <?= $form->field($model, 'lastName')->textInput([
-                    'placeholder' => $model->getAttributeLabel('lastName'),
-                ])->label(false); ?>
-            </div>
-        </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <div class="form-group">
                 <?= $form->field($model, 'phone')->widget(MaskedInput::class, [
                     'mask' => '+7 (999) 999-99-99',
@@ -53,7 +46,7 @@ use yii\widgets\MaskedInput;
                 ])->label(false); ?>
             </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
             <div class="form-group">
                 <?= $form->field($model, 'email')->textInput([
                     'type' => 'email',
@@ -68,11 +61,11 @@ use yii\widgets\MaskedInput;
             'placeholder' => 'Ваш комментарий',
         ])->label(false); ?>
     </div>
-    <div class="form-group">
-        <?= Html::submitButton(Html::tag('span', 'ОТПРАВИТЬ ПИСЬМО', [
+    <div class="form-group text-center">
+        <?= Html::submitButton(Html::tag('span', 'Отправить письмо', [
             'class' => 'ladda-label',
         ]), [
-            'class' => 'btn btn-primary btn-lg ladda-button',
+            'class' => 'btn btn-success btn-lg ladda-button',
             'data' => [
                 'style' => 'zoom-in'
             ],
