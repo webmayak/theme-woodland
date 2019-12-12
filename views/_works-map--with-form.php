@@ -15,7 +15,7 @@
                 <div class="works-map__form-block">
                     <div class="works-map__form-title">Заказать бесплатный звонок</div>
                     <?= LeadForm::widget([
-                        'key' => 'order',
+                        'key' => 'orderOnMap',
                         'mode' => LeadForm::MODE_INLINE,
                     ]) ?>
                 </div>
