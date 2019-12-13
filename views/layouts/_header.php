@@ -150,7 +150,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     ],
                 ]) ?>
                 <?= LeadForm::widget([
-                    'key' => 'question',
+                    'key' => 'questionModal',
                     'text' => 'Задать вопрос',
                     'options' => [
                         'class' => 'btn btn-success header__btn btn--question',
