@@ -17,6 +17,10 @@
     transform: translateY(-50%);
     left: 0;
     right: 0;
+
+    ~ iframe {
+      height: 820px;
+    }
   }
 
   &__form-block {
@@ -25,7 +29,13 @@
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 3px 46px 0 rgba(0, 0, 0, 0.2);
-    padding: 50px;
+    padding: 40px 50px 50px;
+    margin-bottom: 0;
+
+    .close {
+      font-size: 30px;
+      font-weight: normal;
+    }
   }
 
   &__form-title {
@@ -37,6 +47,11 @@
 
   .form-group {
     margin-bottom: 30px;
+  }
+
+  .control-label {
+    font-size: 13px;
+    color: #afafaf;
   }
 
   .form-control {
@@ -63,7 +78,7 @@
   }
 
   textarea.form-control {
-    height: 110px;
+    height: auto;
     resize: none;
   }
 

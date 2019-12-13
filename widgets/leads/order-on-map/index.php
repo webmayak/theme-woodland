@@ -42,14 +42,14 @@ echo $form->field($model, 'email')->textInput([
 ]);
 
 echo $form->field($model, 'comment')->textarea([
-    'rows' => 3,
+    'rows' => 5,
     'placeholder' => $model->getAttributeLabel('comment'),
 ]);
 
-echo Html::submitButton(Html::tag('span', 'Отправить заявку', [
+echo Html::submitButton(Html::tag('span', 'Заказать звонок', [
     'class' => 'ladda-label',
 ]), [
-    'class' => 'btn btn-success btn-block ladda-button',
+    'class' => 'btn btn-success btn-lg d-block m-auto ladda-button',
     'data' => [
         'style' => 'zoom-in'
     ],
