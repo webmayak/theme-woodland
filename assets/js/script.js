@@ -1,3 +1,15 @@
+document.addEventListener(
+    "DOMContentLoaded", () => {
+        const menu = new Mmenu( "#mmenu-nav", {
+            "extensions": [
+                "pagedim-black",
+                "border-full",
+                "theme-white"
+            ]
+        });
+    }
+);
+
 function CollapseHandler() {
     const collapse = $('.footer-menu [data-toggle]');
     if (window.matchMedia('(max-width: 991px)').matches) {

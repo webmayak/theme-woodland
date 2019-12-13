@@ -36,6 +36,11 @@ use yii\web\View;
                     <ul class="sub-menu">
                         <li>
                             <a href="<?= Url::to(['#']) ?>">Этажность</a>
+                            <ul hidden>
+                                <li><a href="<?= Url::to(['#']) ?>">Одноэтажные</a></li>
+                                <li><a href="<?= Url::to(['#']) ?>">Двухэтажные</a></li>
+                                <li><a href="<?= Url::to(['#']) ?>">Трехэтажные</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="<?= Url::to(['#']) ?>">Площадь</a>

@@ -1,5 +1,8 @@
 .header {
+  position: relative;
+  background-color: #fff;
   padding: 20px 0;
+  border-bottom: 1px solid rgba(149, 149, 149, 0.1);
 }
 
 .header__contact {
@@ -7,12 +10,12 @@
   align-items: center;
   font-weight: 600;
   line-height: 1.3;
-}
 
-.header__contact--city,
-.header__contact--tel,
-.header__contact--email {
-  margin-bottom: 25px;
+  &--city,
+  &--tel,
+  &--email {
+    margin-bottom: 25px;
+  }
 }
 
 .header__contact-icon-wrap {
@@ -139,15 +142,38 @@
   margin-top: 10px;
 }
 
-@media (max-width: 991px) {
-  .header__btn + .header__btn {
-    margin-top: 0;
-    margin-left: 17px;
+@media (max-width: 1199px) {
+  .header__site-logo {
+    margin-left: 15px;
   }
 }
 
 @media (max-width: 991px) {
+  .header__contact {
+    &--city,
+    &--tel,
+    &--email {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .header {
+    padding: 10px 0;
+  }
+
   .header__site-logo {
-    vertical-align: middle;
+    margin-left: 10px;
+
+    .site-logo__img {
+      width: 50px;
+      margin-right: 0;
+    }
+
+    .site-logo__name,
+    .site-logo__descr {
+      display: none;
+    }
   }
 }

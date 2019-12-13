@@ -1,6 +1,10 @@
 .slider {
   position: relative;
 
+  .owl-carousel {
+    display: block !important;
+  }
+
   .owl-nav {
     > button {
       width: 150px;

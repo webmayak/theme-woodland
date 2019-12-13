@@ -1,0 +1,29 @@
+.mm-menu {
+  a {
+    &.mm-listitem__text,
+    &.mm-navbar__title {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+
+    &.mm-listitem__text {
+      font-weight: 600;
+      color: $text;
+    }
+
+    &.mm-navbar__title {
+      font-weight: bold;
+      color: $primary;
+    }
+  }
+}
+
+#mm-1 {
+  .mm-navbar {
+    display: none;
+  }
+}
+
+.mm-listitem__btn:not(.mm-listitem__text) {
+  border-left-width: 0;
+}
