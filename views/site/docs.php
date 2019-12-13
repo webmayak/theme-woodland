@@ -60,5 +60,3 @@ $this->params['breadcrumbs'][] = $this->title;
     'mode' => LeadForm::MODE_INLINE,
     'key' => 'question',
 ]) ?>
-
-<div class="container"><!--снова открываем -->

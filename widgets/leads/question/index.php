@@ -19,41 +19,41 @@ use yii\widgets\MaskedInput;
     'id' => 'lead-question-form',
     'action' => ['/leads/default/save', 'key' => $key],
     'options' => [
-        'class' => 'form-faq lead-form',
+        'class' => 'form-fullwidth lead-form',
     ],
 ]) ?>
 <div class="container">
-    <div class="title-home">
+    <div class="form-fullwidth__title">
         Задайте свой вопрос
     </div>
     <div class="form-faq__form">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <?= $form->field($model, 'name')->textInput([
                     'placeholder' => 'Ваше имя',
-                ])->label(false) ?>
+                ])->label() ?>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <?= $form->field($model, 'phone')->widget(MaskedInput::class, [
                     'mask' => '+7 (999) 999-99-99',
                     'options' => [
-                        'placeholder' => 'Ваш номер телефона',
+                        'placeholder' => 'Ваш телефон',
                         'class' => 'form-control',
                     ],
-                ])->label(false); ?>
+                ])->label(); ?>
             </div>
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <?= $form->field($model, 'email')->textInput([
                     'placeholder' => 'Ваш Email',
-                ])->label(false) ?>
+                ])->label(); ?>
             </div>
         </div>
         <?= $form->field($model, 'question')->textarea([
-            'rows' => 3,
-            'placeholder' => 'Ваш комментарий',
-        ])->label(false) ?>
-        <div class="text-center">
-            <button class="btn btn-success btn-lg">Оставить заявку</button>
+            'rows' => 8,
+            'placeholder' => 'Ваш вопрос',
+        ])->label() ?>
+        <div class="text-center mt-4">
+            <button class="btn btn-success btn-lg">Задать вопрос</button>
         </div>
     </div>
 </div>

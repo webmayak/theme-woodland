@@ -208,11 +208,9 @@ use yii\widgets\Breadcrumbs;
 
 <?= $this->render('@theme/views/_video') ?>
 
-<div class="container">
-    <?= LeadForm::widget([
-        'mode' => LeadForm::MODE_INLINE,
-        'key' => 'contact',
-    ]) ?>
-</div>
+<?= LeadForm::widget([
+    'mode' => LeadForm::MODE_INLINE,
+    'key' => 'contact',
+]) ?>
 
 <?php $this->endContent() ?>

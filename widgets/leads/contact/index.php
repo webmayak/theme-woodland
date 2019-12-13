@@ -20,56 +20,58 @@ use yii\widgets\MaskedInput;
     'id' => 'lead-call-me-form',
     'action' => ['/leads/default/save', 'key' => $key],
     'options' => [
-        'class' => 'form-contact lead-form',
+        'class' => 'form-fullwidth lead-form',
     ],
 ]) ?>
-<div class="title-forma">
+<div class="container">
+    <div class="form-fullwidth__title">
     Напишите нам
-</div>
-<div class="form-contact__form">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="form-group">
-                <?= $form->field($model, 'name')->textInput([
-                    'placeholder' => $model->getAttributeLabel('name'),
-                ])->label(false); ?>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <?= $form->field($model, 'phone')->widget(MaskedInput::class, [
-                    'mask' => '+7 (999) 999-99-99',
-                    'options' => [
-                        'placeholder' => $model->getAttributeLabel('phone'),
-                        'class' => 'form-control',
-                    ],
-                ])->label(false); ?>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="form-group">
-                <?= $form->field($model, 'email')->textInput([
-                    'type' => 'email',
-                    'placeholder' => $model->getAttributeLabel('email'),
-                ])->label(false); ?>
-            </div>
-        </div>
     </div>
-    <div class="form-group">
-        <?= $form->field($model, 'comment')->textarea([
-            'rows' => 5,
-            'placeholder' => 'Ваш комментарий',
-        ])->label(false); ?>
-    </div>
-    <div class="form-group text-center">
-        <?= Html::submitButton(Html::tag('span', 'Отправить письмо', [
-            'class' => 'ladda-label',
-        ]), [
-            'class' => 'btn btn-success btn-lg ladda-button',
-            'data' => [
-                'style' => 'zoom-in'
-            ],
-        ]); ?>
+    <div class="form-contact__form">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <?= $form->field($model, 'name')->textInput([
+                        'placeholder' => $model->getAttributeLabel('name'),
+                    ])->label(); ?>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <?= $form->field($model, 'phone')->widget(MaskedInput::class, [
+                        'mask' => '+7 (999) 999-99-99',
+                        'options' => [
+                            'placeholder' => $model->getAttributeLabel('phone'),
+                            'class' => 'form-control',
+                        ],
+                    ])->label(); ?>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <?= $form->field($model, 'email')->textInput([
+                        'type' => 'email',
+                        'placeholder' => $model->getAttributeLabel('email'),
+                    ])->label(); ?>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <?= $form->field($model, 'comment')->textarea([
+                'rows' => 8,
+                'placeholder' => 'Ваш комментарий',
+            ])->label(); ?>
+        </div>
+        <div class="text-center mt-4">
+            <?= Html::submitButton(Html::tag('span', 'Отправить письмо', [
+                'class' => 'ladda-label',
+            ]), [
+                'class' => 'btn btn-success btn-lg ladda-button',
+                'data' => [
+                    'style' => 'zoom-in'
+                ],
+            ]); ?>
+        </div>
     </div>
 </div>
 <?php ActiveForm::end(); ?>
