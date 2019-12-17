@@ -150,6 +150,118 @@ $(document).ready(function () {
     setTimeout(function () {
         $('.quantity-field').styler();
     }, 100);
+
+    var $priceRange = $("#js-range-slider-price"),
+        $priceFrom = $("#price-from"),
+        $priceTo = $("#price-to"),
+        priceInstance,
+        priceMin = 380000,
+        priceMax = 950000,
+        $areaRange = $("#js-range-slider-area"),
+        $areaFrom = $("#area-from"),
+        $areaTo = $("#area-to"),
+        areaInstance,
+        areaMin = 32,
+        areaMax = 240,
+        from = 0,
+        to = 0;
+
+    $priceRange.ionRangeSlider({
+        skin: "round",
+        type: "double",
+        min: priceMin,
+        max: priceMax,
+        from: 380000,
+        to: 950000,
+        onStart: updatePriceInputs,
+        onChange: updatePriceInputs
+    });
+    priceInstance = $priceRange.data("ionRangeSlider");
+
+    function updatePriceInputs (data) {
+        from = data.from;
+        to = data.to;
+
+        $priceFrom.prop("value", from);
+        $priceTo.prop("value", to);
+    }
+
+    $priceFrom.on("input", function () {
+        var val = $(this).prop("value");
+
+        if (val < priceMin) {
+            val = priceMin;
+        } else if (val > to) {
+            val = to;
+        }
+
+        priceInstance.update({
+            from: val
+        });
+    });
+
+    $priceTo.on("input", function () {
+        var val = $(this).prop("value");
+
+        if (val < from) {
+            val = from;
+        } else if (val > priceMax) {
+            val = priceMax;
+        }
+
+        priceInstance.update({
+            to: val
+        });
+    });
+
+    $areaRange.ionRangeSlider({
+        skin: "round",
+        type: "double",
+        min: areaMin,
+        max: areaMax,
+        from: 32,
+        to: 240,
+        onStart: updateAreaInputs,
+        onChange: updateAreaInputs
+    });
+    areaInstance = $areaRange.data("ionRangeSlider");
+
+    function updateAreaInputs (data) {
+        from = data.from;
+        to = data.to;
+
+        $areaFrom.prop("value", from);
+        $areaTo.prop("value", to);
+    }
+
+    $areaFrom.on("input", function () {
+        var val = $(this).prop("value");
+
+        if (val < areaMin) {
+            val = areaMin;
+        } else if (val > to) {
+            val = to;
+        }
+
+        areaInstance.update({
+            from: val
+        });
+    });
+
+    $areaTo.on("input", function () {
+        var val = $(this).prop("value");
+
+        if (val < from) {
+            val = from;
+        } else if (val > areaMax) {
+            val = areaMax;
+        }
+
+        areaInstance.update({
+            to: val
+        });
+    });
+
 });
 
 $(document).on('click', '.open-lead-modal', function () {

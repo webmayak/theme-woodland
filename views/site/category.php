@@ -78,6 +78,8 @@ use pantera\leads\widgets\form\LeadForm;
 
 </main>
 
+<?= $this->render('@theme/views/_filter') ?>
+
 </div>
 
 <?= $this->render('@theme/views/_advantages') ?>
