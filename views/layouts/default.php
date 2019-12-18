@@ -40,38 +40,36 @@ $this->beginPage();
 </head>
 <body class="page-<?= $_SERVER['REQUEST_URI'] == '/' ? 'front' : str_replace('/', '-', trim($_SERVER['REQUEST_URI'], '/')) ?>">
 <?php $this->beginBody() ?>
-<div class="page-wrap">
-    <?= $this->render('_header') ?>
+<?= $this->render('_header') ?>
 
-    <?= MegaMenu::widget() ?>
+<?= MegaMenu::widget() ?>
 
-    <div class="wrap">
-        <?= TwigRender::widget([
-            'text' => $content,
-        ]) ?>
-    </div>
+<div class="wrap">
+    <?= TwigRender::widget([
+        'text' => $content,
+    ]) ?>
+</div>
 
-    <?php if (0) : ?>
-    <div class="section-subcribe">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="section-subcribe__title">Подпишитесь на наши новости</div>
-                    <div class="section-subcribe__hint">Рекомендации по лечению, новые препараты, истории успешного лечения и другое!</div>
-                </div>
-                <div class="col-md-6">
-                    <?= LeadForm::widget([
-                        'key' => 'subscribe',
-                        'mode' => LeadForm::MODE_INLINE,
-                    ]) ?>
-                </div>
+<?php if (0) : ?>
+<div class="section-subcribe">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-subcribe__title">Подпишитесь на наши новости</div>
+                <div class="section-subcribe__hint">Рекомендации по лечению, новые препараты, истории успешного лечения и другое!</div>
+            </div>
+            <div class="col-md-6">
+                <?= LeadForm::widget([
+                    'key' => 'subscribe',
+                    'mode' => LeadForm::MODE_INLINE,
+                ]) ?>
             </div>
         </div>
     </div>
-    <?php endif; ?>
-
-    <?= $this->render('_footer') ?>
 </div>
+<?php endif; ?>
+
+<?= $this->render('_footer') ?>
 
 <nav id="mmenu-nav">
     <ul>

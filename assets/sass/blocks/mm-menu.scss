@@ -27,3 +27,21 @@
 .mm-listitem__btn:not(.mm-listitem__text) {
   border-left-width: 0;
 }
+
+.mm-navbars_bottom {
+  .mm-navbar{
+    * {
+      min-height: auto;
+    }
+
+    &:first-child {
+      display: block;
+      border-top: none;
+      padding: 20px;
+    }
+
+    .btn {
+      color: #ffffff;
+    }
+  }
+}

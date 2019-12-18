@@ -5,6 +5,14 @@ document.addEventListener(
                 "pagedim-black",
                 "border-full",
                 "theme-white"
+            ],
+            "navbars": [
+                {
+                    "position": "bottom",
+                    "content": [
+                        '<a class="btn btn-primary btn-lg ladda-button open-lead-modal" href="/leads/default/modal?key=callMe" data-target="#w2-callMe" data-toggle="modal" data-style="zoom-in"><span class="ladda-label">Заказать звонок</span></a>'
+                    ]
+                }
             ]
         });
     }
