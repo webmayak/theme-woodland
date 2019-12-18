@@ -18,42 +18,42 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= $this->title ?></h1>
     <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <a class="page-site-gallery-one__item-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
+            <a class="page-site-gallery-one__item-link gallery-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
                 <img class="page-site-gallery-one__img" src="/images/gallery-one-1.jpg" alt="">
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <a class="page-site-gallery-one__item-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
+            <a class="page-site-gallery-one__item-link gallery-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
                 <img class="page-site-gallery-one__img" src="/images/gallery-one-1.jpg" alt="">
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <a class="page-site-gallery-one__item-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
+            <a class="page-site-gallery-one__item-link gallery-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
                 <img class="page-site-gallery-one__img" src="/images/gallery-one-1.jpg" alt="">
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <a class="page-site-gallery-one__item-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
+            <a class="page-site-gallery-one__item-link gallery-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
                 <img class="page-site-gallery-one__img" src="/images/gallery-one-1.jpg" alt="">
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <a class="page-site-gallery-one__item-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
+            <a class="page-site-gallery-one__item-link gallery-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
                 <img class="page-site-gallery-one__img" src="/images/gallery-one-1.jpg" alt="">
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <a class="page-site-gallery-one__item-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
+            <a class="page-site-gallery-one__item-link gallery-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
                 <img class="page-site-gallery-one__img" src="/images/gallery-one-1.jpg" alt="">
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <a class="page-site-gallery-one__item-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
+            <a class="page-site-gallery-one__item-link gallery-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
                 <img class="page-site-gallery-one__img" src="/images/gallery-one-1.jpg" alt="">
             </a>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <a class="page-site-gallery-one__item-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
+            <a class="page-site-gallery-one__item-link gallery-link" href="/images/gallery-one-1.jpg" data-fancybox="gallery">
                 <img class="page-site-gallery-one__img" src="/images/gallery-one-1.jpg" alt="">
             </a>
         </div>

@@ -331,3 +331,27 @@ $('.main-tabs__reviews-carousel').owlCarousel({
         }
     }
 });
+
+$('.works__carousel').owlCarousel({
+    loop: true,
+    dots: false,
+    navText: [
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175" width="150" height="150" fill="currentColor"><path d="M145.188 238.575l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1l-215.4-215.5z"/></svg>',
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.175 477.175" width="150" height="150" fill="currentColor"><path d="M145.188 238.575l215.5-215.5c5.3-5.3 5.3-13.8 0-19.1s-13.8-5.3-19.1 0l-225.1 225.1c-5.3 5.3-5.3 13.8 0 19.1l225.1 225c2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4c5.3-5.3 5.3-13.8 0-19.1l-215.4-215.5z"/></svg>'
+    ],
+    responsive : {
+        0 : {
+            items: 1
+        },
+        576 : {
+            items: 2
+        },
+        992 : {
+            items: 3
+        },
+        1200 : {
+            items: 4,
+            nav: true
+        }
+    }
+});
