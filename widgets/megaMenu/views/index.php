@@ -33,7 +33,7 @@ use yii\web\View;
                         Проекты
                         <i class="fa fa-chevron-down"></i>
                     </a>
-                    <?php if ($categories = \common\modules\shop\models\ShopCategory::findOne(2)->getChildren()->andWhere(['status' => 1])->all()): ?>
+                    <?php if (($catalogRoot = \common\modules\shop\models\ShopCategory::findOne(4)) && ($categories = $catalogRoot->getChildren()->andWhere(['status' => 1])->all())): ?>
                         <ul class="sub-menu">
                             <?php foreach ($categories as $category): ?>
                                 <li>
