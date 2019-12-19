@@ -26,35 +26,31 @@ use yii\web\View;
                 $brandsIsActive = preg_match('/^brands/', Yii::$app->request->pathInfo);
                 ?>
                 <li class="<?= $catalogIsActive ? 'active' : '' ?>active" id="main-menu-catalog">
-                    <a href="<?= Url::to(['#']) ?>" class="navtext vsmenu-cat-toggle">
+                    <a href="<?= Url::to(['/shop/catalog']) ?>" class="navtext vsmenu-cat-toggle">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-address"/>
                         </svg>
                         Проекты
                         <i class="fa fa-chevron-down"></i>
                     </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Этажность</a>
-                            <ul hidden>
-                                <li><a href="<?= Url::to(['#']) ?>">Одноэтажные</a></li>
-                                <li><a href="<?= Url::to(['#']) ?>">Двухэтажные</a></li>
-                                <li><a href="<?= Url::to(['#']) ?>">Трехэтажные</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Площадь</a>
-                        </li>
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Технология и тип</a>
-                        </li>
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Стиль</a>
-                        </li>
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Особенности</a>
-                        </li>
-                    </ul>
+                    <?php if ($categories = \common\modules\shop\models\ShopCategory::findOne(2)->getChildren()->andWhere(['status' => 1])->all()): ?>
+                        <ul class="sub-menu">
+                            <?php foreach ($categories as $category): ?>
+                                <li>
+                                    <a href="<?=$category->present()->getUrl()?>"><?= $category->name ?></a>
+                                    <?php if ($lvl2cats = $category->getChildren()->andWhere(['status' => 1])->all()): ?>
+                                        <ul>
+                                            <?php foreach ($lvl2cats as $lvl2cat): ?>
+                                                <li>
+                                                    <a href="<?= $lvl2cat->present()->getUrl() ?>"><?= $lvl2cat->name ?></a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    <?php endif; ?>
+                                </li>
+                            <?php endforeach;?>
+                        </ul>
+                    <?php endif; ?>
                     <?php if (0 && $this->beginCache('megamenu-dropdown', ['duration' => 86400])): ?>
                     <?= $this->render('_dropdown', [
                         'categories' => $catalogRoot->getChildren()->isInMenu()->all(),
