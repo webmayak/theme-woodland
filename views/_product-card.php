@@ -51,15 +51,14 @@ use yii\helpers\Html;
     <div class="product-card__old-price">Старая цена: <del><?= number_format($model->default_price, 0, ',', ' ') ?> Руб</del></div>
     <div class="product-card__price">Цена: <b><?= number_format($model->price, 0, ',', ' ') ?> Руб</b></div>
     <div class="product-card__actions">
-        <?=\common\modules\shop\widgets\cart\addToCart\AddToCartWidget::widget([
-                'htmlOptions' => ['class' => 'btn btn-lg btn-primary'],
-                'content' => 'Заказать
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                        <use xlink:href="/images/sprite.svg#icon-cart"></use>
-                    </svg>',
-                'model' => $model,
-        ]) ?>
-        <?php if (0): ?>
+        <a href="/shop/products/view?id=<?= $model->id ?>" class="product-card__to-cart btn btn-primary">
+            Подробнее
+            <?php if (0) : ?>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                <use xlink:href="/images/sprite.svg#icon-cart"/>
+            </svg>
+            <?php endif; ?>
+        </a>
         <button class="product-card__to-favorites btn btn-outline-success">
             <span class="sr-only">В избранное</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
@@ -72,6 +71,5 @@ use yii\helpers\Html;
                 <use xlink:href="/images/sprite.svg#icon-graph"/>
             </svg>
         </button>
-        <?php endif; ?>
     </div>
 </div>
