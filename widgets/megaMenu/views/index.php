@@ -33,19 +33,21 @@ use yii\web\View;
                         Проекты
                         <i class="fa fa-chevron-down"></i>
                     </a>
-                    <?php if (($catalogRoot = \common\modules\shop\models\ShopCategory::findOne(4)) && ($categories = $catalogRoot->getChildren()->andWhere(['status' => 1])->all())): ?>
+                    <?php if (($catalogRoot = \common\modules\shop\models\ShopCategory::findOne(1)) && ($categories = $catalogRoot->getChildren()->andWhere(['status' => 1])->all())): ?>
                         <ul class="sub-menu">
                             <?php foreach ($categories as $category): ?>
                                 <li>
                                     <a href="<?=$category->present()->getUrl()?>"><?= $category->name ?></a>
-                                    <?php if ($lvl2cats = $category->getChildren()->andWhere(['status' => 1])->all()): ?>
-                                        <ul>
-                                            <?php foreach ($lvl2cats as $lvl2cat): ?>
-                                                <li>
-                                                    <a href="<?= $lvl2cat->present()->getUrl() ?>"><?= $lvl2cat->name ?></a>
-                                                </li>
-                                            <?php endforeach; ?>
-                                        </ul>
+                                    <?php if (0): ?>
+                                        <?php if ($lvl2cats = $category->getChildren()->andWhere(['status' => 1])->all()): ?>
+                                            <ul>
+                                                <?php foreach ($lvl2cats as $lvl2cat): ?>
+                                                    <li>
+                                                        <a href="<?= $lvl2cat->present()->getUrl() ?>"><?= $lvl2cat->name ?></a>
+                                                    </li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </li>
                             <?php endforeach;?>
