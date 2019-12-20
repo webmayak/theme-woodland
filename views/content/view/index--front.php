@@ -13,6 +13,7 @@ use pantera\content\models\ContentPage;
 use pantera\content\widgets\block\Block;
 use pantera\content\widgets\slider\Slider;
 use pantera\leads\widgets\form\LeadForm;
+use yii\helpers\Html;
 use yii\web\View;
 
 $this->context->layout = '//front';
@@ -85,160 +86,51 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<?php if (($catalogRoot = \common\modules\shop\models\ShopCategory::findOne(1)) && ($categories = $catalogRoot->getChildren()->andWhere(['status' => 1])->all())): ?>
 <div class="categories">
     <div class="container">
         <h2>Категории</h2>
         <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-1.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Каркасные дома</div>
-                    </a>
+            <?php foreach ($categories as $category): ?>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <div class="categories__item">
+                        <a class="categories__item-link" href="<?=$category->present()->getUrl()?>">
+                            <div class="categories__item-img-wrap">
+                                <img class="categories__item-img" src="<?= $category->media ? $category->media->image() : 'https://via.placeholder.com/300x200' ?>" alt="<?= Html::encode($category->name) ?>">
+                                <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
+                            </div>
+                            <div class="categories__item-title"><?= Html::encode($category->name) ?></div>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-2.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Дома из бревна</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-3.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Кирпичные дома</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-4.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Дачные дома</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-5.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Дома из бруса</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-6.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Бани</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-7.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Беседки</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-8.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Хозблоки</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-9.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Туалеты</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-10.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Мобильные дома</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                <div class="categories__item">
-                    <a class="categories__item-link" href="#">
-                        <div class="categories__item-img-wrap">
-                            <img class="categories__item-img" src="/images/category-11.jpg" alt="">
-                            <div class="categories__item-descr">Цена от 320 0000 Руб.</div>
-                        </div>
-                        <div class="categories__item-title">Бытовки</div>
-                    </a>
-                </div>
-            </div>
+            <?php endforeach;?>
         </div>
     </div>
 </div>
+<?php endif; ?>
 
 <div class="projects">
     <div class="container">
         <h2>Проекты</h2>
-        <div class="projects__carousel owl-carousel">
-            <div class="projects__item product-card">
-                <div class="product-card__label product-card__label--discount"><div>скидка</div></div>
-                <?= $this->render('@theme/views/_product-card') ?>
-            </div>
-            <div class="projects__item product-card">
-                <div class="product-card__label product-card__label--best-price"><div>лучшая цена</div></div>
-                <?= $this->render('@theme/views/_product-card') ?>
-            </div>
-            <div class="projects__item product-card">
-                <div class="product-card__label product-card__label--present"><div>подарок</div></div>
-                <?= $this->render('@theme/views/_product-card') ?>
-            </div>
-            <div class="projects__item product-card">
-                <div class="product-card__label product-card__label--bestseller"><div>хит продаж</div></div>
-                <?= $this->render('@theme/views/_product-card') ?>
-            </div>
-            <div class="projects__item product-card">
-                <div class="product-card__label product-card__label--best-price"><div>лучшая цена</div></div>
-                <?= $this->render('@theme/views/_product-card') ?>
-            </div>
-        </div>
+        <?= \yii\widgets\ListView::widget([
+            'dataProvider' => new \yii\data\ActiveDataProvider([
+                'query' => \common\modules\shop\models\ShopProduct::find()
+            ]),
+            'options' => [
+                'class' => 'products-list',
+            ],
+            'itemView' => '@theme/views/_product-card',
+            'itemOptions' => [
+                'class' => 'projects__item',
+            ],
+            'layout' => '<div class="projects__carousel owl-carousel">{items}</div>{pager}',
+            'pager' => [
+                'class' => 'yii\bootstrap4\LinkPager',
+                'options' => [
+                    'class' => 'text-center',
+                ],
+            ],
+        ]) ?>
     </div>
 </div>
 
