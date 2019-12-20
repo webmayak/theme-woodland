@@ -169,13 +169,9 @@ use yii\web\View;
                     </a>
                 </li>
                 <li class="active">
-                    <a class="navicon" href="<?= Url::to(['#']) ?>">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                            <use xlink:href="/images/sprite.svg#icon-cart"/>
-                        </svg>
-                        <span class="sr-only">Корзина</span>
-                        <span class="menu-cart-count">23</span>
-                    </a>
+                    <?=\common\modules\shop\widgets\cart\miniCart\MiniCartWidget::widget([
+                        'content' => 'Корзина',
+                    ])?>
                 </li>
             </ul>
         </nav>
