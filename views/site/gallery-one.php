@@ -65,23 +65,25 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="projects">
     <h2>Хиты продаж</h2>
-    <div class="projects__carousel owl-carousel">
-        <div class="projects__item product-card">
-            <?= $this->render('@theme/views/_product-card') ?>
-        </div>
-        <div class="projects__item product-card">
-            <?= $this->render('@theme/views/_product-card') ?>
-        </div>
-        <div class="projects__item product-card">
-            <?= $this->render('@theme/views/_product-card') ?>
-        </div>
-        <div class="projects__item product-card">
-            <?= $this->render('@theme/views/_product-card') ?>
-        </div>
-        <div class="projects__item product-card">
-            <?= $this->render('@theme/views/_product-card') ?>
-        </div>
-    </div>
+    <?= \yii\widgets\ListView::widget([
+        'dataProvider' => new \yii\data\ActiveDataProvider([
+            'query' => \common\modules\shop\models\ShopProduct::find()
+        ]),
+        'options' => [
+            'class' => 'products-list',
+        ],
+        'itemView' => '@theme/views/_product-card',
+        'itemOptions' => [
+            'class' => 'projects__item',
+        ],
+        'layout' => '<div class="projects__carousel owl-carousel">{items}</div>{pager}',
+        'pager' => [
+            'class' => 'yii\bootstrap4\LinkPager',
+            'options' => [
+                'class' => 'text-center',
+            ],
+        ],
+    ]) ?>
 </div>
 
 </div>
