@@ -37,6 +37,9 @@ $this->beginPage();
     <style>
         <?= Yii::$app->settings->get('css', 'default') ?>
     </style>
+    <script>
+        const mmenu_footer = `<?= trim($this->context->renderPartial('@theme/views/_mmenu-footer')) ?>`;
+    </script>
 </head>
 <body class="page-<?= $_SERVER['REQUEST_URI'] == '/' ? 'front' : str_replace('/', '-', trim($_SERVER['REQUEST_URI'], '/')) ?>">
 <?php $this->beginBody() ?>

@@ -32,4 +32,39 @@
       margin-bottom: 0;
     }
   }
+
+  &__toggle {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-weight: 600;
+    cursor: pointer;
+
+    &::after {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .fa {
+      font-size: 10px;
+      position: relative;
+      top: -1px;
+    }
+  }
+
+  &--sm {
+    .contact-item__icon-wrap {
+      width: 28px;
+      height: 28px;
+      margin-right: 5px;
+    }
+
+    .contact-item__value {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
 }

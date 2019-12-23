@@ -1,0 +1,39 @@
+.city-dropdown {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.17);
+  border: none;
+  font-size: inherit;
+  padding: 0;
+  overflow: hidden;
+
+  & > li {
+    color: #323b49;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 8px 32px 8px 25px;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.25s;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: #49ce73;
+      color: #ffffff;
+    }
+
+    &--active {
+      color: #49ce73;
+      background-repeat: no-repeat;
+      background-position: calc(100% - 20px) 50%;
+      background-size: 12px auto;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45.701 45.7' fill='%2349ce73'%3E%3Cpath d='M20.687 38.332a5.308 5.308 0 01-7.505 0L1.554 26.704A5.306 5.306 0 119.059 19.2l6.928 6.927a1.344 1.344 0 001.896 0L36.642 7.368a5.308 5.308 0 017.505 7.504l-23.46 23.46z'/%3E%3C/svg%3E");
+
+      &:hover {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45.701 45.7' fill='%23ffffff'%3E%3Cpath d='M20.687 38.332a5.308 5.308 0 01-7.505 0L1.554 26.704A5.306 5.306 0 119.059 19.2l6.928 6.927a1.344 1.344 0 001.896 0L36.642 7.368a5.308 5.308 0 017.505 7.504l-23.46 23.46z'/%3E%3C/svg%3E");
+      }
+    }
+  }
+}

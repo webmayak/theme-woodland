@@ -30,18 +30,56 @@
 
 .mm-navbars_bottom {
   .mm-navbar{
-    * {
+    text-align: left;
+
+    > * {
       min-height: auto;
+      display: block;
     }
 
     &:first-child {
       display: block;
-      border-top: none;
       padding: 20px;
     }
 
     .btn {
       color: #ffffff;
+    }
+
+    .contact-item__key {
+      margin-top: -4px;
+    }
+  }
+}
+
+.mmenu {
+  &__social {
+    margin-bottom: 20px;
+
+    &-title {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 0 -10px;
+
+      li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      a {
+        color: #ffffff !important;
+      }
     }
   }
 }

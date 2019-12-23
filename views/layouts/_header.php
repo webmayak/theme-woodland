@@ -34,38 +34,38 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
             <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5 col-8">
                 <div class="row align-items-md-center">
                     <div class="col-lg-4 d-none d-lg-block">
-                        <div class="header__contact header__contact--city">
-                            <div class="header__contact-icon-wrap">
+                        <div class="contact-item contact-item--sm header__contact header__contact--city">
+                            <div class="contact-item__icon-wrap">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-city"/>
                                 </svg>
                             </div>
                             <div>
-                                <div class="header__contact-key">Ваш город:</div>
-                                <div class="header__contact-value">
+                                <div class="contact-item__key">Ваш город:</div>
+                                <div class="contact-item__value">
                                     <div class="dropdown">
-                                        <button class="header__contact-toggle dropdown-toggle" type="button" data-toggle="dropdown">г. Москва <i class="fa fa-chevron-down"></i></button>
-                                        <ul class="header__city-dropdown dropdown-menu">
+                                        <button class="contact-item__toggle dropdown-toggle" type="button" data-toggle="dropdown">г. Москва <i class="fa fa-chevron-down"></i></button>
+                                        <ul class="city-dropdown dropdown-menu">
                                             <li>
-                                                <button class="header__city-item header__city-item--active" type="button">г. Москва</button>
+                                                <button class="city-dropdown__item city-dropdown__item--active" type="button">г. Москва</button>
                                             </li>
                                             <li>
-                                                <button class="header__city-item" type="button">г.Санкт-Петербург</button>
+                                                <button class="city-dropdown__item" type="button">г.Санкт-Петербург</button>
                                             </li>
                                             <li>
-                                                <button class="header__city-item" type="button">г.Сочи</button>
+                                                <button class="city-dropdown__item" type="button">г.Сочи</button>
                                             </li>
                                             <li>
-                                                <button class="header__city-item" type="button">г.Нижний Новгород</button>
+                                                <button class="city-dropdown__item" type="button">г.Нижний Новгород</button>
                                             </li>
                                             <li>
-                                                <button class="header__city-item" type="button">г.Новосибирск</button>
+                                                <button class="city-dropdown__item" type="button">г.Новосибирск</button>
                                             </li>
                                             <li>
-                                                <button class="header__city-item" type="button">г.Екатеренбург</button>
+                                                <button class="city-dropdown__item" type="button">г.Екатеренбург</button>
                                             </li>
                                             <li>
-                                                <button class="header__city-item" type="button">г.Самара</button>
+                                                <button class="city-dropdown__item" type="button">г.Самара</button>
                                             </li>
                                         </ul>
                                     </div>
@@ -74,18 +74,18 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
-                        <div class="header__contact header__contact--tel">
-                            <div class="header__contact-icon-wrap">
+                        <div class="contact-item contact-item--sm header__contact header__contact--tel">
+                            <div class="contact-item__icon-wrap">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-tel"/>
                                 </svg>
                             </div>
                             <div>
-                                <div class="header__contact-key">Телефон:</div>
-                                <div class="header__contact-value">
+                                <div class="contact-item__key">Телефон:</div>
+                                <div class="contact-item__value">
                                     <div class="dropdown">
-                                        <button class="header__contact-toggle dropdown-toggle" type="button" data-toggle="dropdown">8-800-775-18-13 <i class="fa fa-chevron-down"></i></button>
-                                        <ul class="header__tel-dropdown dropdown-menu">
+                                        <button class="contact-item__toggle dropdown-toggle" type="button" data-toggle="dropdown">8-800-775-18-13 <i class="fa fa-chevron-down"></i></button>
+                                        <ul class="tel-dropdown dropdown-menu">
                                             <li>
                                                 Отдел Продаж:
                                                 <a href="tel:+74957751813">+7-495-775-18-13</a>
@@ -101,41 +101,41 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 d-none d-md-block">
-                        <div class="header__contact header__contact--email">
-                            <div class="header__contact-icon-wrap">
+                        <div class="contact-item contact-item--sm header__contact header__contact--email">
+                            <div class="contact-item__icon-wrap">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-email"/>
                                 </svg>
                             </div>
                             <div>
-                                <div class="header__contact-key">Email:</div>
-                                <div class="header__contact-value">fortuna-les@gmail.com</div>
+                                <div class="contact-item__key">Email:</div>
+                                <div class="contact-item__value text-nowrap">fortuna-les@gmail.com</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 d-none d-lg-block">
-                        <div class="header__contact header__contact--mode">
-                            <div class="header__contact-icon-wrap">
+                        <div class="contact-item contact-item--sm header__contact header__contact--mode">
+                            <div class="contact-item__icon-wrap">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-mode"/>
                                 </svg>
                             </div>
                             <div>
-                                <div class="header__contact-key">Режим работы:</div>
-                                <div class="header__contact-value">Пн-Пт: 09:00-19:00</div>
+                                <div class="contact-item__key">Режим работы:</div>
+                                <div class="contact-item__value">Пн-Пт: 09:00-19:00</div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-8 d-none d-lg-block">
-                        <div class="header__contact header__contact--address">
-                            <div class="header__contact-icon-wrap">
+                        <div class="contact-item contact-item--sm header__contact header__contact--address">
+                            <div class="contact-item__icon-wrap">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                     <use xlink:href="/images/sprite.svg#icon-address"/>
                                 </svg>
                             </div>
                             <div>
-                                <div class="header__contact-key">Адрес:</div>
-                                <div class="header__contact-value">г. Москва, ул. Летчика Бабушкина, д. 123, оф. 244</div>
+                                <div class="contact-item__key">Адрес:</div>
+                                <div class="contact-item__value text-nowrap">г. Москва, ул. Летчика Бабушкина, д. 123, оф. 244</div>
                             </div>
                         </div>
                     </div>
