@@ -131,10 +131,24 @@ use yii\web\View;
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="<?= Url::to(['#']) ?>">Пункт 1</a>
+                            <a href="<?= Url::to(['#']) ?>">Благоустройства</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="<?= Url::to(['#']) ?>">Газоны</a>
+                                </li>
+                                <li>
+                                    <a href="<?= Url::to(['#']) ?>">Бассейны</a>
+                                </li>
+                                <li>
+                                    <a href="<?= Url::to(['#']) ?>">Газоны</a>
+                                </li>
+                                <li>
+                                    <a href="<?= Url::to(['#']) ?>">Бассейны</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="<?= Url::to(['#']) ?>">Пункт 2</a>
+                            <a href="<?= Url::to(['#']) ?>">Ворота</a>
                         </li>
                     </ul>
                 </li>

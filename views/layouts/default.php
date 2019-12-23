@@ -37,9 +37,6 @@ $this->beginPage();
     <style>
         <?= Yii::$app->settings->get('css', 'default') ?>
     </style>
-    <script>
-        const mmenu_footer = `<?= trim($this->context->renderPartial('@theme/views/_mmenu-footer')) ?>`;
-    </script>
 </head>
 <body class="page-<?= $_SERVER['REQUEST_URI'] == '/' ? 'front' : str_replace('/', '-', trim($_SERVER['REQUEST_URI'], '/')) ?>">
 <?php $this->beginBody() ?>
@@ -81,31 +78,34 @@ $this->beginPage();
         $brandsIsActive = preg_match('/^brands/', Yii::$app->request->pathInfo);
         ?>
         <li class="<?= $catalogIsActive ? 'active' : '' ?>active" id="main-menu-catalog">
-            <a href="<?= Url::to(['#']) ?>">
+            <a href="<?= Url::to(['/shop/catalog']) ?>">
                 Проекты
             </a>
-            <ul>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Этажность</a>
-                    <ul>
-                        <li><a href="<?= Url::to(['#']) ?>">Одноэтажные</a></li>
-                        <li><a href="<?= Url::to(['#']) ?>">Двухэтажные</a></li>
-                        <li><a href="<?= Url::to(['#']) ?>">Трехэтажные</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Площадь</a>
-                </li>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Технология и тип</a>
-                </li>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Стиль</a>
-                </li>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Особенности</a>
-                </li>
-            </ul>
+            <?php if (($catalogRoot = \common\modules\shop\models\ShopCategory::findOne(1)) && ($categories = $catalogRoot->getChildren()->andWhere(['status' => 1])->all())): ?>
+                <ul>
+                    <?php foreach ($categories as $category): ?>
+                        <li>
+                            <a href="<?=$category->present()->getUrl()?>"><?= $category->name ?></a>
+                            <?php if (0): ?>
+                                <?php if ($lvl2cats = $category->getChildren()->andWhere(['status' => 1])->all()): ?>
+                                    <ul>
+                                        <?php foreach ($lvl2cats as $lvl2cat): ?>
+                                            <li>
+                                                <a href="<?= $lvl2cat->present()->getUrl() ?>"><?= $lvl2cat->name ?></a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                        </li>
+                    <?php endforeach;?>
+                </ul>
+            <?php endif; ?>
+            <?php if (0 && $this->beginCache('megamenu-dropdown', ['duration' => 86400])): ?>
+                <?= $this->render('_dropdown', [
+                    'categories' => $catalogRoot->getChildren()->isInMenu()->all(),
+                ]) ?>
+                <?php $this->endCache(); endif; ?>
         </li>
         <li class="<?= false ? 'active' : '' ?>">
             <a href="<?= Url::to(['#']) ?>">
@@ -160,10 +160,24 @@ $this->beginPage();
             </a>
             <ul>
                 <li>
-                    <a href="<?= Url::to(['#']) ?>">Пункт 1</a>
+                    <a href="<?= Url::to(['#']) ?>">Благоустройства</a>
+                    <ul>
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Газоны</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Бассейны</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Газоны</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['#']) ?>">Бассейны</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="<?= Url::to(['#']) ?>">Пункт 2</a>
+                    <a href="<?= Url::to(['#']) ?>">Ворота</a>
                 </li>
             </ul>
         </li>
@@ -176,6 +190,9 @@ $this->beginPage();
 </nav>
 
 <?php $this->endBody() ?>
+<script>
+    const mmenu_footer = `<?= trim($this->context->renderPartial('@theme/views/_mmenu-footer')) ?>`;
+</script>
 <?= Yii::$app->settings->get('script', 'default') ?>
 </body>
 </html>
