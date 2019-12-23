@@ -19,6 +19,14 @@
   }
 }
 
+.product__gallery-carousel {
+  .owl-nav {
+    .owl-next {
+      transform: translateY(-50%);
+    }
+  }
+}
+
 .product-page__carousel {
   margin-bottom: 10px;
 

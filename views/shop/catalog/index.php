@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <ul class="catalog-page__nav-tabs nav nav-tabs" role="tablist">
     <?php foreach ($categories as $key => $category): ?>
         <li class="nav-item">
-            <a class="nav-link<?= $key == 0 ? ' active' : ''?>" data-toggle="tab" href="#catalog-tab-<?= $key ?>" style="white-space: nowrap;"><?= $category->name ?></a>
+            <a class="nav-link<?= $key == 0 ? ' active' : ''?>" data-toggle="tab" href="#catalog-tab-<?= $key ?>"><?= $category->name ?></a>
             <?php if (0): ?>
                 <?php if ($lvl2cats = $category->getChildren()->andWhere(['status' => 1])->all()): ?>
                     <ul>
