@@ -8,6 +8,7 @@
 
 use common\modules\catalog\models\CatalogCategory;
 use pantera\leads\widgets\form\LeadForm;
+use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\web\View;
 
@@ -57,23 +58,26 @@ use yii\web\View;
                     ]) ?>
                     <?php $this->endCache(); endif; ?>
                 </li>
+                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(241)) : ?>
                 <li class="<?= false ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= Url::to(['#']) ?>">
+                    <a class="navtext" href="<?= $parent->present()->getUrl() ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-wall"/>
                         </svg>
-                        Строительство
+                        <?= Html::encode($parent->name) ?>
                         <i class="fa fa-chevron-down"></i>
                     </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Пункт 1</a>
-                        </li>
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Пункт 2</a>
-                        </li>
-                    </ul>
+                    <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                        <ul class="sub-menu">
+                            <?php foreach ($childs as $child): ?>
+                            <li>
+                                <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                            </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
                 </li>
+                <?php endif; ?>
                 <li class="<?= Yii::$app->request->pathInfo === 'gallery' ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/site/gallery']) ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
