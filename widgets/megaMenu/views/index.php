@@ -38,16 +38,14 @@ use yii\web\View;
                             <?php foreach ($categories as $category): ?>
                                 <li>
                                     <a href="<?=$category->present()->getUrl()?>"><?= $category->name ?></a>
-                                    <?php if (0): ?>
-                                        <?php if ($lvl2cats = $category->getChildren()->andWhere(['status' => 1])->all()): ?>
-                                            <ul>
-                                                <?php foreach ($lvl2cats as $lvl2cat): ?>
-                                                    <li>
-                                                        <a href="<?= $lvl2cat->present()->getUrl() ?>"><?= $lvl2cat->name ?></a>
-                                                    </li>
-                                                <?php endforeach; ?>
-                                            </ul>
-                                        <?php endif; ?>
+                                    <?php if ($lvl2cats = $category->getChildren()->andWhere(['status' => 1])->all()): ?>
+                                        <ul class="sub-menu">
+                                            <?php foreach ($lvl2cats as $lvl2cat): ?>
+                                                <li>
+                                                    <a href="<?= $lvl2cat->present()->getUrl() ?>"><?= $lvl2cat->name ?></a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
                                     <?php endif; ?>
                                 </li>
                             <?php endforeach;?>
