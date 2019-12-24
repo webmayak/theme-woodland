@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /**
  * @var \common\modules\shop\models\ShopProduct $model
  */
-?><div class="catalog-page__item product-card">
+?><div class="product-card">
     <div class="product-card__img-wrap">
         <a href="/shop/products/view?id=<?= $model->id ?>" _href="<?= $model->present()->getUrl() ?>">
             <img class="product-card__img" src="<?= $model->media ? $model->media->image() : 'https://via.placeholder.com/150' ?>" alt="<?= Html::encode($model->getParentWithVariantName()) ?>">

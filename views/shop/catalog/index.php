@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                     'itemView' => '@theme/views/_product-card',
                     'itemOptions' => [
-                        'class' => 'col-xl-3 col-lg-4 col-sm-6',
+                        'class' => 'col-xl-3 col-lg-4 col-sm-6 catalog-page__item',
                     ],
                     'layout' => '<div class="row">{items}</div>{pager}',
                     'pager' => [

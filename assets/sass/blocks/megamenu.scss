@@ -76,8 +76,10 @@
         font-weight: 600;
         white-space: nowrap;
         transition: 0.25s;
+      }
 
-        &:hover {
+      &:hover {
+        > a {
           color: $success;
         }
       }
@@ -116,8 +118,10 @@
             color: #323b49;
             padding: 13px 20px;
             transition: background-color 0.25s;
+          }
 
-            &:hover {
+          &:hover {
+            > a {
               background-color: $success;
               color: #ffffff;
             }
@@ -147,8 +151,10 @@
                 color: #323b49;
                 padding: 13px 20px;
                 transition: background-color 0.25s;
+              }
 
-                &:hover {
+              &:hover {
+                > a {
                   background-color: $success;
                   color: #ffffff;
                   text-decoration: none;
