@@ -123,13 +123,7 @@ $this->context->layout = '//front';
             'itemOptions' => [
                 'class' => 'projects__item',
             ],
-            'layout' => '<div class="projects__carousel owl-carousel">{items}</div>{pager}',
-            'pager' => [
-                'class' => 'yii\bootstrap4\LinkPager',
-                'options' => [
-                    'class' => 'text-center',
-                ],
-            ],
+            'layout' => '<div class="projects__carousel owl-carousel">{items}</div>',
         ]) ?>
     </div>
 </div>
