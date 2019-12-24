@@ -95,10 +95,7 @@ use yii\web\View;
                         <li><a href="<?= Url::to(['/articles']) ?>">Статьи</a></li>
                         <li><a href="<?= Url::to(['/specials']) ?>">Акции</a></li>
                         <li><a href="<?= Url::to(['/site/reviews']) ?>">Отзывы</a></li>
-                        <li><a href="<?= Url::to(['/site/search']) ?>">Поиск по сайту</a></li>
                         <li><a href="<?= Url::to(['/site/faq']) ?>">FAQ</a></li>
-                        <li><a href="<?= Url::to(['/sitemap']) ?>">Карта сайта</a></li>
-                        <li><a href="<?= Url::to(['/404']) ?>">404</a></li>
                         <li><a href="<?= Url::to(['/site/docs']) ?>">Документы</a></li>
                     </ul>
                 </li>
