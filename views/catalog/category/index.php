@@ -48,7 +48,7 @@ $tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
     <?php endif; ?>
 </div>
 
-<?php if ($model->childrenActive) : ?>
+<?php if (0 && $model->childrenActive) : ?>
     <div class="content-block content-block--children-items">
         <?= CategoryList::widget([
             'models' => $model->childrenActive,
@@ -56,7 +56,7 @@ $tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
     </div>
 <?php endif; ?>
 
-<?php if ($teams = $model->present()->getRelationCategoryByTypeKey('team')) : ?>
+<?php if (0 && $teams = $model->present()->getRelationCategoryByTypeKey('team')) : ?>
 <div class="content-block content-block--sotrudniki">
     <div class="title-home">
         Сотрудники
@@ -67,7 +67,7 @@ $tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
 </div>
 <?php endif; ?>
 
-<?php if ($videos = $model->present()->getRelationCategoryByTypeKey('video')) : ?>
+<?php if (0 && $videos = $model->present()->getRelationCategoryByTypeKey('video')) : ?>
 <div class="content-block content-block--video">
     <div class="title-home">
         Видео
@@ -78,7 +78,7 @@ $tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
 </div>
 <?php endif; ?>
 
-<?php if ($model->portfolio) : ?>
+<?php if (0 && $model->portfolio) : ?>
 <div class="content-block content-block--sotrudniki">
     <?= PortfolioSlider::widget([
         'category' => $model,
@@ -86,11 +86,11 @@ $tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
 </div>
 <?php endif; ?>
 
-<?php if ($model->block_price_description ||
+<?php if (0 && ($model->block_price_description ||
     $tseny ||
     $model->block_types_description ||
     $model->block_additional_info_description
-) : ?>
+)) : ?>
 <div class="content-block">
     <?php if ($model->block_price_description || $tseny) : ?>
         <div class="title-home">
