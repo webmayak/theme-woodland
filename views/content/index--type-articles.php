@@ -27,7 +27,8 @@ Yii::$app->opengraph->set([
 Yii::$app->seo->setTitle($title);
 Yii::$app->seo->setDescription($description);
 
-$this->params['breadcrumbs'][] = ['label'=>'Статьи', 'url'=>Url::to(['/articles'])];
+$this->params['breadcrumbs'][] = ['label'=>'О компании', 'url'=>Url::to(['/o-kompanii'])];
+$this->params['breadcrumbs'][] = ['label'=>'Статьи', 'url'=>Url::to(['/o-kompanii/stati'])];
 $this->params['breadcrumbs'][] = $title;
 
 /* @var $this View */
