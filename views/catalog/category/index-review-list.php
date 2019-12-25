@@ -1,51 +1,50 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: singletonn
+ * Date: 10/31/18
+ * Time: 4:40 PM
+ */
 
-use kop\y2sp\ScrollPager;
 use pantera\leads\widgets\form\LeadForm;
-use yii\data\ArrayDataProvider;
+use yii\helpers\Html;
 use yii\web\View;
-use yii\widgets\ListView;
-use yii\web\JsExpression;
 
 /* @var $this View */
-/* @var $dataProvider ActiveDataProvider */
-$this->title = 'Отзывы наших клиентов';
-$this->params['breadcrumbs'][] = $this->title;
+/* @var $links array */
+?><main class="page-site-reviews__content">
+    <h1><?= $this->title ?></h1>
+    <div class="review-item page-site-reviews__list-item">
+        <div class="review-item__name">Татьяна Косенко</div>
+        <div class="review-item__date"><i class="fa fa-clock-o"></i> 07.10.19</div>
+        <div class="review-item__text">
+            <p>Долго и качественно я выбирала фирму, которая построит дом по моим требованиям и за приемлемую цену. Когда нашла эту компанию после звонка менеджеру, прежде чем заключить договор, сначала съездила на несколько объектов, которые они раньше строили, что и вам советую. Смогла лично удостовериться, что имею дело с профессионалами, а после того, как залили мне фундамент, я приезжала во время возведения самого сруба и видела, что работа кипит. Каждый был занят своим делом, но работали дружно, как в команде. Дом возвели добротный, с точностью выполнив условия договора, весной этого года думаю продолжить сотрудничество по отделке дома. Выполненной работой осталась очень довольна, здесь вам помогут построить дом вашей мечты.</p>
+        </div>
+    </div>
+    <div class="review-item page-site-reviews__list-item">
+        <div class="review-item__name">Татьяна Косенко</div>
+        <div class="review-item__date"><i class="fa fa-clock-o"></i> 07.10.19</div>
+        <div class="review-item__text">
+            <p>Долго и качественно я выбирала фирму, которая построит дом по моим требованиям и за приемлемую цену. Когда нашла эту компанию после звонка менеджеру, прежде чем заключить договор, сначала съездила на несколько объектов, которые они раньше строили, что и вам советую. Смогла лично удостовериться, что имею дело с профессионалами, а после того, как залили мне фундамент, я приезжала во время возведения самого сруба и видела, что работа кипит. Каждый был занят своим делом, но работали дружно, как в команде. Дом возвели добротный, с точностью выполнив условия договора, весной этого года думаю продолжить сотрудничество по отделке дома. Выполненной работой осталась очень довольна, здесь вам помогут построить дом вашей мечты.</p>
+        </div>
+    </div>
+    <div class="review-item page-site-reviews__list-item">
+        <div class="review-item__name">Татьяна Косенко</div>
+        <div class="review-item__date"><i class="fa fa-clock-o"></i> 07.10.19</div>
+        <div class="review-item__text">
+            <p>Долго и качественно я выбирала фирму, которая построит дом по моим требованиям и за приемлемую цену. Когда нашла эту компанию после звонка менеджеру, прежде чем заключить договор, сначала съездила на несколько объектов, которые они раньше строили, что и вам советую. Смогла лично удостовериться, что имею дело с профессионалами, а после того, как залили мне фундамент, я приезжала во время возведения самого сруба и видела, что работа кипит. Каждый был занят своим делом, но работали дружно, как в команде. Дом возвели добротный, с точностью выполнив условия договора, весной этого года думаю продолжить сотрудничество по отделке дома. Выполненной работой осталась очень довольна, здесь вам помогут построить дом вашей мечты.</p>
+        </div>
+    </div>
+    <div class="page-site-reviews__btn-wrap text-center">
+        <button class="btn btn-lg btn-primary">Показать еще</button>
+    </div>
+</main>
 
-?><h1 class="title-home"><?= Yii::$app->seo->getH1() ?></h1>
+</div><!--закрываем .container -->
 
-<?= ListView::widget([
-    'dataProvider' =>  new ArrayDataProvider([
-        'allModels' => $model->childrenActive,
-    ]),
-    'summary' => false,
-    'itemView' => '_review_view',
-    'options' => [
-        'class' => 'reviews',
-    ],
-    'itemOptions' => [
-        'class' => 'review-item',
-    ],
-    // 'pager' => [
-    //     'class' => ScrollPager::class,
-    //     'item' => '.reviews',
-    //     'triggerText' => 'ПОКАЗАТЬ ЕЩЕ',
-    //     'noneLeftText' => '',
-    //     'enabledExtensions' => [
-    //         ScrollPager::EXTENSION_TRIGGER,
-    //         ScrollPager::EXTENSION_SPINNER,
-    //         ScrollPager::EXTENSION_NONE_LEFT,
-    //         ScrollPager::EXTENSION_PAGING,
-    //     ],
-    //     'triggerTemplate' => '<div class="ias-trigger" style="text-align: center; cursor: pointer;">
-    //                             <a class="btn btn-primary btn-lg">{text}</a>
-    //                         </div>',
-    //     'eventOnRendered' => new JsExpression('function(){initReviewReadMore();}'),
-    // ]
-]) ?>
-<section class="review-form-wrapper">
 <?= LeadForm::widget([
     'mode' => LeadForm::MODE_INLINE,
     'key' => 'review',
 ]) ?>
-</section>
+
+<div class="container"><!-- открываем .container -->
