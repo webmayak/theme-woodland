@@ -52,34 +52,9 @@
   }
 }
 
-.mmenu {
-  &__social {
-    margin-bottom: 20px;
-
-    &-title {
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 0 -10px;
-
-      li {
-        margin-right: 10px;
-        margin-bottom: 10px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-
-      a {
-        color: #ffffff !important;
-      }
-    }
+.mm-listitem_selected {
+  > .mm-listitem__text {
+    background-color: transparent;
+    color: $primary !important;
   }
 }
