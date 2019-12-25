@@ -34,7 +34,7 @@ $tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
 <div class="content-block">
     <h1 class="title-home"><?= Yii::$app->seo->getH1() ?></h1>
     <?php if ($model->description) : ?>
-    <div class="category__body">
+    <div class="category__body editor-content">
         <?php if ($hasMedia) : ?>
             <div class="image">
                 <img src="<?= $model->media->image(375, 300, false) ?>" alt="<?= Html::encode($model->name) ?>">
