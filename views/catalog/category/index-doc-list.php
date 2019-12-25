@@ -13,7 +13,7 @@ use yii\web\View;
 /* @var $this View */
 /* @var $links array */
 $this->title = 'Документы';
-$this->params['breadcrumbs'][] = $this->title;
+
 ?><main class="page-site-docs__content">
     <h1><?= $this->title ?></h1>
     <div class="page-site-docs__item doc-item">
@@ -54,9 +54,11 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 </main>
 
-</div><!--закрываем .container -->
+</div><!-- закрываем .container -->
 
 <?= LeadForm::widget([
     'mode' => LeadForm::MODE_INLINE,
     'key' => 'question',
 ]) ?>
+
+<div class="container"><!-- открываем .container -->
