@@ -287,6 +287,13 @@ $(document).on('click', '.open-lead-modal', function () {
     return false;
 });
 
+$(document).on('shown.bs.modal', '.lead-modal', function () {
+    const btn = $('.open-lead-modal[data-loading]');
+    setTimeout( function() {
+        btn.ladda('remove');
+    }, 400);
+});
+
 $('.product-page__carousel').owlCarousel({
     loop: true,
     nav: true,
