@@ -61,7 +61,7 @@ use yii\web\View;
                                 </a>
                             </li>
                             <li>
-                                <a class="social-link social-link--ok" href="#" target="_blank">
+                                <a class="social-link social-link--ok" href="<?= Yii::$app->contactsManager->get('social_odnoklassniki') ?>" target="_blank">
                                     <span class="sr-only">OK</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                         <use xlink:href="/images/sprite.svg#icon-ok">
@@ -69,7 +69,7 @@ use yii\web\View;
                                 </a>
                             </li>
                             <li>
-                                <a class="social-link social-link--tw" href="#" target="_blank">
+                                <a class="social-link social-link--tw" href="<?= Yii::$app->contactsManager->get('social_twitter') ?>" target="_blank">
                                     <span class="sr-only">Twitter</span>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                         <use xlink:href="/images/sprite.svg#icon-tw">
@@ -170,7 +170,7 @@ use yii\web\View;
                                         <use xlink:href="/images/sprite.svg#icon-tel">
                                     </svg>
                                 </div>
-                                <div class="footer__contact-item-text">8-800-775-18-13</div>
+                                <div class="footer__contact-item-text"><?= Yii::$app->contactsManager->get('phone_main') ?></div>
                             </li>
                             <li class="footer__contact-item">
                                 <div class="footer__contact-item-icon">
@@ -178,7 +178,7 @@ use yii\web\View;
                                         <use xlink:href="/images/sprite.svg#icon-email">
                                     </svg>
                                 </div>
-                                <div class="footer__contact-item-text">fortuna-les@gmail.com</div>
+                                <div class="footer__contact-item-text"><?= Yii::$app->contactsManager->get('email') ?></div>
                             </li>
                             <li class="footer__contact-item">
                                 <div class="footer__contact-item-icon">
@@ -186,7 +186,7 @@ use yii\web\View;
                                         <use xlink:href="/images/sprite.svg#icon-mode">
                                     </svg>
                                 </div>
-                                <div class="footer__contact-item-text">Пн-Пт: 09:00-19:00</div>
+                                <div class="footer__contact-item-text"><?= Yii::$app->contactsManager->get('opening_hours') ?></div>
                             </li>
                             <li class="footer__contact-item">
                                 <div class="footer__contact-item-icon">
@@ -194,7 +194,7 @@ use yii\web\View;
                                         <use xlink:href="/images/sprite.svg#icon-address">
                                     </svg>
                                 </div>
-                                <div class="footer__contact-item-text">Шатурский р-н, д. ЦУС Мир д. 1б</div>
+                                <div class="footer__contact-item-text"><?= Yii::$app->contactsManager->get('address') ?></div>
                             </li>
                         </ul>
                     </div>

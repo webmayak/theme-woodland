@@ -84,15 +84,21 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                                 <div class="contact-item__key">Телефон:</div>
                                 <div class="contact-item__value">
                                     <div class="dropdown">
-                                        <button class="contact-item__toggle dropdown-toggle" type="button" data-toggle="dropdown">8-800-775-18-13 <i class="fa fa-chevron-down"></i></button>
+                                        <button class="contact-item__toggle dropdown-toggle" type="button" data-toggle="dropdown">
+                                            <?= Yii::$app->contactsManager->get('phone_main') ?> <i class="fa fa-chevron-down"></i>
+                                        </button>
                                         <ul class="tel-dropdown dropdown-menu">
                                             <li>
                                                 Отдел Продаж:
-                                                <a href="tel:+74957751813">+7-495-775-18-13</a>
+                                                <a href="tel:<?= Yii::$app->contactsManager->get('phone_sales_department') ?>">
+                                                    <?= Yii::$app->contactsManager->get('phone_sales_department') ?>
+                                                </a>
                                             </li>
                                             <li>
                                                 Горячая Линия:
-                                                <a href="tel:89267751813">8-926-775-18-13</a>
+                                                <a href="tel:<?= Yii::$app->contactsManager->get('phone_hotline') ?>">
+                                                    <?= Yii::$app->contactsManager->get('phone_hotline') ?>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -109,7 +115,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                             </div>
                             <div>
                                 <div class="contact-item__key">Email:</div>
-                                <div class="contact-item__value text-nowrap">fortuna-les@gmail.com</div>
+                                <div class="contact-item__value text-nowrap"><?= Yii::$app->contactsManager->get('email') ?></div>
                             </div>
                         </div>
                     </div>
@@ -122,7 +128,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                             </div>
                             <div>
                                 <div class="contact-item__key">Режим работы:</div>
-                                <div class="contact-item__value">Пн-Пт: 09:00-19:00</div>
+                                <div class="contact-item__value"><?= Yii::$app->contactsManager->get('opening_hours') ?></div>
                             </div>
                         </div>
                     </div>
@@ -135,7 +141,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                             </div>
                             <div>
                                 <div class="contact-item__key">Адрес:</div>
-                                <div class="contact-item__value text-nowrap">г. Москва, ул. Летчика Бабушкина, д. 123, оф. 244</div>
+                                <div class="contact-item__value text-nowrap"><?= Yii::$app->contactsManager->get('address') ?></div>
                             </div>
                         </div>
                     </div>
