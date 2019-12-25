@@ -74,10 +74,10 @@ $this->beginPage();
 <nav id="mmenu-nav">
     <ul>
         <?php
-        $catalogIsActive = preg_match('/^catalog/', Yii::$app->request->pathInfo);
+        $catalogIsActive = preg_match('/catalog/', Yii::$app->request->pathInfo);
         $brandsIsActive = preg_match('/^brands/', Yii::$app->request->pathInfo);
         ?>
-        <li class="<?= $catalogIsActive ? 'active' : '' ?>active" id="main-menu-catalog">
+        <li class="<?= $catalogIsActive ? 'active' : '' ?>" id="main-menu-catalog">
             <a href="<?= Url::to(['/shop/catalog']) ?>">
                 Проекты
             </a>
@@ -105,85 +105,108 @@ $this->beginPage();
                 ]) ?>
                 <?php $this->endCache(); endif; ?>
         </li>
-        <li class="<?= false ? 'active' : '' ?>">
-            <a href="<?= Url::to(['#']) ?>">
-                Строительство
+
+        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(241)) : ?>
+        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+            <a href="<?= $parent->present()->getUrl() ?>">
+                <?= Html::encode($parent->name) ?>
             </a>
-            <ul>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Пункт 1</a>
-                </li>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Пункт 2</a>
-                </li>
-            </ul>
-        </li>
-        <li class="<?= Yii::$app->request->pathInfo === 'gallery' ? 'active' : '' ?>">
-            <a href="<?= Url::to(['/site/gallery']) ?>">
-                Галерея
-            </a>
-        </li>
-        <li class="<?= false ? 'active' : '' ?>">
-            <a href="<?= Url::to(['#']) ?>">
-                О компании
-            </a>
-            <ul>
-                <li><a href="<?= Url::to(['/news']) ?>">Новости</a></li>
-                <li><a href="<?= Url::to(['/articles']) ?>">Статьи</a></li>
-                <li><a href="<?= Url::to(['/specials']) ?>">Акции</a></li>
-                <li><a href="<?= Url::to(['/site/reviews']) ?>">Отзывы</a></li>
-                <li><a href="<?= Url::to(['/site/search']) ?>">Поиск по сайту</a></li>
-                <li><a href="<?= Url::to(['/site/faq']) ?>">FAQ</a></li>
-                <li><a href="<?= Url::to(['/sitemap']) ?>">Карта сайта</a></li>
-                <li><a href="<?= Url::to(['/404']) ?>">404</a></li>
-                <li><a href="<?= Url::to(['/site/docs']) ?>">Документы</a></li>
-            </ul>
-        </li>
-        <li class="<?= false ? 'active' : '' ?>">
-            <a href="<?= Url::to(['#']) ?>">
-                Покупателю
-            </a>
-            <ul>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Пункт 1</a>
-                </li>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Пункт 2</a>
-                </li>
-            </ul>
-        </li>
-        <li class="<?= false ? 'active' : '' ?>">
-            <a href="<?= Url::to(['#']) ?>">
-                Услуги
-            </a>
-            <ul>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Благоустройства</a>
-                    <ul>
+            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                <ul>
+                    <?php foreach ($childs as $child): ?>
                         <li>
-                            <a href="<?= Url::to(['#']) ?>">Газоны</a>
+                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
                         </li>
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Бассейны</a>
-                        </li>
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Газоны</a>
-                        </li>
-                        <li>
-                            <a href="<?= Url::to(['#']) ?>">Бассейны</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="<?= Url::to(['#']) ?>">Ворота</a>
-                </li>
-            </ul>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
         </li>
-        <li class="<?= Yii::$app->request->pathInfo === 'kontakty' ? 'active' : '' ?>">
-            <a href="<?= Url::to(['/kontakty']) ?>">
-                Контакты
+        <?php endif; ?>
+
+        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(235)) : ?>
+        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+            <a href="<?= $parent->present()->getUrl() ?>">
+                <?= Html::encode($parent->name) ?>
             </a>
+            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                <ul>
+                    <?php foreach ($childs as $child): ?>
+                        <li>
+                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
         </li>
+        <?php endif; ?>
+
+        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(237)) : ?>
+        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+            <a href="<?= $parent->present()->getUrl() ?>">
+                <?= Html::encode($parent->name) ?>
+            </a>
+            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                <ul>
+                    <?php foreach ($childs as $child): ?>
+                        <li>
+                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+        </li>
+        <?php endif; ?>
+
+        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(238)) : ?>
+        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+            <a href="<?= $parent->present()->getUrl() ?>">
+                <?= Html::encode($parent->name) ?>
+            </a>
+            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                <ul>
+                    <?php foreach ($childs as $child): ?>
+                        <li>
+                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+        </li>
+        <?php endif; ?>
+
+        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(234)) : ?>
+        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+            <a href="<?= $parent->present()->getUrl() ?>">
+                <?= Html::encode($parent->name) ?>
+            </a>
+            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                <ul>
+                    <?php foreach ($childs as $child): ?>
+                        <li>
+                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+        </li>
+        <?php endif; ?>
+
+        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(243)) : ?>
+        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+            <a href="<?= $parent->present()->getUrl() ?>">
+                <?= Html::encode($parent->name) ?>
+            </a>
+            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                <ul>
+                    <?php foreach ($childs as $child): ?>
+                        <li>
+                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+        </li>
+        <?php endif; ?>
     </ul>
 </nav>
 

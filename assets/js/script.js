@@ -14,6 +14,10 @@ document.addEventListener(
                     ]
                 }
             ]
+        }, {
+            classNames: {
+                selected: "active"
+            }
         });
     }
 );
