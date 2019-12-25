@@ -12,8 +12,6 @@ use yii\web\View;
 
 /* @var $this View */
 /* @var $links array */
-$this->title = 'Вопросы и ответы';
-$this->params['breadcrumbs'][] = $this->title;
 ?><main class="page-site-faq__content">
     <h1><?= $this->title ?></h1>
     <div class="row">
@@ -138,3 +136,5 @@ $this->params['breadcrumbs'][] = $this->title;
     'mode' => LeadForm::MODE_INLINE,
     'key' => 'question',
 ]) ?>
+
+<div class="container"><!-- открываем .container -->
