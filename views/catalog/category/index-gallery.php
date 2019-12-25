@@ -12,8 +12,6 @@ use pantera\leads\widgets\form\LeadForm;
 
 /* @var $this View */
 /* @var $links array */
-$this->title = 'Галерея внутренняя';
-$this->params['breadcrumbs'][] = $this->title;
 ?><main class="page-site-gallery-one__content">
     <h1><?= $this->title ?></h1>
     <div class="row">
