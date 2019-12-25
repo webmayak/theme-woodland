@@ -82,76 +82,25 @@ use yii\web\View;
                 <div class="col-lg-2 order-lg-0 col-md-4 order-sm-3 col-sm-4">
                     <div class="footer__menu">
                         <div class="footer__menu-title">Информация</div>
-                        <ul>
-                            <li>
-                                <a href="">Способы оплаты</a>
-                            </li>
-                            <li>
-                                <a href="">Гарантия</a>
-                            </li>
-                            <li>
-                                <a href="">Доставка по России</a>
-                            </li>
-                            <li>
-                                <a href="">Наши партнеры</a>
-                            </li>
-                            <li>
-                                <a href="">Отзывы о компании</a>
-                            </li>
-                            <li>
-                                <a href="">Реквизиты</a>
-                            </li>
-                        </ul>
+                        <?= Block::widget([
+                            'position' => 'footer_1',
+                        ]) ?>
                     </div>
                 </div>
                 <div class="col-lg-2 order-lg-0 col-md-4 order-sm-3 col-sm-4">
                     <div class="footer__menu">
                         <div class="footer__menu-title">ПРОЕКТЫ</div>
-                        <ul>
-                            <li>
-                                <a href="">Дома из бруса</a>
-                            </li>
-                            <li>
-                                <a href="">Коттеджи из бруса</a>
-                            </li>
-                            <li>
-                                <a href="">Бани из бруса</a>
-                            </li>
-                            <li>
-                                <a href="">Каркасные дома</a>
-                            </li>
-                            <li>
-                                <a href="">Перевозные бани</a>
-                            </li>
-                            <li>
-                                <a href="">Навесы для машины</a>
-                            </li>
-                        </ul>
+                        <?= Block::widget([
+                            'position' => 'footer_2',
+                        ]) ?>
                     </div>
                 </div>
                 <div class="col-lg-2 order-lg-0 col-md-4 order-sm-3 col-sm-4">
                     <div class="footer__menu">
                         <div class="footer__menu-title">СТРОИТЕЛЬСТВО</div>
-                        <ul>
-                            <li>
-                                <a href="">Фундамент</a>
-                            </li>
-                            <li>
-                                <a href="">Строительство срубов</a>
-                            </li>
-                            <li>
-                                <a href="">Внутренняя отделка</a>
-                            </li>
-                            <li>
-                                <a href="">Печи для бань</a>
-                            </li>
-                            <li>
-                                <a href="">Строительство бань</a>
-                            </li>
-                            <li>
-                                <a href="">Калькулятор</a>
-                            </li>
-                        </ul>
+                        <?= Block::widget([
+                            'position' => 'footer_3',
+                        ]) ?>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6">
