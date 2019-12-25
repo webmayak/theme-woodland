@@ -128,7 +128,15 @@ $this->context->layout = '//front';
     </div>
 </div>
 
-<?= $this->render('@theme/views/_text-block--light-bg') ?>
+<div class="text-block light-bg">
+    <div class="container">
+        <div class="editor-content">
+            <?= Block::widget([
+                'position' => 'text_frontpage',
+            ]) ?>
+        </div>
+    </div>
+</div>
 
 <?= $this->render('@theme/views/_video') ?>
 
@@ -265,7 +273,15 @@ $this->context->layout = '//front';
 
 <?= $this->render('@theme/views/_advantages') ?>
 
-<?= $this->render('@theme/views/_text-block--light-bg') ?>
+<?php if ($model->body): ?>
+    <div class="text-block light-bg">
+        <div class="container">
+            <div class="editor-content">
+                <?= $model->body ?>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
 
 <?php if (0) : ?>
 <div class="content-block">
@@ -288,23 +304,6 @@ $this->context->layout = '//front';
         </div>
     </div>
 </div>
-
-<?php if ($model->body || $model->seo->h1): ?>
-    <div class="content-block content-block--frontpage-content">
-        <div class="container">
-            <?php if ($model->seo->h1) : ?>
-                <h1 class="title-home">
-                    <?= $model->seo->h1 ?>
-                </h1>
-            <?php endif; ?>
-            <?php if ($model->body) : ?>
-                <div class="editor-content">
-                    <?= $model->body ?>
-                </div>
-            <?php endif; ?>
-        </div>
-    </div>
-<?php endif; ?>
 <?php endif; ?>
 
 <div class="contact-form-block">

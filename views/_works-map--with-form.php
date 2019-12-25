@@ -6,7 +6,7 @@
 
 <div class="works-map">
     <div class="container">
-        <h2>Карта выполненых объектов</h2>
+        <h2>Карта выполненных объектов</h2>
     </div>
     <div class="works-map__map-wrap">
         <div class="works-map__form">
