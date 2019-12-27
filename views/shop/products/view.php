@@ -8,7 +8,7 @@ use yii\helpers\ArrayHelper;
 
 $this->title = $model->name;
 
-$this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => '/shop/catalog'];
+$this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => ['/shop/catalog']];
 if ($model->category && ($parents = $model->category->parents)) {
     foreach ($parents as $key => $parent) {
         if ($key == 0) continue;

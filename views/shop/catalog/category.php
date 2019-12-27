@@ -7,7 +7,7 @@ use common\modules\shop\widgets\productsListWidget\ProductsListWidgetConfigurati
 
 $this->title = $model->name;
 
-$this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => '/shop/catalog'];
+$this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => ['/shop/catalog']];
 foreach ($model->parents as $key => $parent) {
     if ($key == 0) continue;
     $this->params['breadcrumbs'][] = ['label' => $parent->name, 'url' => $parent->present()->getUrl()];
