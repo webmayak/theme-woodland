@@ -3,7 +3,9 @@
 use pantera\reviews\widgets\form\ReviewForm;
 use pantera\reviews\widgets\LatestReviews;
 use pantera\reviews\widgets\ReviewsList;
+use pantera\content\widgets\block\Block;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\helpers\ArrayHelper;
 
 $this->title = $model->name;
@@ -38,6 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php if ($attachments): ?>
                 <?= \pantera\media\widgets\syncedOwls\SyncedOwls::widget([
                     'models' => $attachments,
+                    'cropImages' => true,
                     'containerOptions' => [
                         'data' => [
                             'fancyboxoptions' => [
@@ -223,13 +226,13 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <use xlink:href="/images/sprite.svg#icon-size"></use>
                             </svg>
                         </div>
-                        <div class="point-with-icon__text">Размеры 4×6 м</div>
+                        <div class="point-with-icon__text">Размеры <?= $model->present()->getAttributeValue(3) ?></div>
                     </li>
                     <li class="product-page__param point-with-icon">
                         <div class="point-with-icon__icon-wrap">
                             <img src="/images/four-squares-with-frame-shape.png" alt="">
                         </div>
-                        <div class="point-with-icon__text">S застройки/общая: 24/42 м2</div>
+                        <div class="point-with-icon__text">S застройки/общая: <?= $model->present()->getAttributeValue(5) ?></div>
                     </li>
                     <li class="product-page__param point-with-icon">
                         <div class="point-with-icon__icon-wrap">
@@ -237,7 +240,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <use xlink:href="/images/sprite.svg#icon-address"></use>
                             </svg>
                         </div>
-                        <div class="point-with-icon__text">Этажность: 1 + мансарда</div>
+                        <div class="point-with-icon__text">Этажность: <?= $model->present()->getAttributeValue(1) ?></div>
                     </li>
                     <li class="product-page__param point-with-icon">
                         <div class="point-with-icon__icon-wrap">
@@ -245,13 +248,13 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <use xlink:href="/images/sprite.svg#icon-bed"></use>
                             </svg>
                         </div>
-                        <div class="point-with-icon__text">Комнат: 3</div>
+                        <div class="point-with-icon__text">Комнат: <?= $model->present()->getAttributeValue(2) ?></div>
                     </li>
                     <li class="product-page__param point-with-icon">
                         <div class="point-with-icon__icon-wrap">
                             <img src="/images/advantage-2.png" alt="">
                         </div>
-                        <div class="point-with-icon__text">Технология: Брусовая</div>
+                        <div class="point-with-icon__text">Технология: <?= $model->present()->getAttributeValue(6) ?></div>
                     </li>
                 </ul>
                 <div class="product-page__links">
@@ -263,7 +266,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                         <span class="point-with-icon__text">Доставка</span>
                     </a>
-                    <a href="#" class="product-page__print-link point-with-icon">
+                    <a href="#" onclick="window.print()" class="product-page__print-link point-with-icon">
                         <div class="point-with-icon__icon-wrap">
                             <img src="/images/icon-printing-tool.png" alt="">
                         </div>
@@ -765,44 +768,16 @@ $this->params['breadcrumbs'][] = $this->title;
                     </div>
                 </div>
                 <div class="tab-pane fade" id="product-tab-3">
-                    <p><b>Работаем без предоплаты!</b></p>
-                    <p>70% от стоимости по договору оплачивается по факту доставки материала и бригады на участок.<br>
-                    30% оплачивается после сдачи объекта и подписания акта приемки.</p>
-                    <p><b>РАБОТАЕМ С МАТЕРИНСКИМ КАПИТАЛОМ!</b> <a href="#">Читать подробнее.</a></p>
-                    <p><b>О доставке:</b></p>
-                    <p>Первые 500 км доставки от производства - бесплатно!<br>
-                    Остальное расстояние оплачивается из расчета 95 руб/км.</p>
+                    <?= Block::widget([
+                        'position' => 'product_tab_how_we_work',
+                    ]) ?>
                 </div>
                 <div class="tab-pane fade" id="product-tab-4">
-                    <p>Компания "Фортуна" совмсестно с <a href="#">банками-партнёрами</a> предлагает выгодные условия кредитования на малоэтажное строительство.</p>
-                    <br>
-                    <div class="row justify-content-between">
-                        <div class="col-xl-auto col-md-4">
-                            <img src="/images/credit-1.png" alt="">
-                        </div>
-                        <div class="col-xl-auto col-md-4">
-                            <img src="/images/credit-2.png" alt="">
-                        </div>
-                        <div class="col-xl-auto col-md-4">
-                            <img src="/images/credit-3.png" alt="">
-                        </div>
-                    </div>
-                    <h5><b>Преимущества кредитования</b></h5>
-                    <ul>
-                        <li>Срок кредита: от 6 до 84 месяцев;</li>
-                        <li>Сумма кредита: от 300 т.р. до 3 млн. р;</li>
-                        <li>Процентая ставка: от 12.99% годовых;</li>
-                        <li>Досрочное погашение без комиссии;</li>
-                    </ul>
-                    <h5><b>Условия кредитования</b></h5>
-                    <ul>
-                        <li>Гражданство РФ;</li>
-                        <li>Постоянная регистрация в регионе присутствия банка;</li>
-                        <li>Возраст от 20 до 70 лет;</li>
-                        <li>Стаж на текущем месте работы: от 3-х месяцев;</li>
-                    </ul>
+                    <?= Block::widget([
+                        'position' => 'product_tab_credit',
+                    ]) ?>
                     <div class="text-center">
-                        <a class="product-page__credit-btn btn btn-primary" href="#">Каркасный дом 7×8 в кредит</a>
+                        <a class="product-page__credit-btn btn btn-primary" href="#"><?= Html::encode($model->name) ?> в кредит</a>
                     </div>
                     <div class="text-center">
                         <a href="#" class="product-page__credit-link text-uppercase">подробнее об условиях кредитования</a>
@@ -899,35 +874,13 @@ $this->params['breadcrumbs'][] = $this->title;
                             <th>Наименование</th>
                             <th>Материал</th>
                         </tr>
-                        <tr>
-                            <td>Стены</td>
-                            <td>Брус ЕВ 150×150</td>
-                        </tr>
-                        <tr>
-                            <td>Лаги перекрытий</td>
-                            <td>150×40</td>
-                        </tr>
-                        <tr>
-                            <td>Фронтоны</td>
-                            <td>Рубленный</td>
-                        </tr>
-                        <tr>
-                            <td>Окна</td>
-                            <td>Оконный проем</td>
-                        </tr>
-                        <tr>
-                            <td>Двери</td>
-                            <td>Дверные проемы</td>
-                        </tr>
-                        <tr>
-                            <td>Кровля</td>
-                            <td>Рубероид</td>
-                        </tr>
-                        <tr>
-                            <td>Полы</td>
-                            <td>Утепление 150 мм</td>
-                        </tr>
-                    </table>
+                        <?php foreach ($model->present()->getAttributesList() as $name => $value) : ?>
+                            <tr>
+                                <td><?= $name ?></td>
+                                <td><?= $value ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </table>
                     </div>
                 </div>
             </div>
