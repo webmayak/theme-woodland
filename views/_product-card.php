@@ -7,51 +7,59 @@ use yii\helpers\Html;
  */
 ?><div class="product-card">
     <div class="product-card__img-wrap">
-        <a href="/shop/products/view?id=<?= $model->id ?>" _href="<?= $model->present()->getUrl() ?>">
+        <a href="/<?=$model->present()->getUrl()?>" _href="<?= $model->present()->getUrl() ?>">
             <img class="product-card__img" src="<?= $model->media ? $model->media->image() : 'https://via.placeholder.com/150' ?>" alt="<?= Html::encode($model->getParentWithVariantName()) ?>">
         </a>
     </div>
-    <a href="/shop/products/view?id=<?= $model->id ?>" _href="<?= $model->present()->getUrl() ?>" class="product-card__title-link">
+    <a href="/<?=$model->present()->getUrl()?>" _href="<?= $model->present()->getUrl() ?>" class="product-card__title-link">
         <h3 class="product-card__title"><?= Html::encode($model->getParentWithVariantName()) ?></h3>
     </a>
     <ul class="product-card__params ul-reset">
+        <?php if ($attributeValue = $model->present()->getAttributeValue(1)): ?>
         <li class="product-card__param">
             <div class="product-card__param-icon-wrap">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="/images/sprite.svg#icon-address"/>
                 </svg>
             </div>
-            <div class="product-card__param-text">Этажность: <b>--</b></div>
+            <div class="product-card__param-text">Этажность: <b><?= $attributeValue ?></b></div>
         </li>
+        <?php endif; ?>
+        <?php if ($attributeValue = $model->present()->getAttributeValue(2)): ?>
         <li class="product-card__param">
             <div class="product-card__param-icon-wrap">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="/images/sprite.svg#icon-bed"/>
                 </svg>
             </div>
-            <div class="product-card__param-text">Комнат: <b>--</b></div>
+            <div class="product-card__param-text">Комнат: <b><?= $attributeValue ?></b></div>
         </li>
+        <?php endif; ?>
+        <?php if ($attributeValue = $model->present()->getAttributeValue(3)): ?>
         <li class="product-card__param">
             <div class="product-card__param-icon-wrap">
                 <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="/images/sprite.svg#icon-size"/>
                 </svg>
             </div>
-            <div class="product-card__param-text">Размер: <b>--</b></div>
+            <div class="product-card__param-text">Размер: <b><?= $attributeValue ?></b></div>
         </li>
+        <?php endif; ?>
+        <?php if ($attributeValue = $model->present()->getAttributeValue(4)): ?>
         <li class="product-card__param">
             <div class="product-card__param-icon-wrap">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                     <use xlink:href="/images/sprite.svg#icon-calendar"/>
                 </svg>
             </div>
-            <div class="product-card__param-text">Сроки: <b>--</b></div>
+            <div class="product-card__param-text">Сроки: <b><?= $attributeValue ?></b></div>
         </li>
+        <?php endif; ?>
     </ul>
     <div class="product-card__old-price">Старая цена: <del><?= number_format($model->default_price, 0, ',', ' ') ?> Руб</del></div>
     <div class="product-card__price">Цена: <b><?= number_format($model->price, 0, ',', ' ') ?> Руб</b></div>
     <div class="product-card__actions">
-        <a href="/shop/products/view?id=<?= $model->id ?>" class="product-card__to-cart btn btn-primary">
+        <a href="/<?=$model->present()->getUrl()?>" class="product-card__to-cart btn btn-primary">
             Подробнее
             <?php if (0) : ?>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
