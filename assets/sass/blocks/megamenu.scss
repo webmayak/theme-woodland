@@ -84,7 +84,7 @@
         }
 
         > ul.sub-menu--projects {
-          display: flex;
+          z-index: 1000;
         }
       }
 
@@ -176,6 +176,8 @@
         }
 
         &--projects {
+          display: flex;
+          z-index: -1;
           width: 1110px;
           max-height: calc(100vh - 250px);
           overflow-y: auto;

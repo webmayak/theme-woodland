@@ -148,7 +148,7 @@ h2 {
   }
 }
 
-.page-item{
+.page-item {
   &:first-child {
     margin-right: auto;
 
@@ -162,6 +162,12 @@ h2 {
 
     .fa {
       margin-left: 5px;
+    }
+  }
+
+  &.disabled {
+    .fa {
+      opacity: 0.5;
     }
   }
 }

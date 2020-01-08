@@ -36,9 +36,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'layout' => '<div class="row">{items}</div>{pager}',
         'pager' => [
             'class' => 'yii\bootstrap4\LinkPager',
-            'options' => [
-                'class' => 'text-center',
-            ],
+            'prevPageLabel' => '<i class="fa fa-angle-left"></i> Назад',
+            'nextPageLabel' => 'Вперед <i class="fa fa-angle-right"></i>',
+            'listOptions' => [
+                    'class' => ['page-search__pagination pagination justify-content-center align-items-center']
+            ]
         ],
     ]) ?>
     <div class="page-search__btn-wrap text-center">
