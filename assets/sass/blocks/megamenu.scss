@@ -98,7 +98,7 @@
       }
 
       > .navicon {
-        padding: 14px;
+        padding: 14px 13px;
         height: 100%;
         display: flex;
         align-items: center;
@@ -168,6 +168,79 @@
             opacity: 1;
             visibility: visible;
             transform: rotateX(0deg);
+          }
+        }
+
+        &--projects {
+          width: 1110px;
+          max-height: calc(100vh - 250px);
+          overflow-y: auto;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-start;
+          align-content: flex-start;
+          padding-top: 10px;
+
+          &::-webkit-scrollbar {
+            width: 20px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-left: 8px solid rgba(0, 0, 0, 0);
+            border-right: 8px solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
+            background-color: $primary;
+          }
+
+          > li {
+            width: 16.5%;
+            margin-bottom: 15px;
+
+            img {
+              display: block;
+              max-height: 40px;
+              margin-bottom: 10px;
+              border-radius: 5px;
+            }
+
+            > a {
+              text-decoration: underline;
+            }
+
+            > ul.sub-menu {
+              display: block;
+              opacity: 1;
+              visibility: visible;
+              transform: none;
+              position: relative;
+              left: 0;
+              background-color: transparent;
+              box-shadow: none;
+
+              > li {
+                > a {
+                  font-weight: normal;
+                  color: #515151;
+                  padding: 7px 20px;
+                }
+
+                &:hover {
+                  > a {
+                    background-color: transparent;
+                    color: #515151;
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+
+            &:hover {
+              > a {
+                background-color: transparent;
+                color: $success;
+                text-decoration: underline;
+              }
+            }
           }
         }
       }

@@ -36,10 +36,13 @@ use yii\web\View;
                         <i class="fa fa-chevron-down"></i>
                     </a>
                     <?php if (($catalogRoot = \common\modules\shop\models\ShopCategory::findOne(1)) && ($categories = $catalogRoot->getChildren()->andWhere(['status' => 1])->all())): ?>
-                        <ul class="sub-menu">
+                        <ul class="sub-menu sub-menu--projects">
                             <?php foreach ($categories as $category): ?>
                                 <li>
-                                    <a href="<?=$category->present()->getUrl()?>"><?= $category->name ?></a>
+                                    <a href="<?=$category->present()->getUrl()?>">
+                                        <img src="<?= $category->media ? $category->media->image() : 'https://via.placeholder.com/300x200' ?>" alt="<?= Html::encode($category->name) ?>">
+                                        <?= $category->name ?>
+                                    </a>
                                     <?php if ($lvl2cats = $category->getChildren()->andWhere(['status' => 1])->all()): ?>
                                         <ul class="sub-menu">
                                             <?php foreach ($lvl2cats as $lvl2cat): ?>
