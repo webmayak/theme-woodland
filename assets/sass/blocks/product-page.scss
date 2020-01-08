@@ -20,9 +20,40 @@
 }
 
 .product__gallery-carousel {
-  .owl-nav {
-    .owl-next {
-      transform: translateY(-50%);
+  .synced-carousel {
+    .owl-carousel {
+      .owl-nav {
+        button {
+          margin-top: 0;
+
+          &.owl-prev,
+          &.owl-next {
+            width: auto;
+            height: auto;
+            background-color: transparent;
+          }
+
+          &.owl-prev {
+            left: 0;
+
+            svg {
+              margin-right: 0;
+            }
+          }
+
+          &.owl-next {
+            right: 0;
+
+            svg {
+              margin-left: 0;
+            }
+          }
+        }
+
+        svg path {
+          fill: #ffffff;
+        }
+      }
     }
   }
 }

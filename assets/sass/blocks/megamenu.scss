@@ -82,6 +82,10 @@
         > a {
           color: $success;
         }
+
+        > ul.sub-menu--projects {
+          display: flex;
+        }
       }
 
       > .navtext {
@@ -175,7 +179,6 @@
           width: 1110px;
           max-height: calc(100vh - 250px);
           overflow-y: auto;
-          display: flex;
           flex-wrap: wrap;
           align-items: flex-start;
           align-content: flex-start;
