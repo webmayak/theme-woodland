@@ -233,6 +233,16 @@ h2.swal2-title {
   }
 }
 
+.card {
+  border-color: $success;
+  border-radius: 10px;
+  box-shadow: 0 3px 46px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 40px;
+}
+
 .mburger {
   color: $primary;
   --mb-button-size: 30px;
