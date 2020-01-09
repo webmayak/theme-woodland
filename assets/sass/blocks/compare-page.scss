@@ -1,0 +1,30 @@
+.compare-page {
+  .nav-tabs {
+    .nav-item {
+      flex-grow: 0;
+    }
+  }
+
+  &__tab-content {
+    margin-top: 40px;
+  }
+
+  .table {
+    font-size: 16px;
+
+    td,
+    th {
+      padding: 20px 15px;
+    }
+
+    th {
+      text-align: left;
+      white-space: nowrap;
+    }
+  }
+
+  &__item-img {
+    border-radius: 5px;
+    width: 230px;
+  }
+}
