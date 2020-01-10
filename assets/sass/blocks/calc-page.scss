@@ -1,3 +1,21 @@
 .calc-page {
+  .editor-content {
+    h4,
+    .h4 {
+      margin-bottom: 25px;
+    }
 
+    ol,
+    ul {
+      &:not([class]) {
+        li {
+          padding-left: 40px;
+
+          &::before {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
 }
