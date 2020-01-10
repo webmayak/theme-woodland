@@ -58,3 +58,7 @@
     color: $primary !important;
   }
 }
+
+.megamenu + #mmenu-nav {
+  display: none;
+}

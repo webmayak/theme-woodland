@@ -44,33 +44,6 @@ $this->beginPage();
 
 <?= MegaMenu::widget() ?>
 
-<div class="wrap">
-    <?= TwigRender::widget([
-        'text' => $content,
-    ]) ?>
-</div>
-
-<?php if (0) : ?>
-<div class="section-subcribe">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="section-subcribe__title">Подпишитесь на наши новости</div>
-                <div class="section-subcribe__hint">Рекомендации по лечению, новые препараты, истории успешного лечения и другое!</div>
-            </div>
-            <div class="col-md-6">
-                <?= LeadForm::widget([
-                    'key' => 'subscribe',
-                    'mode' => LeadForm::MODE_INLINE,
-                ]) ?>
-            </div>
-        </div>
-    </div>
-</div>
-<?php endif; ?>
-
-<?= $this->render('_footer') ?>
-
 <nav id="mmenu-nav">
     <ul>
         <?php
@@ -107,108 +80,135 @@ $this->beginPage();
         </li>
 
         <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(241)) : ?>
-        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-            <a href="<?= $parent->present()->getUrl() ?>">
-                <?= Html::encode($parent->name) ?>
-            </a>
-            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
-                <ul>
-                    <?php foreach ($childs as $child): ?>
-                        <li>
-                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
-        </li>
+            <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+                <a href="<?= $parent->present()->getUrl() ?>">
+                    <?= Html::encode($parent->name) ?>
+                </a>
+                <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                    <ul>
+                        <?php foreach ($childs as $child): ?>
+                            <li>
+                                <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </li>
         <?php endif; ?>
 
         <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(235)) : ?>
-        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-            <a href="<?= $parent->present()->getUrl() ?>">
-                <?= Html::encode($parent->name) ?>
-            </a>
-            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
-                <ul>
-                    <?php foreach ($childs as $child): ?>
-                        <li>
-                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
-        </li>
+            <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+                <a href="<?= $parent->present()->getUrl() ?>">
+                    <?= Html::encode($parent->name) ?>
+                </a>
+                <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                    <ul>
+                        <?php foreach ($childs as $child): ?>
+                            <li>
+                                <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </li>
         <?php endif; ?>
 
         <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(237)) : ?>
-        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-            <a href="<?= $parent->present()->getUrl() ?>">
-                <?= Html::encode($parent->name) ?>
-            </a>
-            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
-                <ul>
-                    <?php foreach ($childs as $child): ?>
-                        <li>
-                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
-        </li>
+            <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+                <a href="<?= $parent->present()->getUrl() ?>">
+                    <?= Html::encode($parent->name) ?>
+                </a>
+                <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                    <ul>
+                        <?php foreach ($childs as $child): ?>
+                            <li>
+                                <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </li>
         <?php endif; ?>
 
         <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(238)) : ?>
-        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-            <a href="<?= $parent->present()->getUrl() ?>">
-                <?= Html::encode($parent->name) ?>
-            </a>
-            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
-                <ul>
-                    <?php foreach ($childs as $child): ?>
-                        <li>
-                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
-        </li>
+            <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+                <a href="<?= $parent->present()->getUrl() ?>">
+                    <?= Html::encode($parent->name) ?>
+                </a>
+                <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                    <ul>
+                        <?php foreach ($childs as $child): ?>
+                            <li>
+                                <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </li>
         <?php endif; ?>
 
         <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(234)) : ?>
-        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-            <a href="<?= $parent->present()->getUrl() ?>">
-                <?= Html::encode($parent->name) ?>
-            </a>
-            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
-                <ul>
-                    <?php foreach ($childs as $child): ?>
-                        <li>
-                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
-        </li>
+            <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+                <a href="<?= $parent->present()->getUrl() ?>">
+                    <?= Html::encode($parent->name) ?>
+                </a>
+                <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                    <ul>
+                        <?php foreach ($childs as $child): ?>
+                            <li>
+                                <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </li>
         <?php endif; ?>
 
         <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(243)) : ?>
-        <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-            <a href="<?= $parent->present()->getUrl() ?>">
-                <?= Html::encode($parent->name) ?>
-            </a>
-            <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
-                <ul>
-                    <?php foreach ($childs as $child): ?>
-                        <li>
-                            <?= Html::a($child->name, $child->present()->getUrl()) ?>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
-        </li>
+            <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
+                <a href="<?= $parent->present()->getUrl() ?>">
+                    <?= Html::encode($parent->name) ?>
+                </a>
+                <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
+                    <ul>
+                        <?php foreach ($childs as $child): ?>
+                            <li>
+                                <?= Html::a($child->name, $child->present()->getUrl()) ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </li>
         <?php endif; ?>
     </ul>
 </nav>
+
+<div class="wrap">
+    <?= TwigRender::widget([
+        'text' => $content,
+    ]) ?>
+</div>
+
+<?php if (0) : ?>
+<div class="section-subcribe">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-subcribe__title">Подпишитесь на наши новости</div>
+                <div class="section-subcribe__hint">Рекомендации по лечению, новые препараты, истории успешного лечения и другое!</div>
+            </div>
+            <div class="col-md-6">
+                <?= LeadForm::widget([
+                    'key' => 'subscribe',
+                    'mode' => LeadForm::MODE_INLINE,
+                ]) ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+
+<?= $this->render('_footer') ?>
 
 <?php $this->endBody() ?>
 <script>
