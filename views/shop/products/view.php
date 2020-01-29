@@ -133,7 +133,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </td>
                         <td>
                             <label class="product-table__price-wrap">
-                                <input class="sr-only" type="checkbox" checked>
+                                <input class="sr-only" type="radio" name="product-options-1" checked>
                                 <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
                             </label>
                         </td>
@@ -148,7 +148,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </td>
                         <td>
                             <label class="product-table__price-wrap">
-                                <input class="sr-only" type="checkbox">
+                                <input class="sr-only" type="radio" name="product-options-1">
                                 <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
                             </label>
                         </td>
@@ -163,7 +163,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </td>
                         <td>
                             <label class="product-table__price-wrap">
-                                <input class="sr-only" type="checkbox">
+                                <input class="sr-only" type="radio" name="product-options-1">
                                 <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
                             </label>
                         </td>
@@ -185,7 +185,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </td>
                         <td>
                             <label class="product-table__price-wrap">
-                                <input class="sr-only" type="checkbox" checked>
+                                <input class="sr-only" type="radio" name="product-options-2" checked>
                                 <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
                             </label>
                         </td>
@@ -200,7 +200,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </td>
                         <td>
                             <label class="product-table__price-wrap">
-                                <input class="sr-only" type="checkbox">
+                                <input class="sr-only" type="radio" name="product-options-2">
                                 <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
                             </label>
                         </td>
@@ -215,7 +215,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </td>
                         <td>
                             <label class="product-table__price-wrap">
-                                <input class="sr-only" type="checkbox">
+                                <input class="sr-only" type="radio" name="product-options-2">
                                 <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
                             </label>
                         </td>
