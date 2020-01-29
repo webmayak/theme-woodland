@@ -114,7 +114,8 @@ $this->context->layout = '//front';
         <h2>Проекты</h2>
         <?= \yii\widgets\ListView::widget([
             'dataProvider' => new \yii\data\ActiveDataProvider([
-                'query' => \common\modules\shop\models\ShopProduct::find()
+                'query' => \common\modules\shop\models\ShopProduct::find()->limit(10),
+                'pagination' => false,
             ]),
             'options' => [
                 'class' => 'products-list',

@@ -83,3 +83,29 @@ use yii\helpers\Html;
         </button>
     </div>
 </div>
+
+<?php
+// рассчитываем реальную позицию текущего элемента
+$realKey = $widget->dataProvider->pagination
+    ? ($widget->dataProvider->pagination->page * $widget->dataProvider->pagination->pageSize) + $index
+    : $index;
+
+// получаем класс обертки элемента
+$cardWrapperClass = ($widget->itemOptions && !empty($widget->itemOptions['class']))
+    ? $widget->itemOptions['class']
+    : '';
+?>
+<?php if ($realKey == ($widget->dataProvider->totalCount - 1)): ?>
+    </div>
+    <div class="<?= $cardWrapperClass ?>">
+        <div class="catalog-page__item free-calc-card">
+            <div class="free-calc-card__img-wrap">
+                <img class="free-calc-card__img" src="/images/free-calc-img.jpg" alt="">
+            </div>
+            <div class="free-calc-card__title">Не нашли нужного проекта?</div>
+            <div class="free-calc-card__descr">Пришлите свой! <br> Расчитаем за 1 день</div>
+            <div class="free-calc-card__accent-text">Бесплатно</div>
+            <a href="#" class="btn btn-lg btn-primary px-1 mt-auto">Заказать бесплатный расчет</a>
+        </div>
+    <!-- не закрываем тег-->
+<?php endif; ?>
