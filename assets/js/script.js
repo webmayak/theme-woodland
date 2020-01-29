@@ -163,6 +163,13 @@ $(document).ready(function () {
         $('.quantity-field').styler();
     }, 100);
 
+    $('.product-page__view-all-link, .product-page__view-set-link').click(function () {
+        var thisTarget = $(this).attr('href');
+        $('.product-page__nav-tabs a[href="' + thisTarget + '"]').click();
+        $('html, body').animate({scrollTop: $('.product-page__nav-tabs').offset().top}, 700);
+        return false;
+    });
+
     var $priceRange = $("#js-range-slider-price"),
         $priceFrom = $("#price-from"),
         $priceTo = $("#price-to"),
