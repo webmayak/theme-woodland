@@ -51,7 +51,7 @@ $this->beginPage();
         $brandsIsActive = preg_match('/^brands/', Yii::$app->request->pathInfo);
         ?>
         <li class="<?= $catalogIsActive ? 'active' : '' ?>" id="main-menu-catalog">
-            <a href="<?= Url::to(['/shop/catalog']) ?>">
+            <a href="<?= Url::to(['/shop/catalog/index']) ?>">
                 Проекты
             </a>
             <?php if (($catalogRoot = \common\modules\shop\models\ShopCategory::findOne(1)) && ($categories = $catalogRoot->getChildren()->andWhere(['status' => 1])->all())): ?>
