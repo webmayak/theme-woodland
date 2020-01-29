@@ -46,30 +46,4 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="page-search__btn-wrap text-center">
         <button class="btn btn-lg btn-primary">Показать еще</button>
     </div>
-    <ul class="page-search__pagination pagination justify-content-center align-items-center">
-        <li class="page-item">
-            <a class="page-link" href="#"><i class="fa fa-angle-left"></i> Назад</a>
-        </li>
-        <li class="page-item active">
-            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">2</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">3</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">4</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link">...</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">7</a>
-        </li>
-        <li class="page-item">
-            <a class="page-link" href="#">Вперед <i class="fa fa-angle-right"></i></a>
-        </li>
-    </ul>
 </main>
