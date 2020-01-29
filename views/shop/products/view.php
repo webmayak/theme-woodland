@@ -224,42 +224,52 @@ $this->params['breadcrumbs'][] = $this->title;
                 <a class="product-page__same-link btn btn-outline-success btn-block" href="#">Этот же проект: Каркасный</a>
                 <div class="product-page__sidebar-title">Характеристики</div>
                 <ul class="product-page__params list-unstyled">
+                    <?php if ($attributeValue = $model->present()->getAttributeValue(3)): ?>
                     <li class="product-page__param point-with-icon">
                         <div class="point-with-icon__icon-wrap">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-size"></use>
                             </svg>
                         </div>
-                        <div class="point-with-icon__text">Размеры <?= $model->present()->getAttributeValue(3) ?></div>
+                        <div class="point-with-icon__text">Размеры <?= $attributeValue ?></div>
                     </li>
+                    <?php endif; ?>
+                    <?php if ($attributeValue = $model->present()->getAttributeValue(5)): ?>
                     <li class="product-page__param point-with-icon">
                         <div class="point-with-icon__icon-wrap">
                             <img src="/images/four-squares-with-frame-shape.png" alt="">
                         </div>
-                        <div class="point-with-icon__text">S застройки/общая: <?= $model->present()->getAttributeValue(5) ?></div>
+                        <div class="point-with-icon__text">S застройки/общая: <?= $attributeValue ?></div>
                     </li>
+                    <?php endif; ?>
+                    <?php if ($attributeValue = $model->present()->getAttributeValue(1)): ?>
                     <li class="product-page__param point-with-icon">
                         <div class="point-with-icon__icon-wrap">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-address"></use>
                             </svg>
                         </div>
-                        <div class="point-with-icon__text">Этажность: <?= $model->present()->getAttributeValue(1) ?></div>
+                        <div class="point-with-icon__text">Этажность: <?= $attributeValue ?></div>
                     </li>
+                    <?php endif; ?>
+                    <?php if ($attributeValue = $model->present()->getAttributeValue(2)): ?>
                     <li class="product-page__param point-with-icon">
                         <div class="point-with-icon__icon-wrap">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                                 <use xlink:href="/images/sprite.svg#icon-bed"></use>
                             </svg>
                         </div>
-                        <div class="point-with-icon__text">Комнат: <?= $model->present()->getAttributeValue(2) ?></div>
+                        <div class="point-with-icon__text">Комнат: <?= $attributeValue ?></div>
                     </li>
+                    <?php endif; ?>
+                    <?php if ($attributeValue = $model->present()->getAttributeValue(6)): ?>
                     <li class="product-page__param point-with-icon">
                         <div class="point-with-icon__icon-wrap">
                             <img src="/images/advantage-2.png" alt="">
                         </div>
-                        <div class="point-with-icon__text">Технология: <?= $model->present()->getAttributeValue(6) ?></div>
+                        <div class="point-with-icon__text">Технология: <?= $attributeValue ?></div>
                     </li>
+                    <?php endif; ?>
                 </ul>
                 <div class="product-page__links">
                     <a href="#" class="product-page__view-all-link text-uppercase">Смотреть все</a><br>
