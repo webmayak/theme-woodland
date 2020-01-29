@@ -23,6 +23,29 @@
 
     <?= $this->render('@theme/views/_filter') ?>
 
+    <?= \yii\widgets\ListView::widget([
+        'dataProvider' => new \yii\data\ActiveDataProvider([
+            'query' => \common\modules\shop\models\ShopProduct::find()
+        ]),
+        'options' => [
+            'class' => 'products-list',
+        ],
+        'itemView' => '@theme/views/_product-card',
+        'itemOptions' => [
+            'class' => 'col-xl-3 col-lg-4 col-sm-6 catalog-page__item',
+        ],
+        'layout' => '<div class="row">{items}</div>{pager}',
+        'pager' => [
+            'class' => 'yii\bootstrap4\LinkPager',
+            'prevPageLabel' => '<i class="fa fa-angle-left"></i> Назад',
+            'nextPageLabel' => 'Вперед <i class="fa fa-angle-right"></i>',
+            'listOptions' => [
+                    'class' => ['page-search__pagination pagination justify-content-center align-items-center']
+            ]
+        ],
+    ]) ?>
+
+    <?php if (0): ?>
     <div class="row mt-4">
         <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="catalog-page__item product-card">
@@ -102,6 +125,7 @@
             <a class="page-link" href="#">Вперед <i class="fa fa-angle-right"></i></a>
         </li>
     </ul>
+    <?php endif; ?>
 
 </main>
 
