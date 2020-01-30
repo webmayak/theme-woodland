@@ -64,4 +64,53 @@
 .filter__additional {
   display: none;
   padding-top: 30px;
+
+  &-item {
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}
+
+.filter__option {
+  &-labels-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-label {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    margin-right: 6px;
+    margin-bottom: 6px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-control {
+    width: 100%;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid rgba($text, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.25s;
+  }
+
+  &-input:checked ~ .filter__option-control {
+    color: $success;
+    border-color: $success;
+  }
 }

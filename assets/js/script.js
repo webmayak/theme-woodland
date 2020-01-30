@@ -281,6 +281,17 @@ $(document).ready(function () {
         });
     });
 
+    $('.filter__open').click(function () {
+        $('.filter__additional').slideToggle();
+        var filterOpenBtnText = ($(this).text() === 'Все параметры') ? 'Свернуть' : 'Все параметры';
+        $(this).text(filterOpenBtnText);
+    });
+
+    $('.filter').on('reset', function () {
+        priceInstance.reset();
+        areaInstance.reset();
+    });
+
 });
 
 $(document).on('click', '.open-lead-modal', function () {
