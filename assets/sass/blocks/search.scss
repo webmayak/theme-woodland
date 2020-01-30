@@ -1,0 +1,49 @@
+.search {
+  padding: 0 !important;
+
+  &__open-btn {
+    border: none;
+    color: inherit;
+    padding: 14px 13px;
+    height: 100%;
+
+    &:focus {
+      outline: none;
+      color: $success;
+    }
+  }
+
+  &__form {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  &__field {
+    height: 100%;
+    border: none;
+    padding-right: 44px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: none;
+    background-color: #ffffff;
+    width: 44px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 16px;
+    background-image: url("../images/close.svg");
+    border-radius: 5px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

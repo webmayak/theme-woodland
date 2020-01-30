@@ -292,6 +292,23 @@ $(document).ready(function () {
         areaInstance.reset();
     });
 
+    $('.search__open-btn').click(function () {
+        $('.search__form').fadeIn();
+
+        var searchWrap = $('.search-wrap').position().left + $('.search-wrap').outerWidth() - 1;
+        $('.search__form').width(searchWrap);
+
+        $(document).on('keydown', function (evt) {
+            if (evt.keyCode === 27) {
+                $('.search__form').fadeOut();
+            }
+        });
+    });
+
+    $('.search__close-btn').click(function () {
+        $('.search__form').fadeOut();
+    });
+
 });
 
 $(document).on('click', '.open-lead-modal', function () {

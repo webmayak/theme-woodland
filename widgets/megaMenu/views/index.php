@@ -21,6 +21,10 @@ use yii\web\View;
 <div class="megamenu clearfix">
     <div class="container">
         <nav class="wsmenu">
+            <form class="search__form">
+                <input class="search__field form-control" type="text" placeholder="Поиск по сайту">
+                <button class="search__close-btn" type="button"><span class="sr-only">Закрыть</span></button>
+            </form>
             <ul class="wsmenu-list">
                 <?php
                 $catalogIsActive = preg_match('/catalog/', Yii::$app->request->pathInfo);
@@ -200,14 +204,15 @@ use yii\web\View;
                     <?php endif; ?>
                 </li>
                 <?php endif; ?>
-
-                <li>
-                    <a class="navicon" href="<?= Url::to(['/site/search']) ?>">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                            <use xlink:href="/images/sprite.svg#icon-search"/>
-                        </svg>
-                        <span class="sr-only">Поиск</span>
-                    </a>
+                <li class="search-wrap">
+                    <div class="navicon search">
+                        <button class="search__open-btn" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                <use xlink:href="/images/sprite.svg#icon-search"/>
+                            </svg>
+                            <span class="sr-only">Поиск</span>
+                        </button>
+                    </div>
                 </li>
                 <li>
                     <a class="navicon" href="<?= Url::to(['/site/favorite']) ?>">

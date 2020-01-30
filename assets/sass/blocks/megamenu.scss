@@ -79,7 +79,8 @@
       }
 
       &:hover {
-        > a {
+        > a,
+        button {
           color: $success;
         }
 
