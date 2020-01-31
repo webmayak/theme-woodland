@@ -21,8 +21,6 @@ $this->title = $model->name;
     </div>
     <?php endif; ?>
 
-    <?= \frontend\themes\woodland\widgets\Filter\Filter::widget() ?>
-
     <?= \yii\widgets\ListView::widget([
         'dataProvider' => new \yii\data\ActiveDataProvider([
             'query' => \common\modules\shop\models\ShopProduct::find()
