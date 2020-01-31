@@ -21,7 +21,7 @@ $this->title = $model->name;
     </div>
     <?php endif; ?>
 
-    <?= $this->render('@theme/views/_filter') ?>
+    <?= \frontend\themes\woodland\widgets\Filter\Filter::widget() ?>
 
     <?= \yii\widgets\ListView::widget([
         'dataProvider' => new \yii\data\ActiveDataProvider([
