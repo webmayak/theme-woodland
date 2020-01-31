@@ -6,16 +6,20 @@ use yii\helpers\Html;
 use yii\web\View;
 
 /* @var $this View */
-/* @var $links array */
-$this->title = 'Домостроительная компания';
+$this->title = $model->name;
 
 ?><main class="page-site-category__content">
-    <h1><?= $this->title ?></h1>
+    <h1><?= Html::encode($this->title) ?></h1>
 
-    <div class="page-site-category__text-block">
-        <p>В активе компании склад круглого леса, пилорама, несколько деревообрабатывающих цехов, комплекс сушильных камер, склад готовой продукции, собственный парк автотранспорта. В цехах установлено оборудование для производства домостроительного бруса и подготовки домокомплектов , в том числе и линия для изготовления клеёного бруса. Иными словами, на производственные площади  предприятия мы поместили всё необходимое оборудование для полного технологического цикла по обработке древесины от раскроя бревна до выпуска готовых домокомплектов и другой столярной продукции.</p>
-        <p>Чтобы прикоснуться к истории, мы создали домостроительную компанию «ФОРТУНА» и разместили ее в подмосковной Мещёре, в краю красивых и экологически чистых лесов, жемчужных озёр и рек, на расстоянии 140км. от Москвы, в посёлке ЦУС «Мир» Шатурского района.</p>
+    <?php if ($model->description) : ?>
+    <div class="text-block">
+        <div class="editor-content">
+            <?= TwigRender::widget([
+                'text' => $model->description,
+            ]) ?>
+        </div>
     </div>
+    <?php endif; ?>
 
     <?= $this->render('@theme/views/_filter') ?>
 
@@ -47,31 +51,19 @@ $this->title = 'Домостроительная компания';
 
 </div><!-- закрываем .container -->
 
-<?= $this->render('@theme/views/_advantages') ?>
-
-<?php if ($model->description) : ?>
-<div class="text-block">
-    <div class="container">
-        <?php if ($hasMedia) : ?>
-            <div class="image">
-                <img src="<?= $model->media->image(375, 300, false) ?>" alt="<?= Html::encode($model->name) ?>">
-            </div>
-        <?php endif; ?>
-        <div class="editor-content">
-            <?= TwigRender::widget([
-                'text' => $model->description,
-            ]) ?>
-        </div>
-        <div class="clearfix"></div>
-    </div>
-</div>
-<?php endif; ?>
-
 <?= $this->render('@theme/views/_steps') ?>
 
 <?= $this->render('@theme/views/_works-map--with-form') ?>
 
-<?= $this->render('@theme/views/_text-block') ?>
+<?php if ($bottom_text = Yii::$app->seo->text): ?>
+<div class="text-block">
+    <div class="container">
+        <div class="editor-content">
+            <?= $bottom_text ?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
 
 <?= $this->render('@theme/views/_works') ?>
 
