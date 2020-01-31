@@ -47,11 +47,7 @@ $this->title = $model->name;
 
 </main>
 
-<?= $this->render('@theme/views/_categories') ?>
-
 </div><!-- закрываем .container -->
-
-<?= $this->render('@theme/views/_steps') ?>
 
 <?= $this->render('@theme/views/_works-map--with-form') ?>
 
