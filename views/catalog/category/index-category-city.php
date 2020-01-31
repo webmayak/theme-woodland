@@ -1,5 +1,6 @@
 <?php
 
+use frontend\widgets\twigRender\TwigRender;
 use pantera\leads\widgets\form\LeadForm;
 use yii\helpers\Html;
 use yii\web\View;
@@ -48,7 +49,23 @@ $this->title = 'Домостроительная компания';
 
 <?= $this->render('@theme/views/_advantages') ?>
 
-<?= $this->render('@theme/views/_text-block') ?>
+<?php if ($model->description) : ?>
+<div class="text-block">
+    <div class="container">
+        <?php if ($hasMedia) : ?>
+            <div class="image">
+                <img src="<?= $model->media->image(375, 300, false) ?>" alt="<?= Html::encode($model->name) ?>">
+            </div>
+        <?php endif; ?>
+        <div class="editor-content">
+            <?= TwigRender::widget([
+                'text' => $model->description,
+            ]) ?>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<?php endif; ?>
 
 <?= $this->render('@theme/views/_steps') ?>
 
