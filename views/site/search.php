@@ -15,12 +15,14 @@ $this->title = '"Дом" - результаты поиска';
 $this->params['breadcrumbs'][] = $this->title;
 ?><main class="page-search__content">
     <h1><?= $this->title ?></h1>
-	<div class="input-group">
-		<input class="page-search__search-field form-control form-control-lg" type="text" placeholder="Поиск по сайту" value="Дом">
-		<div class="input-group-append">
-          <button type="submit" class="page-search__search-btn btn btn-primary">Поиск</button>
+    <form>
+        <div class="input-group">
+            <input class="page-search__search-field form-control form-control-lg" type="text" name="q" placeholder="Поиск по сайту" value="Дом">
+            <div class="input-group-append">
+              <button type="submit" class="page-search__search-btn btn btn-primary">Поиск</button>
+            </div>
         </div>
-	</div>
+    </form>
     <div class="page-search__text">Если результаты вас не удовлетворяют, пожалуйста, попробуйте еще раз</div>
     <?= \yii\widgets\ListView::widget([
         'dataProvider' => new \yii\data\ActiveDataProvider([

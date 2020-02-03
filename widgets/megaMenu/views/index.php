@@ -21,8 +21,8 @@ use yii\web\View;
 <div class="megamenu clearfix">
     <div class="container">
         <nav class="wsmenu">
-            <form class="search__form">
-                <input class="search__field form-control" type="text" placeholder="Поиск по сайту">
+            <form class="search__form" action="<?= Url::to(['/site/search']) ?>">
+                <input class="search__field form-control" type="text" name="q" placeholder="Поиск по сайту">
                 <button class="search__close-btn" type="button"><span class="sr-only">Закрыть</span></button>
             </form>
             <ul class="wsmenu-list">

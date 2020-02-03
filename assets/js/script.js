@@ -294,6 +294,7 @@ $(document).ready(function () {
 
     $('.search__open-btn').click(function () {
         $('.search__form').fadeIn();
+        $('.search__field').focus();
 
         var searchWrap = $('.search-wrap').position().left + $('.search-wrap').outerWidth() - 1;
         $('.search__form').width(searchWrap);
