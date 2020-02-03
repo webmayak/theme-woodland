@@ -65,7 +65,15 @@ if ($mapScript = trim($model->present()->getAttributeValueByKey('map'))) {
 </div>
 <?php endif; ?>
 
-<?= $this->render('@theme/views/_works') ?>
+<?php
+// блок "Наши выполненные работы"
+if (($galleries = $model->present()->getRelationCategoryByTypeKey('gallery'))
+    && !empty($gallery = $galleries[0])
+) {
+    echo $this->render('@theme/views/_works', [
+        'model' => $gallery,
+    ]);
+} ?>
 
 <div class="contact-form-block">
     <div class="container">

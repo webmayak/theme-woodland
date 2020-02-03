@@ -1,22 +1,20 @@
-<div class="works">
+<?php
+
+use yii\helpers\Html;
+
+?><div class="works">
     <div class="container">
         <h2>Наши выполненные работы</h2>
+        <?php if (!empty($model) && !empty($model->media) && is_array($model->media)): ?>
         <div class="works__carousel owl-carousel">
-            <a class="works__item gallery-link" href="/images/work-1.jpg" data-fancybox="works">
-                <img src="/images/work-1.jpg" alt="">
+            <?php foreach ($model->media as $index => $media): ?>
+            <a class="works__item gallery-link" href="<?= $media->image() ?>" data-fancybox="works">
+                <img src="<?= $media->image(255, 255, false) ?>" alt="<?= Html::encode($model->name) . ' - фото ' . ($index+1)  ?>">
             </a>
-            <a class="works__item gallery-link" href="/images/work-2.jpg" data-fancybox="works">
-                <img src="/images/work-2.jpg" alt="">
-            </a>
-            <a class="works__item gallery-link" href="/images/work-3.jpg" data-fancybox="works">
-                <img src="/images/work-3.jpg" alt="">
-            </a>
-            <a class="works__item gallery-link" href="/images/work-4.jpg" data-fancybox="works">
-                <img src="/images/work-4.jpg" alt="">
-            </a>
-            <a class="works__item gallery-link" href="/images/work-2.jpg" data-fancybox="works">
-                <img src="/images/work-2.jpg" alt="">
-            </a>
+        <?php endforeach; ?>
         </div>
+        <?php else: ?>
+        <p>Нет элементов для отображения.</p>
+        <?php endif; ?>
     </div>
 </div>
