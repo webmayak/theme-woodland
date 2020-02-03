@@ -32,7 +32,7 @@ use yii\web\View;
                 ?>
 
                 <li class="<?= $catalogIsActive ? 'active' : '' ?>" id="main-menu-catalog">
-                    <a href="<?= Url::to(['/shop/catalog']) ?>" class="navtext vsmenu-cat-toggle">
+                    <a href="<?= Url::to(['/shop/catalog/index']) ?>" class="navtext vsmenu-cat-toggle">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-address"/>
                         </svg>
