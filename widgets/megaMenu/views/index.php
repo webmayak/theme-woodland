@@ -136,7 +136,7 @@ use yii\web\View;
                 </li>
                 <?php endif; ?>
 
-                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(260)) : ?>
+                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(238)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                     <a class="navtext" href="<?= $parent->present()->getUrl() ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
@@ -159,7 +159,7 @@ use yii\web\View;
                 </li>
                 <?php endif; ?>
 
-                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(261)) : ?>
+                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(234)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                     <a class="navtext" href="<?= $parent->present()->getUrl() ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
