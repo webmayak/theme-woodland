@@ -46,5 +46,3 @@ $this->params['breadcrumbs'][] = $defaultTitle;
     </div>
     <?php endif; ?>
 </main>
-/div>
-</main>
