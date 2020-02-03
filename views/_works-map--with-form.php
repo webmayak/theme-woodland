@@ -1,9 +1,8 @@
 <?php
 
-    use pantera\leads\widgets\form\LeadForm;
+use pantera\leads\widgets\form\LeadForm;
 
 ?>
-
 <div class="works-map">
     <div class="container">
         <h2>Карта выполненных объектов</h2>
@@ -23,6 +22,6 @@
                 </div>
             </div>
         </div>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CGXCfH1r"></iframe>
+        <?= !empty($mapScript) ? $mapScript : '<iframe src="https://yandex.ru/map-widget/v1/-/CGXCfH1r"></iframe>' ?>
     </div>
 </div>

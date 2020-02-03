@@ -47,7 +47,13 @@ $this->title = $model->name;
 
 </div><!-- закрываем .container -->
 
-<?= $this->render('@theme/views/_works-map--with-form') ?>
+<?php
+// блок "Карта выполненных объектов"
+if ($mapScript = trim($model->present()->getAttributeValueByKey('map'))) {
+    echo $this->render('@theme/views/_works-map--with-form', [
+        'mapScript' => $mapScript,
+    ]);
+} ?>
 
 <?php if ($bottom_text = Yii::$app->seo->text): ?>
 <div class="text-block">
