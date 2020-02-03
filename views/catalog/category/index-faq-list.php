@@ -7,8 +7,22 @@
  */
 
 use pantera\leads\widgets\form\LeadForm;
+use pantera\faq\models\FaqCategories;
+use pantera\faq\models\FaqQuestions;
 use yii\helpers\Html;
 use yii\web\View;
+
+$categories = FaqCategories::find()->all();
+
+foreach ($categories as $category) {
+    echo $category->title . '<br/>';
+    if ($questions = $category->getActiveFaqQuestions()->all()) {
+        foreach ($questions as $question) {
+            echo '--Q:' . $question->title . '<br/>';
+            echo '--A:' . $question->body;
+        }
+    }
+}
 
 /* @var $this View */
 /* @var $links array */
