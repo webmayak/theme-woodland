@@ -27,7 +27,8 @@ use yii\web\View;
     <div class="item-card__date"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDate($model->created_at, 'd.MM.yy') ?></div>
     <h4 class="item-card__title"><a href="<?= $model->getUrl() ?>"><?= Html::encode($model->title) ?></a></h4>
     <div>
-        <p>Не пропустите две недели скидок для Вас, с 10 октября по 24 октября. Не упустите свой шанс, приобрести дом по скидке. Для того что бы оформить заказ, заполните форму ...</p>
+        <?php $bodyText = html_entity_decode(strip_tags($model->body)); ?>
+        <p><?= mb_substr($bodyText, 0, 100, 'utf-8') . (mb_strlen($bodyText) > 100 ? '...' : '') ?></p>
     </div>
     <a class="item-card__more-link" href="<?= $model->getUrl() ?>">Читать все <i class="fa fa-angle-right"></i></a>
 </div>
