@@ -114,3 +114,39 @@
     border-color: $success;
   }
 }
+
+@media (max-width: 991px) {
+  .filter {
+    &__item {
+      margin-bottom: 20px;
+    }
+
+    &__main {
+      *[class^="col"]:last-child {
+        .filter__item {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .filter {
+    &__wrap {
+      padding: 15px;
+    }
+
+    &__price-field {
+      width: calc(50% - 5px);
+    }
+
+    &__option-label {
+      font-size: 14px;
+    }
+
+    &__open {
+      margin-bottom: 15px;
+    }
+  }
+}
