@@ -1,5 +1,7 @@
 <?php
-    use pantera\content\widgets\block\Block;
+
+use pantera\content\widgets\block\Block;
+
 ?>
 <div class="video-block" id="video-block">
     <div class="container">
