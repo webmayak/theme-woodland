@@ -119,7 +119,7 @@ $this->params['breadcrumbs'][] = $model->name;
                                         <div class="page-contacts__route-item page-contacts__route-item--foot">
                                             <div class="page-contacts__route-title">Пешком</div>
                                             <div class="page-contacts__route-text">
-                                                <?= $model->present()->getAttributeValueByKey('how_to_get_on_foot') ?>
+                                                <?= trim($model->present()->getAttributeValueByKey('how_to_get_on_foot')) ?>
                                             </div>
                                         </div>
                                     </div>
@@ -127,7 +127,7 @@ $this->params['breadcrumbs'][] = $model->name;
                                         <div class="page-contacts__route-item page-contacts__route-item--car">
                                             <div class="page-contacts__route-title">Авто</div>
                                             <div class="page-contacts__route-text">
-                                                <?= $model->present()->getAttributeValueByKey('how_to_get_by_car') ?>
+                                                <?= trim($model->present()->getAttributeValueByKey('how_to_get_by_car')) ?>
                                             </div>
                                         </div>
                                     </div>
@@ -148,7 +148,7 @@ $this->params['breadcrumbs'][] = $model->name;
     <div class="requisites light-bg">
         <div class="container">
             <h2>Наши реквизиты</h2>
-            <?= $model->present()->getAttributeValueByKey('requisites') ?>
+            <?= trim($model->present()->getAttributeValueByKey('requisites')) ?>
         </div>
     </div>
 
