@@ -11,13 +11,15 @@ use yii\helpers\ArrayHelper;
 $this->title = $model->name;
 
 $this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => ['/shop/catalog/index']];
-if ($model->category && ($parents = $model->category->parents)) {
-    foreach ($parents as $key => $parent) {
-        if ($key == 0) continue;
-        $this->params['breadcrumbs'][] = ['label' => $parent->name, 'url' => $parent->present()->getUrl()];
+if ($model->category) {
+    if ($parents = $model->category->parents) {
+        foreach ($parents as $key => $parent) {
+            if ($key == 0) continue;
+            $this->params['breadcrumbs'][] = ['label' => $parent->name, 'url' => $parent->present()->getUrl()];
+        }
     }
+    $this->params['breadcrumbs'][] = ['label' => $model->category->name, 'url' => $model->category->present()->getUrl()];
 }
-$this->params['breadcrumbs'][] = ['label' => $model->category->name, 'url' => $model->category->present()->getUrl()];
 $this->params['breadcrumbs'][] = $this->title;
 
 /**
