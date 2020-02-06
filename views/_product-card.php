@@ -6,6 +6,15 @@ use yii\helpers\Html;
  * @var \common\modules\shop\models\ShopProduct $model
  */
 ?><div class="product-card">
+    <?php
+        $labelStart = '<div class="product-card__label product-card__label--';
+        $labelMiddle = '"><div>';
+        $labelEnd = '</div></div>';
+        if($model->present()->isInSegment('discount')) echo $labelStart .'discount' . $labelMiddle . 'скидка' . $labelEnd;
+        if($model->present()->isInSegment('best-price')) echo $labelStart .'best-price' . $labelMiddle . 'лучшая цена' . $labelEnd;
+        if($model->present()->isInSegment('present')) echo $labelStart .'present' . $labelMiddle . 'подарок' . $labelEnd;
+        if($model->present()->isInSegment('bestseller')) echo $labelStart .'bestseller' . $labelMiddle . 'хит продаж' . $labelEnd;
+    ?>
     <div class="product-card__img-wrap">
         <a href="/<?=$model->present()->getUrl()?>" _href="<?= $model->present()->getUrl() ?>">
             <img class="product-card__img" src="<?= $model->media ? $model->media->image() : 'https://via.placeholder.com/150' ?>" alt="<?= Html::encode($model->getParentWithVariantName()) ?>">
