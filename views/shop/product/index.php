@@ -118,6 +118,46 @@ $this->params['breadcrumbs'][] = $this->title;
                     'content' => 'Заказать этот проект',
                     'model' => $model
                 ]) ?>
+                <?php if ($variants = $model->getVariants()->all()): ?>
+
+                    <?php
+                    $productTypes = [];
+                    $productVariantsByType = [];
+                    foreach ($variants as $variant) {
+                        // тут храним типы
+                        $productTypes[$variant->productType->id] = $variant->productType;
+                        // тут храним варианты товаров для кажого типа
+                        $productVariantsByType[$variant->productType->id][] = $variant;
+                    }
+                    ?>
+
+                    <?php foreach ($productVariantsByType as $type_id => $variants): ?>
+                        <div class="product-page__sidebar-title">
+                            <?= $productTypes[$type_id]->name ?>
+                        </div>
+                        <table class="product-page__sidebar-table product-table">
+                        <?php foreach ($variants as $index => $variant): ?>
+                            <tr>
+                                <td>
+                                    <img src="<?= $variant->media->image() ?>" alt="Сечение бруса <?= $variant->present()->getAttributeValue(8) ?>">
+                                </td>
+                                <td>
+                                    <span class="product-table__size"><?= $variant->present()->getAttributeValue(8) ?></span><br>
+                                    <span class="product-table__thickness">толщина стены: <?= $variant->present()->getAttributeValue(9) ?> мм</span>
+                                </td>
+                                <td>
+                                    <label class="product-table__price-wrap">
+                                        <input class="sr-only" type="radio" name="product-options">
+                                        <span class="product-table__price"><?= number_format($variant->price, 0, ',', ' ') ?> руб.</span>
+                                    </label>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                        </table>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <?php if (0): ?>
                 <div class="product-page__sidebar-title">
                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#00bbdf" aria-hidden="true" role="presentation" focusable="false">
                         <use xlink:href="/images/sprite.svg#icon-address"/>
@@ -223,6 +263,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         </td>
                     </tr>
                 </table>
+                <?php endif; ?>
+                
                 <a class="product-page__same-link btn btn-outline-success btn-block" href="#">Этот же проект: Каркасный</a>
                 <div class="product-page__sidebar-title">Характеристики</div>
                 <ul class="product-page__params list-unstyled">
