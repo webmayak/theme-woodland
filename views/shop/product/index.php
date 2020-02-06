@@ -123,6 +123,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php
                     $productTypes = [];
                     $productVariantsByType = [];
+                    $checkedFirst = false;
                     foreach ($variants as $variant) {
                         // тут храним типы
                         $productTypes[$variant->productType->id] = $variant->productType;
@@ -133,10 +134,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <?php foreach ($productVariantsByType as $type_id => $variants): ?>
                         <div class="product-page__sidebar-title">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#00bbdf" aria-hidden="true" role="presentation" focusable="false">
+                                <use xlink:href="/images/sprite.svg#icon-address"/>
+                            </svg>
                             <?= $productTypes[$type_id]->name ?>
                         </div>
                         <table class="product-page__sidebar-table product-table">
-                        <?php foreach ($variants as $index => $variant): ?>
+                        <?php foreach ($variants as $variant) : ?>
                             <tr>
                                 <td>
                                     <img src="<?= $variant->media->image() ?>" alt="Сечение бруса <?= $variant->present()->getAttributeValue(8) ?>">
@@ -147,7 +151,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </td>
                                 <td>
                                     <label class="product-table__price-wrap">
-                                        <input class="sr-only" type="radio" name="product-options">
+                                        <input class="sr-only" type="radio" name="product_id" value="<?= $variant->id ?>"<?php if (!$checkedFirst) { echo ' checked'; $checkedFirst = true; } ?>>
                                         <span class="product-table__price"><?= number_format($variant->price, 0, ',', ' ') ?> руб.</span>
                                     </label>
                                 </td>
