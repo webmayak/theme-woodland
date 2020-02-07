@@ -1,12 +1,9 @@
 <?php
 
-use pantera\reviews\widgets\form\ReviewForm;
-use pantera\reviews\widgets\LatestReviews;
-use pantera\reviews\widgets\ReviewsList;
 use pantera\content\widgets\block\Block;
-use yii\helpers\Html;
-use yii\helpers\Url;
+use pantera\reviews\widgets\LatestReviews;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Html;
 
 $this->title = $model->name;
 
@@ -69,47 +66,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     <img src="https://via.placeholder.com/700x400" alt="<?= Html::encode($model->name) ?>" class="img-fluid">
                 <?php endif; ?>
             </div>
-            <div class="product-page__sizes">
-                <div class="product-page__sizes-title">Возможные размеры и сечения профилированного бруса</div>
-                <div class="row">
-                    <div class="col-sm-4 col-6">
-                        <span class="product-page__size-item">
-                            <img class="product-page__size-img" src="/images/size-1.png" alt="">
-                            <span class="product-page__size-text">90×140 мм. <br>(Прямой)</span>
-                        </span>
-                    </div>
-                    <div class="col-sm-4 col-6">
-                        <span class="product-page__size-item">
-                            <img class="product-page__size-img" src="/images/size-2.png" alt="">
-                            <span class="product-page__size-text">90×140 мм. <br>(Овал)</span>
-                        </span>
-                    </div>
-                    <div class="col-sm-4 col-6">
-                        <span class="product-page__size-item">
-                            <img class="product-page__size-img" src="/images/size-3.png" alt="">
-                            <span class="product-page__size-text">140×140 мм. <br>(Прямой)</span>
-                        </span>
-                    </div>
-                    <div class="col-sm-4 col-6">
-                        <span class="product-page__size-item">
-                            <img class="product-page__size-img" src="/images/size-4.png" alt="">
-                            <span class="product-page__size-text">140×140 мм. <br>(Овал)</span>
-                        </span>
-                    </div>
-                    <div class="col-sm-4 col-6">
-                        <span class="product-page__size-item">
-                            <img class="product-page__size-img" src="/images/size-5.png" alt="">
-                            <span class="product-page__size-text">190×140 мм. <br>(Прямой)</span>
-                        </span>
-                    </div>
-                    <div class="col-sm-4 col-6">
-                        <span class="product-page__size-item">
-                            <img class="product-page__size-img" src="/images/size-6.png" alt="">
-                            <span class="product-page__size-text">190×140 мм. <br>(Овал)</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
+            <?php
+            if ($model->possible_sizes) {
+                echo $model->possible_sizes;
+            }
+            ?>
         </div>
         <div class="col-lg-4">
             <div class="product-page__sidebar">
@@ -269,7 +230,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 </table>
                 <?php endif; ?>
                 
-                <a class="product-page__same-link btn btn-outline-success btn-block" href="#">Этот же проект: Каркасный</a>
+                <?php
+                if ($model->similar_product_link) {
+                    echo $model->similar_product_link;
+                }
+                ?>
                 <div class="product-page__sidebar-title">Характеристики</div>
                 <ul class="product-page__params list-unstyled">
                     <?php if ($attributeValue = $model->present()->getAttributeValue(3)): ?>
@@ -383,14 +348,25 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="col-12">
             <ul class="product-page__nav-tabs nav nav-tabs" role="tablist">
+                <?php if ($model->equipment) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#product-tab-1">
+                            Комплектация
+                        </a>
+                    </li>
+                <?php endif; ?>
+                <?php if ($model->additional_services) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link <?= !$model->equipment ? 'active' : '' ?>" data-toggle="tab" href="#product-tab-2">
+                            Доп. услуги
+                        </a>
+                    </li>
+                <?php endif; ?>
                 <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#product-tab-1">Комплектация</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#product-tab-2">Доп. услуги</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#product-tab-3">Как работаем</a>
+                    <a class="nav-link <?= !$model->equipment && !$model->additional_services ? 'active' : '' ?>"
+                       data-toggle="tab" href="#product-tab-3">
+                        Как работаем
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#product-tab-4">В кредит</a>
@@ -406,430 +382,22 @@ $this->params['breadcrumbs'][] = $this->title;
                 </li>
             </ul>
             <div class="product-page__tab-content tab-content">
-                <div class="tab-pane fade show active" id="product-tab-1">
-                    <div class="table-responsive">
-                        <table>
-                        <tr>
-                            <th>Наименование</th>
-                            <th>Описание</th>
-                            <th colspan="3">Значение</th>
-                        </tr>
-                        <tr>
-                            <td>Обвязка:</td>
-                            <td>
-                                2 нижних венца  из нестроганного бруса <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>100×150</td>
-                            <td>150×150</td>
-                            <td>200×150</td>
-                        </tr>
-                        <tr>
-                            <td>Каркас внешних цен:</td>
-                            <td>
-                                обрезная доска на гвозди, с шагом 60 см <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>40×100</td>
-                            <td>40×150</td>
-                            <td>40×200</td>
-                        </tr>
-                        <tr>
-                            <td>Цена:</td>
-                            <td>
-                                стоимость в базовой комплектации <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                <span class="text-success mb-2 d-inline-block">763 000</span><br>
-                                <button class="btn btn-primary">Купить</button>
-                            </td>
-                            <td>
-                                <span class="text-success mb-2 d-inline-block">891 000</span><br>
-                                <button class="btn btn-primary">Купить</button>
-                            </td>
-                            <td>
-                                <span class="text-success mb-2 d-inline-block">990 000</span><br>
-                                <button class="btn btn-primary">Купить</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Каркас внутренних стен:</td>
-                            <td>
-                                обрезная доска на гвозди, с шагом 60 см <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Высота потолка:</td>
-                            <td>
-                                1-й этаж - 2.4 м., 2-й этаж - 2.3 м. <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Пол черновой:</td>
-                            <td>
-                                обрезная доска 100х22 мм <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Лаги:</td>
-                            <td>
-                                потолочные лаги, брус 150х50 мм <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Стропильная система:</td>
-                            <td>
-                                стропила из доски 40х100 мм. и 40х150 мм <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Обрешетка:</td>
-                            <td>
-                                доска обрезная 22 мм на 100 мм <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Кровля:</td>
-                            <td>
-                                ондулин (красный, зеленый) <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Утепление внешних стен:</td>
-                            <td>
-                                плитный утеплитель <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Утепление пола, перекрытий:</td>
-                            <td>
-                                минеральная вата Isover или URSA <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Парогидроизоляция:</td>
-                            <td>
-                                утепление Изоспан <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Чистовой пол:</td>
-                            <td>
-                                сухая половая доска 100 мм. на 36 мм <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Внутренняя отделка:</td>
-                            <td>
-                                вагонка камерной сушки 88х12.5 мм <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Внешняя отделка:</td>
-                            <td>
-                                вагонка естественной влажности 90 мм <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Входная дверь:</td>
-                            <td>
-                                металлическая 8 м. на 2 м <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Внутренние двери:</td>
-                            <td>
-                                деревянные без фурнитуры 8 м. на 2 м <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Углы внутренние:</td>
-                            <td>
-                                сухой плинтус <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Лестница:</td>
-                            <td>
-                                ступени половая доска 36 мм <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Окна:</td>
-                            <td>
-                                двойное остекление 1 м. на 1,2 м <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Наличники:</td>
-                            <td>
-                                камерная сушка 88 мм. на 12.5 мм <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                            <td><i class="fa fa-check text-success"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Цена:</td>
-                            <td>
-                                стоимость дома под ключ <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                <span class="text-success mb-2 d-inline-block">790 000</span><br>
-                                <button class="btn btn-primary">Купить</button>
-                            </td>
-                            <td>
-                                <span class="text-success mb-2 d-inline-block">850 000</span><br>
-                                <button class="btn btn-primary">Купить</button>
-                            </td>
-                            <td>
-                                <span class="text-success mb-2 d-inline-block">940 000</span><br>
-                                <button class="btn btn-primary">Купить</button>
-                            </td>
-                        </tr>
-                    </table>
+                <?php if ($model->equipment) : ?>
+                    <div class="tab-pane fade show active" id="product-tab-1">
+                        <div class="table-responsive">
+                            <?= $model->equipment ?>
+                        </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="product-tab-2">
-                    <div class="table-responsive">
-                        <table>
-                        <tr>
-                            <th>Услуга</th>
-                            <th>Описание</th>
-                            <th>Цена</th>
-                        </tr>
-                        <tr>
-                            <td>Замена утеплителя Isover на Rockwool</td>
-                            <td>
-                                более качественный вариант утеплителя <br>
-                                плитный Rockwool, доплата за вычетом Isover
-                            </td>
-                            <td>
-                                50 мм.:   + 110 руб за м2 <br>
-                                100 мм.: + 220 руб за м2 <br>
-                                150 мм.: + 330 руб. за м2
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Утепление внутренних стен <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                Isaover или аналог во внутренние перегородки. <br>
-                                Возможно использование Rockwool
-                            </td>
-                            <td>
-                                50 мм.: 90 руб за м2
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Кровля из металлочерепицы <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                кровельный материал из тонколистовой стали <br>
-                                с полимерным защитным слоем
-                            </td>
-                            <td>
-                                460 за м2
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Обрабработка антисептиком <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                огнебиозащита обвязки, лаг пола и потолка
-                            </td>
-                            <td>
-                                380 руб./м2
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Внутренняя отделка имитацией бруса <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                деревянный отделочный материал под брус, <br>
-                                цена за вычетом вагонки
-                            </td>
-                            <td>
-                                + 100 руб./м2
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Внутренняя отделка блок-хаусом <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                деревянный отделочный материал под бревно, <br>
-                                цена за вычетом вагонки
-                            </td>
-                            <td>
-                                + 130 руб./м2
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Внешняя отделка блок-хаусом <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                деревянный отделочный материал под бревно, <br>
-                                цена за вычетом вагонки
-                            </td>
-                            <td>
-                                + 130 руб./м2
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Внешняя отделка сайдингом <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                виниловый отделочный материал, цена <br>
-                                за вычетом вагонки
-                            </td>
-                            <td>
-                                + 150 руб./м2
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Замена деревянных окон на ПВХ <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                сверхпрочные пластиковые окна двойного <br>
-                                остекления, цена за вычетом деревянного окна
-                            </td>
-                            <td>
-                                5200 руб./шт.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Водосточные трубы <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                желоба из ПВХ, алюминия или меди
-                            </td>
-                            <td>
-                                требуется детальный расчет
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Строительная бытовка <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                необходима для проживания рабочей бригады <br>
-                                и хозяйственных нужд, не требуется, если на участке
-                            </td>
-                            <td>
-                                14000 руб.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Аренда генератора <br>
-                                <a href="#">Посмотреть фото</a>
-                            </td>
-                            <td>
-                                необходим если на участке нет электроэнергии, <br>
-                                топливо не входит в стоимость
-                            </td>
-                            <td>
-                                7000 руб.
-                            </td>
-                        </tr>
-                    </table>
+                <?php endif; ?>
+                <?php if ($model->additional_services) : ?>
+                    <div class="tab-pane fade <?= !$model->equipment ? 'show active' : '' ?>" id="product-tab-2">
+                        <div class="table-responsive">
+                            <?= $model->additional_services ?>
+                        </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="product-tab-3">
+                <?php endif; ?>
+                <div class="tab-pane fade <?= !$model->equipment && !$model->additional_services ? 'show active' : '' ?>"
+                     id="product-tab-3">
                     <?= Block::widget([
                         'position' => 'product_tab_how_we_work',
                     ]) ?>
