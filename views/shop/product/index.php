@@ -1,7 +1,6 @@
 <?php
 
 use pantera\content\widgets\block\Block;
-use pantera\reviews\widgets\LatestReviews;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
@@ -66,11 +65,11 @@ $this->params['breadcrumbs'][] = $this->title;
                     <img src="https://via.placeholder.com/700x400" alt="<?= Html::encode($model->name) ?>" class="img-fluid">
                 <?php endif; ?>
             </div>
-            <?php
-            if ($model->possible_sizes) {
-                echo $model->possible_sizes;
-            }
-            ?>
+            <?php if ($model->possible_sizes) : ?>
+                <div class="product-page__sizes">
+                    <?= $model->possible_sizes ?>
+                </div>
+            <?php endif; ?>
         </div>
         <div class="col-lg-4">
             <div class="product-page__sidebar">
@@ -230,11 +229,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 </table>
                 <?php endif; ?>
                 
-                <?php
-                if ($model->similar_product_link) {
-                    echo $model->similar_product_link;
-                }
-                ?>
+                <?php if ($model->similar_product_link) : ?>
+                    <?= $model->similar_product_link ?>
+                <?php endif; ?>
+
                 <div class="product-page__sidebar-title">Характеристики</div>
                 <ul class="product-page__params list-unstyled">
                     <?php if ($attributeValue = $model->present()->getAttributeValue(3)): ?>
@@ -348,32 +346,23 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="col-12">
             <ul class="product-page__nav-tabs nav nav-tabs" role="tablist">
-                <?php if ($model->equipment) : ?>
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#product-tab-1">
-                            Комплектация
-                        </a>
-                    </li>
-                <?php endif; ?>
-                <?php if ($model->additional_services) : ?>
-                    <li class="nav-item">
-                        <a class="nav-link <?= !$model->equipment ? 'active' : '' ?>" data-toggle="tab" href="#product-tab-2">
-                            Доп. услуги
-                        </a>
-                    </li>
-                <?php endif; ?>
                 <li class="nav-item">
-                    <a class="nav-link <?= !$model->equipment && !$model->additional_services ? 'active' : '' ?>"
-                       data-toggle="tab" href="#product-tab-3">
-                        Как работаем
-                    </a>
+                    <a class="nav-link active" data-toggle="tab" href="#product-tab-1">Комплектация</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#product-tab-2">Доп. услуги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#product-tab-3">Как работаем</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#product-tab-4">В кредит</a>
                 </li>
+                <?php if (0) : ?>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#product-tab-5">Комментарии</a>
                 </li>
+                <?php endif; ?>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#product-tab-6">Описание</a>
                 </li>
@@ -382,22 +371,17 @@ $this->params['breadcrumbs'][] = $this->title;
                 </li>
             </ul>
             <div class="product-page__tab-content tab-content">
-                <?php if ($model->equipment) : ?>
-                    <div class="tab-pane fade show active" id="product-tab-1">
-                        <div class="table-responsive">
-                            <?= $model->equipment ?>
-                        </div>
+                <div class="tab-pane fade show active" id="product-tab-1">
+                    <div class="table-responsive">
+                        <?= $model->equipment ?>
                     </div>
-                <?php endif; ?>
-                <?php if ($model->additional_services) : ?>
-                    <div class="tab-pane fade <?= !$model->equipment ? 'show active' : '' ?>" id="product-tab-2">
-                        <div class="table-responsive">
-                            <?= $model->additional_services ?>
-                        </div>
+                </div>
+                <div class="tab-pane fade" id="product-tab-2">
+                    <div class="table-responsive">
+                        <?= $model->additional_services ?>
                     </div>
-                <?php endif; ?>
-                <div class="tab-pane fade <?= !$model->equipment && !$model->additional_services ? 'show active' : '' ?>"
-                     id="product-tab-3">
+                </div>
+                <div class="tab-pane fade" id="product-tab-3">
                     <?= Block::widget([
                         'position' => 'product_tab_how_we_work',
                     ]) ?>
@@ -413,6 +397,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <a href="#" class="product-page__credit-link text-uppercase">подробнее об условиях кредитования</a>
                     </div>
                 </div>
+                <?php if (0) : ?>
                 <div class="tab-pane fade" id="product-tab-5">
                     <div class="comments">
                         <ul class="comments__list ul-reset">
@@ -494,6 +479,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </ul>
                     </div>
                 </div>
+                <?php endif; ?>
                 <div class="tab-pane fade" id="product-tab-6">
                     <?= $model->full_description ?>
                 </div>
