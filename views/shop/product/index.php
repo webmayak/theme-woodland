@@ -121,33 +121,40 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php if ($variants = $model->getVariants()->all()): ?>
 
                     <?php
-                    $productTypes = [];
-                    $productVariantsByType = [];
+                    $ID_PROFILE_SIZE  = 8;   // Сечение бруса
+                    $ID_WALL_THICKNESS = 9;  // Толщина стены
+                    $ID_PRICE = 10;          // Тип цены
+
                     $checkedFirst = false;
+
+                    // подготовим данные
+                    $variantsByPriceType = [];
                     foreach ($variants as $variant) {
-                        // тут храним типы
-                        $productTypes[$variant->productType->id] = $variant->productType;
-                        // тут храним варианты товаров для кажого типа
-                        $productVariantsByType[$variant->productType->id][] = $variant;
+                        $priceType = $variant->present()->getAttributeValue($ID_PRICE);
+                        $variantsByPriceType[$priceType][] = $variant;
                     }
                     ?>
 
-                    <?php foreach ($productVariantsByType as $type_id => $variants): ?>
+                    <?php foreach ($variantsByPriceType as $priceType => $variants) : ?>
                         <div class="product-page__sidebar-title">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#00bbdf" aria-hidden="true" role="presentation" focusable="false">
-                                <use xlink:href="/images/sprite.svg#icon-address"/>
-                            </svg>
-                            <?= $productTypes[$type_id]->name ?>
+                            <?php if ($priceType == 'Цена под ключ') : ?>
+                                <img src="/images/icon-key.png" alt="">
+                            <?php else: ?>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#00bbdf" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-address"/>
+                                </svg>
+                            <?php endif; ?>
+                            <?= Html::encode($priceType) ?>
                         </div>
                         <table class="product-page__sidebar-table product-table">
                         <?php foreach ($variants as $variant) : ?>
                             <tr>
                                 <td>
-                                    <img src="<?= $variant->media->image() ?>" alt="Сечение бруса <?= $variant->present()->getAttributeValue(8) ?>">
+                                    <img src="<?= $variant->media->image() ?>" alt="Сечение бруса <?= Html::encode($variant->present()->getAttributeValue($ID_PROFILE_SIZE)) ?>">
                                 </td>
                                 <td>
-                                    <span class="product-table__size"><?= $variant->present()->getAttributeValue(8) ?></span><br>
-                                    <span class="product-table__thickness">толщина стены: <?= $variant->present()->getAttributeValue(9) ?> мм</span>
+                                    <span class="product-table__size"><?= Html::encode($variant->present()->getAttributeValue($ID_PROFILE_SIZE)) ?></span><br>
+                                    <span class="product-table__thickness">толщина стены: <?= Html::encode($variant->present()->getAttributeValue($ID_WALL_THICKNESS)) ?> мм</span>
                                 </td>
                                 <td>
                                     <label class="product-table__price-wrap">
@@ -159,114 +166,6 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?php endforeach; ?>
                         </table>
                     <?php endforeach; ?>
-                <?php endif; ?>
-
-                <?php if (0): ?>
-                <div class="product-page__sidebar-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#00bbdf" aria-hidden="true" role="presentation" focusable="false">
-                        <use xlink:href="/images/sprite.svg#icon-address"/>
-                    </svg>
-                    Цена под усадку
-                </div>
-                <table class="product-page__sidebar-table product-table">
-                    <tr>
-                        <td>
-                            <img src="/images/table-size-1.png" alt="">
-                        </td>
-                        <td>
-                            <span class="product-table__size">90×140 мм</span><br>
-                            <span class="product-table__thickness">толщина стены: 90 мм</span>
-                        </td>
-                        <td>
-                            <label class="product-table__price-wrap">
-                                <input class="sr-only" type="radio" name="product-options-1" checked>
-                                <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="/images/table-size-2.png" alt="">
-                        </td>
-                        <td>
-                            <span class="product-table__size">140×140 мм</span><br>
-                            <span class="product-table__thickness">толщина стены: 140 мм</span>
-                        </td>
-                        <td>
-                            <label class="product-table__price-wrap">
-                                <input class="sr-only" type="radio" name="product-options-1">
-                                <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="/images/table-size-3.png" alt="">
-                        </td>
-                        <td>
-                            <span class="product-table__size">190×140 мм</span><br>
-                            <span class="product-table__thickness">толщина стены: 190 мм</span>
-                        </td>
-                        <td>
-                            <label class="product-table__price-wrap">
-                                <input class="sr-only" type="radio" name="product-options-1">
-                                <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
-                            </label>
-                        </td>
-                    </tr>
-                </table>
-                <hr>
-                <div class="product-page__sidebar-title">
-                    <img src="/images/icon-key.png" alt="">
-                    Цена под ключ
-                </div>
-                <table class="product-page__sidebar-table product-table">
-                    <tr>
-                        <td>
-                            <img src="/images/table-size-1.png" alt="">
-                        </td>
-                        <td>
-                            <span class="product-table__size">90×140 мм</span><br>
-                            <span class="product-table__thickness">толщина стены: 90 мм</span>
-                        </td>
-                        <td>
-                            <label class="product-table__price-wrap">
-                                <input class="sr-only" type="radio" name="product-options-2" checked>
-                                <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="/images/table-size-2.png" alt="">
-                        </td>
-                        <td>
-                            <span class="product-table__size">140×140 мм</span><br>
-                            <span class="product-table__thickness">толщина стены: 140 мм</span>
-                        </td>
-                        <td>
-                            <label class="product-table__price-wrap">
-                                <input class="sr-only" type="radio" name="product-options-2">
-                                <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
-                            </label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="/images/table-size-3.png" alt="">
-                        </td>
-                        <td>
-                            <span class="product-table__size">190×140 мм</span><br>
-                            <span class="product-table__thickness">толщина стены: 190 мм</span>
-                        </td>
-                        <td>
-                            <label class="product-table__price-wrap">
-                                <input class="sr-only" type="radio" name="product-options-2">
-                                <span class="product-table__price"><?= number_format($model->price, 0, ',', ' ') ?> руб.</span>
-                            </label>
-                        </td>
-                    </tr>
-                </table>
                 <?php endif; ?>
                 
                 <a class="product-page__same-link btn btn-outline-success btn-block" href="#">Этот же проект: Каркасный</a>
