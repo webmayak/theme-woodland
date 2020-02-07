@@ -1,3 +1,8 @@
+<?php
+$attributes = \common\modules\shop\models\ShopProductTypeAttribute::find()
+    ->andWhere(['is_for_filter' => 1])
+    ->all();
+?>
 <form class="filter">
     <div class="filter__wrap">
         <div class="filter__main">
@@ -50,247 +55,22 @@
             </div>
         </div>
         <div class="filter__additional">
-            <fieldset class="filter__additional-item">
-                <legend class="filter__additional-title">Размер:</legend>
-                <div class="filter__content">
-                    <div class="filter__option-labels-wrap">
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size" checked>
-                            <span class="filter__option-control">6×6</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">6×7</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">6×8</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">6×9</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size" checked>
-                            <span class="filter__option-control">7×7</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">7×8</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">7×9</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size" checked>
-                            <span class="filter__option-control">7×10</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">8×8</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">8×9</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">8×10</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">9×9</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">9×10</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">10×10</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="size">
-                            <span class="filter__option-control">10×12</span>
-                        </label>
+            <?php foreach ($attributes as $attribute) : ?>
+                <?php $default_values = preg_split('/\n/', $attribute->default_values); ?>
+                <fieldset class="filter__additional-item">
+                    <legend class="filter__additional-title"><?= $attribute->name ?>:</legend>
+                    <div class="filter__content">
+                        <div class="filter__option-labels-wrap">
+                            <?php foreach ($default_values as $value) : ?>
+                                <label class="filter__option-label">
+                                    <input class="filter__option-input sr-only" type="checkbox" name="filter-<?= $attribute->id ?>">
+                                    <span class="filter__option-control"><?= $value ?></span>
+                                </label>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
-                </div>
-            </fieldset>
-            <fieldset class="filter__additional-item">
-                <legend class="filter__additional-title">Этажность:</legend>
-                <div class="filter__content">
-                    <div class="filter__option-labels-wrap">
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="storeys" checked>
-                            <span class="filter__option-control">Одноэтажные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="storeys">
-                            <span class="filter__option-control">С терассой</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="storeys">
-                            <span class="filter__option-control">С масандрой</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="storeys" checked>
-                            <span class="filter__option-control">Дачные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="storeys">
-                            <span class="filter__option-control">Для постоянного проживания</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="storeys">
-                            <span class="filter__option-control">Двухэтажные</span>
-                        </label>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset class="filter__additional-item">
-                <legend class="filter__additional-title">Площадь:</legend>
-                <div class="filter__content">
-                    <div class="filter__option-labels-wrap">
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="area" checked>
-                            <span class="filter__option-control">До 100 кв.м</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="area">
-                            <span class="filter__option-control">От 100 до 150 кв.м</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="area">
-                            <span class="filter__option-control">От 150 кв.м</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="area">
-                            <span class="filter__option-control">40 кв.м</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="area">
-                            <span class="filter__option-control">50 кв.м</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="area">
-                            <span class="filter__option-control">60 кв.м</span>
-                        </label>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset class="filter__additional-item">
-                <legend class="filter__additional-title">Цена:</legend>
-                <div class="filter__content">
-                    <div class="filter__option-labels-wrap">
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="price">
-                            <span class="filter__option-control">До 5 тыс.руб</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="price" checked>
-                            <span class="filter__option-control">От 500 тыс. руб до 1 млн.руб</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="price">
-                            <span class="filter__option-control">От 1 млн.руб</span>
-                        </label>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset class="filter__additional-item">
-                <legend class="filter__additional-title">Тип:</legend>
-                <div class="filter__content">
-                    <div class="filter__option-labels-wrap">
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="type">
-                            <span class="filter__option-control">С террасой</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="type" checked>
-                            <span class="filter__option-control">Дачные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="type">
-                            <span class="filter__option-control">Для постоянного проживания</span>
-                        </label>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset class="filter__additional-item">
-                <legend class="filter__additional-title">Стиль:</legend>
-                <div class="filter__content">
-                    <div class="filter__option-labels-wrap">
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="style">
-                            <span class="filter__option-control">Финские</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="style">
-                            <span class="filter__option-control">Хай тек</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="style">
-                            <span class="filter__option-control">Современные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="style">
-                            <span class="filter__option-control">Скандинавские</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="style" checked>
-                            <span class="filter__option-control">Красивые</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="style">
-                            <span class="filter__option-control">Шале</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="checkbox" name="style">
-                            <span class="filter__option-control">Канадские</span>
-                        </label>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset class="filter__additional-item">
-                <legend class="filter__additional-title">Популярная подборка:</legend>
-                <div class="filter__content">
-                    <div class="filter__option-labels-wrap">
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="radio" name="selection" checked>
-                            <span class="filter__option-control">Современные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="radio" name="selection">
-                            <span class="filter__option-control">Современные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="radio" name="selection">
-                            <span class="filter__option-control">Современные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="radio" name="selection">
-                            <span class="filter__option-control">Современные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="radio" name="selection">
-                            <span class="filter__option-control">Современные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="radio" name="selection">
-                            <span class="filter__option-control">Современные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="radio" name="selection">
-                            <span class="filter__option-control">Современные</span>
-                        </label>
-                        <label class="filter__option-label">
-                            <input class="filter__option-input sr-only" type="radio" name="selection">
-                            <span class="filter__option-control">Современные</span>
-                        </label>
-                    </div>
-                </div>
-            </fieldset>
+                </fieldset>
+            <?php endforeach; ?>
         </div>
     </div>
     <div class="row">
