@@ -99,12 +99,11 @@ $this->context->layout = '//front';
         <?php
 
         // найти необходимый сегмент по алиасу
-        // $segment = ProductSegment::find()->andWhere(['alias' => 'on_front'])->one();
+        $segment = \common\modules\shop\models\ShopProductSegment::find()->andWhere(['alias' => 'frontpage'])->one();
 
         // найти все товары в рамках текущего сегмента
-        // $productsOnFront = ProductToSegment::find()->andWhere(['segment_id' => $segment->id])->select('product_id')->asArray()->all();
+        $productsOnFront = \common\modules\shop\models\ProductToSegment::find()->andWhere(['segment_id' => $segment->id])->select('product_id')->asArray();
 
-        $productsOnFront = [];
         ?>
         <?= \yii\widgets\ListView::widget([
             'dataProvider' => new \yii\data\ActiveDataProvider([
