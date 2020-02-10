@@ -96,9 +96,19 @@ $this->context->layout = '//front';
 <div class="projects">
     <div class="container">
         <h2>Проекты</h2>
+        <?php
+
+        // найти необходимый сегмент по алиасу
+        // $segment = ProductSegment::find()->andWhere(['alias' => 'on_front'])->one();
+
+        // найти все товары в рамках текущего сегмента
+        // $productsOnFront = ProductToSegment::find()->andWhere(['segment_id' => $segment->id])->select('product_id')->asArray()->all();
+
+        $productsOnFront = [];
+        ?>
         <?= \yii\widgets\ListView::widget([
             'dataProvider' => new \yii\data\ActiveDataProvider([
-                'query' => \common\modules\shop\models\ShopProduct::find()->limit(10),
+                'query' => \common\modules\shop\models\ShopProduct::find()->andWhere(['id' => $productsOnFront])->limit(10),
                 'pagination' => false,
             ]),
             'options' => [
