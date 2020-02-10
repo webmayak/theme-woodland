@@ -177,9 +177,15 @@
   }
 }
 
-.product-page__same-link {
+.product-page__similar-product {
   margin-top: 20px;
-  padding: 13px 10px;
+
+  a {
+    @extend .btn;
+    @extend .btn-lg;
+    @extend .btn-outline-success;
+    @extend .btn-block;
+  }
 }
 
 .product-page__sidebar-table {

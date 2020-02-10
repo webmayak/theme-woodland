@@ -129,7 +129,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php endif; ?>
                 
                 <?php if ($model->similar_product_link) : ?>
-                    <?= $model->similar_product_link ?>
+                    <div class="product-page__similar-product">
+                        <?= $model->similar_product_link ?>
+                    </div>
                 <?php endif; ?>
 
                 <div class="product-page__sidebar-title">Характеристики</div>
