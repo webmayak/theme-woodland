@@ -64,6 +64,7 @@ const initPopover = function () {
 };
 initPopover();
 $('[data-fancybox]').fancybox();
+$('.fancybox').fancybox();
 
 /**
  * Инициализация скрытия большого текста в отзыве

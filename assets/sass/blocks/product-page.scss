@@ -273,7 +273,8 @@
     margin-top: 35px;
   }
 
-  a:not([class]) {
+  a:not([class]),
+  a.fancybox {
     color: $success;
     font-weight: 600;
   }
