@@ -141,6 +141,19 @@ $('.btn--video').click(function(){
     return false;
 });
 
+// Добавление товара в сравнение
+$(document).on('click', '.product-card__to-compare', function () {
+    const self = $(this);
+    const data = {
+        id: self.attr('data-id')
+    };
+    $.get("/shop/compare/add?id=" + self.attr('id'), data).always(function (result) {
+        self.toggleClass('btn-success').toggleClass('btn-outline-success');
+        $('.show-compare-link .tag').text(result.count);
+    });
+    return false;
+});
+
 $(document).ready(function () {
     if ($('.why-us-item').length) {
         var counterFlag = 0;

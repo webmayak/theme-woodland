@@ -84,7 +84,15 @@ use yii\helpers\Html;
                 <use xlink:href="/images/sprite.svg#icon-heart"/>
             </svg>
         </button>
-        <button class="product-card__to-compare btn btn-outline-success">
+        <?php
+            $productsInCompare = $model->getCompare()->all();
+            foreach ($productsInCompare as $item) {
+                if ($item->product_id === $model->id) {
+                    $compareBtnClass = true;
+                }
+            }
+        ?>
+        <button class="product-card__to-compare btn <?= $compareBtnClass ? 'btn-success' : 'btn-outline-success' ?>" data-id="<?= $model->id ?>">
             <span class="sr-only">Сравнить</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                 <use xlink:href="/images/sprite.svg#icon-graph"/>
