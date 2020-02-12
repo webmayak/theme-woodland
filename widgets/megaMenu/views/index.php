@@ -223,7 +223,7 @@ use yii\web\View;
                     </a>
                 </li>
                 <li>
-                    <a class="navicon" href="<?= Url::to(['/site/compare']) ?>">
+                    <a class="navicon" href="<?= Url::to(['/compare']) ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-graph"/>
                         </svg>
