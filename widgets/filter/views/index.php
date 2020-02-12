@@ -1,8 +1,3 @@
-<?php
-$attributes = \common\modules\shop\models\ShopProductTypeAttribute::find()
-    ->andWhere(['is_for_filter' => 1])
-    ->all();
-?>
 <form class="filter">
     <div class="filter__wrap">
         <div class="filter__main">
