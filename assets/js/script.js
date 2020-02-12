@@ -154,6 +154,20 @@ $(document).on('click', '.product-card__to-compare', function () {
     return false;
 });
 
+$('.compare-page__all-attr-link').click(function (evt) {
+    evt.preventDefault();
+    $('.compare-page__table tr[data-equal]').removeClass('d-none');
+    $(this).addClass('active');
+    $('.compare-page__diff-attr-link').removeClass('active');
+});
+
+$('.compare-page__diff-attr-link').click(function (evt) {
+    evt.preventDefault();
+    $('.compare-page__table tr[data-equal]').addClass('d-none');
+    $(this).addClass('active');
+    $('.compare-page__all-attr-link').removeClass('active');
+});
+
 $(document).ready(function () {
     if ($('.why-us-item').length) {
         var counterFlag = 0;
