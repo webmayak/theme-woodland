@@ -147,9 +147,8 @@ $(document).on('click', '.product-card__to-compare', function () {
     const data = {
         id: self.attr('data-id')
     };
-    $.get("/shop/compare/add?id=" + self.attr('id'), data).always(function (result) {
+    $.get("/shop/compare/add?id=" + self.attr('id'), data).always(function () {
         self.toggleClass('btn-success').toggleClass('btn-outline-success');
-        $('.show-compare-link .tag').text(result.count);
     });
     return false;
 });
@@ -166,6 +165,18 @@ $('.compare-page__diff-attr-link').click(function (evt) {
     $('.compare-page__table tr[data-equal]').addClass('d-none');
     $(this).addClass('active');
     $('.compare-page__all-attr-link').removeClass('active');
+});
+
+// Добавление товара в избранное
+$(document).on('click', '.product-card__to-favorites', function () {
+    const self = $(this);
+    const data = {
+        product_id: self.attr('data-id')
+    };
+    $.post("/shop/favorites/add", data).always(function () {
+        self.toggleClass('btn-success').toggleClass('btn-outline-success');
+    });
+    return false;
 });
 
 $(document).ready(function () {

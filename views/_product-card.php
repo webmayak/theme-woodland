@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use common\modules\shop\models\ShopProductCompare;
+use common\modules\shop\models\ShopProductFavorite;
 
 /**
  * @var \common\modules\shop\models\ShopProduct $model
@@ -79,7 +80,7 @@ use common\modules\shop\models\ShopProductCompare;
             </svg>
             <?php endif; ?>
         </a>
-        <button class="product-card__to-favorites btn btn-outline-success">
+        <button class="product-card__to-favorites btn <?= ShopProductFavorite::isFavorite($model->id) ? 'btn-success' : 'btn-outline-success' ?>" data-id="<?= $model->id ?>">
             <span class="sr-only">В избранное</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                 <use xlink:href="/images/sprite.svg#icon-heart"/>
