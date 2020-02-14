@@ -1,20 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 9/18/18
- * Time: 3:45 PM
- */
 
 use common\modules\catalog\models\CatalogCategory;
-use frontend\themes\woodland\widgets\mainCatalog\MainCatalog;
 use frontend\themes\woodland\widgets\videoList\VideoList;
 use pantera\content\models\ContentPage;
 use pantera\content\widgets\block\Block;
 use pantera\content\widgets\slider\Slider;
 use pantera\leads\widgets\form\LeadForm;
-use yii\helpers\Html;
+use yii\data\ArrayDataProvider;
 use yii\web\View;
+use yii\widgets\ListView;
 
 $this->context->layout = '//front';
 
@@ -151,9 +145,16 @@ $this->context->layout = '//front';
             <div class="tab-pane fade show active" id="reviews-tab">
                 <h2>Что клиенты говорят о нас</h2>
                 <?php
-                $dataProvider = (new \pantera\content\models\ContentPageSearch())->search('reviews');
-                $dataProvider->pagination->pageSize = 3;
-                echo \yii\widgets\ListView::widget([
+                $contentPages = ContentPage::find()
+                    ->joinWith('type', false)
+                    ->isActive()
+                    ->andWhere(['=', 'is_favorite', ContentPage::IS_FAVORITE_YES])
+                    ->andWhere(['=', 'key', 'reviews'])
+                    ->all();
+                $dataProvider = new ArrayDataProvider([
+                    'allModels' => $contentPages,
+                ]);
+                echo ListView::widget([
                     'dataProvider' => $dataProvider,
                     'options' => [
                         'class' => 'main-tabs__reviews-carousel owl-carousel',
@@ -168,8 +169,15 @@ $this->context->layout = '//front';
             <div class="tab-pane fade" id="news-tab">
                 <h2>Последние новости</h2>
                 <?php
-                $dataProvider = (new \pantera\content\models\ContentPageSearch())->search('news');
-                $dataProvider->pagination->pageSize = 4;
+                $contentPages = ContentPage::find()
+                    ->joinWith('type', false)
+                    ->isActive()
+                    ->andWhere(['=', 'is_favorite', ContentPage::IS_FAVORITE_YES])
+                    ->andWhere(['=', 'key', 'news'])
+                    ->all();
+                $dataProvider = new ArrayDataProvider([
+                    'allModels' => $contentPages,
+                ]);
                 echo \yii\widgets\ListView::widget([
                     'dataProvider' => $dataProvider,
                     'options' => [
@@ -185,8 +193,15 @@ $this->context->layout = '//front';
             <div class="tab-pane fade" id="articles-tab">
                 <h2>Актуальные статьи</h2>
                 <?php
-                $dataProvider = (new \pantera\content\models\ContentPageSearch())->search('articles');
-                $dataProvider->pagination->pageSize = 4;
+                $contentPages = ContentPage::find()
+                    ->joinWith('type', false)
+                    ->isActive()
+                    ->andWhere(['=', 'is_favorite', ContentPage::IS_FAVORITE_YES])
+                    ->andWhere(['=', 'key', 'articles'])
+                    ->all();
+                $dataProvider = new ArrayDataProvider([
+                    'allModels' => $contentPages,
+                ]);
                 echo \yii\widgets\ListView::widget([
                     'dataProvider' => $dataProvider,
                     'options' => [
