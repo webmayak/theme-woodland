@@ -1,6 +1,8 @@
 <?php
 
 use pantera\content\widgets\block\Block;
+use pantera\media\widgets\syncedOwls\SyncedOwls;
+use common\modules\shop\widgets\cart\addToCart\AddToCartWidget;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
@@ -36,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     : $model->attachments;
                 ?>
                 <?php if ($attachments): ?>
-                <?= \pantera\media\widgets\syncedOwls\SyncedOwls::widget([
+                <?= SyncedOwls::widget([
                     'models' => $attachments,
                     'cropImages' => true,
                     'containerOptions' => [
@@ -73,7 +75,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="col-lg-4">
             <div class="product-page__sidebar">
-                <?=\common\modules\shop\widgets\cart\addToCart\AddToCartWidget::widget([
+                <?= AddToCartWidget::widget([
                     'htmlOptions' => ['class' => 'product-page__order-btn btn btn-success btn-block text-uppercase'],
                     'content' => 'Заказать этот проект',
                     'model' => $model
