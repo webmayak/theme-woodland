@@ -57,6 +57,7 @@ use yii\helpers\Html;
         <div class="filter__additional">
             <?php foreach ($attributes as $attribute) : ?>
                 <?php $default_values = preg_split('/\n+/', $attribute->default_values); ?>
+                <?php $default_values = array_map('trim', $default_values); ?>
                 <fieldset class="filter__additional-item">
                     <legend class="filter__additional-title"><?= $attribute->name ?>:</legend>
                     <div class="filter__content">
