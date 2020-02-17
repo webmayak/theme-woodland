@@ -10,8 +10,8 @@ use pantera\leads\widgets\form\LeadForm;
     <div class="works-map__map-wrap">
         <div class="works-map__form">
             <div class="container">
-                <div class="works-map__form-block alert alert-dismissible fade show">
-                    <div class="works-map__form-title">Заказать бесплатный звонок</div>
+                <div class="works-map__form-block form-alert alert alert-dismissible fade show">
+                    <div class="form-alert__title">Заказать бесплатный звонок</div>
                     <?= LeadForm::widget([
                         'key' => 'orderOnMap',
                         'mode' => LeadForm::MODE_INLINE,

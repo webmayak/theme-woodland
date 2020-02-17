@@ -1,0 +1,49 @@
+.form-alert {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 46px 0 rgba(0, 0, 0, 0.2);
+  padding: 40px 50px 50px;
+  margin-bottom: 0;
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .form-group {
+    margin-bottom: 30px;
+  }
+
+  .control-label {
+    font-size: 13px;
+    color: #afafaf;
+  }
+
+  .form-control {
+    background-color: #eff0f4;
+    border-color: transparent;
+    height: 50px;
+  }
+
+  textarea.form-control {
+    height: auto;
+    resize: none;
+  }
+
+  .btn {
+    @extend .btn-lg;
+  }
+
+  .close {
+    font-size: 30px;
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 575px) {
+  .form-alert {
+    padding: 40px 30px 30px;
+  }
+}
