@@ -119,7 +119,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 </td>
                                 <td>
                                     <span class="product-table__size"><?= Html::encode($variant->present()->getAttributeValue($ID_PROFILE_SIZE)) ?></span><br>
-                                    <span class="product-table__thickness">толщина стены: <?= Html::encode($variant->present()->getAttributeValue($ID_WALL_THICKNESS)) ?> мм</span>
+                                    <span class="product-table__thickness">толщина стены: <?= Html::encode($variant->present()->getAttributeValue($ID_WALL_THICKNESS)) ?></span>
                                 </td>
                                 <td>
                                     <label class="product-table__price-wrap">
