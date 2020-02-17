@@ -180,6 +180,9 @@ $(document).on('click', '.product-card__to-favorites', function () {
 });
 
 $(document).ready(function () {
+
+    $('.product-page__nav-tabs .nav-item:first-child .nav-link').click();
+
     if ($('.why-us-item').length) {
         var counterFlag = 0;
 

@@ -247,12 +247,16 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="col-12">
             <ul class="product-page__nav-tabs nav nav-tabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#product-tab-1">Комплектация</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#product-tab-2">Доп. услуги</a>
-                </li>
+                <?php if ($model->equipment) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#product-tab-1">Комплектация</a>
+                    </li>
+                <?php endif; ?>
+                <?php if ($model->additional_services) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#product-tab-2">Доп. услуги</a>
+                    </li>
+                <?php endif; ?>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#product-tab-3">Как работаем</a>
                 </li>
@@ -272,16 +276,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 </li>
             </ul>
             <div class="product-page__tab-content tab-content">
-                <div class="tab-pane fade show active" id="product-tab-1">
-                    <div class="table-responsive">
-                        <?= $model->equipment ?>
+                <?php if ($model->equipment) : ?>
+                    <div class="tab-pane fade" id="product-tab-1">
+                        <div class="table-responsive">
+                            <?= $model->equipment ?>
+                        </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="product-tab-2">
-                    <div class="table-responsive">
-                        <?= $model->additional_services ?>
+                <?php endif; ?>
+                <?php if ($model->additional_services) : ?>
+                    <div class="tab-pane fade" id="product-tab-2">
+                        <div class="table-responsive">
+                            <?= $model->additional_services ?>
+                        </div>
                     </div>
-                </div>
+                <?php endif; ?>
                 <div class="tab-pane fade" id="product-tab-3">
                     <?= Block::widget([
                         'position' => 'product_tab_how_we_work',
