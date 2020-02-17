@@ -1,4 +1,9 @@
-<form class="filter">
+<?php
+
+use yii\helpers\Html;
+
+?>
+<form class="filter" method="get">
     <div class="filter__wrap">
         <div class="filter__main">
             <div class="row">
@@ -10,8 +15,8 @@
                                 <input class="js-range-slider" type="text" id="js-range-slider-price">
                             </div>
                             <div class="filter__price-fields">
-                                <input class="form-control filter__price-field" type="number" id="price-from" name="price-from" aria-label="Цена, от" value="380000">
-                                <input class="form-control filter__price-field" type="number" id="price-to" name="price-to" aria-label="Цена, до" value="950000">
+                                <input class="form-control filter__price-field" type="number" id="price-from" aria-label="Цена, от" value="380000">
+                                <input class="form-control filter__price-field" type="number" id="price-to" aria-label="Цена, до" value="950000">
                             </div>
                         </div>
                     </fieldset>
@@ -24,8 +29,8 @@
                                 <input class="js-range-slider" type="text" id="js-range-slider-area">
                             </div>
                             <div class="filter__price-fields">
-                                <input class="form-control filter__price-field" type="number" id="area-from" name="area-from" aria-label="Площадь, от" value="32">
-                                <input class="form-control filter__price-field" type="number" id="area-to" name="area-to" aria-label="Площадь, до" value="240">
+                                <input class="form-control filter__price-field" type="number" id="area-from" aria-label="Площадь, от" value="32">
+                                <input class="form-control filter__price-field" type="number" id="area-to" aria-label="Площадь, до" value="240">
                             </div>
                         </div>
                     </fieldset>
@@ -36,11 +41,11 @@
                         <div class="filter__content">
                             <div class="filter__sort-labels-wrap">
                                 <label class="filter__sort-label">
-                                    <input class="filter__sort-input sr-only" type="radio" name="sort" value="sort-price">
+                                    <input class="filter__sort-input sr-only" type="radio" value="sort-price">
                                     <span class="filter__sort-control">по цене</span>
                                 </label>
                                 <label class="filter__sort-label">
-                                    <input class="filter__sort-input sr-only" type="radio" name="sort" value="sort-area">
+                                    <input class="filter__sort-input sr-only" type="radio" value="sort-area">
                                     <span class="filter__sort-control">по площади</span>
                                 </label>
                             </div>
@@ -58,8 +63,8 @@
                         <div class="filter__option-labels-wrap">
                             <?php foreach ($default_values as $value) : ?>
                                 <label class="filter__option-label">
-                                    <input class="filter__option-input sr-only" type="checkbox" name="filter-<?= $attribute->id ?>">
-                                    <span class="filter__option-control"><?= $value ?></span>
+                                    <input class="filter__option-input sr-only" type="checkbox" name="filter_attr[<?= $attribute->id ?>][]" value="<?= Html::encode($value) ?>">
+                                    <span class="filter__option-control"><?= Html::encode($value) ?></span>
                                 </label>
                             <?php endforeach; ?>
                         </div>
@@ -69,11 +74,14 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-md-4">
             <button class="filter__open btn btn-lg btn-block btn-primary" type="button">Все параметры</button>
         </div>
-        <div class="col-sm-6">
-            <button class="filter__reset btn btn-lg btn-block btn-success" type="reset">Сбросить</button>
+        <div class="col-md-4">
+            <button class="filter__reset btn btn-lg btn-block btn-secondary" type="reset">Сбросить</button>
+        </div>
+        <div class="col-md-4">
+            <button class="filter__submit btn btn-lg btn-block btn-success">Применить</button>
         </div>
     </div>
 </form>
