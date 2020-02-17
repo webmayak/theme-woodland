@@ -11,7 +11,7 @@ use yii\base\Widget;
  */
 class PrevProjectLink extends Widget
 {
-	public $model;
+    public $model;
 
     public function run()
     {
