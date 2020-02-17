@@ -1,6 +1,8 @@
 <?php
 
 use pantera\content\widgets\block\Block;
+use frontend\themes\woodland\widgets\prevNextProject\PrevProjectLink;
+use frontend\themes\woodland\widgets\prevNextProject\NextProjectLink;
 use pantera\media\widgets\syncedOwls\SyncedOwls;
 use common\modules\shop\widgets\cart\addToCart\AddToCartWidget;
 use yii\helpers\ArrayHelper;
@@ -25,9 +27,9 @@ $this->params['breadcrumbs'][] = $this->title;
  */
 ?><div class="product-page">
     <div class="product-page__nav">
-        <a href="#" class="btn btn-outline-success"><i class="fa fa-long-arrow-left mr-3"></i> Предыдущий проект</a>
+        <?= PrevProjectLink::widget(['model' => $model]) ?>
         <h1><?= Html::encode($this->title) ?></h1>
-        <a href="#" class="btn btn-outline-success">Следующий проект <i class="fa fa-long-arrow-right ml-3"></i></a>
+        <?= NextProjectLink::widget(['model' => $model]) ?>
     </div>
     <div class="row align-items-start">
         <div class="col-lg-8">
