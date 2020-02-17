@@ -89,6 +89,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     // подготовим данные
                     $variantsByPriceType = [];
+
+                    usort($variants, function($a, $b) {
+                        return $a['price'] <=> $b['price'];
+                    });
+
                     foreach ($variants as $variant) {
                         $priceType = $variant->present()->getAttributeValue($ID_PRICE);
                         $variantsByPriceType[$priceType][] = $variant;
