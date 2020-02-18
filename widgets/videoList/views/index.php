@@ -12,9 +12,9 @@ echo ListView::widget([
     'itemView' => '_view',
     'layout' => '<div class="row">{items}</div>{pager}',
     'options' => [
-        'class' => 'list-view--content',
+        'class' => 'pb-5',
     ],
     'itemOptions' => [
-        'class' => 'col-md-6 col-lg-4 content-item content-item--video',
+        'class' => 'col-md-6 col-lg-4 mb-4 content-item content-item--video',
     ],
 ]);

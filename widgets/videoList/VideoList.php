@@ -2,7 +2,6 @@
 
 namespace frontend\themes\woodland\widgets\videoList;
 
-use pantera\content\models\ContentPage;
 use pantera\content\models\ContentPageSearch;
 use yii\base\Widget;
 

@@ -11,13 +11,15 @@ use yii\web\View;
         $img = '';
         if ($model->media && $model->media->issetMedia()) {
             $img = $model->media->image(370, 280, false);
+        } else {
+            $img = 'https://via.placeholder.com/370x280?text=+';
         }
         echo Html::img($img, [
             'class' => 'content-item__image',
         ]);
         ?>
     </div>
-    <div class="h5 content-item__title">
+    <div class="h5 content-item__title mt-3">
         <?= $model->title ?>
     </div>
 </a>
