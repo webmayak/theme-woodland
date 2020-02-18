@@ -5,12 +5,13 @@
   padding: 20px;
   box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.12);
   border-radius: 10px;
-  height: calc(100% - 30px);
+  min-height: 100%;
+  line-height: 1.8;
 
   &__img-wrap {
     overflow: hidden;
     border-radius: 5px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
   &__img {
@@ -18,21 +19,23 @@
   }
 
   &__title {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-
-  &__descr {
-    font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
   }
 
+  &__descr {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
   &__accent-text {
     color: $success;
-    font-size: 26px;
+    font-size: 20px;
+    line-height: 1;
     font-weight: bold;
+    margin-bottom: 10px;
   }
 }

@@ -109,7 +109,7 @@ $cardWrapperClass = ($widget->itemOptions && !empty($widget->itemOptions['class'
 <?php if ($realKey == ($widget->dataProvider->totalCount - 1)): ?>
     </div>
     <div class="<?= $cardWrapperClass ?>">
-        <div class="catalog-page__item free-calc-card">
+        <div class="free-calc-card">
             <div class="free-calc-card__img-wrap">
                 <img class="free-calc-card__img" src="/images/free-calc-img.jpg" alt="">
             </div>
