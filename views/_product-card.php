@@ -19,11 +19,11 @@ use common\modules\shop\models\ShopProductFavorite;
     ?>
     <div class="product-card__img-wrap">
         <a href="/<?=$model->present()->getUrl()?>" _href="<?= $model->present()->getUrl() ?>">
-            <img class="product-card__img" src="<?= $model->media ? $model->media->image() : 'https://via.placeholder.com/150' ?>" alt="<?= Html::encode($model->getParentWithVariantName()) ?>">
+            <img class="product-card__img" src="<?= $model->media ? $model->media->image() : 'https://via.placeholder.com/150' ?>" alt="<?= Html::encode($model->name) ?>">
         </a>
     </div>
     <a href="/<?=$model->present()->getUrl()?>" _href="<?= $model->present()->getUrl() ?>" class="product-card__title-link">
-        <h3 class="product-card__title"><?= Html::encode($model->getParentWithVariantName()) ?></h3>
+        <h3 class="product-card__title"><?= Html::encode($model->name) ?></h3>
     </a>
     <ul class="product-card__params ul-reset">
         <?php if ($attributeValue = $model->present()->getAttributeValue(1)): ?>
