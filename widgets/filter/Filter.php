@@ -2,22 +2,26 @@
 
 namespace frontend\themes\woodland\widgets\Filter;
 
-use common\modules\shop\models\ShopProductTypeAttribute;
-use yii\base\Widget;
+use common\modules\shop\widgets\productFilter\ProductFilter;
+use common\modules\shop\models\ShopProductsSearchFrontend;
+use Yii;
 
-class Filter extends Widget
+class Filter extends ProductFilter
 {
-	/**
-	* {@inheritdoc}
-	*/
-    public function run()
+    /* @var bool */
+    public $registerCssAssets = false;
+    /* @var bool */
+    public $registerJsAssets = false;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function init()
     {
-    	parent::run();
-    	$attributes = ShopProductTypeAttribute::find()
-		    ->andWhere(['is_for_filter' => 1])
-		    ->all();
-        return $this->render('index', [
-        	'attributes' => $attributes,
-        ]);
+        parent::init();
+        if (!$this->searchModel) {
+            $this->searchModel = new ShopProductsSearchFrontend();
+            $this->searchModel->search(Yii::$app->request->queryParams);
+        }
     }
 }

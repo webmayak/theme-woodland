@@ -63,8 +63,9 @@ use yii\helpers\Html;
                     <div class="filter__content">
                         <div class="filter__option-labels-wrap">
                             <?php foreach ($default_values as $value) : ?>
+                            <?php $checked = isset($searchModel->filter_attr[$attribute->id]) && in_array($value, $searchModel->filter_attr[$attribute->id]); ?>
                                 <label class="filter__option-label">
-                                    <input class="filter__option-input sr-only" type="checkbox" name="filter_attr[<?= $attribute->id ?>][]" value="<?= Html::encode($value) ?>">
+                                    <input class="filter__option-input sr-only" type="checkbox" name="filter_attr[<?= $attribute->id ?>][]" value="<?= Html::encode($value) ?>"<?= $checked ? ' checked' : '' ?>>
                                     <span class="filter__option-control"><?= Html::encode($value) ?></span>
                                 </label>
                             <?php endforeach; ?>
