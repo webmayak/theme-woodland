@@ -4,6 +4,7 @@ namespace frontend\themes\woodland\widgets\shopProducts;
 
 use common\modules\shop\models\ShopProductsSearchFrontend;
 use yii\base\Widget;
+use Yii;
 
 class Products extends Widget
 {
@@ -13,7 +14,7 @@ class Products extends Widget
     {
     	if (empty($this->dataProvider)) {
 	    	$searchModel = new ShopProductsSearchFrontend();
-	    	$this->dataProvider = $searchModel->search([]);
+	    	$this->dataProvider = $searchModel->search(Yii::$app->request->queryParams);
     	}
 
     	$dataProvider->pagination['defaultPageSize'] = 12;
