@@ -1,0 +1,43 @@
+.specials-timer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &__due-date {
+    border: 1px solid $success;
+    border-radius: 5px;
+    padding: 20px 30px 20px 110px;
+    background-repeat: no-repeat;
+    background-position: 30px 50%;
+    background-image: url("../images/alarm-clock.png");
+
+    b {
+      font-size: 24px;
+      margin-top: 5px;
+      display: block;
+    }
+  }
+
+  &__days-left {
+    margin-left: 30px;
+
+    b {
+      font-size: 18px;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .specials-timer {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__days-left {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+}
