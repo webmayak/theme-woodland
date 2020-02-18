@@ -101,7 +101,7 @@ $this->context->layout = '//front';
         ?>
         <?= \yii\widgets\ListView::widget([
             'dataProvider' => new \yii\data\ActiveDataProvider([
-                'query' => \common\modules\shop\models\ShopProduct::find()->andWhere(['id' => $productsOnFront])->limit(10),
+                'query' => \common\modules\shop\models\ShopProduct::find()->andWhere(['id' => $productsOnFront]),
                 'pagination' => false,
             ]),
             'options' => [
