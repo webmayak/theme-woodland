@@ -1,8 +1,21 @@
 <?php
 
 use yii\helpers\Html;
+use common\modules\shop\models\ShopProduct;
+
+$minPrice = ShopProduct::find()->select('MIN(price)')->scalar();
+$maxPrice = ShopProduct::find()->select('MAX(price)')->scalar();
+
+$minPriceValue = number_format($searchModel->min_price ? $searchModel->min_price : $minPrice, 0, ',', '');
+$maxPriceValue = number_format($searchModel->max_price ? $searchModel->max_price : $maxPrice, 0, ',', '');
 
 ?>
+<script>
+    var minPrice = <?= $minPrice ?>;
+    var maxPrice = <?= $maxPrice ?>;
+    var minArea = 32;
+    var maxArea = 240;
+</script>
 <form class="filter" method="get">
     <div class="filter__wrap">
         <div class="filter__main">
@@ -15,8 +28,8 @@ use yii\helpers\Html;
                                 <input class="js-range-slider" type="text" id="js-range-slider-price">
                             </div>
                             <div class="filter__price-fields">
-                                <input class="form-control filter__price-field" type="number" id="price-from" aria-label="Цена, от" value="380000">
-                                <input class="form-control filter__price-field" type="number" id="price-to" aria-label="Цена, до" value="950000">
+                                <input class="form-control filter__price-field" type="number" id="price-from" aria-label="Цена, от" name="min_price" value="<?= $minPriceValue ?>">
+                                <input class="form-control filter__price-field" type="number" id="price-to" aria-label="Цена, до" name="max_price" value="<?= $maxPriceValue ?>">
                             </div>
                         </div>
                     </fieldset>

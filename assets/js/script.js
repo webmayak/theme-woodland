@@ -212,114 +212,113 @@ $(document).ready(function () {
         return false;
     });
 
-    var $priceRange = $("#js-range-slider-price"),
-        $priceFrom = $("#price-from"),
-        $priceTo = $("#price-to"),
+    // filter
+    var priceRange = $("#js-range-slider-price"),
+        priceFromField = $("#price-from"),
+        priceToField = $("#price-to"),
         priceInstance,
-        priceMin = 380000,
-        priceMax = 950000,
-        $areaRange = $("#js-range-slider-area"),
-        $areaFrom = $("#area-from"),
-        $areaTo = $("#area-to"),
+        priceFrom = 0,
+        priceTo = 0,
+        areaRange = $("#js-range-slider-area"),
+        areaFromField = $("#area-from"),
+        areaToField = $("#area-to"),
         areaInstance,
-        areaMin = 32,
-        areaMax = 240,
-        from = 0,
-        to = 0;
+        areaFrom = 0,
+        areaTo = 0;
 
-    $priceRange.ionRangeSlider({
+    function onFromInput (min, to) {
+        var val = $(this).prop("value");
+
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+    }
+
+    function onToInput (max, from) {
+        var val = $(this).prop("value");
+
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+    }
+
+    // priceRange
+    function updatePriceInputs (data) {
+        priceFrom = data.from;
+        priceTo = data.to;
+
+        priceFromField.prop("value", priceFrom);
+        priceToField.prop("value", priceTo);
+    }
+
+    priceRange.ionRangeSlider({
         skin: "round",
         type: "double",
-        min: priceMin,
-        max: priceMax,
-        from: 380000,
-        to: 950000,
+        min: minPrice,
+        max: maxPrice,
+        from: priceFromField.val(),
+        to: priceToField.val(),
         onStart: updatePriceInputs,
         onChange: updatePriceInputs
     });
-    priceInstance = $priceRange.data("ionRangeSlider");
 
-    function updatePriceInputs (data) {
-        from = data.from;
-        to = data.to;
+    priceInstance = priceRange.data("ionRangeSlider");
 
-        $priceFrom.prop("value", from);
-        $priceTo.prop("value", to);
+    priceFromField.on("input", function () {
+        onFromInput(minPrice, priceTo);
+
+        priceInstance.update({
+            from: $(this).prop("value")
+        });
+    });
+
+    priceToField.on("input", function () {
+        onToInput(maxPrice, priceFrom);
+
+        priceInstance.update({
+            to: $(this).prop("value")
+        });
+    });
+
+    // areaRange
+    function updateAreaInputs(data) {
+        areaFrom = data.from;
+        areaTo = data.to;
+
+        areaFromField.prop("value", areaFrom);
+        areaToField.prop("value", areaTo);
     }
 
-    $priceFrom.on("input", function () {
-        var val = $(this).prop("value");
-
-        if (val < priceMin) {
-            val = priceMin;
-        } else if (val > to) {
-            val = to;
-        }
-
-        priceInstance.update({
-            from: val
-        });
-    });
-
-    $priceTo.on("input", function () {
-        var val = $(this).prop("value");
-
-        if (val < from) {
-            val = from;
-        } else if (val > priceMax) {
-            val = priceMax;
-        }
-
-        priceInstance.update({
-            to: val
-        });
-    });
-
-    $areaRange.ionRangeSlider({
+    areaRange.ionRangeSlider({
         skin: "round",
         type: "double",
-        min: areaMin,
-        max: areaMax,
-        from: 32,
-        to: 240,
+        min: minArea,
+        max: maxArea,
+        from: areaFromField.val(),
+        to: areaToField.val(),
         onStart: updateAreaInputs,
         onChange: updateAreaInputs
     });
-    areaInstance = $areaRange.data("ionRangeSlider");
 
-    function updateAreaInputs (data) {
-        from = data.from;
-        to = data.to;
+    areaInstance = areaRange.data("ionRangeSlider");
 
-        $areaFrom.prop("value", from);
-        $areaTo.prop("value", to);
-    }
-
-    $areaFrom.on("input", function () {
-        var val = $(this).prop("value");
-
-        if (val < areaMin) {
-            val = areaMin;
-        } else if (val > to) {
-            val = to;
-        }
+    areaFromField.on("input", function () {
+        onFromInput(minArea, areaTo);
 
         areaInstance.update({
-            from: val
+            from: $(this).prop("value")
         });
     });
 
-    $areaTo.on("input", function () {
-        var val = $(this).prop("value");
-
-        if (val < from) {
-            val = from;
-        } else if (val > areaMax) {
-            val = areaMax;
-        }
+    areaToField.on("input", function () {
+        onToInput(maxArea, areaFrom);
 
         areaInstance.update({
-            to: val
+            to: $(this).prop("value")
         });
     });
 
