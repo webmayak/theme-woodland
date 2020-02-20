@@ -34,7 +34,7 @@ class NextProjectLink extends Widget
         if ($nextProject) {
             return Html::a(
                 'Следующий проект <i class="fa fa-long-arrow-right ml-3"></i>',
-                '/' . $nextProject->present()->getUrl(),
+                $nextProject->present()->getUrl(),
                 ['class' => 'btn btn-outline-success']
             );
         }
