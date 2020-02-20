@@ -18,11 +18,11 @@ use common\modules\shop\models\ShopProductFavorite;
         if($model->isInSegment('bestseller')) echo $labelStart .'bestseller' . $labelMiddle . 'хит продаж' . $labelEnd;
     ?>
     <div class="product-card__img-wrap">
-        <a href="/<?=$model->present()->getUrl()?>" _href="<?= $model->present()->getUrl() ?>">
+        <a href="<?=$model->present()->getUrl()?>">
             <img class="product-card__img" src="<?= $model->media ? $model->media->image() : 'https://via.placeholder.com/150' ?>" alt="<?= Html::encode($model->name) ?>">
         </a>
     </div>
-    <a href="/<?=$model->present()->getUrl()?>" _href="<?= $model->present()->getUrl() ?>" class="product-card__title-link">
+    <a href="<?=$model->present()->getUrl()?>" class="product-card__title-link">
         <h3 class="product-card__title"><?= Html::encode($model->name) ?></h3>
     </a>
     <ul class="product-card__params ul-reset">
@@ -72,7 +72,7 @@ use common\modules\shop\models\ShopProductFavorite;
     <?php endif; ?>
     <div class="product-card__price">Цена: от <b><?= number_format($model->price, 0, ',', ' ') ?> Руб.</b></div>
     <div class="product-card__actions">
-        <a href="/<?=$model->present()->getUrl()?>" class="product-card__to-cart btn btn-primary">
+        <a href="<?=$model->present()->getUrl()?>" class="product-card__to-cart btn btn-primary">
             Подробнее
             <?php if (0) : ?>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
