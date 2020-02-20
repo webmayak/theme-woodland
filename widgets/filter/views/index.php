@@ -54,12 +54,12 @@ $maxPriceValue = number_format($searchModel->max_price ? $searchModel->max_price
                         <div class="filter__content">
                             <div class="filter__sort-labels-wrap">
                                 <label class="filter__sort-label">
-                                    <input class="filter__sort-input sr-only" type="radio" value="sort-price">
-                                    <span class="filter__sort-control">по цене</span>
+                                    <input class="filter__sort-input sr-only" type="radio" name="sort" value="price"<?= $searchModel->sort === 'price' ? ' checked' : '' ?>>
+                                    <span class="filter__sort-control">по цене &uarr;</span>
                                 </label>
                                 <label class="filter__sort-label">
-                                    <input class="filter__sort-input sr-only" type="radio" value="sort-area">
-                                    <span class="filter__sort-control">по площади</span>
+                                    <input class="filter__sort-input sr-only" type="radio" name="sort" value="-price"<?= $searchModel->sort === '-price' ? ' checked' : '' ?>>
+                                    <span class="filter__sort-control">по цене &darr;</span>
                                 </label>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\themes\woodland\widgets\Filter;
+namespace frontend\themes\woodland\widgets\filter;
 
 use common\modules\shop\widgets\productFilter\ProductFilter;
 use common\modules\shop\models\ShopProductsSearchFrontend;
@@ -19,6 +19,7 @@ class Filter extends ProductFilter
     public function init()
     {
         parent::init();
+        FilterAsset::register($this->view);
         if (!$this->searchModel) {
             $this->searchModel = new ShopProductsSearchFrontend();
             $this->searchModel->search(Yii::$app->request->queryParams);
