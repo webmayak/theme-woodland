@@ -8,19 +8,20 @@ use Yii;
 
 class Products extends Widget
 {
-	public $dataProvider;
+    public $dataProvider;
 
     public function run()
     {
-    	if (empty($this->dataProvider)) {
-	    	$searchModel = new ShopProductsSearchFrontend();
-	    	$this->dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-    	}
+        if (empty($this->dataProvider)) {
+            $searchModel = new ShopProductsSearchFrontend();
+            $this->dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        }
 
-    	$dataProvider->pagination['defaultPageSize'] = 12;
+        $this->dataProvider->pagination->defaultPageSize = 12;
+        $this->dataProvider->pagination->pageParam = 'page';
 
         return $this->render('index', [
-        	'dataProvider' => $this->dataProvider,
+            'dataProvider' => $this->dataProvider,
         ]);
     }
 }
