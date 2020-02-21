@@ -2,6 +2,9 @@
 
 use yii\helpers\Html;
 use common\modules\shop\models\ShopProduct;
+use common\modules\shop\models\ProductAttributeValue;
+
+$AREA_ATTR_ID = 5;
 
 $minPrice = ShopProduct::find()->select('MIN(price)')->scalar();
 $maxPrice = ShopProduct::find()->select('MAX(price)')->scalar();
@@ -9,12 +12,22 @@ $maxPrice = ShopProduct::find()->select('MAX(price)')->scalar();
 $minPriceValue = number_format($searchModel->min_price ? $searchModel->min_price : $minPrice, 0, ',', '');
 $maxPriceValue = number_format($searchModel->max_price ? $searchModel->max_price : $maxPrice, 0, ',', '');
 
+$minArea = ProductAttributeValue::find()->select('MIN(CAST(attribute_value AS UNSIGNED))')->where(['attribute_id' => $AREA_ATTR_ID])->scalar();
+$maxArea = ProductAttributeValue::find()->select('MAX(CAST(attribute_value AS UNSIGNED))')->where(['attribute_id' => $AREA_ATTR_ID])->scalar();
+
+$areaFrom = Yii::$app->request->get('min_area');
+$areaTo = Yii::$app->request->get('max_area');
+
+$minAreaValue = $areaFrom ? $areaFrom : $minArea;
+$maxAreaValue = $areaTo ? $areaTo : $maxArea;
+
 ?>
 <script>
+    var AREA_ATTR_ID = <?= $AREA_ATTR_ID ?>;
     var minPrice = <?= $minPrice ?>;
     var maxPrice = <?= $maxPrice ?>;
-    var minArea = 32;
-    var maxArea = 240;
+    var minArea = <?= $minArea ?>;
+    var maxArea = <?= $maxArea ?>;
 </script>
 <form class="filter" method="get">
     <div class="filter__wrap">
@@ -28,8 +41,8 @@ $maxPriceValue = number_format($searchModel->max_price ? $searchModel->max_price
                                 <input class="js-range-slider" type="text" id="js-range-slider-price">
                             </div>
                             <div class="filter__price-fields">
-                                <input class="form-control filter__price-field" type="number" id="price-from" aria-label="Цена, от" name="min_price" value="<?= $minPriceValue ?>">
-                                <input class="form-control filter__price-field" type="number" id="price-to" aria-label="Цена, до" name="max_price" value="<?= $maxPriceValue ?>">
+                                <input class="form-control filter__price-field" type="number" id="price-from" aria-label="Цена, от" name="min_price" value="<?= $minPriceValue ?>" min="<?= $minPriceValue ?>" max="<?= $maxPriceValue ?>">
+                                <input class="form-control filter__price-field" type="number" id="price-to" aria-label="Цена, до" name="max_price" value="<?= $maxPriceValue ?>" min="<?= $minPriceValue ?>" max="<?= $maxPriceValue ?>">
                             </div>
                         </div>
                     </fieldset>
@@ -42,8 +55,8 @@ $maxPriceValue = number_format($searchModel->max_price ? $searchModel->max_price
                                 <input class="js-range-slider" type="text" id="js-range-slider-area">
                             </div>
                             <div class="filter__price-fields">
-                                <input class="form-control filter__price-field" type="number" id="area-from" aria-label="Площадь, от" value="32">
-                                <input class="form-control filter__price-field" type="number" id="area-to" aria-label="Площадь, до" value="240">
+                                <input class="form-control filter__price-field" type="number" id="area-from" aria-label="Площадь, от" name="min_area" value="<?= $minAreaValue ?>" min="<?= $minArea ?>" max="<?= $maxArea ?>">
+                                <input class="form-control filter__price-field" type="number" id="area-to" aria-label="Площадь, до" name="max_area" value="<?= $maxAreaValue ?>" min="<?= $minArea ?>" max="<?= $maxArea ?>">
                             </div>
                         </div>
                     </fieldset>
@@ -71,7 +84,7 @@ $maxPriceValue = number_format($searchModel->max_price ? $searchModel->max_price
             <?php foreach ($attributes as $attribute) : ?>
                 <?php $default_values = preg_split('/\n+/', $attribute->default_values); ?>
                 <?php $default_values = array_map('trim', $default_values); ?>
-                <fieldset class="filter__additional-item">
+                <fieldset class="filter__additional-item"<?php if ($attribute->id === $AREA_ATTR_ID) echo ' hidden'; ?>>
                     <legend class="filter__additional-title"><?= $attribute->name ?>:</legend>
                     <div class="filter__content">
                         <div class="filter__option-labels-wrap">

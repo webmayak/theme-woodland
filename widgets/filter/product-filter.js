@@ -49,7 +49,8 @@ priceRange.ionRangeSlider({
     from: priceFromField.val(),
     to: priceToField.val(),
     onStart: updatePriceInputs,
-    onChange: updatePriceInputs
+    onChange: updatePriceInputs,
+    onUpdate: updatePriceInputs
 });
 
 priceInstance = priceRange.data("ionRangeSlider");
@@ -77,6 +78,16 @@ function updateAreaInputs(data) {
 
     areaFromField.prop("value", areaFrom);
     areaToField.prop("value", areaTo);
+
+    var areaFieldsAll = $('[name="filter_attr[' + AREA_ATTR_ID + '][]"]');
+
+    areaFieldsAll.each(function () {
+        if ($(this).val() >= areaFrom && $(this).val() <= areaTo) {
+            $(this).prop('checked', true);
+        } else {
+            $(this).prop('checked', false);
+        }
+    });
 }
 
 areaRange.ionRangeSlider({
@@ -87,7 +98,8 @@ areaRange.ionRangeSlider({
     from: areaFromField.val(),
     to: areaToField.val(),
     onStart: updateAreaInputs,
-    onChange: updateAreaInputs
+    onChange: updateAreaInputs,
+    onUpdate: updateAreaInputs
 });
 
 areaInstance = areaRange.data("ionRangeSlider");
