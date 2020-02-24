@@ -1,21 +1,20 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 9/18/18
- * Time: 4:27 PM
- */
 
-use pantera\content\models\ContentPage;
+use common\modules\catalog\models\CatalogCategory;
 use yii\helpers\Html;
 use yii\web\View;
 
-/* @var $this View */
-/* @var $model ContentPage */
+$isClosed = $model->present()->getAttributeValueByKey('is_closed');
 
+/* @var $this View */
+/* @var $model CatalogCategory */
 ?><div class="item-card item-card--specials-item">
+    <?php if ($isClosed) : ?>
+    <div class="item-card__label item-card__label--closed">Акция завершена</div>
+    <?php else : ?>
     <div class="item-card__label">Действующая акция</div>
-    <a class="item-card__img-link" href="<?= $model->getUrl() ?>">
+    <?php endif; ?>
+    <a class="item-card__img-link" href="<?= $model->present()->getUrl() ?>">
         <?php
         if ($model->media && $model->media->issetMedia()) {
             $img = $model->media->image(310, 200, false);
@@ -25,10 +24,9 @@ use yii\web\View;
         } ?>
     </a>
     <div class="item-card__date"><i class="fa fa-calendar"></i> <?= Yii::$app->formatter->asDate($model->created_at, 'd.MM.yy') ?></div>
-    <h4 class="item-card__title"><a href="<?= $model->getUrl() ?>"><?= Html::encode($model->title) ?></a></h4>
-    <div>
-        <?php $bodyText = html_entity_decode(strip_tags($model->body)); ?>
-        <p><?= mb_substr($bodyText, 0, 100, 'utf-8') . (mb_strlen($bodyText) > 100 ? '...' : '') ?></p>
-    </div>
-    <a class="item-card__more-link" href="<?= $model->getUrl() ?>">Читать все <i class="fa fa-angle-right"></i></a>
+    <h4 class="item-card__title"><a href="<?= $model->present()->getUrl() ?>"><?= Html::encode($model->name) ?></a></h4>
+    <?php if ($announce = $model->present()->getAttributeValueByKey('announce')) : ?>
+        <div><p><?= $announce ?></p></div>
+    <?php endif; ?>
+    <a class="item-card__more-link" href="<?= $model->present()->getUrl() ?>">Читать все <i class="fa fa-angle-right"></i></a>
 </div>

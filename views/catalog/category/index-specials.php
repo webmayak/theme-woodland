@@ -1,13 +1,13 @@
 <?php
 
-use pantera\content\models\ContentPage;
+use common\modules\catalog\models\CatalogCategory;
 use pantera\leads\widgets\form\LeadForm;
 use yii\helpers\Html;
 use yii\web\View;
 
 /* @var $this View */
-/* @var $model ContentPage */
-$this->params['breadcrumbs'][] = $model->title;
+/* @var $model CatalogCategory */
+$this->params['breadcrumbs'][] = $model->name;
 ?>
 <h1 class="title-home">
     <?= Yii::$app->seo->getH1() ?>
@@ -21,9 +21,9 @@ $this->params['breadcrumbs'][] = $model->title;
                 ]) ?>
             <?php endif; ?>
 
-            <?php if ($model->body) : ?>
+            <?php if ($model->description) : ?>
                 <div class="editor-content editor-content__page">
-                    <?= $model->body ?>
+                    <?= $model->description ?>
                 </div>
             <?php endif; ?>
         </div>
