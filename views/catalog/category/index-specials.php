@@ -7,7 +7,6 @@ use yii\web\View;
 
 /* @var $this View */
 /* @var $model CatalogCategory */
-$this->params['breadcrumbs'][] = $model->name;
 ?>
 <h1 class="title-home">
     <?= Yii::$app->seo->getH1() ?>
