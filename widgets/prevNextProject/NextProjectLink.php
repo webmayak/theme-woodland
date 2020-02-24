@@ -19,6 +19,7 @@ class NextProjectLink extends Widget
 
         $query = ShopProduct::find();
         $query->andWhere(['=', 'category_id', $project->category_id]);
+        $query->andWhere(['IS', 'parent_id', null]);
         $query->andWhere(['>', 'id', $project->id]);
         $query->orderBy(['id' => SORT_ASC]);
         $nextProject = $query->one();
@@ -26,6 +27,7 @@ class NextProjectLink extends Widget
         if (!$nextProject) {
             $query = ShopProduct::find();
             $query->andWhere(['=', 'category_id', $project->category_id]);
+            $query->andWhere(['IS', 'parent_id', null]);
             $query->andWhere(['<>', 'id', $project->id]);
             $query->orderBy(['id' => SORT_ASC]);
             $nextProject = $query->one();
