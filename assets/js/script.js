@@ -212,6 +212,12 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.product-page__materials-link').click(function () {
+        var materialsTarget = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(materialsTarget).offset().top}, 400);
+        return false;
+    });
+
     $('.search__open-btn').click(function () {
         $('.search__form').fadeIn();
         $('.search__field').focus();

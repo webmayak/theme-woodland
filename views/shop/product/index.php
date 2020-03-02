@@ -70,8 +70,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php endif; ?>
             </div>
             <?php if ($model->possible_sizes) : ?>
-                <div class="product-page__sizes">
-                    <?= $model->possible_sizes ?>
+                <div class="product-page__sizes" id="materials">
+                    <div class="product-page__sizes-title">Возможные размеры и сечения профилированного бруса</div>
+                    <div class="table-responsive">
+                        <?= $model->possible_sizes ?>
+                    </div>
                 </div>
             <?php endif; ?>
         </div>
@@ -194,7 +197,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 </ul>
                 <div class="product-page__links">
                     <a href="#product-tab-7" class="product-page__view-all-link text-uppercase">Смотреть все</a><br>
-                    <a href="#product-tab-1" class="product-page__view-set-link text-uppercase">Смотреть комплектацию</a><br>
+                    <?php if ($model->equipment) : ?>
+                        <a href="#product-tab-1" class="product-page__view-set-link text-uppercase">Смотреть комплектацию</a><br>
+                    <?php endif; ?>
                     <a href="#" class="product-page__delivery-link point-with-icon">
                         <div class="point-with-icon__icon-wrap">
                             <img src="/images/icon-delivery-truck.png" alt="">
@@ -207,7 +212,10 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                         <span class="point-with-icon__text">Распечатать</span>
                     </a>
-                    <div class="product-page__materials">Из чего строим: <a class="product-page__materials-link" href="#">Материалы</a></div>
+                    <?php if ($model->possible_sizes) : ?>
+                        <div class="product-page__materials">Из чего строим: <a class="product-page__materials-link" href="#materials">Материалы</a></div>
+                    <?php endif; ?>
+
                     <a href="#" class="product-page__calc-link btn btn-primary btn-block">
                         <img src="/images/icon-real-estate.png" alt="">
                         Расчет дома - калькулятор
