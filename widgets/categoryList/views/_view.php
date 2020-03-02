@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/2/18
- * Time: 1:38 PM
- */
 
 use common\modules\catalog\models\CatalogCategory;
 use pantera\leads\widgets\form\LeadForm;

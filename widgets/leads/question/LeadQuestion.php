@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 9/24/18
- * Time: 12:46 PM
- */
 
 namespace frontend\themes\woodland\widgets\leads\question;
 

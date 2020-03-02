@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/10/18
- * Time: 2:37 PM
- */
 
 namespace frontend\themes\woodland\widgets\leads\payment;
 

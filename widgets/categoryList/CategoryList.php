@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/11/18
- * Time: 5:39 PM
- */
 
 namespace frontend\themes\woodland\widgets\categoryList;
 

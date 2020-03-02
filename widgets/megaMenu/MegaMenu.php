@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/8/18
- * Time: 12:02 PM
- */
 
 namespace frontend\themes\woodland\widgets\megaMenu;
 

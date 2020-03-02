@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 11/1/18
- * Time: 12:25 PM
- */
 
 use common\modules\catalog\models\CatalogCategory;
 use yii\helpers\Html;

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/10/18
- * Time: 1:43 PM
- */
 
 use frontend\themes\woodland\widgets\leads\request\LeadRequest;
 use yii\helpers\Html;

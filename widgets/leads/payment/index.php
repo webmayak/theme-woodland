@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 9/24/18
- * Time: 1:33 PM
- */
 
 use frontend\themes\woodland\widgets\leads\order\LeadOrder;
 use yii\bootstrap\ActiveForm;

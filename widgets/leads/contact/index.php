@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/24/18
- * Time: 10:13 AM
- */
 
 use frontend\themes\woodland\widgets\leads\contact\LeadContact;
 use yii\helpers\Html;

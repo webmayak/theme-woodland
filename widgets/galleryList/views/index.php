@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 11/1/18
- * Time: 12:24 PM
- */
 
 use yii\data\ActiveDataProvider;
 use yii\web\View;

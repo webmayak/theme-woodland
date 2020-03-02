@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 9/24/18
- * Time: 1:33 PM
- */
 
 use pantera\leads\models\CallMe;
 use yii\bootstrap\ActiveForm;
