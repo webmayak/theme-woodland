@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/16/18
- * Time: 11:33 AM
- */
 
 use yii\helpers\Html;
 use yii\web\View;

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/17/18
- * Time: 3:54 PM
- */
 
 use pantera\media\models\Media;
 use yii\web\View;

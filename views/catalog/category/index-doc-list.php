@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/31/18
- * Time: 4:40 PM
- */
 
 use pantera\leads\widgets\form\LeadForm;
 use yii\helpers\Html;

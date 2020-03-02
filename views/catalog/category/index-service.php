@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/4/18
- * Time: 11:58 AM
- */
 
 use common\modules\catalog\models\CatalogCategory;
 use frontend\themes\woodland\widgets\categoryList\CategoryList;

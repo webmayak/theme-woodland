@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/16/18
- * Time: 11:34 AM
- */
 
 use pantera\leads\widgets\form\LeadForm;
 use pantera\content\widgets\block\Block;

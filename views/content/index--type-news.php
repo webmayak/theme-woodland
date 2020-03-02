@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 9/18/18
- * Time: 11:00 AM
- */
 
 use pantera\content\models\ContentPage;
 use yii\helpers\Html;

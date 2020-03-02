@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/10/18
- * Time: 4:44 PM
- */
 
 use frontend\themes\woodland\widgets\mainCatalog\MainCatalog;
 use yii\web\View;

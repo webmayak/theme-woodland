@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/10/18
- * Time: 4:26 PM
- */
 
 use common\modules\catalog\models\CatalogCategory;
 use common\modules\catalog\models\CatalogCategoryAttributeValue;
