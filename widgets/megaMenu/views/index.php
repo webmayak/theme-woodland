@@ -138,7 +138,7 @@ use yii\web\View;
 
                 <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(238)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= $parent->present()->getUrl() ?>">
+                    <span class="navtext">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-percentage"/>
                         </svg>
@@ -146,7 +146,7 @@ use yii\web\View;
                         <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
                             <i class="fa fa-chevron-down"></i>
                         <?php endif; ?>
-                    </a>
+                    </span>
                     <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
                         <ul class="sub-menu">
                             <?php foreach ($childs as $child): ?>
@@ -161,7 +161,7 @@ use yii\web\View;
 
                 <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(234)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= $parent->present()->getUrl() ?>">
+                    <span class="navtext">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-fence"/>
                         </svg>
@@ -169,7 +169,7 @@ use yii\web\View;
                         <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
                             <i class="fa fa-chevron-down"></i>
                         <?php endif; ?>
-                    </a>
+                    </span>
                     <?php if ($childs = $parent->getChildren()->isInMenu()->isActive()->all()) : ?>
                         <ul class="sub-menu">
                             <?php foreach ($childs as $child): ?>
