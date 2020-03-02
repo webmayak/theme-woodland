@@ -50,6 +50,13 @@ $this->params['breadcrumbs'][] = $model->name;
                                         <div class="contact-item__value"><?= Yii::$app->contactsManager->get('address') ?></div>
                                     </div>
                                 </li>
+                                <?php
+                                $phone_sales_department = Yii::$app->contactsManager->get('phone_sales_department');
+                                $phone_bookkeeping = Yii::$app->contactsManager->get('phone_bookkeeping');
+                                $phone_collaboration = Yii::$app->contactsManager->get('phone_collaboration');
+                                $showPhones = $phone_sales_department || $phone_bookkeeping || $phone_collaboration;
+                                ?>
+                                <?php if ($showPhones) : ?>
                                 <li class="page-contacts__contact-item contact-item">
                                     <div class="contact-item__icon-wrap">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
@@ -57,14 +64,21 @@ $this->params['breadcrumbs'][] = $model->name;
                                         </svg>
                                     </div>
                                     <div>
-                                        <div class="contact-item__key">Отдел продаж:</div>
-                                        <div class="contact-item__value"><?= Yii::$app->contactsManager->get('phone_sales_department') ?></div>
-                                        <div class="contact-item__key">Бухгалтерия:</div>
-                                        <div class="contact-item__value"><?= Yii::$app->contactsManager->get('phone_bookkeeping') ?></div>
-                                        <div class="contact-item__key">Сотрудничество:</div>
-                                        <div class="contact-item__value"><?= Yii::$app->contactsManager->get('phone_collaboration') ?></div>
+                                        <?php if ($phone_sales_department) : ?>
+                                            <div class="contact-item__key">Отдел продаж:</div>
+                                            <div class="contact-item__value"><?= $phone_sales_department ?></div>
+                                        <?php endif; ?>
+                                        <?php if ($phone_bookkeeping) : ?>
+                                            <div class="contact-item__key">Бухгалтерия:</div>
+                                            <div class="contact-item__value"><?= $phone_bookkeeping ?></div>
+                                        <?php endif; ?>
+                                        <?php if ($phone_collaboration) : ?>
+                                            <div class="contact-item__key">Сотрудничество:</div>
+                                            <div class="contact-item__value"><?= $phone_collaboration ?></div>
+                                        <?php endif; ?>
                                     </div>
                                 </li>
+                                <?php endif; ?>
                                 <li class="page-contacts__contact-item contact-item">
                                     <div class="contact-item__icon-wrap">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
