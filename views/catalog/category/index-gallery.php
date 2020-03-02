@@ -1,5 +1,6 @@
 <?php
 
+use frontend\widgets\twigRender\TwigRender;
 use yii\helpers\Html;
 use yii\web\View;
 use pantera\leads\widgets\form\LeadForm;
@@ -19,9 +20,11 @@ use pantera\leads\widgets\form\LeadForm;
         <?php endforeach; ?>
     </div>
     <?php endif; ?>
-    <?php if (0): ?>
-    <div class="page-site-gallery-one__btn-wrap text-center">
-        <button class="btn btn-lg btn-primary">Показать еще</button>
+    <?php if ($model->description) : ?>
+    <div class="editor-content">
+        <?= TwigRender::widget([
+            'text' => $model->description,
+        ]) ?>
     </div>
     <?php endif; ?>
 </main>
