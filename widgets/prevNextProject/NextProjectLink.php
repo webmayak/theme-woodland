@@ -12,6 +12,9 @@ use yii\base\Widget;
 class NextProjectLink extends Widget
 {
     public $model;
+    
+    /* @var string */
+    public $text = 'Следующий';
 
     public function run()
     {
@@ -35,7 +38,7 @@ class NextProjectLink extends Widget
 
         if ($nextProject) {
             return Html::a(
-                'Следующий проект <i class="fa fa-long-arrow-right ml-3"></i>',
+                $this->text,
                 $nextProject->present()->getUrl(),
                 ['class' => 'btn btn-outline-success']
             );

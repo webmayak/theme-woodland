@@ -1,8 +1,11 @@
 <?php
 
-use yii\helpers\Html;
 use common\modules\shop\models\ShopProductCompare;
 use common\modules\shop\models\ShopProductFavorite;
+use common\modules\shop\widgets\cart\addToCart\AddToCartWidget;
+use yii\helpers\Html;
+
+$productIsProject = !in_array($model->product_type_id, [4, 11]);
 
 /**
  * @var \common\modules\shop\models\ShopProduct $model
@@ -72,14 +75,20 @@ use common\modules\shop\models\ShopProductFavorite;
     <?php endif; ?>
     <div class="product-card__price">Цена: от <b><?= number_format($model->price, 0, ',', ' ') ?> Руб.</b></div>
     <div class="product-card__actions">
-        <a href="<?=$model->present()->getUrl()?>" class="product-card__to-cart btn btn-primary">
-            Подробнее
-            <?php if (0) : ?>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                <use xlink:href="/images/sprite.svg#icon-cart"/>
-            </svg>
-            <?php endif; ?>
-        </a>
+        <?php if ($productIsProject) : ?>
+            <a href="<?=$model->present()->getUrl()?>" class="product-card__to-cart btn btn-primary">
+                Подробнее
+            </a>
+        <?php else : ?>
+            <?= AddToCartWidget::widget([
+                'content' => 'Купить '
+                    . '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">'
+                        . '<use xlink:href="/images/sprite.svg#icon-cart"/>'
+                    . '</svg>',
+                'model' => $model,
+                'htmlOptions' => ['class' => 'btn btn-primary product-card__to-cart'],
+            ]) ?>
+        <?php endif; ?>
         <button class="product-card__to-favorites btn <?= ShopProductFavorite::isFavorite($model->id) ? 'btn-success' : 'btn-outline-success' ?>" data-id="<?= $model->id ?>">
             <span class="sr-only">В избранное</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
@@ -95,28 +104,30 @@ use common\modules\shop\models\ShopProductFavorite;
     </div>
 </div>
 
-<?php
-// рассчитываем реальную позицию текущего элемента
-$realKey = $widget->dataProvider->pagination
-    ? ($widget->dataProvider->pagination->page * $widget->dataProvider->pagination->pageSize) + $index
-    : $index;
+<?php if ($productIsProject) : ?>
+    <?php
+    // рассчитываем реальную позицию текущего элемента
+    $realKey = $widget->dataProvider->pagination
+        ? ($widget->dataProvider->pagination->page * $widget->dataProvider->pagination->pageSize) + $index
+        : $index;
 
-// получаем класс обертки элемента
-$cardWrapperClass = ($widget->itemOptions && !empty($widget->itemOptions['class']))
-    ? $widget->itemOptions['class']
-    : '';
-?>
-<?php if ($realKey == ($widget->dataProvider->totalCount - 1)): ?>
-    </div>
-    <div class="<?= $cardWrapperClass ?>">
-        <div class="free-calc-card">
-            <div class="free-calc-card__img-wrap">
-                <img class="free-calc-card__img" src="/images/free-calc-img.jpg" alt="">
-            </div>
-            <div class="free-calc-card__title">Не нашли нужного проекта?</div>
-            <div class="free-calc-card__descr">Пришлите свой! <br> Расчитаем за 1 день</div>
-            <div class="free-calc-card__accent-text">Бесплатно</div>
-            <a href="#" class="btn btn-lg btn-primary px-1 mt-auto">Заказать бесплатный расчет</a>
+    // получаем класс обертки элемента
+    $cardWrapperClass = ($widget->itemOptions && !empty($widget->itemOptions['class']))
+        ? $widget->itemOptions['class']
+        : '';
+    ?>
+    <?php if ($realKey == ($widget->dataProvider->totalCount - 1)): ?>
         </div>
-    <!-- не закрываем тег-->
+        <div class="<?= $cardWrapperClass ?>">
+            <div class="free-calc-card">
+                <div class="free-calc-card__img-wrap">
+                    <img class="free-calc-card__img" src="/images/free-calc-img.jpg" alt="">
+                </div>
+                <div class="free-calc-card__title">Не нашли нужного проекта?</div>
+                <div class="free-calc-card__descr">Пришлите свой! <br> Расчитаем за 1 день</div>
+                <div class="free-calc-card__accent-text">Бесплатно</div>
+                <a href="#" class="btn btn-lg btn-primary px-1 mt-auto">Заказать бесплатный расчет</a>
+            </div>
+        <!-- не закрываем тег-->
+    <?php endif; ?>
 <?php endif; ?>

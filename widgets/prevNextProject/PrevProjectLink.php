@@ -13,6 +13,9 @@ class PrevProjectLink extends Widget
 {
     public $model;
 
+    /* @var string */
+    public $text = 'Предыдущий';
+
     public function run()
     {
         $project = $this->model;
@@ -35,7 +38,7 @@ class PrevProjectLink extends Widget
 
         if ($prevProject) {
             return Html::a(
-                '<i class="fa fa-long-arrow-left mr-3"></i> Предыдущий проект',
+                $this->text,
                 $prevProject->present()->getUrl(),
                 ['class' => 'btn btn-outline-success']
             );

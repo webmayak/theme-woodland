@@ -8,8 +8,9 @@ use common\modules\shop\widgets\cart\addToCart\AddToCartWidget;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
-$this->title = $model->name;
+$productIsProject = !in_array($model->product_type_id, [4, 11]);
 
+$this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => ['/shop/catalog/index']];
 if ($model->category) {
     if ($parents = $model->category->parents) {
@@ -27,9 +28,13 @@ $this->params['breadcrumbs'][] = $this->title;
  */
 ?><div class="product-page">
     <div class="product-page__nav">
-        <?= PrevProjectLink::widget(['model' => $model]) ?>
+        <?php if ($productIsProject) : ?>
+            <?= PrevProjectLink::widget(['model' => $model, 'text' => '<i class="fa fa-long-arrow-left mr-3"></i> Предыдущий проект']) ?>
+        <?php endif; ?>
         <h1><?= Html::encode($this->title) ?></h1>
-        <?= NextProjectLink::widget(['model' => $model]) ?>
+        <?php if ($productIsProject) : ?>
+            <?= NextProjectLink::widget(['model' => $model, 'text' => 'Следующий проект <i class="fa fa-long-arrow-right ml-3"></i>']) ?>
+        <?php endif; ?>
     </div>
     <div class="row align-items-start">
         <div class="col-lg-8">
@@ -80,151 +85,170 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="col-lg-4">
             <div class="product-page__sidebar">
-                <?= AddToCartWidget::widget([
-                    'htmlOptions' => ['class' => 'product-page__order-btn btn btn-success btn-block text-uppercase'],
-                    'content' => 'Заказать этот проект',
-                    'model' => $model
-                ]) ?>
-                <?php if ($variants = $model->getVariants()->all()): ?>
 
-                    <?php
-                    $ID_PROFILE_SIZE  = 8;   // Сечение бруса
-                    $ID_WALL_THICKNESS = 9;  // Толщина стены
-                    $ID_PRICE = 10;          // Тип цены
-
-                    $checkedFirst = false;
-
-                    // подготовим данные
-                    $variantsByPriceType = [];
-
-                    usort($variants, function($a, $b) {
-                        return $a['price'] <=> $b['price'];
-                    });
-
-                    foreach ($variants as $variant) {
-                        $priceType = $variant->present()->getAttributeValue($ID_PRICE);
-                        $variantsByPriceType[$priceType][] = $variant;
-                    }
-                    ?>
-
-                    <?php foreach ($variantsByPriceType as $priceType => $variants) : ?>
-                        <div class="product-page__sidebar-title">
-                            <?php if ($priceType == 'Цена под ключ') : ?>
-                                <img src="/images/icon-key.png" alt="">
-                            <?php else: ?>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#00bbdf" aria-hidden="true" role="presentation" focusable="false">
-                                    <use xlink:href="/images/sprite.svg#icon-address"/>
-                                </svg>
-                            <?php endif; ?>
-                            <?= Html::encode($priceType) ?>
-                        </div>
-                        <table class="product-page__sidebar-table product-table">
-                        <?php foreach ($variants as $variant) : ?>
-                            <tr>
-                                <td>
-                                    <img src="<?= $variant->media->image() ?>" alt="Сечение бруса <?= Html::encode($variant->present()->getAttributeValue($ID_PROFILE_SIZE)) ?>">
-                                </td>
-                                <td>
-                                    <span class="product-table__size"><?= Html::encode($variant->present()->getAttributeValue($ID_PROFILE_SIZE)) ?></span><br>
-                                    <span class="product-table__thickness">толщина стены: <?= Html::encode($variant->present()->getAttributeValue($ID_WALL_THICKNESS)) ?></span>
-                                </td>
-                                <td>
-                                    <label class="product-table__price-wrap">
-                                        <input class="sr-only" type="radio" name="product_id" value="<?= $variant->id ?>"<?php if (!$checkedFirst) { echo ' checked'; $checkedFirst = true; } ?>>
-                                        <span class="product-table__price"><?= number_format($variant->price, 0, ',', ' ') ?> руб.</span>
-                                    </label>
-                                </td>
-                            </tr>
-                        <?php endforeach; ?>
-                        </table>
-                    <?php endforeach; ?>
+                <?php if (!$productIsProject) : ?>
+                    <div class="text-center mb-4" style="font-size: 22px; font-weight: bold;">
+                        Цена: <?= number_format($model->price, 0, ',', ' ') ?> Руб.
+                    </div>
                 <?php endif; ?>
                 
-                <?php if ($model->similar_product_link) : ?>
-                    <div class="product-page__similar-product">
-                        <?= $model->similar_product_link ?>
+                <?= AddToCartWidget::widget([
+                    'htmlOptions' => ['class' => 'btn btn-success btn-block product-page__order-btn text-uppercase'],
+                    'content' => $productIsProject
+                        ? 'Заказать этот проект'
+                        : 'Купить '
+                        . '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">'
+                            . '<use xlink:href="/images/sprite.svg#icon-cart"/>'
+                        . '</svg>',
+                    'model' => $model
+                ]) ?>
+
+                <?php if ($productIsProject) : ?>
+
+                    <?php if ($variants = $model->getVariants()->all()): ?>
+                        <?php
+                        $ID_PROFILE_SIZE  = 8;   // Сечение бруса
+                        $ID_WALL_THICKNESS = 9;  // Толщина стены
+                        $ID_PRICE = 10;          // Тип цены
+
+                        $checkedFirst = false;
+
+                        // подготовим данные
+                        $variantsByPriceType = [];
+
+                        usort($variants, function($a, $b) {
+                            return $a['price'] <=> $b['price'];
+                        });
+
+                        foreach ($variants as $variant) {
+                            $priceType = $variant->present()->getAttributeValue($ID_PRICE);
+                            $variantsByPriceType[$priceType][] = $variant;
+                        }
+                        ?>
+
+                        <?php foreach ($variantsByPriceType as $priceType => $variants) : ?>
+                            <div class="product-page__sidebar-title">
+                                <?php if ($priceType == 'Цена под ключ') : ?>
+                                    <img src="/images/icon-key.png" alt="">
+                                <?php else: ?>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="#00bbdf" aria-hidden="true" role="presentation" focusable="false">
+                                        <use xlink:href="/images/sprite.svg#icon-address"/>
+                                    </svg>
+                                <?php endif; ?>
+                                <?= Html::encode($priceType) ?>
+                            </div>
+                            <table class="product-page__sidebar-table product-table">
+                            <?php foreach ($variants as $variant) : ?>
+                                <tr>
+                                    <td>
+                                        <img src="<?= $variant->media->image() ?>" alt="Сечение бруса <?= Html::encode($variant->present()->getAttributeValue($ID_PROFILE_SIZE)) ?>">
+                                    </td>
+                                    <td>
+                                        <span class="product-table__size"><?= Html::encode($variant->present()->getAttributeValue($ID_PROFILE_SIZE)) ?></span><br>
+                                        <span class="product-table__thickness">толщина стены: <?= Html::encode($variant->present()->getAttributeValue($ID_WALL_THICKNESS)) ?></span>
+                                    </td>
+                                    <td>
+                                        <label class="product-table__price-wrap">
+                                            <input class="sr-only" type="radio" name="product_id" value="<?= $variant->id ?>"<?php if (!$checkedFirst) { echo ' checked'; $checkedFirst = true; } ?>>
+                                            <span class="product-table__price"><?= number_format($variant->price, 0, ',', ' ') ?> руб.</span>
+                                        </label>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                            </table>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                    
+                    <?php if ($model->similar_product_link) : ?>
+                        <div class="product-page__similar-product">
+                            <?= $model->similar_product_link ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="product-page__sidebar-title">Характеристики</div>
+                    <ul class="product-page__params list-unstyled">
+                        <?php if ($attributeValue = $model->present()->getAttributeValue(3)): ?>
+                        <li class="product-page__param point-with-icon">
+                            <div class="point-with-icon__icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-size"></use>
+                                </svg>
+                            </div>
+                            <div class="point-with-icon__text">Размеры <?= $attributeValue ?></div>
+                        </li>
+                        <?php endif; ?>
+                        <?php if ($attributeValue = $model->present()->getAttributeValue(5)): ?>
+                        <li class="product-page__param point-with-icon">
+                            <div class="point-with-icon__icon-wrap">
+                                <img src="/images/four-squares-with-frame-shape.png" alt="">
+                            </div>
+                            <div class="point-with-icon__text">S застройки/общая: <?= $attributeValue ?></div>
+                        </li>
+                        <?php endif; ?>
+                        <?php if ($attributeValue = $model->present()->getAttributeValue(1)): ?>
+                        <li class="product-page__param point-with-icon">
+                            <div class="point-with-icon__icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-address"></use>
+                                </svg>
+                            </div>
+                            <div class="point-with-icon__text">Этажность: <?= $attributeValue ?></div>
+                        </li>
+                        <?php endif; ?>
+                        <?php if ($attributeValue = $model->present()->getAttributeValue(2)): ?>
+                        <li class="product-page__param point-with-icon">
+                            <div class="point-with-icon__icon-wrap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                    <use xlink:href="/images/sprite.svg#icon-bed"></use>
+                                </svg>
+                            </div>
+                            <div class="point-with-icon__text">Комнат: <?= $attributeValue ?></div>
+                        </li>
+                        <?php endif; ?>
+                        <?php if ($attributeValue = $model->present()->getAttributeValue(6)): ?>
+                        <li class="product-page__param point-with-icon">
+                            <div class="point-with-icon__icon-wrap">
+                                <img src="/images/advantage-2.png" alt="">
+                            </div>
+                            <div class="point-with-icon__text">Технология: <?= $attributeValue ?></div>
+                        </li>
+                        <?php endif; ?>
+                    </ul>
+
+                    <div class="product-page__links">
+                        <a href="#product-tab-7" class="product-page__view-all-link text-uppercase">Смотреть все</a><br>
+                        <?php if ($model->equipment) : ?>
+                            <a href="#product-tab-1" class="product-page__view-set-link text-uppercase">Смотреть комплектацию</a><br>
+                        <?php endif; ?>
+                        <a href="#" class="product-page__delivery-link point-with-icon">
+                            <div class="point-with-icon__icon-wrap">
+                                <img src="/images/icon-delivery-truck.png" alt="">
+                            </div>
+                            <span class="point-with-icon__text">Доставка</span>
+                        </a>
+                        <a href="#" onclick="window.print()" class="product-page__print-link point-with-icon">
+                            <div class="point-with-icon__icon-wrap">
+                                <img src="/images/icon-printing-tool.png" alt="">
+                            </div>
+                            <span class="point-with-icon__text">Распечатать</span>
+                        </a>
+                        <?php if ($model->possible_sizes) : ?>
+                            <div class="product-page__materials">Из чего строим: <a class="product-page__materials-link" href="#materials">Материалы</a></div>
+                        <?php endif; ?>
+
+                        <a href="#" class="product-page__calc-link btn btn-primary btn-block">
+                            <img src="/images/icon-real-estate.png" alt="">
+                            Расчет дома - калькулятор
+                        </a>
+                        <a href="#" class="product-page__calc-link btn btn-primary btn-block">
+                            <img src="/images/icon-brick2gf.png" alt="">
+                            Фундамент - калькулятор
+                        </a>
                     </div>
                 <?php endif; ?>
 
-                <div class="product-page__sidebar-title">Характеристики</div>
-                <ul class="product-page__params list-unstyled">
-                    <?php if ($attributeValue = $model->present()->getAttributeValue(3)): ?>
-                    <li class="product-page__param point-with-icon">
-                        <div class="point-with-icon__icon-wrap">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                <use xlink:href="/images/sprite.svg#icon-size"></use>
-                            </svg>
-                        </div>
-                        <div class="point-with-icon__text">Размеры <?= $attributeValue ?></div>
-                    </li>
-                    <?php endif; ?>
-                    <?php if ($attributeValue = $model->present()->getAttributeValue(5)): ?>
-                    <li class="product-page__param point-with-icon">
-                        <div class="point-with-icon__icon-wrap">
-                            <img src="/images/four-squares-with-frame-shape.png" alt="">
-                        </div>
-                        <div class="point-with-icon__text">S застройки/общая: <?= $attributeValue ?></div>
-                    </li>
-                    <?php endif; ?>
-                    <?php if ($attributeValue = $model->present()->getAttributeValue(1)): ?>
-                    <li class="product-page__param point-with-icon">
-                        <div class="point-with-icon__icon-wrap">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                <use xlink:href="/images/sprite.svg#icon-address"></use>
-                            </svg>
-                        </div>
-                        <div class="point-with-icon__text">Этажность: <?= $attributeValue ?></div>
-                    </li>
-                    <?php endif; ?>
-                    <?php if ($attributeValue = $model->present()->getAttributeValue(2)): ?>
-                    <li class="product-page__param point-with-icon">
-                        <div class="point-with-icon__icon-wrap">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
-                                <use xlink:href="/images/sprite.svg#icon-bed"></use>
-                            </svg>
-                        </div>
-                        <div class="point-with-icon__text">Комнат: <?= $attributeValue ?></div>
-                    </li>
-                    <?php endif; ?>
-                    <?php if ($attributeValue = $model->present()->getAttributeValue(6)): ?>
-                    <li class="product-page__param point-with-icon">
-                        <div class="point-with-icon__icon-wrap">
-                            <img src="/images/advantage-2.png" alt="">
-                        </div>
-                        <div class="point-with-icon__text">Технология: <?= $attributeValue ?></div>
-                    </li>
-                    <?php endif; ?>
-                </ul>
                 <div class="product-page__links">
-                    <a href="#product-tab-7" class="product-page__view-all-link text-uppercase">Смотреть все</a><br>
-                    <?php if ($model->equipment) : ?>
-                        <a href="#product-tab-1" class="product-page__view-set-link text-uppercase">Смотреть комплектацию</a><br>
-                    <?php endif; ?>
-                    <a href="#" class="product-page__delivery-link point-with-icon">
-                        <div class="point-with-icon__icon-wrap">
-                            <img src="/images/icon-delivery-truck.png" alt="">
-                        </div>
-                        <span class="point-with-icon__text">Доставка</span>
-                    </a>
-                    <a href="#" onclick="window.print()" class="product-page__print-link point-with-icon">
-                        <div class="point-with-icon__icon-wrap">
-                            <img src="/images/icon-printing-tool.png" alt="">
-                        </div>
-                        <span class="point-with-icon__text">Распечатать</span>
-                    </a>
-                    <?php if ($model->possible_sizes) : ?>
-                        <div class="product-page__materials">Из чего строим: <a class="product-page__materials-link" href="#materials">Материалы</a></div>
-                    <?php endif; ?>
-
-                    <a href="#" class="product-page__calc-link btn btn-primary btn-block">
-                        <img src="/images/icon-real-estate.png" alt="">
-                        Расчет дома - калькулятор
-                    </a>
-                    <a href="#" class="product-page__calc-link btn btn-primary btn-block">
-                        <img src="/images/icon-brick2gf.png" alt="">
-                        Фундамент - калькулятор
-                    </a>
-                    <div class="product-page__share-title">Поделиться (сохранить проект)</div>
+                    <div class="product-page__share-title">Поделиться ссылкой (сохранить<?php if ($productIsProject) : ?> проект<?php endif; ?>)</div>
                     <ul class="product-page__share list-unstyled">
                         <li>
                             <a class="social-link social-link--vk" href="#" target="_blank">
