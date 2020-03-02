@@ -123,10 +123,12 @@ initShare();
 
 /**
  * Любое завершение pjax
- * инициализируем заного поповеры
  */
 $(document).on('pjax:complete', function () {
+    // инициализируем заново поповеры
     initPopover();
+    // виджет +/- в корзине
+    $('.quantity-field').styler();
 });
 
 $.goup({
@@ -201,9 +203,7 @@ $(document).ready(function () {
         });
     }
 
-    setTimeout(function () {
-        $('.quantity-field').styler();
-    }, 100);
+    $('.quantity-field').styler();
 
     $('.product-page__view-all-link, .product-page__view-set-link').click(function () {
         var thisTarget = $(this).attr('href');
