@@ -343,12 +343,14 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?= Block::widget([
                         'position' => 'product_tab_credit',
                     ]) ?>
+                    <?php if (0) : ?>
                     <div class="text-center">
                         <a class="product-page__credit-btn btn btn-primary" href="#"><?= Html::encode($model->name) ?> в кредит</a>
                     </div>
                     <div class="text-center">
                         <a href="#" class="product-page__credit-link text-uppercase">подробнее об условиях кредитования</a>
                     </div>
+                    <?php endif; ?>
                 </div>
                 <?php if (0) : ?>
                 <div class="tab-pane fade" id="product-tab-5">
