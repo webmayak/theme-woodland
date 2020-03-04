@@ -37,32 +37,9 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                             <div>
                                 <div class="contact-item__key">Ваш город:</div>
                                 <div class="contact-item__value">
-                                    <div class="dropdown">
-                                        <button class="contact-item__toggle dropdown-toggle" type="button" data-toggle="dropdown">г. Москва <i class="fa fa-chevron-down"></i></button>
-                                        <ul class="city-dropdown dropdown-menu">
-                                            <li>
-                                                <button class="city-dropdown__item city-dropdown__item--active" type="button">г. Москва</button>
-                                            </li>
-                                            <li>
-                                                <button class="city-dropdown__item" type="button">г.Санкт-Петербург</button>
-                                            </li>
-                                            <li>
-                                                <button class="city-dropdown__item" type="button">г.Сочи</button>
-                                            </li>
-                                            <li>
-                                                <button class="city-dropdown__item" type="button">г.Нижний Новгород</button>
-                                            </li>
-                                            <li>
-                                                <button class="city-dropdown__item" type="button">г.Новосибирск</button>
-                                            </li>
-                                            <li>
-                                                <button class="city-dropdown__item" type="button">г.Екатеренбург</button>
-                                            </li>
-                                            <li>
-                                                <button class="city-dropdown__item" type="button">г.Самара</button>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <?= Block::widget([
+                                        'position' => 'header_city',
+                                    ]) ?>
                                 </div>
                             </div>
                         </div>
