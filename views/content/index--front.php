@@ -89,8 +89,8 @@ $this->context->layout = '//front';
     </div>
 </div>
 
-<div class="projects">
-    <div class="container">
+<div class="container">
+    <div class="projects">
         <h2>Проекты</h2>
         <?php
 

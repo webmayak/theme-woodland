@@ -45,10 +45,8 @@ use pantera\leads\widgets\form\LeadForm;
         ],
         'layout' => '<div class="projects__carousel owl-carousel">{items}</div>',
     ]) ?>
+<!-- закрываем .container -->
 </div>
-
-</div>
-
 <div class="contact-form-block">
     <div class="container">
         <div class="row">
@@ -61,6 +59,5 @@ use pantera\leads\widgets\form\LeadForm;
         </div>
     </div>
 </div>
-
 <!-- снова открываем локально закрытый .container -->
 <div class="container">

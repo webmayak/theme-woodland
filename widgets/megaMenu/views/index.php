@@ -61,7 +61,7 @@ use yii\web\View;
                     <?php $this->endCache(); endif; ?>
                 </li>
 
-                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(241)) : ?>
+                <?php if ($parent = CatalogCategory::findOne(241)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                     <a class="navtext" href="<?= $parent->present()->getUrl() ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
@@ -84,7 +84,7 @@ use yii\web\View;
                 </li>
                 <?php endif; ?>
 
-                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(235)) : ?>
+                <?php if ($parent = CatalogCategory::findOne(235)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                     <a class="navtext" href="<?= $parent->present()->getUrl() ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
@@ -107,7 +107,7 @@ use yii\web\View;
                 </li>
                 <?php endif; ?>
 
-                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(237)) : ?>
+                <?php if ($parent = CatalogCategory::findOne(237)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                     <a class="navtext" href="<?= $parent->present()->getUrl() ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
@@ -130,9 +130,8 @@ use yii\web\View;
                 </li>
                 <?php endif; ?>
 
-                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(238)) : ?>
+                <?php if ($parent = CatalogCategory::findOne(238)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-                    <a class="navtext">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-percentage"/>
                         </svg>
@@ -153,9 +152,8 @@ use yii\web\View;
                 </li>
                 <?php endif; ?>
 
-                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(234)) : ?>
+                <?php if ($parent = CatalogCategory::findOne(234)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-                    <a class="navtext">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-fence"/>
                         </svg>
@@ -176,7 +174,7 @@ use yii\web\View;
                 </li>
                 <?php endif; ?>
 
-                <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(243)) : ?>
+                <?php if ($parent = CatalogCategory::findOne(243)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                     <a class="navtext" href="<?= $parent->present()->getUrl() ?>">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
