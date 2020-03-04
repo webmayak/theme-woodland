@@ -9,6 +9,7 @@ $productIsProject = !in_array($model->product_type_id, [4, 11]);
 
 /**
  * @var \common\modules\shop\models\ShopProduct $model
+ * @var \frontend\themes\woodland\widgets\shopProducts\ProductsList $widget
  */
 ?><div class="product-card">
     <?php
@@ -104,7 +105,7 @@ $productIsProject = !in_array($model->product_type_id, [4, 11]);
     </div>
 </div>
 
-<?php if ($productIsProject) : ?>
+<?php if ($widget->showLeadCard) : ?>
     <?php
     // рассчитываем реальную позицию текущего элемента
     $realKey = $widget->dataProvider->pagination

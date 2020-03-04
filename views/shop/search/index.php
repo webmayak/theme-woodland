@@ -3,7 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\web\View;
-use frontend\themes\woodland\widgets\shopProducts\Products;
+use frontend\themes\woodland\widgets\shopProducts\ProductsList;
 
 $defaultTitle = 'Поиск по сайту';
 $query = Yii::$app->request->get('q');
@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $defaultTitle;
         </div>
     </form>
     <div class="page-search__text">Если результаты вас не удовлетворяют, пожалуйста, попробуйте еще раз</div>
-    <?= Products::widget([
+    <?= ProductsList::widget([
         'dataProvider' => $dataProvider,
     ]) ?>
     <?php if (0): ?>

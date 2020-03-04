@@ -2,6 +2,8 @@
 
 use common\modules\catalog\models\CatalogCategory;
 use frontend\themes\woodland\widgets\videoList\VideoList;
+use frontend\themes\woodland\widgets\shopProducts\ProductsCarousel;
+use frontend\themes\woodland\widgets\shopCategories\Categories as CategoriesList;
 use pantera\content\models\ContentPage;
 use pantera\content\widgets\block\Block;
 use pantera\content\widgets\slider\Slider;
@@ -83,7 +85,7 @@ $this->context->layout = '//front';
 <div class="categories">
     <div class="container">
         <h2>Категории</h2>
-        <?= \frontend\themes\woodland\widgets\shopCategories\Categories::widget() ?>
+        <?= CategoriesList::widget() ?>
     </div>
 </div>
 
@@ -96,22 +98,14 @@ $this->context->layout = '//front';
         $segment = \common\modules\shop\models\ShopProductSegment::find()->andWhere(['alias' => 'frontpage'])->one();
 
         // найти все товары в рамках текущего сегмента
-        $productsOnFront = \common\modules\shop\models\ProductToSegment::find()->andWhere(['segment_id' => $segment->id])->select('product_id')->asArray();
+        $productsOnFront = \common\modules\shop\models\ProductToSegment::find()->andWhere(['segment_id' => $segment->id])->select('product_id')->column();
 
         ?>
-        <?= \yii\widgets\ListView::widget([
+        <?= ProductsCarousel::widget([
             'dataProvider' => new \yii\data\ActiveDataProvider([
                 'query' => \common\modules\shop\models\ShopProduct::find()->andWhere(['id' => $productsOnFront]),
                 'pagination' => false,
             ]),
-            'options' => [
-                'class' => 'products-list',
-            ],
-            'itemView' => '@theme/views/_product-card',
-            'itemOptions' => [
-                'class' => 'projects__item',
-            ],
-            'layout' => '<div class="projects__carousel owl-carousel">{items}</div>',
         ]) ?>
     </div>
 </div>

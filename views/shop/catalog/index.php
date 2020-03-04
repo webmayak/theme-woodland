@@ -1,6 +1,9 @@
 <?php
 
 use pantera\leads\widgets\form\LeadForm;
+use common\modules\shop\models\ShopProduct;
+use frontend\themes\woodland\widgets\shopProducts\ProductsList;
+use yii\data\ActiveDataProvider;
 use yii\web\View;
 
 /* @var $this View */
@@ -43,27 +46,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="catalog-page__tab-content tab-content">
         <?php foreach ($categories as $key => $category) : ?>
             <div class="tab-pane fade show<?= $key == 0 ? ' active' : ''?>" id="catalog-tab-<?= $key ?>">
-                <?= \yii\widgets\ListView::widget([
-                    'dataProvider' => new \yii\data\ActiveDataProvider([
-                        'query' => \common\modules\shop\models\ShopProduct::find()->andWhere(['category_id' => $category->id])
+                <?= ProductsList::widget([
+                    'dataProvider' => new ActiveDataProvider([
+                        'query' => ShopProduct::find()->andWhere(['category_id' => $category->id])->limit(12),
+                        'pagination' => false,
                     ]),
-                    'options' => [
-                        'class' => 'products-list',
-                    ],
-                    'itemView' => '@theme/views/_product-card',
-                    'itemOptions' => [
-                        'class' => 'col-xl-3 col-lg-4 col-sm-6 catalog-page__item',
-                    ],
-                    'layout' => '<div class="row">{items}</div>{pager}',
-                    'pager' => [
-                        'class' => 'yii\bootstrap4\LinkPager',
-                        'prevPageLabel' => '<i class="fa fa-angle-left"></i> Назад',
-                        'nextPageLabel' => 'Вперед <i class="fa fa-angle-right"></i>',
-                        'listOptions' => [
-                            'class' => ['pagination justify-content-center align-items-center']
-                        ]
-                    ],
+                    'showLeadCard' => false,
                 ]) ?>
+
                 <div class="catalog-page__btn-wrap">
                     <?php if (0) : ?>
                         <button class="catalog-page__btn btn btn-lg btn-primary">Показать еще</button>

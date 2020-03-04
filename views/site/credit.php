@@ -87,25 +87,4 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="tab-pane fade" id="credit-tab-2">2</div>
         <div class="tab-pane fade" id="credit-tab-3">3</div>
     </div>
-
-    <h2 class="mt-5">Популярные проекты под кредитование</h2>
-    <?= \yii\widgets\ListView::widget([
-        'dataProvider' => new \yii\data\ActiveDataProvider([
-            'query' => \common\modules\shop\models\ShopProduct::find(),
-            'pagination' => [
-                'pageSize' => 8,
-            ]
-        ]),
-        'options' => [
-            'class' => 'products-list',
-        ],
-        'itemView' => '@theme/views/_product-card',
-        'itemOptions' => [
-            'class' => 'col-xl-3 col-lg-4 col-sm-6 catalog-page__item',
-        ],
-        'layout' => '<div class="row">{items}</div>',
-    ]) ?>
-    <div class="catalog-page__btn-wrap">
-        <button class="catalog-page__btn btn btn-lg btn-primary">Показать еще</button>
-    </div>
 </div>

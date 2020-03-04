@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use frontend\themes\woodland\widgets\shopProducts\Products;
+use frontend\themes\woodland\widgets\shopProducts\ProductsList;
 
 $this->title = $model->name;
 
@@ -17,6 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
  */
 ?><h1><?= Html::encode($this->title) ?></h1>
 
-<?= Products::widget([
+<?= ProductsList::widget([
     'dataProvider' => $dataProvider,
+    'showLeadCard' => !preg_match('/(sadovyj-dekor|pellety)/', Yii::$app->request->pathInfo)
 ]) ?>
