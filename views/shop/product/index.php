@@ -111,7 +111,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <?php if ($variants = $model->getVariants()->all()): ?>
                         <?php
                         $ID_PROFILE_SIZE  = 8;   // Сечение бруса
-                        $ID_WALL_THICKNESS = 9;  // Толщина стены
+                        $ID_VARIANT_TYPE = 9;  // Вид
                         $ID_PRICE = 10;          // Тип цены
 
                         $checkedFirst = false;
@@ -148,7 +148,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     </td>
                                     <td>
                                         <span class="product-table__size"><?= Html::encode($variant->present()->getAttributeValue($ID_PROFILE_SIZE)) ?></span><br>
-                                        <span class="product-table__thickness">толщина стены: <?= Html::encode($variant->present()->getAttributeValue($ID_WALL_THICKNESS)) ?></span>
+                                        <span class="product-table__thickness">вид: <?= Html::encode($variant->present()->getAttributeValue($ID_VARIANT_TYPE)) ?></span>
                                     </td>
                                     <td>
                                         <label class="product-table__price-wrap">
