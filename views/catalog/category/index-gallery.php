@@ -29,22 +29,6 @@ use pantera\leads\widgets\form\LeadForm;
     <?php endif; ?>
 </main>
 
-<div class="projects">
-    <h2>Хиты продаж</h2>
-    <?= \yii\widgets\ListView::widget([
-        'dataProvider' => new \yii\data\ActiveDataProvider([
-            'query' => \common\modules\shop\models\ShopProduct::find()->limit(10),
-            'pagination' => false,
-        ]),
-        'options' => [
-            'class' => 'products-list',
-        ],
-        'itemView' => '@theme/views/_product-card',
-        'itemOptions' => [
-            'class' => 'projects__item',
-        ],
-        'layout' => '<div class="projects__carousel owl-carousel">{items}</div>',
-    ]) ?>
 <!-- закрываем .container -->
 </div>
 <div class="contact-form-block">
