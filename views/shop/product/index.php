@@ -1,10 +1,13 @@
 <?php
 
+use common\modules\shop\models\ShopProduct;
 use pantera\content\widgets\block\Block;
 use frontend\themes\woodland\widgets\prevNextProject\PrevProjectLink;
 use frontend\themes\woodland\widgets\prevNextProject\NextProjectLink;
 use pantera\media\widgets\syncedOwls\SyncedOwls;
 use common\modules\shop\widgets\cart\addToCart\AddToCartWidget;
+use frontend\themes\woodland\widgets\shopProducts\ProductsCarousel;
+use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
@@ -24,7 +27,7 @@ if ($model->category) {
 $this->params['breadcrumbs'][] = $this->title;
 
 /**
- * @var $model \common\modules\shop\models\ShopProduct
+ * @var $model ShopProduct
  */
 ?><div class="product-page">
     <div class="product-page__nav">
@@ -453,3 +456,17 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
 </div>
+
+<?php if ($model->smilar_products && ($similarProductIds = explode(',', $model->smilar_products))) : ?>
+<div class="projects" style="margin-top: -60px;">
+    <div class="container">
+        <h2>Похожие проекты</h2>
+        <?= ProductsCarousel::widget([
+            'dataProvider' => new ActiveDataProvider([
+                'query' => ShopProduct::find()->andWhere(['id' => $similarProductIds]),
+                'pagination' => false,
+            ]),
+        ]) ?>
+    </div>
+</div>
+<?php endif; ?>
