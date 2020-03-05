@@ -210,18 +210,20 @@ use yii\web\View;
                 </li>
                 <li>
                     <a class="navicon" href="<?= Url::to(['/favorite']) ?>">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-heart"/>
                         </svg>
                         <span class="sr-only">Избранное</span>
+                        <span class="menu-count">0</span>
                     </a>
                 </li>
                 <li>
                     <a class="navicon" href="<?= Url::to(['/compare']) ?>">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-graph"/>
                         </svg>
                         <span class="sr-only">Сравнение</span>
+                        <span class="menu-count">0</span>
                     </a>
                 </li>
                 <li class="active">
