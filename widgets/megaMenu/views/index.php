@@ -132,7 +132,7 @@ use yii\web\View;
 
                 <?php if ($parent = CatalogCategory::findOne(238)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-                    <a class="navtext" style="cursor: pointer;">
+                    <a class="navtext">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-percentage"/>
                         </svg>
@@ -155,7 +155,7 @@ use yii\web\View;
 
                 <?php if ($parent = CatalogCategory::findOne(234)) : ?>
                 <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
-                    <a class="navtext" style="cursor: pointer;">
+                    <a class="navtext">
                         <svg class="megamenu__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-fence"/>
                         </svg>
