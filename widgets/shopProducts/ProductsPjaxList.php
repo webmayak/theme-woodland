@@ -29,7 +29,8 @@ class ProductsPjaxList extends Widget
         $pjaxOptions = ArrayHelper::merge(
             $this->pjaxOptions,
             ['id' => 'products-list-pjax'],
-            ['linkSelector' => '.show-more a']
+            ['linkSelector' => '.show-more a'],
+            ['timeout' => 3000]
         );
         return $this->render('pjax_list', [
             'listOptions' => $listOptions,
