@@ -10,7 +10,14 @@ use yii\helpers\Url;
 if ((Yii::$app->controller->id === 'site' && Yii::$app->controller->action->id === 'error') === false) {
     $this->registerLinkTag([
         'rel' => 'canonical',
-        'href' => Url::canonical(),
+        // так было, вроде правильно, но выдавало
+        // технические адреса, т.к. UrlManager
+        // для наших модулей не в полной мере корректен..
+        // 'href' => Url::canonical(),
+
+        // так сделано сейчас
+        // TODO: надо когда-нибудь сделать, чтобы Url::canonical() возвращал корректные url-ы
+        'href' => Url::to([preg_replace('/\?.*$/', '', Yii::$app->request->url)], true),
     ]);
 }
 $this->registerLinkTag([
