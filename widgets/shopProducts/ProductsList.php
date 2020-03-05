@@ -2,6 +2,7 @@
 
 namespace frontend\themes\woodland\widgets\shopProducts;
 
+use yii\helpers\Url;
 use Yii;
 
 /**
@@ -27,4 +28,41 @@ class ProductsList extends ProductsBaseList
 
     /* var bool показать карточку "не нашли нужного проекта" */
     public $showLeadCard = true;
+
+    /* var bool кнопка "Показать еще" */
+    public $showMoreButton = false;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function init() : void
+    {
+        parent::init();
+        $this->prepareLayout();
+    }
+
+    /**
+     * Подготавливаем лейаут в соответствии
+     * с параметром виджета showMoreButton
+     * и кол-вом моделей из dataProvider
+     * @return void
+     */
+    private function prepareLayout()
+    {
+        if ($this->showMoreButton
+            && $this->dataProvider->count < $this->dataProvider->totalCount
+            && empty(Yii::$app->request->get('page'))
+        ) {
+            $loadMoreUrl = [
+                '/' . Yii::$app->request->pathinfo,
+                'per-page' => Yii::$app->request->get('per-page', 12) + 12
+            ];
+            $this->layout =
+                '<div class="row">{items}</div>'
+                . '<div class="show-more text-center mt-4 mb-4">'
+                . '   <a href="' . Url::to($loadMoreUrl) . '" class="btn btn-lg btn-primary" rel="nofollow">Показать еще</a>'
+                . '</div>'
+                . '{pager}';
+        }
+    }
 }
