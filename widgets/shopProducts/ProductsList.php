@@ -3,6 +3,7 @@
 namespace frontend\themes\woodland\widgets\shopProducts;
 
 use yii\helpers\Url;
+use yii\helpers\ArrayHelper;
 use Yii;
 
 /**
@@ -53,10 +54,18 @@ class ProductsList extends ProductsBaseList
             && $this->dataProvider->count < $this->dataProvider->totalCount
             && empty(Yii::$app->request->get('page'))
         ) {
-            $loadMoreUrl = [
-                '/' . Yii::$app->request->pathinfo,
-                'per-page' => Yii::$app->request->get('per-page', 12) + 12
-            ];
+            
+            $queryParams = Yii::$app->request->queryParams;
+            ArrayHelper::remove($queryParams, 'id');
+            ArrayHelper::remove($queryParams, 'page');
+            ArrayHelper::remove($queryParams, '_pjax');
+
+            $loadMoreUrl = ArrayHelper::merge(
+                ['/' . Yii::$app->request->pathinfo],
+                $queryParams,
+                ['per-page' => Yii::$app->request->get('per-page', 12) + 12]
+            );
+
             $this->layout =
                 '<div class="row">{items}</div>'
                 . '<div class="show-more text-center mt-4 mb-4">'

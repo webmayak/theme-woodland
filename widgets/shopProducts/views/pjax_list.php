@@ -6,5 +6,5 @@ use frontend\themes\woodland\widgets\shopProducts\ProductsList;
 ?>
 
 <?php Pjax::begin($pjaxOptions) ?>
-<?= ProductsList::widget($listOptions) ?>
+<?= $content ?>
 <?php Pjax::end() ?>

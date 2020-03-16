@@ -1,19 +1,20 @@
 <?php
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use common\modules\shop\models\ShopProduct;
 use common\modules\shop\models\ProductAttributeValue;
 
 $AREA_ATTR_ID = 5;
 
-$minPrice = ShopProduct::find()->select('MIN(price)')->scalar();
-$maxPrice = ShopProduct::find()->select('MAX(price)')->scalar();
+$minPrice = ShopProduct::find()->select('MIN(price)')->andWhere(['category_id' => $searchModel->category_id])->scalar();
+$maxPrice = ShopProduct::find()->select('MAX(price)')->andWhere(['category_id' => $searchModel->category_id])->scalar();
 
 $minPriceValue = number_format($searchModel->min_price ? $searchModel->min_price : $minPrice, 0, ',', '');
 $maxPriceValue = number_format($searchModel->max_price ? $searchModel->max_price : $maxPrice, 0, ',', '');
 
-$minArea = ProductAttributeValue::find()->select('MIN(CAST(attribute_value AS UNSIGNED))')->where(['attribute_id' => $AREA_ATTR_ID])->scalar();
-$maxArea = ProductAttributeValue::find()->select('MAX(CAST(attribute_value AS UNSIGNED))')->where(['attribute_id' => $AREA_ATTR_ID])->scalar();
+$minArea = ProductAttributeValue::find()->select('MIN(CAST(attribute_value AS UNSIGNED))')->andWhere(['attribute_id' => $AREA_ATTR_ID])->scalar();
+$maxArea = ProductAttributeValue::find()->select('MAX(CAST(attribute_value AS UNSIGNED))')->andWhere(['attribute_id' => $AREA_ATTR_ID])->scalar();
 
 $areaFrom = Yii::$app->request->get('min_area');
 $areaTo = Yii::$app->request->get('max_area');
@@ -29,7 +30,10 @@ $maxAreaValue = $areaTo ? $areaTo : $maxArea;
     var minArea = <?= $minArea ?>;
     var maxArea = <?= $maxArea ?>;
 </script>
-<form class="filter" method="get">
+<form action="<?= Url::to(['/' . Yii::$app->request->pathInfo]) ?>" class="filter" method="get" id="products-list-filter" data-pjax="1">
+    <?php if ($perPage = Yii::$app->request->get('per-page')) : ?>
+    <?= Html::hiddenInput('per-page', $perPage) ?>
+    <?php endif; ?>
     <div class="filter__wrap">
         <div class="filter__main">
             <div class="row">
@@ -80,15 +84,20 @@ $maxAreaValue = $areaTo ? $areaTo : $maxArea;
                 </div>
             </div>
         </div>
-        <div class="filter__additional">
+        <div class="filter__additional"<?= !empty($_COOKIE['filter_expanded']) ? '' : ' style="display: none"' ?>>
             <?php foreach ($attributes as $attribute) : ?>
-                <?php $default_values = preg_split('/\n+/', $attribute->default_values); ?>
-                <?php $default_values = array_map('trim', $default_values); ?>
+                <?php
+                // $values = preg_split('/\n+/', $attribute->default_values);
+                // $values = array_map('trim', $values);
+                $values = ProductAttributeValue::find()->select('attribute_value')->joinWith('product')->andWhere(['attribute_id' => $attribute->id, 'category_id' => $searchModel->category_id])->column();
+                $values = array_unique($values);
+                asort($values);
+                ?>
                 <fieldset class="filter__additional-item"<?php if ($attribute->id === $AREA_ATTR_ID) echo ' hidden'; ?>>
                     <legend class="filter__additional-title"><?= $attribute->name ?>:</legend>
                     <div class="filter__content">
                         <div class="filter__option-labels-wrap">
-                            <?php foreach ($default_values as $value) : ?>
+                            <?php foreach ($values as $value) : ?>
                             <?php $checked = isset($searchModel->filter_attr[$attribute->id]) && in_array($value, $searchModel->filter_attr[$attribute->id]); ?>
                                 <label class="filter__option-label">
                                     <input class="filter__option-input sr-only" type="checkbox" name="filter_attr[<?= $attribute->id ?>][]" value="<?= Html::encode($value) ?>"<?= $checked ? ' checked' : '' ?>>
@@ -102,14 +111,11 @@ $maxAreaValue = $areaTo ? $areaTo : $maxArea;
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <button class="filter__open btn btn-lg btn-block btn-primary" type="button">Все параметры</button>
+        <div class="col-md-6">
+            <button class="filter__open btn btn-lg btn-block btn-primary" type="button"><?= !empty($_COOKIE['filter_expanded']) ? 'Свернуть' : 'Все параметры' ?></button>
         </div>
-        <div class="col-md-4">
-            <button class="filter__reset btn btn-lg btn-block btn-secondary" type="reset">Сбросить</button>
-        </div>
-        <div class="col-md-4">
-            <button class="filter__submit btn btn-lg btn-block btn-success">Применить</button>
+        <div class="col-md-6">
+            <a href="<?= Url::to(['/' . Yii::$app->request->pathInfo]) ?>" class="filter__reset btn btn-lg btn-block btn-secondary" type="reset" data-pjax="1">Сбросить</a>
         </div>
     </div>
 </form>

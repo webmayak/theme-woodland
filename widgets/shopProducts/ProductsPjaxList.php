@@ -12,6 +12,9 @@ use Yii;
  */
 class ProductsPjaxList extends Widget
 {
+    /* var string */
+    public $layout = '{items}';
+
     /* var array */
     public $listOptions;
 
@@ -29,11 +32,14 @@ class ProductsPjaxList extends Widget
         $pjaxOptions = ArrayHelper::merge(
             $this->pjaxOptions,
             ['id' => 'products-list-pjax'],
-            ['linkSelector' => '.show-more a'],
+            ['linkSelector' => '.show-more a, a[data-pjax="1"]'],
             ['timeout' => 3000]
         );
+        $content = strtr($this->layout, [
+            '{items}' => ProductsList::widget($listOptions),
+        ]);
         return $this->render('pjax_list', [
-            'listOptions' => $listOptions,
+            'content' => $content,
             'pjaxOptions' => $pjaxOptions,
         ]);
     }
