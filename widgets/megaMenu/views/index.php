@@ -2,6 +2,7 @@
 
 use common\modules\catalog\models\CatalogCategory;
 use pantera\leads\widgets\form\LeadForm;
+use common\modules\shop\widgets\cart\miniCart\MiniCartWidget;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\web\View;
@@ -229,8 +230,14 @@ use yii\web\View;
                     </a>
                 </li>
                 <li class="active">
-                    <?=\common\modules\shop\widgets\cart\miniCart\MiniCartWidget::widget([
-                        'content' => 'Корзина',
+                    <?= MiniCartWidget::widget([
+                        'layout' => '<a class="navicon" href="{url}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
+                                <use xlink:href="/images/sprite.svg#icon-cart"/>
+                            </svg>
+                            <span class="sr-only">Корзина</span>
+                            <span id="minicart-count-value" class="menu-count">{count}</span>
+                        </a>',
                     ])?>
                 </li>
             </ul>
