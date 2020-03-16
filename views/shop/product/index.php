@@ -4,6 +4,7 @@ use common\modules\shop\models\ShopProduct;
 use pantera\content\widgets\block\Block;
 use frontend\themes\woodland\widgets\prevNextProject\PrevProjectLink;
 use frontend\themes\woodland\widgets\prevNextProject\NextProjectLink;
+use pantera\leads\widgets\form\LeadForm;
 use pantera\media\widgets\syncedOwls\SyncedOwls;
 use common\modules\shop\widgets\cart\addToCart\AddToCartWidget;
 use frontend\themes\woodland\widgets\shopProducts\ProductsCarousel;
@@ -93,18 +94,23 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="text-center mb-4" style="font-size: 22px; font-weight: bold;">
                         Цена: <?= number_format($model->price, 0, ',', ' ') ?> Руб.
                     </div>
-                <?php endif; ?>
-                
-                <?= AddToCartWidget::widget([
-                    'htmlOptions' => ['class' => 'btn btn-success btn-block product-page__order-btn text-uppercase'],
-                    'content' => $productIsProject
-                        ? 'Заказать этот проект'
-                        : 'Купить '
-                        . '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">'
-                            . '<use xlink:href="/images/sprite.svg#icon-cart"/>'
-                        . '</svg>',
-                    'model' => $model
-                ]) ?>
+                    <?= AddToCartWidget::widget([
+                        'htmlOptions' => ['class' => 'btn btn-success btn-block product-page__order-btn text-uppercase'],
+                        'content' => 'Купить '
+                            . '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">'
+                                . '<use xlink:href="/images/sprite.svg#icon-cart"/>'
+                            . '</svg>',
+                        'model' => $model
+                    ]) ?>
+                <?php else : ?>
+                    <?= LeadForm::widget([
+                        'key' => 'orderProject',
+                        'text' => 'Заказать этот проект',
+                        'options' => [
+                            'class' => 'btn btn-success btn-block product-page__order-btn text-uppercase',
+                        ],
+                    ]) ?>
+                <?php endif; ?>                
 
                 <?php if ($productIsProject) : ?>
 
