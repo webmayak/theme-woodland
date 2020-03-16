@@ -3,6 +3,7 @@
 use common\modules\shop\models\ShopProductCompare;
 use common\modules\shop\models\ShopProductFavorite;
 use common\modules\shop\widgets\cart\addToCart\AddToCartWidget;
+use pantera\leads\widgets\form\LeadForm;
 use yii\helpers\Html;
 
 $productIsProject = !in_array($model->product_type_id, [4, 11]);
@@ -127,7 +128,13 @@ $productIsProject = !in_array($model->product_type_id, [4, 11]);
                 <div class="free-calc-card__title">Не нашли нужного проекта?</div>
                 <div class="free-calc-card__descr">Пришлите свой! <br> Расчитаем за 1 день</div>
                 <div class="free-calc-card__accent-text">Бесплатно</div>
-                <a href="#" class="btn btn-lg btn-primary px-1 mt-auto">Заказать бесплатный расчет</a>
+                <?= LeadForm::widget([
+                    'key' => 'orderProject',
+                    'text' => 'Заказать бесплатный расчет',
+                    'options' => [
+                        'class' => 'btn btn-lg btn-primary px-1 mt-auto',
+                    ],
+                ]) ?>
             </div>
         <!-- не закрываем тег-->
     <?php endif; ?>
