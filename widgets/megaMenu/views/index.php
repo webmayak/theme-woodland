@@ -208,22 +208,24 @@ use yii\web\View;
                         </button>
                     </div>
                 </li>
-                <li>
+                <?php $favoriteCount = \common\modules\shop\models\ShopProductFavorite::getCount() ?>
+                <li<?= $favoriteCount ? ' class="active"' : '' ?>>
                     <a class="navicon" href="<?= Url::to(['/favorite']) ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-heart"/>
                         </svg>
                         <span class="sr-only">Избранное</span>
-                        <span class="menu-count">0</span>
+                        <span id="favorite-count-value" class="menu-count<?= !$favoriteCount ? ' d-none' : '' ?>"><?= $favoriteCount ?></span>
                     </a>
                 </li>
-                <li>
+                <?php $compareCount = \common\modules\shop\models\ShopProductCompare::getCount() ?>
+                <li<?= $compareCount ? ' class="active"' : '' ?>>
                     <a class="navicon" href="<?= Url::to(['/compare']) ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
                             <use xlink:href="/images/sprite.svg#icon-graph"/>
                         </svg>
                         <span class="sr-only">Сравнение</span>
-                        <span class="menu-count">0</span>
+                        <span id="compare-count-value" class="menu-count<?= !$compareCount ? ' d-none' : '' ?>"><?= $compareCount ?></span>
                     </a>
                 </li>
                 <li class="active">

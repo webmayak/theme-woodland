@@ -149,8 +149,14 @@ $(document).on('click', '.product-card__to-compare', function () {
     const data = {
         id: self.attr('data-id')
     };
-    $.get("/shop/compare/add?id=" + self.attr('id'), data).always(function () {
+    $.get("/shop/compare/add?id=" + self.attr('id'), data).always(function (data) {
         self.toggleClass('btn-success').toggleClass('btn-outline-success');
+        $('#compare-count-value').text(data.count);
+        if (data.count > 0) {
+            $('#compare-count-value').removeClass('d-none').closest('li').addClass('active');
+        } else {
+            $('#compare-count-value').addClass('d-none').closest('li').removeClass('active');
+        }
     });
     return false;
 });
@@ -175,8 +181,14 @@ $(document).on('click', '.product-card__to-favorites', function () {
     const data = {
         product_id: self.attr('data-id')
     };
-    $.post("/shop/favorites/add", data).always(function () {
+    $.post("/shop/favorites/add", data).always(function (data) {
         self.toggleClass('btn-success').toggleClass('btn-outline-success');
+        $('#favorite-count-value').text(data.count);
+        if (data.count > 0) {
+            $('#favorite-count-value').removeClass('d-none').closest('li').addClass('active');
+        } else {
+            $('#favorite-count-value').addClass('d-none').closest('li').removeClass('active');
+        }
     });
     return false;
 });
