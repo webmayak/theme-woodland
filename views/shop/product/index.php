@@ -91,7 +91,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?php if (!$productIsProject) : ?>
                     <div class="text-center mb-4" style="font-size: 22px; font-weight: bold;">
-                        Цена: <?= number_format($model->price, 0, ',', ' ') ?> Руб.
+                        Цена: <?= Yii::$app->formatter->asCurrency($model->price) ?>
                     </div>
                     <?= AddToCartWidget::widget([
                         'htmlOptions' => ['class' => 'btn btn-success btn-block product-page__order-btn text-uppercase'],
@@ -158,7 +158,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <td>
                                         <label class="product-table__price-wrap">
                                             <input class="sr-only" type="radio" name="product_id" value="<?= $variant->id ?>"<?php if (!$checkedFirst) { echo ' checked'; $checkedFirst = true; } ?>>
-                                            <span class="product-table__price"><?= number_format($variant->price, 0, ',', ' ') ?> руб.</span>
+                                            <span class="product-table__price"><?= Yii::$app->formatter->asCurrency($variant->price) ?></span>
                                         </label>
                                     </td>
                                 </tr>

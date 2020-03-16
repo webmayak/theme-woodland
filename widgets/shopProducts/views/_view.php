@@ -72,9 +72,9 @@ $productIsProject = !in_array($model->product_type_id, [4, 11]);
         <?php endif; ?>
     </ul>
     <?php if ($model->default_price > $model->price): ?>
-    <div class="product-card__old-price">Старая цена: <del><?= number_format($model->default_price, 0, ',', ' ') ?> Руб</del></div>
+    <div class="product-card__old-price">Старая цена: <del><?= Yii::$app->formatter->asCurrency($model->default_price) ?></del></div>
     <?php endif; ?>
-    <div class="product-card__price">Цена: <?php if ($productIsProject) : ?>от <?php endif; ?><b><?= number_format($model->price, 0, ',', ' ') ?> Руб.</b></div>
+    <div class="product-card__price">Цена: <?php if ($productIsProject) : ?>от <?php endif; ?><b><?= Yii::$app->formatter->asCurrency($model->price) ?></b></div>
     <div class="product-card__actions">
         <?php if ($productIsProject) : ?>
             <a href="<?=$model->present()->getUrl()?>" class="product-card__to-cart btn btn-primary">
