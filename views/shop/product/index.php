@@ -1,13 +1,12 @@
 <?php
 
+use frontend\themes\woodland\widgets\prevNextProject\{PrevProjectLink, NextProjectLink};
+use frontend\themes\woodland\widgets\shopProducts\ProductsCarousel;
 use common\modules\shop\models\ShopProduct;
+use common\modules\shop\widgets\cart\addToCart\AddToCartWidget;
 use pantera\content\widgets\block\Block;
-use frontend\themes\woodland\widgets\prevNextProject\PrevProjectLink;
-use frontend\themes\woodland\widgets\prevNextProject\NextProjectLink;
 use pantera\leads\widgets\form\LeadForm;
 use pantera\media\widgets\syncedOwls\SyncedOwls;
-use common\modules\shop\widgets\cart\addToCart\AddToCartWidget;
-use frontend\themes\woodland\widgets\shopProducts\ProductsCarousel;
 use yii\data\ActiveDataProvider;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
