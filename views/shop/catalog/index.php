@@ -12,7 +12,7 @@ use yii\web\View;
 $this->title = "Каталог";
 $this->params['breadcrumbs'][] = $this->title;
 
-?><h1><?=$this->title?></h1>
+?><h1><?= ($seoH1 = Yii::$app->seo->getH1()) ? $seoH1 : 'Каталог' ?></h1>
 
 <?php if ($categories) : ?>
     <ul class="catalog-page__nav-tabs nav nav-tabs" role="tablist">
