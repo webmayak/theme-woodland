@@ -5,8 +5,7 @@ use frontend\widgets\twigRender\TwigRender;
 use yii\helpers\Html;
 use yii\web\View;
 
-$this->params['breadcrumbs'][] = ['label' => 'О компании', 'url' => ['/o-kompanii']];
-$this->params['breadcrumbs'][] = ['label' => 'Статьи', 'url' => ['/o-kompanii/stati']];
+$this->params['breadcrumbs'][] = ['label' => 'Статьи', 'url' => ['/stati']];
 $this->params['breadcrumbs'][] = $model->title;
 
 /* @var $this View */
