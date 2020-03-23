@@ -3,15 +3,22 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 use common\modules\shop\models\ShopProduct;
+use common\modules\shop\models\ShopProductsSearchFrontend;
 use common\modules\shop\models\ProductAttributeValue;
 
 $AREA_ATTR_ID = 5;
 
-$minPrice = ShopProduct::find()->select('MIN(price)')->andWhere(['category_id' => $searchModel->category_id])->scalar();
-$maxPrice = ShopProduct::find()->select('MAX(price)')->andWhere(['category_id' => $searchModel->category_id])->scalar();
+// получаем минимальную и максимальную цену в текущей категории
+// для этого используем основную search-модель, т.к. в ней
+// реализована мощая логика
+$searchByCategory = new ShopProductsSearchFrontend();
+$searchByCategory->category_id = $searchModel->category_id;
 
-$minPriceValue = number_format($searchModel->min_price ? $searchModel->min_price : $minPrice, 0, ',', '');
-$maxPriceValue = number_format($searchModel->max_price ? $searchModel->max_price : $maxPrice, 0, ',', '');
+$minPrice = $searchByCategory->buildSearchQuery()->select('MIN(price)')->groupBy(false)->scalar();
+$maxPrice = $searchByCategory->buildSearchQuery()->select('MAX(price)')->groupBy(false)->scalar();
+
+$minPriceValue = number_format($searchModel->min_price ?: $minPrice, 0, ',', '');
+$maxPriceValue = number_format($searchModel->max_price ?: $maxPrice, 0, ',', '');
 
 $minArea = ProductAttributeValue::find()->select('MIN(CAST(attribute_value AS UNSIGNED))')->andWhere(['attribute_id' => $AREA_ATTR_ID])->scalar();
 $maxArea = ProductAttributeValue::find()->select('MAX(CAST(attribute_value AS UNSIGNED))')->andWhere(['attribute_id' => $AREA_ATTR_ID])->scalar();
@@ -89,9 +96,15 @@ $maxAreaValue = $areaTo ? $areaTo : $maxArea;
                 <?php
                 // $values = preg_split('/\n+/', $attribute->default_values);
                 // $values = array_map('trim', $values);
-                $values = ProductAttributeValue::find()->select('attribute_value')->joinWith('product')->andWhere(['attribute_id' => $attribute->id, 'category_id' => $searchModel->category_id])->column();
+                $values = ProductAttributeValue::find()
+                    ->select('attribute_value')
+                    ->andWhere([
+                        'attribute_id' => $attribute->id,
+                        'product_id' => $searchByCategory->buildSearchQuery()->select(ShopProduct::tableName() . '.id')->column(),
+                    ])
+                    ->column();
                 $values = array_unique($values);
-                asort($values);
+                sort($values);
                 ?>
                 <fieldset class="filter__additional-item"<?php if ($attribute->id === $AREA_ATTR_ID) echo ' hidden'; ?>>
                     <legend class="filter__additional-title"><?= $attribute->name ?>:</legend>
