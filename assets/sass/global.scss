@@ -246,6 +246,11 @@ h2.swal2-title {
   padding: 40px;
 }
 
+.tooltip-inner {
+  border: 2px solid $primary;
+  text-align: left;
+}
+
 .mburger {
   color: $primary;
   --mb-button-size: 30px;

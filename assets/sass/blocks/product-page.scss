@@ -231,12 +231,9 @@
 .product-page__delivery-link,
 .product-page__print-link {
   display: inline-flex;
-  margin-bottom: 15px;
+  vertical-align: middle;
   color: inherit;
-}
-
-.product-page__delivery-link {
-  margin-right: 20px;
+  margin: 0 5px 15px;
 }
 
 .product-page__materials {

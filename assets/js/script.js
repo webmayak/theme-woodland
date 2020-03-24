@@ -137,6 +137,8 @@ $.goup({
 
 svg4everybody();
 
+$('[data-toggle="tooltip"]').tooltip();
+
 $('.btn--video').click(function(){
     var target = $(this).attr('href');
     $('html, body').animate({scrollTop: $(target).offset().top}, 700);

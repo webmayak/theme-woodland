@@ -228,13 +228,13 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?php if ($model->equipment) : ?>
                             <a href="#product-tab-1" class="product-page__view-set-link text-uppercase">Смотреть комплектацию</a><br>
                         <?php endif; ?>
-                        <a href="#" class="product-page__delivery-link point-with-icon">
+                        <div class="product-page__delivery-link point-with-icon">
                             <div class="point-with-icon__icon-wrap">
                                 <img src="/images/icon-delivery-truck.png" alt="">
                             </div>
-                            <span class="point-with-icon__text">Доставка</span>
-                        </a>
-                        <a href="#" onclick="window.print()" class="product-page__print-link point-with-icon">
+                            <span class="point-with-icon__text">Доставка <i class="fa fa-question-circle-o text-primary" data-toggle="tooltip" data-placement="top" title="Бесплатно доставим материалы до вашего участка от нашей базы"></i></span>
+                        </div>
+                        <a onclick="window.print()" class="product-page__print-link point-with-icon">
                             <div class="point-with-icon__icon-wrap">
                                 <img src="/images/icon-printing-tool.png" alt="">
                             </div>
