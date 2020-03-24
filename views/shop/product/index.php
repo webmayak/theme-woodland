@@ -232,7 +232,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <div class="point-with-icon__icon-wrap">
                                 <img src="/images/icon-delivery-truck.png" alt="">
                             </div>
-                            <span class="point-with-icon__text">Доставка <i class="fa fa-question-circle-o text-primary" data-toggle="tooltip" data-placement="top" title="Бесплатно доставим материалы до вашего участка от нашей базы"></i></span>
+                            <span class="point-with-icon__text">Доставка <i class="fa fa-question-circle-o text-primary" data-toggle="tooltip" data-placement="top" title="<?= Yii::$app->contactsManager->get('delivery') ?>"></i></span>
                         </div>
                         <a onclick="window.print()" class="product-page__print-link point-with-icon">
                             <div class="point-with-icon__icon-wrap">
