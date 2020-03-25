@@ -238,8 +238,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <i class="fa fa-question-circle-o text-primary" data-toggle="tooltip" data-placement="top" title="<?= Html::encode($delivery_tooltip) ?>"></i>
                             </span>
                         </div>
-                        <a onclick="window.print()" class="product-page__print-link point-with-icon">
                         <?php endif; ?>
+                        <a onclick="window.print()" class="product-page__print-link point-with-icon" style="cursor: pointer;">
                             <div class="point-with-icon__icon-wrap">
                                 <img src="/images/icon-printing-tool.png" alt="">
                             </div>
