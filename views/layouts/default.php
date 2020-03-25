@@ -1,7 +1,7 @@
 <?php
 
 use frontend\themes\woodland\AppAsset;
-use frontend\widgets\megaMenu\MegaMenu;
+use frontend\themes\woodland\widgets\megaMenu\MegaMenu;
 use frontend\widgets\twigRender\TwigRender;
 use pantera\leads\widgets\form\LeadForm;
 use yii\helpers\Html;

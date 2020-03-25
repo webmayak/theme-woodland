@@ -8,10 +8,6 @@ use yii\helpers\Url;
 use yii\web\View;
 
 /* @var $this View */
-/* @var $catalogRoot CatalogCategory */
-/* @var $servicesRoot CatalogCategory */
-/* @var $calculatorRoot CatalogCategory */
-/* @var $category CatalogCategory */
 ?>
 <div class="megamenu clearfix">
     <div class="container">
@@ -55,11 +51,6 @@ use yii\web\View;
                             <?php endforeach;?>
                         </ul>
                     <?php endif; ?>
-                    <?php if (0 && $this->beginCache('megamenu-dropdown', ['duration' => 86400])): ?>
-                    <?= $this->render('_dropdown', [
-                        'categories' => $catalogRoot->getChildren()->isInMenu()->all(),
-                    ]) ?>
-                    <?php $this->endCache(); endif; ?>
                 </li>
 
                 <?php if ($parent = CatalogCategory::findOne(241)) : ?>

@@ -11,7 +11,6 @@ use yii\helpers\Html;
 use yii\web\View;
 
 $this->title = "Корзина";
-$this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => '/shop/catalog/index'];
 $this->params['breadcrumbs'][] = $this->title;
 
 CartAssets::register($this);
