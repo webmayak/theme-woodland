@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </li>
         <?php endforeach; ?>
     </ul>
-    <div class="page-sitemap__title">Статьи</div>
+    <div class="page-sitemap__title">Каталог</div>
     <ul>
         <?php foreach ($links2 as $link) : ?>
             <li>
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </li>
         <?php endforeach; ?>
     </ul>
-    <div class="page-sitemap__title">Каталог</div>
+    <div class="page-sitemap__title">Статьи</div>
     <ul>
         <?php foreach ($links3 as $link) : ?>
             <li>
