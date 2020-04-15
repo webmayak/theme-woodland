@@ -125,29 +125,40 @@ $this->params['breadcrumbs'][] = $model->name;
                                 </div>
                             </div>
                         </div>
+                        <?php
+                        $on_foot = trim($model->present()->getAttributeValueByKey('how_to_get_on_foot'));
+                        $by_car = trim($model->present()->getAttributeValueByKey('how_to_get_by_car'));
+                        $showRoute = $on_foot || $by_car;
+                        ?>
+                        <?php if ($showRoute) : ?>
                         <div class="col-12">
                             <div class="page-contacts__route">
                                 <h2>Как добраться</h2>
                                 <div class="row">
+                                    <?php if ($on_foot) : ?>
                                     <div class="col-lg-6">
                                         <div class="page-contacts__route-item page-contacts__route-item--foot">
                                             <div class="page-contacts__route-title">Пешком</div>
                                             <div class="page-contacts__route-text">
-                                                <?= trim($model->present()->getAttributeValueByKey('how_to_get_on_foot')) ?>
+                                                <?= $on_foot ?>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php endif; ?>
+                                    <?php if ($by_car) : ?>
                                     <div class="col-lg-6">
                                         <div class="page-contacts__route-item page-contacts__route-item--car">
                                             <div class="page-contacts__route-title">Авто</div>
                                             <div class="page-contacts__route-text">
-                                                <?= trim($model->present()->getAttributeValueByKey('how_to_get_by_car')) ?>
+                                                <?= $by_car ?>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <?php if (0) : ?>
