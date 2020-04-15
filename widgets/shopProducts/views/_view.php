@@ -21,6 +21,7 @@ $productIsProject = !in_array($model->product_type_id, [4, 11]);
         if($model->isInSegment('best-price')) echo $labelStart .'best-price' . $labelMiddle . 'лучшая цена' . $labelEnd;
         if($model->isInSegment('present')) echo $labelStart .'present' . $labelMiddle . 'подарок' . $labelEnd;
         if($model->isInSegment('bestseller')) echo $labelStart .'bestseller' . $labelMiddle . 'хит продаж' . $labelEnd;
+        if($model->isInSegment('new')) echo $labelStart .'new' . $labelMiddle . 'новинка' . $labelEnd;
     ?>
     <div class="product-card__img-wrap">
         <a href="<?=$model->present()->getUrl()?>">

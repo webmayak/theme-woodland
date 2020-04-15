@@ -97,6 +97,17 @@
       background-color: #e8780b;
     }
   }
+
+  &--new {
+    &::before,
+    &::after {
+      border-color: transparent transparent transparent #115d96;
+    }
+
+    div {
+      background-color: #167ac6;
+    }
+  }
 }
 
 .product-card__img-wrap {
