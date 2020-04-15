@@ -69,7 +69,7 @@ $this->params['breadcrumbs'][] = $model->name;
                                             <div class="contact-item__value"><?= $phone_sales_department ?></div>
                                         <?php endif; ?>
                                         <?php if ($phone_bookkeeping) : ?>
-                                            <div class="contact-item__key">Бухгалтерия:</div>
+                                            <div class="contact-item__key">Телефон:</div>
                                             <div class="contact-item__value"><?= $phone_bookkeeping ?></div>
                                         <?php endif; ?>
                                         <?php if ($phone_collaboration) : ?>
