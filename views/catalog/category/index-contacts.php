@@ -39,6 +39,9 @@ $this->params['breadcrumbs'][] = $model->name;
                     <div class="row">
                         <div class="col-lg-4">
                             <ul class="page-contacts__contact-list ul-reset">
+                                <?php
+                                $address = trim($model->present()->getAttributeValueByKey('address'));
+                                if ($address) : ?>
                                 <li class="page-contacts__contact-item contact-item">
                                     <div class="contact-item__icon-wrap">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" aria-hidden="true" role="presentation" focusable="false">
@@ -47,9 +50,10 @@ $this->params['breadcrumbs'][] = $model->name;
                                     </div>
                                     <div>
                                         <div class="contact-item__key">Адрес:</div>
-                                        <div class="contact-item__value"><?= Yii::$app->contactsManager->get('address') ?></div>
+                                        <div class="contact-item__value"><?= $address ?></div>
                                     </div>
                                 </li>
+                                <?php endif; ?>
                                 <?php
                                 $phone_sales_department = Yii::$app->contactsManager->get('phone_sales_department');
                                 $phone_bookkeeping = Yii::$app->contactsManager->get('phone_bookkeeping');
