@@ -49,7 +49,7 @@ $this->context->layout = '//front';
             <div class="col-xl-2 col-md-3 col-6">
                 <div class="why-us__item why-us-item">
                     <div class="why-us-item__circle">
-                        <div class="why-us-item__number" data-from="0" data-to="19">19</div>
+                        <div class="why-us-item__number" data-from="0" data-to="21">21</div>
                     </div>
                     <div class="why-us-item__descr">Лет <br>работы</div>
                 </div>
@@ -57,7 +57,7 @@ $this->context->layout = '//front';
             <div class="col-xl-2 col-md-3 col-6">
                 <div class="why-us__item why-us-item">
                     <div class="why-us-item__circle">
-                        <div class="why-us-item__number" data-from="0" data-to="2">2</div>
+                        <div class="why-us-item__number" data-from="0" data-to="3">3</div>
                     </div>
                     <div class="why-us-item__descr">Собственных <br>производства</div>
                 </div>
@@ -65,7 +65,10 @@ $this->context->layout = '//front';
             <div class="col-xl-2 col-md-3 col-6">
                 <div class="why-us__item why-us-item">
                     <div class="why-us-item__circle">
-                        <div class="why-us-item__number" data-from="0" data-to="550">550</div>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <span class="why-us-item__number" data-from="0" data-to="1000">1000</span>
+                            <span>+</span>
+                        </div>
                     </div>
                     <div class="why-us-item__descr">Проектов <br>выполненно</div>
                 </div>
@@ -73,7 +76,7 @@ $this->context->layout = '//front';
             <div class="col-xl-2 col-md-3 col-6">
                 <div class="why-us__item why-us-item">
                     <div class="why-us-item__circle">
-                        <div class="why-us-item__number" data-from="0" data-to="200">200</div>
+                        <div class="why-us-item__number" data-from="0" data-to="50">50</div>
                     </div>
                     <div class="why-us-item__descr">Рабочих <br>в штате</div>
                 </div>
