@@ -43,6 +43,16 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-lg-8">
             <div class="product__gallery-carousel">
                 <?php
+                $labelStart = '<div class="product-card__label product-card__label--';
+                $labelMiddle = '"><div>';
+                $labelEnd = '</div></div>';
+                if($model->isInSegment('discount')) echo $labelStart .'discount' . $labelMiddle . 'скидка' . $labelEnd;
+                if($model->isInSegment('best-price')) echo $labelStart .'best-price' . $labelMiddle . 'лучшая цена' . $labelEnd;
+                if($model->isInSegment('present')) echo $labelStart .'present' . $labelMiddle . 'подарок' . $labelEnd;
+                if($model->isInSegment('bestseller')) echo $labelStart .'bestseller' . $labelMiddle . 'хит продаж' . $labelEnd;
+                if($model->isInSegment('new')) echo $labelStart .'new' . $labelMiddle . 'новинка' . $labelEnd;
+                ?>
+                <?php
                 $attachments = $model->media
                     ? ArrayHelper::merge([$model->media], $model->attachments)
                     : $model->attachments;
@@ -50,7 +60,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php if ($attachments): ?>
                 <?= SyncedOwls::widget([
                     'models' => $attachments,
-                    'cropImages' => true,
                     'containerOptions' => [
                         'data' => [
                             'fancyboxoptions' => [
