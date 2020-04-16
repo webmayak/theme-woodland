@@ -8,7 +8,7 @@ use pantera\leads\widgets\form\LeadForm;
 /* @var $this View */
 /* @var $links array */
 ?><main class="page-site-gallery-one__content">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode(Yii::$app->seo->h1) ?></h1>
     <?php if ($model->media && is_array($model->media)): ?>
     <div class="row">
         <?php foreach ($model->media as $index => $media): ?>
