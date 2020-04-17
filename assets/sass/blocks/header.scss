@@ -23,6 +23,12 @@
   .header__site-logo {
     margin-left: 15px;
   }
+
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
 }
 
 @media (max-width: 991px) {
