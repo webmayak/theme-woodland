@@ -59,6 +59,18 @@
   }
 }
 
+.mmenu-count {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: $primary;
+  color: #ffffff;
+  text-align: center;
+}
+
 .megamenu + #mmenu-nav {
   display: none;
 }

@@ -1,7 +1,6 @@
 <?php
 
 use common\modules\catalog\models\CatalogCategory;
-use pantera\leads\widgets\form\LeadForm;
 use common\modules\shop\widgets\cart\miniCart\MiniCartWidget;
 use yii\helpers\Html;
 use yii\helpers\Url;

@@ -1,5 +1,7 @@
 <?php
 
+use common\modules\catalog\models\CatalogCategory;
+use common\modules\shop\widgets\cart\miniCart\MiniCartWidget;
 use frontend\themes\woodland\AppAsset;
 use frontend\themes\woodland\widgets\megaMenu\MegaMenu;
 use frontend\widgets\twigRender\TwigRender;
@@ -61,12 +63,12 @@ $this->beginPage();
             <a href="<?= Url::to(['/shop/catalog/index']) ?>">
                 Проекты
             </a>
-            <?php if (($catalogRoot = \common\modules\shop\models\ShopCategory::findOne(1)) && ($categories = $catalogRoot->getChildren()->andWhere(['status' => 1])->all())): ?>
+            <?php if (($catalogRoot = \common\modules\shop\models\ShopCategory::findOne(1)) && ($categories = $catalogRoot->getChildren()->active()->inMenu()->all())): ?>
                 <ul>
                     <?php foreach ($categories as $category): ?>
                         <li>
                             <a href="<?=$category->present()->getUrl()?>"><?= $category->name ?></a>
-                            <?php if ($lvl2cats = $category->getChildren()->andWhere(['status' => 1])->all()): ?>
+                            <?php if ($lvl2cats = $category->getChildren()->active()->inMenu()->all()): ?>
                                 <ul>
                                     <?php foreach ($lvl2cats as $lvl2cat): ?>
                                         <li>
@@ -79,14 +81,9 @@ $this->beginPage();
                     <?php endforeach;?>
                 </ul>
             <?php endif; ?>
-            <?php if (0 && $this->beginCache('megamenu-dropdown', ['duration' => 86400])): ?>
-                <?= $this->render('_dropdown', [
-                    'categories' => $catalogRoot->getChildren()->isInMenu()->all(),
-                ]) ?>
-                <?php $this->endCache(); endif; ?>
         </li>
 
-        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(241)) : ?>
+        <?php if ($parent = CatalogCategory::findOne(241)) : ?>
             <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                 <a href="<?= $parent->present()->getUrl() ?>">
                     <?= Html::encode($parent->name) ?>
@@ -103,7 +100,7 @@ $this->beginPage();
             </li>
         <?php endif; ?>
 
-        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(235)) : ?>
+        <?php if ($parent = CatalogCategory::findOne(235)) : ?>
             <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                 <a href="<?= $parent->present()->getUrl() ?>">
                     <?= Html::encode($parent->name) ?>
@@ -120,7 +117,7 @@ $this->beginPage();
             </li>
         <?php endif; ?>
 
-        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(237)) : ?>
+        <?php if ($parent = CatalogCategory::findOne(237)) : ?>
             <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                 <a href="<?= $parent->present()->getUrl() ?>">
                     <?= Html::encode($parent->name) ?>
@@ -137,7 +134,7 @@ $this->beginPage();
             </li>
         <?php endif; ?>
 
-        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(238)) : ?>
+        <?php if ($parent = CatalogCategory::findOne(238)) : ?>
             <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                 <a href="<?= $parent->present()->getUrl() ?>">
                     <?= Html::encode($parent->name) ?>
@@ -154,7 +151,7 @@ $this->beginPage();
             </li>
         <?php endif; ?>
 
-        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(234)) : ?>
+        <?php if ($parent = CatalogCategory::findOne(234)) : ?>
             <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                 <a href="<?= $parent->present()->getUrl() ?>">
                     <?= Html::encode($parent->name) ?>
@@ -171,7 +168,7 @@ $this->beginPage();
             </li>
         <?php endif; ?>
 
-        <?php if ($parent = \common\modules\catalog\models\CatalogCategory::findOne(243)) : ?>
+        <?php if ($parent = CatalogCategory::findOne(243)) : ?>
             <li class="<?= Yii::$app->request->pathInfo === $parent->slug ? 'active' : '' ?>">
                 <a href="<?= $parent->present()->getUrl() ?>">
                     <?= Html::encode($parent->name) ?>
@@ -187,6 +184,31 @@ $this->beginPage();
                 <?php endif; ?>
             </li>
         <?php endif; ?>
+
+        <?php $favoriteCount = \common\modules\shop\models\ShopProductFavorite::getCount() ?>
+        <li>
+            <a href="<?= Url::to(['/favorite']) ?>">
+                <span>Избранное</span>
+                <span id="favorite-count-value" class="mmenu-count<?= !$favoriteCount ? ' d-none' : '' ?>"><?= $favoriteCount ?></span>
+            </a>
+        </li>
+
+        <?php $compareCount = \common\modules\shop\models\ShopProductCompare::getCount() ?>
+        <li>
+            <a href="<?= Url::to(['/compare']) ?>">
+                <span>Сравнение</span>
+                <span id="compare-count-value" class="mmenu-count<?= !$compareCount ? ' d-none' : '' ?>"><?= $compareCount ?></span>
+            </a>
+        </li>
+
+        <li>
+            <?= MiniCartWidget::widget([
+                'layout' => '<a href="{url}">
+                            <span>Корзина</span>
+                            <span id="minicart-count-value" class="mmenu-count">{count}</span>
+                        </a>',
+            ])?>
+        </li>
     </ul>
 </nav>
 
