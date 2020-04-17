@@ -206,7 +206,7 @@ use yii\web\View;
                             <use xlink:href="/images/sprite.svg#icon-heart"/>
                         </svg>
                         <span class="sr-only">Избранное</span>
-                        <span id="favorite-count-value" class="menu-count<?= !$favoriteCount ? ' d-none' : '' ?>"><?= $favoriteCount ?></span>
+                        <span class="menu-count<?= !$favoriteCount ? ' d-none' : '' ?>" data-behavior="favorite-count-value"><?= $favoriteCount ?></span>
                     </a>
                 </li>
                 <?php $compareCount = \common\modules\shop\models\ShopProductCompare::getCount() ?>
@@ -216,7 +216,7 @@ use yii\web\View;
                             <use xlink:href="/images/sprite.svg#icon-graph"/>
                         </svg>
                         <span class="sr-only">Сравнение</span>
-                        <span id="compare-count-value" class="menu-count<?= !$compareCount ? ' d-none' : '' ?>"><?= $compareCount ?></span>
+                        <span class="menu-count<?= !$compareCount ? ' d-none' : '' ?>" data-behavior="compare-count-value"><?= $compareCount ?></span>
                     </a>
                 </li>
                 <li class="active">
@@ -226,7 +226,7 @@ use yii\web\View;
                                 <use xlink:href="/images/sprite.svg#icon-cart"/>
                             </svg>
                             <span class="sr-only">Корзина</span>
-                            <span id="minicart-count-value" class="menu-count">{count}</span>
+                            <span class="menu-count" data-behavior="cart-count-value">{count}</span>
                         </a>',
                     ])?>
                 </li>

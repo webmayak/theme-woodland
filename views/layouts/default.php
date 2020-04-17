@@ -189,7 +189,7 @@ $this->beginPage();
         <li>
             <a href="<?= Url::to(['/favorite']) ?>">
                 <span>Избранное</span>
-                <span id="favorite-count-value" class="mmenu-count<?= !$favoriteCount ? ' d-none' : '' ?>"><?= $favoriteCount ?></span>
+                <span class="mmenu-count<?= !$favoriteCount ? ' d-none' : '' ?>" data-behavior="favorite-count-value"><?= $favoriteCount ?></span>
             </a>
         </li>
 
@@ -197,7 +197,7 @@ $this->beginPage();
         <li>
             <a href="<?= Url::to(['/compare']) ?>">
                 <span>Сравнение</span>
-                <span id="compare-count-value" class="mmenu-count<?= !$compareCount ? ' d-none' : '' ?>"><?= $compareCount ?></span>
+                <span class="mmenu-count<?= !$compareCount ? ' d-none' : '' ?>" data-behavior="compare-count-value"><?= $compareCount ?></span>
             </a>
         </li>
 
@@ -205,7 +205,7 @@ $this->beginPage();
             <?= MiniCartWidget::widget([
                 'layout' => '<a href="{url}">
                             <span>Корзина</span>
-                            <span id="minicart-count-value" class="mmenu-count">{count}</span>
+                            <span class="mmenu-count" data-behavior="cart-count-value">{count}</span>
                         </a>',
             ])?>
         </li>
