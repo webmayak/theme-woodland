@@ -53,7 +53,7 @@ use yii\widgets\MaskedInput;
             ]) ?>
         </div>
         <div class="form-check">
-          <input type="checkbox" class="sr-only" id="acception" checked>
+          <input type="checkbox" class="sr-only" id="acception" checked required>
           <label class="form-check-label" for="acception">Даю свое согласие на обработку персональных данных</label>
         </div>
     </div>
