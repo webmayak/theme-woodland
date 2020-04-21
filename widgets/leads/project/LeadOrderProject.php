@@ -17,6 +17,7 @@ class LeadOrderProject extends Lead
         $rules[] = ['name', 'required'];
         $rules[] = ['phone', 'required'];
         $rules[] = ['email', 'email'];
+        $rules[] = ['comment', 'string'];
         return $rules;
     }
 
