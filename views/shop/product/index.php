@@ -121,7 +121,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]) ?>
                     <?php if ($model->product_type_id === $GARDEN_HOUSE) : ?>
                         <?= LeadForm::widget([
-                            'key' => 'orderProject',
+                            'key' => 'orderGardenHouse',
                             'text' => 'Онлайн заказ',
                             'options' => [
                                 'class' => 'btn btn-primary btn-block text-uppercase product-page__online-order',
