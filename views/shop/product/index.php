@@ -12,6 +12,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
 $productIsProject = !in_array($model->product_type_id, [4, 11]);
+$isHouse = preg_match('/dom/', Yii::$app->request->pathInfo);
 $GARDEN_HOUSE = 13;
 
 $this->title = $model->name;
@@ -333,9 +334,11 @@ $this->params['breadcrumbs'][] = $this->title;
                         <a class="nav-link" data-toggle="tab" href="#product-tab-2">Доп. услуги</a>
                     </li>
                 <?php endif; ?>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#product-tab-3">Как работаем</a>
-                </li>
+                <?php if ($isHouse) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#product-tab-3">Как работаем</a>
+                    </li>
+                <?php endif; ?>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#product-tab-4">В кредит</a>
                 </li>
@@ -363,11 +366,13 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                     </div>
                 <?php endif; ?>
-                <div class="tab-pane fade" id="product-tab-3">
-                    <?= Block::widget([
-                        'position' => 'product_tab_how_we_work',
-                    ]) ?>
-                </div>
+                <?php if ($isHouse) : ?>
+                    <div class="tab-pane fade" id="product-tab-3">
+                        <?= Block::widget([
+                            'position' => 'product_tab_how_we_work',
+                        ]) ?>
+                    </div>
+                <?php endif; ?>
                 <div class="tab-pane fade" id="product-tab-4">
                     <?= Block::widget([
                         'position' => 'product_tab_credit',
