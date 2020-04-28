@@ -310,6 +310,9 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="col-12">
             <ul class="product-page__nav-tabs nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#product-tab-6">Описание</a>
+                </li>
                 <?php if ($model->equipment) : ?>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#product-tab-1">Комплектация</a>
@@ -331,9 +334,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     <a class="nav-link" data-toggle="tab" href="#product-tab-5">Комментарии</a>
                 </li>
                 <?php endif; ?>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#product-tab-6">Описание</a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#product-tab-7">Характеристики</a>
                 </li>
