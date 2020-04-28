@@ -12,6 +12,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
 $productIsProject = !in_array($model->product_type_id, [4, 11]);
+$GARDEN_HOUSE = 13;
 
 $this->title = $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Каталог', 'url' => ['/shop/catalog/index']];
@@ -118,6 +119,15 @@ $this->params['breadcrumbs'][] = $this->title;
                             'class' => 'btn btn-success btn-block product-page__order-btn text-uppercase',
                         ],
                     ]) ?>
+                    <?php if ($model->product_type_id === $GARDEN_HOUSE) : ?>
+                        <?= LeadForm::widget([
+                            'key' => 'orderProject',
+                            'text' => 'Онлайн заказ',
+                            'options' => [
+                                'class' => 'btn btn-primary btn-block text-uppercase product-page__online-order',
+                            ],
+                        ]) ?>
+                    <?php endif; ?>
                 <?php endif; ?>                
 
                 <?php if ($productIsProject) : ?>
