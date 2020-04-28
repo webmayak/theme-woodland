@@ -268,6 +268,10 @@ $(document).on('shown.bs.modal', '.lead-modal', function () {
     btn.ladda('remove');
 });
 
+$(document).on('change', '#equipmentField', function () {
+    $(this).closest('form').find('[hidden]').attr('hidden', false);
+});
+
 $('.product-page__carousel').owlCarousel({
     rewind: true,
     nav: true,
