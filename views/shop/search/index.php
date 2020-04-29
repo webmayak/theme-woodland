@@ -11,6 +11,9 @@ $query = Yii::$app->request->get('q');
 $this->title = $query ? '"' . $query . '" - результаты поиска' : $defaultTitle;
 $this->params['breadcrumbs'][] = $defaultTitle;
 
+$dataProvider->sort->defaultOrder = ['price' => SORT_DESC];
+$dataProvider->pagination->pageSize = 12;
+
 /* @var $this View */
 ?>
 
