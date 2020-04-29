@@ -49,6 +49,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= ProductsList::widget([
                     'dataProvider' => new ActiveDataProvider([
                         'query' => ShopProduct::find()->andWhere(['category_id' => $category->id])->limit(12),
+                        'sort' => [
+                            'defaultOrder' => [
+                                'price' => SORT_DESC,
+                            ]
+                        ],
                         'pagination' => false,
                     ]),
                     'showLeadCard' => false,

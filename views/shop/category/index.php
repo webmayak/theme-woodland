@@ -15,6 +15,8 @@ $this->params['breadcrumbs'][] = $model->name;
 
 $isProjectsCategory = !preg_match('/(sadovyj-dekor|pellety)/', Yii::$app->request->pathInfo);
 
+$dataProvider->sort->defaultOrder = ['price' => SORT_DESC];
+
 /**
  * @var $dataProvider \yii\data\ActiveDataProvider
  */
