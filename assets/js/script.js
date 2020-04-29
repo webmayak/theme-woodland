@@ -268,7 +268,7 @@ $(document).on('shown.bs.modal', '.lead-modal', function () {
     btn.ladda('remove');
 });
 
-$(document).on('change', '#equipmentField', function () {
+$(document).on('change', '#leadordergardenhouse-equipment', function () {
     $(this).closest('form').find('[hidden]').attr('hidden', false);
 });
 
