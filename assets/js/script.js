@@ -308,7 +308,7 @@ $('.projects__carousel').owlCarousel({
             items: 3
         },
         1200 : {
-            items: 4,
+            items: 3,
             nav: true
         }
     }

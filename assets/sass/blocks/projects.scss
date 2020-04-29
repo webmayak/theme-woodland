@@ -1,5 +1,9 @@
 .projects {
   padding: 40px 0;
+
+  &__item {
+    height: 100%;
+  }
 }
 
 .projects__title {
@@ -14,6 +18,10 @@
 
   .owl-stage-outer {
     margin: -18px 0;
+  }
+
+  .owl-stage {
+    display: flex;
   }
 
   .owl-item {

@@ -1,7 +1,10 @@
 .product-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   padding: 20px;
+  height: 100%;
   box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.12);
   border-radius: 10px;
   line-height: 1.8;
@@ -19,8 +22,8 @@
 .product-card__label {
   position: absolute;
   z-index: 2;
-  right: -42px;
-  top: 23px;
+  right: -45px;
+  top: 20px;
   font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
@@ -156,7 +159,7 @@
 .product-card__params {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 15px;
+  margin-bottom: auto;
 }
 
 .product-card__param {

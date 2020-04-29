@@ -22,6 +22,11 @@
 .product__gallery-carousel {
   position: relative;
 
+  .product-card__label {
+    top: 23px;
+    right: -42px;
+  }
+
   .synced-carousel {
     .owl-carousel {
       .owl-nav {

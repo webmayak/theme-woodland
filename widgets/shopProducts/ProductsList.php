@@ -12,7 +12,7 @@ use Yii;
 class ProductsList extends ProductsBaseList
 {
     /* var array */
-    public $itemOptions = ['class' => 'col-xl-3 col-lg-4 col-sm-6 catalog-page__item'];
+    public $itemOptions = ['class' => 'col-lg-4 col-sm-6 catalog-page__item'];
 
     /* var string */
     public $layout = '<div class="row">{items}</div>{pager}';
