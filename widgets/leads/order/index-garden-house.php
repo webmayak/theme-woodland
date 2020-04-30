@@ -5,8 +5,11 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\MaskedInput;
+use common\modules\shop\models\ShopProduct;
 
-$this->title = 'Заказ беседки "Чайная" 2,4х2,4';
+$product = ShopProduct::findOne(346);
+
+$this->title = 'Заказать ' . Html::encode($product->name);
 
 /* @var $this View */
 /* @var $model LeadOrderGardenHouse */
@@ -20,15 +23,23 @@ $form = ActiveForm::begin([
     ],
 ]);
 
-?>
+if ($variants = $product->getVariants()->all()) {
+    usort($variants, function ($a, $b) {
+        return $a['price'] <=> $b['price'];
+    });
 
-<?php echo $form->field($model, 'equipment')->dropDownList([
-    'Сделай сам' => 'Сделай сам',
-    'Эконом' => 'Эконом',
-    'Плюс' => 'Плюс',
-], [
+    $priceTypes = [];
+
+    foreach ($variants as $variant) {
+        $priceTypes[] = $variant->present()->getAttributeValue(10);
+    }
+}
+
+echo $form->field($model, 'equipment')->dropDownList(
+    array_combine($priceTypes, $priceTypes), [
     'prompt' => 'Сделайте выбор'
 ]);
+
 ?>
 
     <fieldset hidden>
