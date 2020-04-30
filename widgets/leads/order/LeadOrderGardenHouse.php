@@ -54,7 +54,7 @@ class LeadOrderGardenHouse extends Lead
     }
 
     /**
-     * TODO: add comment..
+     * Получаем товар
      */
     public function getProduct()
     {
@@ -68,17 +68,16 @@ class LeadOrderGardenHouse extends Lead
     }
 
     /**
-     * TODO: add comment..
+     * Получаем массив вариантов комплектации из атрибутов товара
      */
     public function getAvailableEquipment()
     {
         $product = $this->getProduct();
+        $priceTypes = [];
         if ($variants = $product->getVariants()->all()) {
             usort($variants, function ($a, $b) {
                 return $a['price'] <=> $b['price'];
             });
-
-            $priceTypes = [];
 
             foreach ($variants as $variant) {
                 $priceTypes[] = $variant->present()->getAttributeValue(10);
@@ -88,7 +87,7 @@ class LeadOrderGardenHouse extends Lead
     }
 
     /**
-     * TODO: add comment..
+     * Получаем массив цветов покраски из настроек
      */
     public function getAvailablePainting()
     {
@@ -100,7 +99,7 @@ class LeadOrderGardenHouse extends Lead
     }
 
     /**
-     * TODO: add comment..
+     * Получаем массив цветов кровли из настроек
      */
     public function getAvailableRoofColors()
     {
