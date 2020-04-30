@@ -91,10 +91,9 @@ class LeadOrderGardenHouse extends Lead
      */
     public function getAvailablePainting()
     {
-        $painting = preg_split(
-            '/\n+/',
-            Yii::$app->settings->get('gardenhouse_painting', 'default')
-        );
+        $setting = trim(Yii::$app->settings->get('gardenhouse_painting', 'default'));
+        $painting = preg_split('/\n+/', $setting);
+        $painting = array_map('trim', $painting);
         return array_combine($painting, $painting);
     }
 
@@ -103,10 +102,9 @@ class LeadOrderGardenHouse extends Lead
      */
     public function getAvailableRoofColors()
     {
-        $roofColors = preg_split(
-            '/\n+/',
-            Yii::$app->settings->get('gardenhouse_roof_color', 'default')
-        );
+        $setting = trim(Yii::$app->settings->get('gardenhouse_roof_color', 'default'));
+        $roofColors = preg_split('/\n+/', $setting);
+        $roofColors = array_map('trim', $roofColors);
         return array_combine($roofColors, $roofColors);
     }
 }
