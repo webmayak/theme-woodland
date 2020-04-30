@@ -25,7 +25,7 @@ $productIsProject = !in_array($model->product_type_id, [4, 11]);
     ?>
     <div class="product-card__img-wrap">
         <a href="<?=$model->present()->getUrl()?>">
-            <img class="product-card__img" src="<?= $model->media ? $model->media->image() : 'https://via.placeholder.com/150' ?>" alt="<?= Html::encode($model->name) ?>">
+            <img class="product-card__img" src="<?= $model->media ? $model->media->image(505, 283, false) : 'https://via.placeholder.com/505x283' ?>" alt="<?= Html::encode($model->name) ?>">
         </a>
     </div>
     <a href="<?=$model->present()->getUrl()?>" class="product-card__title-link">
