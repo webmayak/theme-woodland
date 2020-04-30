@@ -33,23 +33,21 @@ $form = ActiveForm::begin([
 
     <fieldset hidden>
         <?php
-        echo $form->field($model, 'painting')->dropDownList([
-            'Без покраски' => 'Без покраски',
-            'Акватекс "Зеленый" в 1 слой' => 'Акватекс "Зеленый" в 1 слой',
-            'Акватекс "Палисандр" в 1 слой' => 'Акватекс "Палисандр" в 1 слой',
-            'Акватекс "Орех" в 1 слой' => 'Акватекс "Орех" в 1 слой',
-            'Акватекс "Красное дерево" в 1 слой' => 'Акватекс "Красное дерево" в 1 слой',
-            'Акватекс "Дуб" в 1 слой' => 'Акватекс "Дуб" в 1 слой',
-            'Акватекс "Орегон" в 1 слой' => 'Акватекс "Орегон" в 1 слой',
-        ], [
+        $painting = preg_split(
+            '/\n+/',
+            Yii::$app->settings->get('gardenhouse_painting', 'default')
+        );
+        echo $form->field($model, 'painting')->dropDownList(
+            array_combine($painting, $painting), [
             'prompt' => 'Укажите цвет'
         ]);
 
-        echo $form->field($model, 'roofColor')->dropDownList([
-            'Шинглас "Финская черепица" коричневый' => 'Шинглас "Финская черепица" коричневый',
-            'Шинглас "Финская черепица" Зеленый' => 'Шинглас "Финская черепица" Зеленый',
-            'Шинглас "Финская черепица" красный' => 'Шинглас "Финская черепица" красный',
-        ], [
+        $roofColor = preg_split(
+            '/\n+/',
+            Yii::$app->settings->get('gardenhouse_roof_color', 'default')
+        );
+        echo $form->field($model, 'roofColor')->dropDownList(
+            array_combine($roofColor, $roofColor), [
             'prompt' => 'Укажите цвет'
         ]);
         ?>
