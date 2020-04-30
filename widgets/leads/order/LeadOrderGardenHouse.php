@@ -3,6 +3,9 @@
 namespace frontend\themes\woodland\widgets\leads\order;
 
 use pantera\leads\models\Lead;
+use common\modules\shop\models\ShopProduct;
+use pantera\seo\models\SeoSlug;
+use Yii;
 
 class LeadOrderGardenHouse extends Lead
 {
@@ -48,5 +51,63 @@ class LeadOrderGardenHouse extends Lead
         $labels['phone'] = 'Телефон';
         $labels['email'] = 'Email';
         return $labels;
+    }
+
+    /**
+     * TODO: add comment..
+     */
+    public function getProduct()
+    {
+        $referrer = parse_url(Yii::$app->request->referrer);
+        $slug = trim($referrer['path'], '/');
+        $referrerSeoSlug = SeoSlug::find()
+            ->andWhere(['slug' => $slug])
+            ->orderBy(['id' => SORT_DESC])
+            ->one();
+        return ShopProduct::findOne($referrerSeoSlug->model_id);
+    }
+
+    /**
+     * TODO: add comment..
+     */
+    public function getAvailableEquipment()
+    {
+        $product = $this->getProduct();
+        if ($variants = $product->getVariants()->all()) {
+            usort($variants, function ($a, $b) {
+                return $a['price'] <=> $b['price'];
+            });
+
+            $priceTypes = [];
+
+            foreach ($variants as $variant) {
+                $priceTypes[] = $variant->present()->getAttributeValue(10);
+            }
+        }
+        return array_combine($priceTypes, $priceTypes);
+    }
+
+    /**
+     * TODO: add comment..
+     */
+    public function getAvailablePainting()
+    {
+        $painting = preg_split(
+            '/\n+/',
+            Yii::$app->settings->get('gardenhouse_painting', 'default')
+        );
+        return array_combine($painting, $painting);
+    }
+
+    /**
+     * TODO: add comment..
+     */
+    public function getAvailableRoofColors()
+    {
+        $roofColors = preg_split(
+            '/\n+/',
+            Yii::$app->settings->get('gardenhouse_roof_color', 'default')
+        );
+        return array_combine($roofColors, $roofColors);
     }
 }

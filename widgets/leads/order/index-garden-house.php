@@ -5,11 +5,8 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\MaskedInput;
-use common\modules\shop\models\ShopProduct;
 
-$product = ShopProduct::findOne(346);
-
-$this->title = 'Заказать ' . Html::encode($product->name);
+$this->title = 'Заказать ' . Html::encode($model->product->name);
 
 /* @var $this View */
 /* @var $model LeadOrderGardenHouse */
@@ -23,20 +20,8 @@ $form = ActiveForm::begin([
     ],
 ]);
 
-if ($variants = $product->getVariants()->all()) {
-    usort($variants, function ($a, $b) {
-        return $a['price'] <=> $b['price'];
-    });
-
-    $priceTypes = [];
-
-    foreach ($variants as $variant) {
-        $priceTypes[] = $variant->present()->getAttributeValue(10);
-    }
-}
-
 echo $form->field($model, 'equipment')->dropDownList(
-    array_combine($priceTypes, $priceTypes), [
+    $model->getAvailableEquipment(), [
     'prompt' => 'Сделайте выбор'
 ]);
 
@@ -44,21 +29,12 @@ echo $form->field($model, 'equipment')->dropDownList(
 
     <fieldset hidden>
         <?php
-        $painting = preg_split(
-            '/\n+/',
-            Yii::$app->settings->get('gardenhouse_painting', 'default')
-        );
         echo $form->field($model, 'painting')->dropDownList(
-            array_combine($painting, $painting), [
+            $model->getAvailablePainting(), [
             'prompt' => 'Укажите цвет'
         ]);
-
-        $roofColor = preg_split(
-            '/\n+/',
-            Yii::$app->settings->get('gardenhouse_roof_color', 'default')
-        );
         echo $form->field($model, 'roofColor')->dropDownList(
-            array_combine($roofColor, $roofColor), [
+            $model->getAvailableRoofColors(), [
             'prompt' => 'Укажите цвет'
         ]);
         ?>
