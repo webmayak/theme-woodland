@@ -127,14 +127,14 @@ CartAssets::register($this);
                     </div>
                     <div class="form-group row align-items-center">
                         <span class="col-lg-2 col-form-label font-weight-bold">Дата доставки:</span>
-                        <div class="col-lg-10">
-                            <input type="date" class="form-control w-auto" value="<?= date("Y-m-d") ?>">
+                        <div class="col-lg-3">
+                            <input type="date" class="form-control" value="<?= date("Y-m-d") ?>">
                         </div>
                     </div>
                     <div class="form-group row align-items-center">
                         <span class="col-lg-2 col-form-label font-weight-bold">Время доставки:</span>
-                        <div class="col-lg-10">
-                            <select class="form-control w-auto">
+                        <div class="col-lg-3">
+                            <select class="form-control">
                                 <option>Весь день</option>
                             </select>
                         </div>
