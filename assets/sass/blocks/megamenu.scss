@@ -24,7 +24,7 @@
   font-family: inherit;
   border-left: none;
   width: 100%;
-  height: auto!important;
+  height: auto !important;
 
   > .wsmenu-list {
     display: flex;
@@ -85,6 +85,14 @@
 
         > ul.sub-menu--projects {
           z-index: 1000;
+
+          > li {
+            > ul.sub-menu {
+              display: block;
+              opacity: 1;
+              visibility: visible;
+            }
+          }
         }
       }
 
@@ -178,7 +186,6 @@
 
         &--projects {
           display: flex;
-          z-index: -1;
           width: 1110px;
           max-height: calc(100vh - 250px);
           overflow-y: auto;
@@ -214,12 +221,8 @@
             }
 
             > ul.sub-menu {
-              display: block;
-              opacity: 1;
-              visibility: visible;
               transform: none;
-              position: relative;
-              left: 0;
+              position: static;
               background-color: transparent;
               box-shadow: none;
 
