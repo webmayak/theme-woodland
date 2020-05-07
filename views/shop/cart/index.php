@@ -98,21 +98,21 @@ CartAssets::register($this);
             </li>
         </ul>
         <div class="tab-content mt-4">
-            <div class="checkout__tab-pane tab-pane fade show active" id="tab-1">
+            <div class="checkout__tab-pane p-3 p-sm-4 p-lg-5 tab-pane fade show active" id="tab-1">
                 <form>
                     <div class="form-group row align-items-center">
-                        <span class="col-lg-2 font-weight-bold">Регион доставки:</span>
+                        <span class="col-lg-2 col-form-label font-weight-bold">Регион доставки:</span>
                         <div class="col-lg-10">
-                            <div class="btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-success active">
+                            <div class="btn-group-toggle mb-n2" data-toggle="buttons">
+                                <label class="btn btn-outline-success active mb-2">
                                     <input type="radio" name="region" checked>
                                     Москва
                                 </label>
-                                <label class="btn btn-outline-success">
+                                <label class="btn btn-outline-success mb-2">
                                     <input type="radio" name="region">
                                     Московская область
                                 </label>
-                                <label class="btn btn-outline-success">
+                                <label class="btn btn-outline-success mb-2">
                                     <input type="radio" name="region">
                                     Другой регион России
                                 </label>
@@ -120,19 +120,19 @@ CartAssets::register($this);
                         </div>
                     </div>
                     <div class="form-group row align-items-center">
-                        <span class="col-lg-2 font-weight-bold">Цена доставки:</span>
+                        <span class="col-lg-2 col-form-label font-weight-bold">Цена доставки:</span>
                         <div class="col-lg-10">
                             <span class="text-primary">Бесплатно</span>
                         </div>
                     </div>
                     <div class="form-group row align-items-center">
-                        <span class="col-lg-2 font-weight-bold">Дата доставки:</span>
+                        <span class="col-lg-2 col-form-label font-weight-bold">Дата доставки:</span>
                         <div class="col-lg-10">
                             <input type="date" class="form-control w-auto" value="<?= date("Y-m-d") ?>">
                         </div>
                     </div>
                     <div class="form-group row align-items-center">
-                        <span class="col-lg-2 font-weight-bold">Время доставки:</span>
+                        <span class="col-lg-2 col-form-label font-weight-bold">Время доставки:</span>
                         <div class="col-lg-10">
                             <select class="form-control w-auto">
                                 <option>Весь день</option>
@@ -140,22 +140,22 @@ CartAssets::register($this);
                         </div>
                     </div>
                     <div class="form-group row align-items-center">
-                        <span class="col-lg-2 font-weight-bold">Оплата:</span>
+                        <span class="col-lg-2 col-form-label font-weight-bold">Оплата:</span>
                         <div class="col-lg-10">
-                            <div class="btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-success active">
+                            <div class="btn-group-toggle mb-n2" data-toggle="buttons">
+                                <label class="btn btn-outline-success active mb-2">
                                     <input type="radio" name="payment" checked>
                                     Наличными при получении
                                 </label>
-                                <label class="btn btn-outline-success">
+                                <label class="btn btn-outline-success mb-2">
                                     <input type="radio" name="payment">
                                     Картой
                                 </label>
-                                <label class="btn btn-outline-success">
+                                <label class="btn btn-outline-success mb-2">
                                     <input type="radio" name="payment">
                                     Счет в банке
                                 </label>
-                                <label class="btn btn-outline-success">
+                                <label class="btn btn-outline-success mb-2">
                                     <input type="radio" name="payment">
                                     Электронными деньгами
                                 </label>
@@ -163,7 +163,7 @@ CartAssets::register($this);
                         </div>
                     </div>
                     <div class="row mt-5">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
                             <div class="form-alert mh-100">
                                 <div class="form-alert__title">Заполните данные</div>
                                 <div class="form-group">
@@ -192,7 +192,7 @@ CartAssets::register($this);
                     </div>
                 </form>
             </div>
-            <div class="checkout__tab-pane tab-pane fade" id="tab-2">
+            <div class="checkout__tab-pane p-3 p-sm-4 p-lg-5 tab-pane fade" id="tab-2">
                 456
             </div>
         </div>
