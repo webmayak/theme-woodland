@@ -125,7 +125,7 @@ CartAssets::register($this);
                             <span class="text-primary">Бесплатно</span>
                         </div>
                     </div>
-                    <div class="form-group row align-items-center">
+                    <div class="form-group field-date row align-items-center">
                         <span class="col-lg-2 col-form-label font-weight-bold">Дата доставки:</span>
                         <div class="col-lg-3">
                             <input type="date" class="form-control" value="<?= date("Y-m-d") ?>">
@@ -166,11 +166,11 @@ CartAssets::register($this);
                         <div class="col-lg-6 mb-4 mb-lg-0">
                             <div class="form-alert mh-100">
                                 <div class="form-alert__title">Заполните данные</div>
-                                <div class="form-group">
+                                <div class="form-group field-name">
                                     <label class="control-label">Ваше имя</label>
                                     <input type="text" class="form-control" placeholder="Ваше имя" required>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group field-phone">
                                     <label class="control-label">Ваш телефон</label>
                                     <input type="text" class="form-control" placeholder="Ваш телефон" required>
                                 </div>
