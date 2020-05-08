@@ -8,5 +8,18 @@
   &__tab-pane {
     border: 2px solid $success;
     border-radius: 10px;
+
+    legend {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .form-control {
+      height: auto;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      font-weight: 600;
+    }
   }
 }

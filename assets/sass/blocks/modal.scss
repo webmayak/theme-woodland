@@ -23,13 +23,11 @@
   }
 
   .form-control {
-    height: 50px;
+    height: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
     font-size: 14px;
     font-weight: 600;
-  }
-
-  textarea.form-control {
-    height: auto;
   }
 
   .modal-body {

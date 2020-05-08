@@ -128,13 +128,13 @@ CartAssets::register($this);
                     <div class="form-group field-date row align-items-center">
                         <span class="col-lg-2 col-form-label font-weight-bold">Дата доставки:</span>
                         <div class="col-lg-3">
-                            <input type="date" class="form-control" value="<?= date("Y-m-d") ?>">
+                            <input type="date" class="form-control" value="<?= date("Y-m-d") ?>" required>
                         </div>
                     </div>
                     <div class="form-group row align-items-center">
                         <span class="col-lg-2 col-form-label font-weight-bold">Время доставки:</span>
                         <div class="col-lg-3">
-                            <select class="form-control">
+                            <select class="form-control" required>
                                 <option>Весь день</option>
                             </select>
                         </div>
@@ -185,7 +185,8 @@ CartAssets::register($this);
                             <div class="form-alert mh-100 text-center">
                                 <div class="form-alert__title">Наши гарантии</div>
                                 <img class="mt-5" src="/images/icon-shield.png" alt="">
-                                <p class="fs-16 mt-5"><span class="text-primary">14 дней на возврат денег</span> без вопросов
+                                <p class="fs-16 mt-5">
+                                    <span class="text-primary">14 дней на возврат денег</span> без вопросов
                                     <br>если товар не подошел</p>
                             </div>
                         </div>
@@ -193,7 +194,121 @@ CartAssets::register($this);
                 </form>
             </div>
             <div class="checkout__tab-pane p-3 p-sm-4 p-lg-5 tab-pane fade" id="tab-2">
-                456
+                <form>
+                    <fieldset class="mb-4">
+                        <legend><span class="text-success">Шаг 1.</span> Регион доставки:</legend>
+                        <div class="btn-group-toggle mb-n2" data-toggle="buttons">
+                            <label class="btn btn-outline-success active mb-2">
+                                <input type="radio" name="region" checked>
+                                Москва
+                            </label>
+                            <label class="btn btn-outline-success mb-2">
+                                <input type="radio" name="region">
+                                Московская область
+                            </label>
+                            <label class="btn btn-outline-success mb-2">
+                                <input type="radio" name="region">
+                                Другой регион России
+                            </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="mb-4">
+                        <legend><span class="text-success">Шаг 2.</span> Контактная информация:</legend>
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-5">
+                                <div class="form-group field-name">
+                                    <label class="control-label">Ваше имя</label>
+                                    <input type="text" class="form-control" placeholder="Ваше имя" required>
+                                </div>
+                                <div class="form-group field-phone">
+                                    <label class="control-label">Ваш телефон</label>
+                                    <input type="text" class="form-control" placeholder="Ваш телефон" required>
+                                </div>
+                                <div class="form-group field-email">
+                                    <label class="control-label">Ваш email</label>
+                                    <input type="email" class="form-control" placeholder="Ваш email" required>
+                                </div>
+                                <div class="form-group field-address">
+                                    <label class="control-label">Ваш адрес</label>
+                                    <input type="text" class="form-control" placeholder="Ваш адрес" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label">Ваш комментарий</label>
+                                    <textarea class="form-control" rows="5" placeholder="Ваш комментарий"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="mb-4">
+                        <legend><span class="text-success">Шаг 3.</span> Доставка:</legend>
+                        <div class="row align-items-baseline">
+                            <div class="col-auto">
+                                <div class="form-check">
+                                    <input type="checkbox" class="sr-only" id="delivery-courier" checked required>
+                                    <label class="form-check-label mb-2" for="delivery-courier">
+                                        <span class="font-weight-600 mr-3">Доставка курьером</span>
+                                        <span>Доставка курьером для Москвы и Московской области</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <label class="mr-2">Дата доставки:</label>
+                                <input type="date" class="form-control d-inline-block w-auto py-2 mr-2" value="<?= date("Y-m-d") ?>" required>
+                            </div>
+                            <div class="col-auto">
+                                <span class="text-primary font-weight-600">300 Руб</span>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="mb-4">
+                        <legend><span class="text-success">Шаг 4.</span> Оплата:</legend>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="sr-only" id="payment-1" checked required>
+                            <label class="form-check-label" for="payment-1">
+                                <span class="font-weight-600 mr-3">Оплата наличными при получении</span>
+                                <span>Вы можете расплатиться наличными при получении товара. Картой расплатиться будет уже нельзя.</span>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="sr-only" id="payment-2" checked required>
+                            <label class="form-check-label" for="payment-2">
+                                <span class="font-weight-600 mr-3">Оплата по счету (р/с в Сбербанке)</span>
+                                <span>Выставим счет для оплаты от физических и юридических лиц. Наш р/с открыт в Сбербанке г. Москва.</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div class="row mt-5">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <div class="form-alert mh-100">
+                                <div class="row align-items-baseline font-weight-600 fs-18 mb-1">
+                                    <div class="col-sm-3 col-auto">Скидка:</div>
+                                    <div class="col-sm-9 col-auto">
+                                        <span class="text-primary">-754 Руб</span>
+                                    </div>
+                                </div>
+                                <div class="row align-items-baseline font-weight-600 fs-18 mb-5">
+                                    <div class="col-sm-3 col-auto">Итого:</div>
+                                    <div class="col-sm-9 col-auto">
+                                        <span class="text-success fs-24">31 990 Руб</span>
+                                    </div>
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="sr-only" id="acception-2" checked required>
+                                    <label class="form-check-label" for="acception-2">Даю свое согласие на обработку персональных данных</label>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-lg d-block m-auto">Оформить заказ</button>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-alert mh-100 text-center">
+                                <img src="/images/icon-shield.png" alt="">
+                                <p class="fs-16 mt-3 mb-0">
+                                    <span class="text-primary">14 дней на возврат денег</span> без вопросов
+                                    <br>если товар не подошел</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
 
