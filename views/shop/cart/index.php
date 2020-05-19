@@ -90,6 +90,7 @@ CartAssets::register($this);
             </table>
         </div>
 
+        <?php if (0): ?>
         <ul class="checkout__nav-tabs nav nav-tabs mt-5" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" data-toggle="tab" href="#tab-1">Быстрое оформление заказа</a>
@@ -312,6 +313,7 @@ CartAssets::register($this);
                 </form>
             </div>
         </div>
+    	<?php endif; ?>
 
     <?php else : ?>
         <p class="text-center">Вы еще ничего не добавили в корзину, перейдите в <a href="/catalog">каталог проектов</a>
