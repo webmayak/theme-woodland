@@ -169,7 +169,9 @@ $this->params['breadcrumbs'][] = $this->title;
                             <?php foreach ($variants as $variant) : ?>
                                 <tr>
                                     <td>
+                                        <?php if ($variant->media): ?>
                                         <img src="<?= $variant->media->image() ?>" alt="Сечение бруса <?= Html::encode($variant->present()->getAttributeValue($ID_PROFILE_SIZE)) ?>">
+                                        <?php endif; ?>
                                     </td>
                                     <td>
                                         <span class="product-table__size"><?= Html::encode($variant->present()->getAttributeValue($ID_PROFILE_SIZE)) ?></span><br>
