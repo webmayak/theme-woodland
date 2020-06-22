@@ -270,7 +270,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?php if ($model->possible_sizes) : ?>
                             <div class="product-page__materials">Из чего строим: <a class="product-page__materials-link" href="#materials">Материалы</a></div>
                         <?php endif; ?>
-
+                        <?php if (0) : ?>
                         <a href="#" class="product-page__calc-link btn btn-primary btn-block">
                             <img src="/images/icon-real-estate.png" alt="">
                             Расчет дома - калькулятор
@@ -279,6 +279,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <img src="/images/icon-brick2gf.png" alt="">
                             Фундамент - калькулятор
                         </a>
+                        <?php endif; ?>
                     </div>
                 <?php endif; ?>
 
