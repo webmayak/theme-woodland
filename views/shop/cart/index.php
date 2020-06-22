@@ -90,6 +90,10 @@ CartAssets::register($this);
             </table>
         </div>
 
+        <div class="text-center mt-3">
+            <?= Html::a('Оформить заказ', ['/shop/order/index'], ['class' => 'btn btn-success btn-lg', 'data-pjax' => 0]) ?>
+        </div>
+
         <?php if (0): ?>
         <ul class="checkout__nav-tabs nav nav-tabs mt-5" role="tablist">
             <li class="nav-item">
@@ -316,22 +320,23 @@ CartAssets::register($this);
     	<?php endif; ?>
 
     <?php else : ?>
-        <p class="text-center">Вы еще ничего не добавили в корзину, перейдите в <a href="/catalog">каталог проектов</a>
+        <p class="text-center fs-18">Вы еще ничего не добавили в корзину, перейдите в <a href="/catalog">каталог проектов</a>
         </p>
     <?php endif; ?>
     <?php Pjax::end() ?>
 </main>
 
-<main class="shop-order-complete mb-5">
-    <a href="#" class="btn btn-primary btn-lg mb-4"><i class="fa fa-chevron-left mr-2"></i> Вернуться к покупкам</a>
-    <h1><i class="fa fa-check text-success"></i> Спасибо! Ваш заказ № 161709 уже получен нами!</h1>
-    <p>Наш менеджер свяжется с Вами в течение ближайшего времени, ответит на оставшиеся вопросы и согласует детали доставки.</p>
-    <p>Пожалуйста, сохраните номер Вашего заказа.</p>
-    <p>Для решения всех срочных вопросов - позвоните нам 8-495-662-95-65.</p>
-    <p>Полный список наших контактов (все телефоны, адрес офиса, карта проезда до склада) вы найдете
-        <a href="#">здесь</a>.
-    </p>
-
-    <h2 class="mt-5">Точно ничего не забыли?</h2>
+<div class="shop-order-complete mb-5">
+    <?php if (0) : ?>
+        <a href="#" class="btn btn-primary btn-lg mb-4"><i class="fa fa-chevron-left mr-2"></i> Вернуться к покупкам</a>
+        <h1><i class="fa fa-check text-success"></i> Спасибо! Ваш заказ № 161709 уже получен нами!</h1>
+        <p>Наш менеджер свяжется с Вами в течение ближайшего времени, ответит на оставшиеся вопросы и согласует детали доставки.</p>
+        <p>Пожалуйста, сохраните номер Вашего заказа.</p>
+        <p>Для решения всех срочных вопросов - позвоните нам 8-495-662-95-65.</p>
+        <p>Полный список наших контактов (все телефоны, адрес офиса, карта проезда до склада) вы найдете
+            <a href="#">здесь</a>.
+        </p>
+    <?php endif; ?>
+    <h2>Точно ничего не забыли?</h2>
     <?= CategoriesList::widget() ?>
-</main>
+</div>
