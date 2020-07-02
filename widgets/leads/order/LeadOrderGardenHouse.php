@@ -23,12 +23,32 @@ class LeadOrderGardenHouse extends Lead
     public $phone;
     public $email;
 
+    /**
+     * {@inheritdoc}
+     */
+    public function toText(): string
+    {
+        $properties = [];
+        foreach ($this->getAllProperty() as $propertyName => $propertyValue) {
+            $label = $this->getAttributeLabel($propertyName);
+            if (in_array($propertyName, ['mosquitoNets', 'table', 'bench'])) {
+                $properties[] = $label . ': ' . ($propertyValue ? 'ДА' : 'НЕТ');
+            } else {
+                $properties[] = $label . ': ' . $propertyValue;
+            }
+        }
+        return implode("\n", $properties);
+    }
+
     public function rules()
     {
         $rules = parent::rules();
         $rules[] = ['equipment', 'required'];
         $rules[] = ['painting', 'required'];
         $rules[] = ['roofColor', 'required'];
+        $rules[] = ['mosquitoNets', 'safe'];
+        $rules[] = ['table', 'safe'];
+        $rules[] = ['bench', 'safe'];
         $rules[] = ['city', 'required'];
         $rules[] = ['street', 'required'];
         $rules[] = ['house', 'required'];
