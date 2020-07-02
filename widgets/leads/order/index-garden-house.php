@@ -40,39 +40,27 @@ echo $form->field($model, 'equipment')->dropDownList(
             'prompt' => 'Укажите цвет'
         ]);
 
-        echo '<label class="control-label">Дополнительные опции</label>';
-
-        echo $form->field($model, 'mosquitoNets', [
-            'options'=>
-                [
-                    'class'=>'form-group mb-0'
-                ]
-        ])->checkbox([
-            'value' => 'mosquitoNets',
-            'style'=> 'position: relative; top: 1px;'
-        ]);
-
-        echo $form->field($model, 'table', [
-            'options'=>
-                [
-                    'class'=>'form-group mb-0'
-                ]
-        ])->checkbox([
-            'value' => 'table',
-            'style'=> 'position: relative; top: 1px;'
-        ]);
-
-        echo $form->field($model, 'bench', [
-            'options'=>
-                [
-                    'class'=>'form-group mb-0'
-                ]
-        ])->checkbox([
-            'value' => 'bench',
-            'style'=> 'position: relative; top: 1px;'
-        ]);
-
         ?>
+
+        <div class="garden-house-additional">
+            <label class="control-label">Дополнительные опции</label>
+
+            <?php
+
+            echo $form->field($model, 'mosquitoNets')->checkbox([
+                'value' => 'mosquitoNets'
+            ]);
+
+            echo $form->field($model, 'table')->checkbox([
+                'value' => 'table'
+            ]);
+
+            echo $form->field($model, 'bench')->checkbox([
+                'value' => 'bench'
+            ]);
+
+            ?>
+        </div>
     </fieldset>
 
     <fieldset hidden>

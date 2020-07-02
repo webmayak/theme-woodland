@@ -34,3 +34,17 @@
     padding: 15px 30px 30px;
   }
 }
+
+.garden-house-additional {
+  margin-bottom: 1rem;
+  
+  .form-group,
+  .help-block {
+    margin: 0;
+  }
+
+  input[type=checkbox] {
+    position: relative;
+    top: 1px;
+  }
+}

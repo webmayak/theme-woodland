@@ -46,6 +46,10 @@ class LeadOrderGardenHouse extends Lead
         $tablePrice = 6500;
         $benchPrice = 3850;
 
+        if ($this->product->id == 334) {
+            $tablePrice = 6000;
+        }
+
         $labels = parent::attributeLabels();
         $labels['equipment'] = 'Комплектация';
         $labels['painting'] = 'Покраска';
