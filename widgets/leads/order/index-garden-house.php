@@ -47,17 +47,11 @@ echo $form->field($model, 'equipment')->dropDownList(
 
             <?php
 
-            echo $form->field($model, 'mosquitoNets')->checkbox([
-                'value' => 'mosquitoNets'
-            ]);
+            echo $form->field($model, 'mosquitoNets')->checkbox();
 
-            echo $form->field($model, 'table')->checkbox([
-                'value' => 'table'
-            ]);
+            echo $form->field($model, 'table')->checkbox();
 
-            echo $form->field($model, 'bench')->checkbox([
-                'value' => 'bench'
-            ]);
+            echo $form->field($model, 'bench')->checkbox();
 
             ?>
         </div>
@@ -111,6 +105,14 @@ echo Html::submitButton(Html::tag('span', 'Заказать', [
     'class' => 'ladda-label',
 ]), [
     'class' => 'btn btn-success btn-block mt-3 ladda-button',
+    'data' => [
+        'style' => 'zoom-in'
+    ],
+    'hidden' => true
+]);
+
+ActiveForm::end();
+  'class' => 'btn btn-success btn-block mt-3 ladda-button',
     'data' => [
         'style' => 'zoom-in'
     ],
