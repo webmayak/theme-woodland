@@ -12,6 +12,9 @@ class LeadOrderGardenHouse extends Lead
     public $equipment;
     public $painting;
     public $roofColor;
+    public $mosquitoNets;
+    public $table;
+    public $bench;
     public $city;
     public $street;
     public $house;
@@ -39,10 +42,17 @@ class LeadOrderGardenHouse extends Lead
 
     public function attributeLabels()
     {
+        $mosquitoNetsPrice = 8000;
+        $tablePrice = 6500;
+        $benchPrice = 3850;
+
         $labels = parent::attributeLabels();
         $labels['equipment'] = 'Комплектация';
         $labels['painting'] = 'Покраска';
         $labels['roofColor'] = 'Цвет кровли';
+        $labels['mosquitoNets'] = "Антикомариные сетки по кругу и входной проём +{$mosquitoNetsPrice} руб.";
+        $labels['table'] = "Стол +{$tablePrice} руб.";
+        $labels['bench'] = "Лавка (угловые элементы) +{$benchPrice} руб.";
         $labels['city'] = 'Населенный пункт';
         $labels['street'] = 'Улица';
         $labels['house'] = 'Номер дома';
