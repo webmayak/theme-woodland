@@ -112,11 +112,3 @@ echo Html::submitButton(Html::tag('span', 'Заказать', [
 ]);
 
 ActiveForm::end();
-  'class' => 'btn btn-success btn-block mt-3 ladda-button',
-    'data' => [
-        'style' => 'zoom-in'
-    ],
-    'hidden' => true
-]);
-
-ActiveForm::end();
