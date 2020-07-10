@@ -1,11 +1,11 @@
 <?php 
 
-use common\modules\shop\models\ShopCategory;
 use common\modules\shop\models\ShopProduct;
 use yii\helpers\Html;
 
-?><?php if (($catalogRoot = ShopCategory::findOne(1)) && ($categories = $catalogRoot->getChildren()->andWhere(['status' => 1])->all())) : ?>
-<div class="row">
+/* @var $this yii\web\View */
+/* @var $categories common\modules\shop\models\ShopCategory[] */
+?><div class="row">
     <?php foreach ($categories as $category) : ?>
         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
             <div class="categories__item">
@@ -27,4 +27,3 @@ use yii\helpers\Html;
         </div>
     <?php endforeach; ?>
 </div>
-<?php endif; ?>
