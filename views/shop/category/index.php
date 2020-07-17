@@ -32,6 +32,6 @@ $dataProvider->sort->defaultOrder = ['price' => SORT_DESC];
     ],
 ]) ?>
 
-<div class="category-description">
+<div class="category-description editor-content">
     <?= $model->description ?>
 </div>
