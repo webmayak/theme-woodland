@@ -7,6 +7,6 @@ use yii\web\View;
 /* @var $content string */
 ?>
 <?php $this->beginContent('@theme/views/layouts/default.php') ?>
-	<?= Alert::widget() ?>
-	<?= $content ?>
+    <?= Alert::widget() ?>
+    <?= $content ?>
 <?php $this->endContent() ?>

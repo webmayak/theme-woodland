@@ -19,5 +19,5 @@ $this->params['breadcrumbs'][] = 'Страница 404';
     <h1><?= Html::encode($this->title) ?></h1>
     <img class="page-404__image" src="/images/404.png" alt="Страница не найдена">
     <div class="page-404__text">Приносим извинения, но такой страницы не существует</div>
-	<a class="btn btn-lg btn-success" href="/">Вернуться на главную</a>
+    <a class="btn btn-lg btn-success" href="/">Вернуться на главную</a>
 </main>

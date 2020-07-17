@@ -23,13 +23,13 @@ $dataProvider->sort->defaultOrder = ['price' => SORT_DESC];
 ?><h1><?= Html::encode($this->title) ?></h1>
 
 <?= ProductsPjaxList::widget([
-	'layout' => $isProjectsCategory
-		? ProductsFilter::widget(['searchModel' => $searchModel]) . '{items}'
-		: '{items}',
-	'listOptions' => [
-	    'dataProvider' => $dataProvider,
-	    'showLeadCard' => $isProjectsCategory,
-	],
+    'layout' => $isProjectsCategory
+        ? ProductsFilter::widget(['searchModel' => $searchModel]) . '{items}'
+        : '{items}',
+    'listOptions' => [
+        'dataProvider' => $dataProvider,
+        'showLeadCard' => $isProjectsCategory,
+    ],
 ]) ?>
 
 <div class="category-description">

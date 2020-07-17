@@ -9,11 +9,11 @@ $activeSpecials = [];
 $closedSpecials = [];
 
 foreach ($specials as $special) {
-	if ($special->present()->getAttributeValueByKey('is_closed')) {
-		$closedSpecials[] = $special;
-	} else {
-		$activeSpecials[] = $special;
-	}
+    if ($special->present()->getAttributeValueByKey('is_closed')) {
+        $closedSpecials[] = $special;
+    } else {
+        $activeSpecials[] = $special;
+    }
 }
 
 /* @var $this View */

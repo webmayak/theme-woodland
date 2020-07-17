@@ -317,7 +317,7 @@ CartAssets::register($this);
                 </form>
             </div>
         </div>
-    	<?php endif; ?>
+        <?php endif; ?>
 
     <?php else : ?>
         <p class="text-center fs-18">Вы еще ничего не добавили в корзину, перейдите в <a href="/catalog">каталог проектов</a>
