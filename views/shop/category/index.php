@@ -31,3 +31,7 @@ $dataProvider->sort->defaultOrder = ['price' => SORT_DESC];
 	    'showLeadCard' => $isProjectsCategory,
 	],
 ]) ?>
+
+<div class="category-description">
+    <?= $model->description ?>
+</div>
