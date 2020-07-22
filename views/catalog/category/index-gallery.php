@@ -2,6 +2,7 @@
 
 use frontend\widgets\twigRender\TwigRender;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\web\View;
 use pantera\leads\widgets\form\LeadForm;
 
@@ -9,6 +10,22 @@ use pantera\leads\widgets\form\LeadForm;
 /* @var $links array */
 ?><main class="page-site-gallery-one__content">
     <h1><?= Html::encode(Yii::$app->seo->h1) ?></h1>
+    <?php if ($photos = $model->getChildrenActive()->all()): ?>
+        <div class="row">
+        <?php foreach ($photos as $index => $photo): ?>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div style="position: relative;">
+                <a class="page-site-gallery-one__item-link gallery-link" href="<?= $photo->media->image() ?>" data-fancybox="gallery">
+                    <img class="page-site-gallery-one__img" src="<?= $photo->media->image(255, 255, false) ?>" alt="<?= Html::encode($photo->name) ?>">
+                </a>
+                <a style="position: absolute; display: block; bottom: 0; left: 0; width: 100%; padding: 10px 15px; background-color: rgba(0,187,223,.7); border-radius: 0 0 10px 10px; color: #fff; font-size: 13px;" href="<?= Url::to($photo->present()->getAttributeValueByKey('link')) ?>">
+                    <?= Html::encode($photo->name) ?>
+                </a>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+    <?php endif; ?>
     <?php if ($model->media && is_array($model->media)): ?>
     <div class="row">
         <?php foreach ($model->media as $index => $media): ?>
