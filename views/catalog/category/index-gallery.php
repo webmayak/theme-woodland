@@ -14,11 +14,11 @@ use pantera\leads\widgets\form\LeadForm;
         <div class="row">
         <?php foreach ($photos as $index => $photo): ?>
         <div class="col-lg-3 col-md-4 col-sm-6">
-            <div style="position: relative;">
-                <a class="page-site-gallery-one__item-link gallery-link" href="<?= $photo->media->image() ?>" data-fancybox="gallery">
+            <div class="page-site-gallery-one__item">
+                <a class="page-site-gallery-one__img-link gallery-link" href="<?= $photo->media->image() ?>" data-fancybox="gallery">
                     <img class="page-site-gallery-one__img" src="<?= $photo->media->image(255, 255, false) ?>" alt="<?= Html::encode($photo->name) ?>">
                 </a>
-                <a style="position: absolute; display: block; bottom: 0; left: 0; width: 100%; padding: 10px 15px; background-color: rgba(0,187,223,.7); border-radius: 0 0 10px 10px; color: #fff; font-size: 13px;" href="<?= Url::to($photo->present()->getAttributeValueByKey('link')) ?>">
+                <a class="page-site-gallery-one__title-link" href="<?= Url::to($photo->present()->getAttributeValueByKey('link')) ?>">
                     <?= Html::encode($photo->name) ?>
                 </a>
             </div>
