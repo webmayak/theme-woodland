@@ -13,6 +13,7 @@ use pantera\leads\widgets\form\LeadForm;
     <?php if ($photos = $model->getChildrenActive()->all()): ?>
         <div class="row">
         <?php foreach ($photos as $index => $photo): ?>
+        <?php if (!$photo->media) continue; ?>
         <div class="col-lg-3 col-md-4 col-sm-6">
             <div class="page-site-gallery-one__item">
                 <a class="page-site-gallery-one__img-link gallery-link" href="<?= $photo->media->image() ?>" data-fancybox="gallery">
