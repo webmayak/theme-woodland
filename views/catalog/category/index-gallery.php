@@ -10,7 +10,7 @@ use pantera\leads\widgets\form\LeadForm;
 /* @var $links array */
 ?><main class="page-site-gallery-one__content">
     <h1><?= Html::encode(Yii::$app->seo->h1) ?></h1>
-    <?php if ($photos = $model->getChildrenActive()->all()): ?>
+    <?php if ($photos = $model->getChildrenActive()->byType('gallery-item')->all()): ?>
         <div class="row">
         <?php foreach ($photos as $index => $photo): ?>
         <?php if (!$photo->media) continue; ?>
