@@ -231,6 +231,8 @@ $this->context->layout = '//front';
     </div>
 <?php endif; ?>
 
+<?= $this->render('@theme/views/_cities') ?>
+
 <?php if (0) : ?>
 <div class="content-block">
     <div class="container">
