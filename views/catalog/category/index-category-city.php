@@ -11,6 +11,16 @@ $this->title = Yii::$app->seo->title ?? $model->name;
 ?><main class="page-site-category__content">
     <h1><?= Html::encode(Yii::$app->seo->h1 ?? $model->name) ?></h1>
 
+    <?php if ($children = $model->childrenActive) : ?>
+        <ul>
+            <?php foreach ($children as $child) : ?>
+                <li>
+                    <?= $child->name ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
     <?php if ($model->description) : ?>
     <div class="text-block">
         <div class="editor-content">
