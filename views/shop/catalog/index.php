@@ -76,6 +76,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <?= $this->render('@theme/views/_steps') ?>
 
+<?= $this->render('@theme/views/_cities') ?>
+
 <div class="contact-form-block">
     <div class="container">
         <div class="row">
