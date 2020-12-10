@@ -1,0 +1,37 @@
+.city-serivices {
+  counter-reset: li;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $primary;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+    transition: 0.25s;
+
+    &::before {
+      content: counter(li);
+      counter-increment: li;
+      font-size: 30px;
+      color: #ffffff;
+      background-color: $primary;
+      border-radius: $btn-border-radius;
+      width: 50px;
+      line-height: 70px;
+      text-align: center;
+      flex-shrink: 0;
+      margin-right: 15px;
+      transition: 0.25s;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: darken($primary, 8%);
+
+      &::before {
+        background-color: darken($primary, 8%);
+      }
+    }
+  }
+}

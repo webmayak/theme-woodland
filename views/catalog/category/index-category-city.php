@@ -12,13 +12,15 @@ $this->title = Yii::$app->seo->title ?? $model->name;
     <h1><?= Html::encode(Yii::$app->seo->h1 ?? $model->name) ?></h1>
 
     <?php if ($children = $model->childrenActive) : ?>
-        <ul>
+        <ol class="city-serivices row list-unstyled mb-0">
             <?php foreach ($children as $child) : ?>
-                <li>
-                    <?= $child->name ?>
+                <li class="col-sm-6 col-lg-4 mb-5">
+                    <a href="<?= $child->present()->getUrl() ?>" class="city-serivices__item">
+                        <?= $child->name ?>
+                    </a>
                 </li>
             <?php endforeach; ?>
-        </ul>
+        </ol>
     <?php endif; ?>
 
     <?php if ($model->description) : ?>
