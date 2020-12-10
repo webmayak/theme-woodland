@@ -32,6 +32,12 @@ $dataProvider->sort->defaultOrder = ['price' => SORT_DESC];
     ],
 ]) ?>
 
-<div class="category-description editor-content">
-    <?= $model->description ?>
-</div>
+<?php if ($model->description): ?>
+    <div class="category-description editor-content">
+        <?= $model->description ?>
+    </div>
+<?php endif; ?>
+
+</div><!-- закрываем .container -->
+
+<?= $this->render('@theme/views/_cities') ?>
