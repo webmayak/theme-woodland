@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use frontend\themes\woodland\widgets\shopProducts\ProductsPjaxList;
 use frontend\themes\woodland\widgets\filter\Filter as ProductsFilter;
+use common\modules\catalog\models\CatalogCategory;
 
 $this->title = $model->seo->h1 ?? $model->name;
 
@@ -40,4 +41,29 @@ $dataProvider->sort->defaultOrder = ['price' => SORT_DESC];
 
 </div><!-- закрываем .container -->
 
-<?= $this->render('@theme/views/_cities') ?>
+<?php
+
+$CATEGORY_ID_ATTRIBUTE_ID = 83;
+
+// получаем список категорий каталога, для которых указана id текущей категории магазина
+$cities_ids = (new \yii\db\Query())
+    ->select('category_id')
+    ->from('catalog_category_attribute_value')
+    ->where([
+        'attribute_id' => $CATEGORY_ID_ATTRIBUTE_ID,
+        'value' => $model->id
+    ])->column();
+
+if ($cities_ids) {
+    echo $this->render(
+        '@theme/views/_cities',
+        [
+            'cities' => CatalogCategory::find()
+                ->isActive()
+                ->andWhere(['id' => $cities_ids])
+                ->all()
+        ]
+    );
+}
+
+?>

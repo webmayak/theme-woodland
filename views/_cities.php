@@ -2,10 +2,12 @@
 
 use common\modules\catalog\models\CatalogCategory;
 
-$citiesRoot = CatalogCategory::find()->andWhere(['id' => 251])->one();
-$cities = $citiesRoot->childrenActive;
+if (empty($cities)) {
+    $citiesRoot = CatalogCategory::find()->andWhere(['id' => 251])->one();
+    $cities = $citiesRoot->childrenActive;
+}
 
-if ($cities) : ?>
+?><?php if ($cities): ?>
     <div class="cities-block light-bg">
         <div class="container">
             <h2>Города</h2>
