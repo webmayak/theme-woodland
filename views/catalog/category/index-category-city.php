@@ -6,7 +6,7 @@ use yii\helpers\Html;
 use yii\web\View;
 
 /* @var $this View */
-$this->title = Yii::$app->seo->title ?? $model->name;
+$this->title = Yii::$app->seo->title ?: $model->name;
 
 ?><main class="page-site-category__content">
     <h1><?= Html::encode(Yii::$app->seo->h1 ?? $model->name) ?></h1>
