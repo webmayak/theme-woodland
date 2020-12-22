@@ -16,7 +16,7 @@ if (empty($cities)) {
                     <?php foreach ($cities as $city) : ?>
                         <li>
                             <a href="<?= $city->present()->getUrl() ?>">
-                                <?= $city->name ?>
+                                <?= !empty($nameCallback) && is_callable($nameCallback) ? $nameCallback($city) : $city->name ?>
                             </a>
                         </li>
                     <?php endforeach; ?>

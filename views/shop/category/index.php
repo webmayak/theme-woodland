@@ -61,7 +61,10 @@ if ($cities_ids) {
             'cities' => CatalogCategory::find()
                 ->isActive()
                 ->andWhere(['id' => $cities_ids])
-                ->all()
+                ->all(),
+            'nameCallback' => function($city) {
+                return $city->parent->name;
+            },
         ]
     );
 }
