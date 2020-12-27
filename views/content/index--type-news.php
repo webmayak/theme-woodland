@@ -42,11 +42,6 @@ $this->params['breadcrumbs'][] = $title;
             </div>
         </div>
     </div>
-    <?php if ($model->media && $model->media->issetMedia()) : ?>
-        <div class="news-page__image">
-            <?= Html::img($model->media->image(500, 400, false), ['class' => 'img-thumbnail']) ?>
-        </div>
-    <?php endif; ?>
     <?php if ($model->body) : ?>
         <div class="news-page__body editor-content editor-content__page">
             <?= $model->body ?>
