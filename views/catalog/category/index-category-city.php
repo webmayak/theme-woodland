@@ -3,6 +3,7 @@
 use frontend\widgets\twigRender\TwigRender;
 use pantera\leads\widgets\form\LeadForm;
 use pantera\seo\models\SeoPresets;
+use common\modules\shop\models\ShopCategory;
 use yii\helpers\Html;
 use yii\web\View;
 
@@ -19,11 +20,13 @@ SeoPresets::apply('categoryCity', [
     <?php if ($children = $model->childrenActive) : ?>
         <ol class="city-serivices row list-unstyled mb-0">
             <?php foreach ($children as $child) : ?>
+            <?php if ($shopCategory = ShopCategory::findOne($child->present()->getAttributeValueByKey('category_id'))) : ?>
                 <li class="col-sm-6 col-lg-4 mb-5">
                     <a href="<?= $child->present()->getUrl() ?>" class="city-serivices__item">
-                        <?= $child->name ?>
+                        <?= $shopCategory->name ?>
                     </a>
                 </li>
+            <?php endif; ?>
             <?php endforeach; ?>
         </ol>
     <?php endif; ?>
