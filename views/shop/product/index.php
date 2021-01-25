@@ -12,6 +12,7 @@ use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 
 $productIsProject = !in_array($model->product_type_id, [4, 11]);
+$isHouseOrBath = in_array($model->product_type_id, [1, 2, 3, 5, 6, 7, 9, 10, 12, 25, 26]);
 $isHouse = preg_match('/dom/', Yii::$app->request->pathInfo);
 $GARDEN_HOUSE = 13;
 
@@ -263,7 +264,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?php if ($model->equipment) : ?>
                             <a href="#product-tab-1" class="product-page__view-set-link text-uppercase">Смотреть комплектацию</a><br>
                         <?php endif; ?>
-                        <?php if ($delivery_tooltip = Yii::$app->settings->get('default.delivery_tooltip')) : ?>
+                        <?php if ($delivery_tooltip = Yii::$app->settings->get('default.delivery_tooltip') && $isHouseOrBath) : ?>
                         <div class="product-page__delivery-link point-with-icon">
                             <div class="point-with-icon__icon-wrap">
                                 <img src="/images/icon-delivery-truck.png" alt="">
