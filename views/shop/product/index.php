@@ -264,7 +264,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <?php if ($model->equipment) : ?>
                             <a href="#product-tab-1" class="product-page__view-set-link text-uppercase">Смотреть комплектацию</a><br>
                         <?php endif; ?>
-                        <?php if ($delivery_tooltip = Yii::$app->settings->get('default.delivery_tooltip') && $isHouseOrBath) : ?>
+                        <?php if ($isHouseOrBath && ($delivery_tooltip = Yii::$app->settings->get('default.delivery_tooltip'))) : ?>
                         <div class="product-page__delivery-link point-with-icon">
                             <div class="point-with-icon__icon-wrap">
                                 <img src="/images/icon-delivery-truck.png" alt="">
