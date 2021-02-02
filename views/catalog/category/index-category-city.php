@@ -52,7 +52,7 @@ if ($mapScript = trim($model->present()->getAttributeValueByKey('map'))) {
     ]);
 } ?>
 
-<?php if ($bottom_text = Yii::$app->seo->text): ?>
+<?php if ($bottom_text = $model->seo->text): ?>
 <div class="text-block">
     <div class="container">
         <div class="editor-content">
