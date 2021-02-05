@@ -1,10 +1,6 @@
 .works-map {
   padding-top: 40px;
 
-  &__map-wrap {
-    position: relative;
-  }
-
   iframe {
     height: 700px;
     width: 100%;
@@ -15,17 +11,20 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0;
-    right: 0;
+    right: calc((100% - 1110px) / 2);
+    width: 530px;
 
     ~ iframe {
       height: 820px;
     }
   }
+}
 
-  &__form-block {
-    width: 530px;
-    margin-left: auto;
+@media (max-width: 1199px) {
+  .works-map {
+    &__form {
+      right: calc((100% - 930px) / 2);
+    }
   }
 }
 
