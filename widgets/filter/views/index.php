@@ -17,6 +17,16 @@ $searchByCategory->category_id = $searchModel->category_id;
 $minPrice = $searchByCategory->buildSearchQuery()->select('MIN(price)')->groupBy(false)->scalar();
 $maxPrice = $searchByCategory->buildSearchQuery()->select('MAX(price)')->groupBy(false)->scalar();
 
+// получаем максимальную цену вариантов
+$searchByCategoryVariants = new ShopProductsSearchFrontend();
+$searchByCategoryVariants->onlyVariants = true;
+$searchByCategoryVariants->status = false;
+$searchByCategoryVariants->parent_id = $searchByCategory->buildSearchQuery()->distinct('shop_product.id')->groupBy(false)->column();
+$maxVariantsPrice = $searchByCategoryVariants->buildSearchQuery()->select('MAX(price)')->groupBy(false)->scalar();
+
+// максимальная цена с учетом вариантов
+$maxPrice = max($maxPrice, $maxVariantsPrice);
+
 $minPriceValue = number_format($searchModel->min_price ?: $minPrice, 0, ',', '');
 $maxPriceValue = number_format($searchModel->max_price ?: $maxPrice, 0, ',', '');
 
